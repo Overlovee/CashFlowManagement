@@ -47,6 +47,8 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.PaidDebtName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PaidDebtAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
@@ -55,6 +57,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
+            this.RepaidLoanName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RepaidLoanAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnpaidDebtName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnpaidDebtAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OutstandingLoanName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OutstandingLoanAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -266,11 +274,17 @@
             // 
             // dataGridView4
             // 
+            this.dataGridView4.AllowUserToAddRows = false;
+            this.dataGridView4.AllowUserToDeleteRows = false;
             this.dataGridView4.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.UnpaidDebtName,
+            this.UnpaidDebtAmount});
             this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView4.Location = new System.Drawing.Point(3, 34);
             this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.ReadOnly = true;
             this.dataGridView4.RowHeadersWidth = 51;
             this.dataGridView4.RowTemplate.Height = 29;
             this.dataGridView4.Size = new System.Drawing.Size(290, 123);
@@ -318,15 +332,37 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.PaidDebtName,
+            this.PaidDebtAmount});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 34);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.Size = new System.Drawing.Size(290, 122);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // PaidDebtName
+            // 
+            this.PaidDebtName.HeaderText = "Name";
+            this.PaidDebtName.MinimumWidth = 6;
+            this.PaidDebtName.Name = "PaidDebtName";
+            this.PaidDebtName.ReadOnly = true;
+            this.PaidDebtName.Width = 125;
+            // 
+            // PaidDebtAmount
+            // 
+            this.PaidDebtAmount.HeaderText = "Amount";
+            this.PaidDebtAmount.MinimumWidth = 6;
+            this.PaidDebtAmount.Name = "PaidDebtAmount";
+            this.PaidDebtAmount.ReadOnly = true;
+            this.PaidDebtAmount.Width = 125;
             // 
             // tableLayoutPanel4
             // 
@@ -374,11 +410,17 @@
             // 
             // dataGridView3
             // 
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
             this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.OutstandingLoanName,
+            this.OutstandingLoanAmount});
             this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView3.Location = new System.Drawing.Point(3, 34);
             this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.RowTemplate.Height = 29;
             this.dataGridView3.Size = new System.Drawing.Size(291, 123);
@@ -414,11 +456,17 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.RepaidLoanName,
+            this.RepaidLoanAmount});
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(3, 34);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 29;
             this.dataGridView2.Size = new System.Drawing.Size(291, 122);
@@ -435,6 +483,54 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Loans";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // RepaidLoanName
+            // 
+            this.RepaidLoanName.HeaderText = "Name";
+            this.RepaidLoanName.MinimumWidth = 6;
+            this.RepaidLoanName.Name = "RepaidLoanName";
+            this.RepaidLoanName.ReadOnly = true;
+            this.RepaidLoanName.Width = 125;
+            // 
+            // RepaidLoanAmount
+            // 
+            this.RepaidLoanAmount.HeaderText = "Amount";
+            this.RepaidLoanAmount.MinimumWidth = 6;
+            this.RepaidLoanAmount.Name = "RepaidLoanAmount";
+            this.RepaidLoanAmount.ReadOnly = true;
+            this.RepaidLoanAmount.Width = 125;
+            // 
+            // UnpaidDebtName
+            // 
+            this.UnpaidDebtName.HeaderText = "Name";
+            this.UnpaidDebtName.MinimumWidth = 6;
+            this.UnpaidDebtName.Name = "UnpaidDebtName";
+            this.UnpaidDebtName.ReadOnly = true;
+            this.UnpaidDebtName.Width = 125;
+            // 
+            // UnpaidDebtAmount
+            // 
+            this.UnpaidDebtAmount.HeaderText = "Amount";
+            this.UnpaidDebtAmount.MinimumWidth = 6;
+            this.UnpaidDebtAmount.Name = "UnpaidDebtAmount";
+            this.UnpaidDebtAmount.ReadOnly = true;
+            this.UnpaidDebtAmount.Width = 125;
+            // 
+            // OutstandingLoanName
+            // 
+            this.OutstandingLoanName.HeaderText = "Name";
+            this.OutstandingLoanName.MinimumWidth = 6;
+            this.OutstandingLoanName.Name = "OutstandingLoanName";
+            this.OutstandingLoanName.ReadOnly = true;
+            this.OutstandingLoanName.Width = 125;
+            // 
+            // OutstandingLoanAmount
+            // 
+            this.OutstandingLoanAmount.HeaderText = "Amount";
+            this.OutstandingLoanAmount.MinimumWidth = 6;
+            this.OutstandingLoanAmount.Name = "OutstandingLoanAmount";
+            this.OutstandingLoanAmount.ReadOnly = true;
+            this.OutstandingLoanAmount.Width = 125;
             // 
             // Paybook
             // 
@@ -503,5 +599,13 @@
         private DataGridView dataGridView2;
         private Label label3;
         private Label label4;
+        private DataGridViewTextBoxColumn PaidDebtName;
+        private DataGridViewTextBoxColumn PaidDebtAmount;
+        private DataGridViewTextBoxColumn UnpaidDebtName;
+        private DataGridViewTextBoxColumn UnpaidDebtAmount;
+        private DataGridViewTextBoxColumn OutstandingLoanName;
+        private DataGridViewTextBoxColumn OutstandingLoanAmount;
+        private DataGridViewTextBoxColumn RepaidLoanName;
+        private DataGridViewTextBoxColumn RepaidLoanAmount;
     }
 }

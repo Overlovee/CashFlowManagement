@@ -30,9 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnSettings = new System.Windows.Forms.Button();
-            this.btnAccount = new System.Windows.Forms.Button();
-            this.btnPaybook = new System.Windows.Forms.Button();
             this.btnTransaction = new System.Windows.Forms.Button();
             this.btnOverview = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
@@ -43,6 +40,10 @@
             this.lblTittle = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnCategory = new System.Windows.Forms.Button();
+            this.btnSettings = new System.Windows.Forms.Button();
+            this.btnAccount = new System.Windows.Forms.Button();
+            this.btnPaybook = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelNavBar.SuspendLayout();
@@ -54,6 +55,7 @@
             this.panelMenu.Controls.Add(this.btnSettings);
             this.panelMenu.Controls.Add(this.btnAccount);
             this.panelMenu.Controls.Add(this.btnPaybook);
+            this.panelMenu.Controls.Add(this.btnCategory);
             this.panelMenu.Controls.Add(this.btnTransaction);
             this.panelMenu.Controls.Add(this.btnOverview);
             this.panelMenu.Controls.Add(this.btnHome);
@@ -63,66 +65,6 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(250, 616);
             this.panelMenu.TabIndex = 0;
-            // 
-            // btnSettings
-            // 
-            this.btnSettings.BackColor = System.Drawing.Color.Black;
-            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSettings.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnSettings.FlatAppearance.BorderSize = 0;
-            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
-            this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSettings.Location = new System.Drawing.Point(0, 437);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnSettings.Size = new System.Drawing.Size(250, 70);
-            this.btnSettings.TabIndex = 7;
-            this.btnSettings.Text = "Settings";
-            this.btnSettings.UseVisualStyleBackColor = false;
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
-            // 
-            // btnAccount
-            // 
-            this.btnAccount.BackColor = System.Drawing.Color.Black;
-            this.btnAccount.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAccount.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnAccount.FlatAppearance.BorderSize = 0;
-            this.btnAccount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAccount.ForeColor = System.Drawing.Color.White;
-            this.btnAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnAccount.Image")));
-            this.btnAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAccount.Location = new System.Drawing.Point(0, 367);
-            this.btnAccount.Name = "btnAccount";
-            this.btnAccount.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnAccount.Size = new System.Drawing.Size(250, 70);
-            this.btnAccount.TabIndex = 6;
-            this.btnAccount.Text = "Account";
-            this.btnAccount.UseVisualStyleBackColor = false;
-            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
-            // 
-            // btnPaybook
-            // 
-            this.btnPaybook.BackColor = System.Drawing.Color.Black;
-            this.btnPaybook.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPaybook.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnPaybook.FlatAppearance.BorderSize = 0;
-            this.btnPaybook.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPaybook.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnPaybook.ForeColor = System.Drawing.Color.White;
-            this.btnPaybook.Image = ((System.Drawing.Image)(resources.GetObject("btnPaybook.Image")));
-            this.btnPaybook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPaybook.Location = new System.Drawing.Point(0, 297);
-            this.btnPaybook.Name = "btnPaybook";
-            this.btnPaybook.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnPaybook.Size = new System.Drawing.Size(250, 70);
-            this.btnPaybook.TabIndex = 4;
-            this.btnPaybook.Text = "Paybook";
-            this.btnPaybook.UseVisualStyleBackColor = false;
-            this.btnPaybook.Click += new System.EventHandler(this.btnPaybook_Click);
             // 
             // btnTransaction
             // 
@@ -140,7 +82,7 @@
             this.btnTransaction.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
             this.btnTransaction.Size = new System.Drawing.Size(250, 70);
             this.btnTransaction.TabIndex = 3;
-            this.btnTransaction.Text = "       Transaction          Management";
+            this.btnTransaction.Text = "+ Add Transaction";
             this.btnTransaction.UseVisualStyleBackColor = false;
             // 
             // btnOverview
@@ -261,6 +203,86 @@
             this.button1.TabIndex = 1;
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // btnCategory
+            // 
+            this.btnCategory.BackColor = System.Drawing.Color.Black;
+            this.btnCategory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCategory.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnCategory.FlatAppearance.BorderSize = 0;
+            this.btnCategory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCategory.ForeColor = System.Drawing.Color.White;
+            this.btnCategory.Image = ((System.Drawing.Image)(resources.GetObject("btnCategory.Image")));
+            this.btnCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCategory.Location = new System.Drawing.Point(0, 297);
+            this.btnCategory.Name = "btnCategory";
+            this.btnCategory.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnCategory.Size = new System.Drawing.Size(250, 70);
+            this.btnCategory.TabIndex = 4;
+            this.btnCategory.Text = "Category";
+            this.btnCategory.UseVisualStyleBackColor = false;
+            this.btnCategory.Click += new System.EventHandler(this.btnPaybook_Click);
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.BackColor = System.Drawing.Color.Black;
+            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSettings.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnSettings.FlatAppearance.BorderSize = 0;
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSettings.ForeColor = System.Drawing.Color.White;
+            this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
+            this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSettings.Location = new System.Drawing.Point(0, 507);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnSettings.Size = new System.Drawing.Size(250, 70);
+            this.btnSettings.TabIndex = 10;
+            this.btnSettings.Text = "Settings";
+            this.btnSettings.UseVisualStyleBackColor = false;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
+            // btnAccount
+            // 
+            this.btnAccount.BackColor = System.Drawing.Color.Black;
+            this.btnAccount.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAccount.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnAccount.FlatAppearance.BorderSize = 0;
+            this.btnAccount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAccount.ForeColor = System.Drawing.Color.White;
+            this.btnAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnAccount.Image")));
+            this.btnAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAccount.Location = new System.Drawing.Point(0, 437);
+            this.btnAccount.Name = "btnAccount";
+            this.btnAccount.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnAccount.Size = new System.Drawing.Size(250, 70);
+            this.btnAccount.TabIndex = 9;
+            this.btnAccount.Text = "Account";
+            this.btnAccount.UseVisualStyleBackColor = false;
+            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
+            // 
+            // btnPaybook
+            // 
+            this.btnPaybook.BackColor = System.Drawing.Color.Black;
+            this.btnPaybook.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPaybook.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnPaybook.FlatAppearance.BorderSize = 0;
+            this.btnPaybook.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPaybook.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnPaybook.ForeColor = System.Drawing.Color.White;
+            this.btnPaybook.Image = ((System.Drawing.Image)(resources.GetObject("btnPaybook.Image")));
+            this.btnPaybook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPaybook.Location = new System.Drawing.Point(0, 367);
+            this.btnPaybook.Name = "btnPaybook";
+            this.btnPaybook.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnPaybook.Size = new System.Drawing.Size(250, 70);
+            this.btnPaybook.TabIndex = 8;
+            this.btnPaybook.Text = "Paybook";
+            this.btnPaybook.UseVisualStyleBackColor = false;
+            this.btnPaybook.Click += new System.EventHandler(this.btnPaybook_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -295,11 +317,12 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnCloseChildForm;
         private System.Windows.Forms.Label label1;
-        private Button btnPaybook;
         private Button btnTransaction;
         private Button btnOverview;
         private Button btnSettings;
         private Button btnAccount;
+        private Button btnPaybook;
+        private Button btnCategory;
     }
 }
 
