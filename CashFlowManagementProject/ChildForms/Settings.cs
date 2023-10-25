@@ -17,6 +17,15 @@ namespace CashFlowManagementProject.ChildForms
             InitializeComponent();
 
             cbbLanguages.SelectedIndex = 1;
+            cbbLanguages.ItemHeight= 40;
+            cbbExport.SelectedIndex = 0;
+            cbbExport.ItemHeight = 40;
+            cbbTimeFormat.SelectedIndex = 0;
+            cbbTimeFormat.ItemHeight = 40;
+            cbbCurrencyUnit.SelectedIndex = 0;
+            cbbCurrencyUnit.ItemHeight = 40;
+            cbbOverviewDisplayMode.SelectedIndex = 0;
+            cbbOverviewDisplayMode.ItemHeight = 40;
         }
     }
 }

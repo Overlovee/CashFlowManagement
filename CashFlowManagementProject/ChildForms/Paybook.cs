@@ -15,7 +15,6 @@ namespace CashFlowManagementProject.ChildForms
         public Paybook()
         {
             InitializeComponent();
-            comboBox1.SelectedIndex = 0;
         }
     }
 }
