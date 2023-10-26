@@ -109,6 +109,9 @@
     <EmbeddedResource Include="ChildForms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\Overview.resx">
+      <DependentUpon>Overview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\Paybook.resx">
       <DependentUpon>Paybook.cs</DependentUpon>
     </EmbeddedResource>
