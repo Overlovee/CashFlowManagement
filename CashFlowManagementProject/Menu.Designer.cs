@@ -41,10 +41,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panelDesktop = new System.Windows.Forms.Panel();
             this.panelNavBar = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblTittle = new System.Windows.Forms.Label();
-            this.panelDesktop = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -66,7 +66,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(250, 616);
+            this.panelMenu.Size = new System.Drawing.Size(250, 713);
             this.panelMenu.TabIndex = 0;
             // 
             // btnSettings
@@ -246,8 +246,21 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(250, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(950, 616);
+            this.panel1.Size = new System.Drawing.Size(1132, 713);
             this.panel1.TabIndex = 3;
+            // 
+            // panelDesktop
+            // 
+            this.panelDesktop.AutoSize = true;
+            this.panelDesktop.BackColor = System.Drawing.Color.White;
+            this.panelDesktop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.panelDesktop.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.panelDesktop.Location = new System.Drawing.Point(0, 87);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(1132, 626);
+            this.panelDesktop.TabIndex = 5;
             // 
             // panelNavBar
             // 
@@ -257,7 +270,7 @@
             this.panelNavBar.ForeColor = System.Drawing.Color.Black;
             this.panelNavBar.Location = new System.Drawing.Point(0, 0);
             this.panelNavBar.Name = "panelNavBar";
-            this.panelNavBar.Size = new System.Drawing.Size(950, 87);
+            this.panelNavBar.Size = new System.Drawing.Size(1132, 87);
             this.panelNavBar.TabIndex = 2;
             // 
             // tableLayoutPanel1
@@ -270,7 +283,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(950, 87);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1132, 87);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // lblTittle
@@ -281,23 +294,10 @@
             this.lblTittle.ForeColor = System.Drawing.Color.Black;
             this.lblTittle.Location = new System.Drawing.Point(3, 0);
             this.lblTittle.Name = "lblTittle";
-            this.lblTittle.Size = new System.Drawing.Size(944, 87);
+            this.lblTittle.Size = new System.Drawing.Size(1126, 87);
             this.lblTittle.TabIndex = 1;
             this.lblTittle.Text = "HOME";
             this.lblTittle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panelDesktop
-            // 
-            this.panelDesktop.AutoSize = true;
-            this.panelDesktop.BackColor = System.Drawing.Color.White;
-            this.panelDesktop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.panelDesktop.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.panelDesktop.Location = new System.Drawing.Point(0, 87);
-            this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(950, 529);
-            this.panelDesktop.TabIndex = 5;
             // 
             // Menu
             // 
@@ -305,12 +305,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1200, 616);
+            this.ClientSize = new System.Drawing.Size(1382, 713);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMenu);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(1400, 760);
             this.Name = "Menu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cash Flow Management";
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
