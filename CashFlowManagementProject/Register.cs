@@ -25,6 +25,7 @@ namespace CashFlowManagementProject
             {
                 // Đóng form
                 e.Cancel = true;
+                //
             }
         }
 
