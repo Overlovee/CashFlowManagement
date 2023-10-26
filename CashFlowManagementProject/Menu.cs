@@ -97,6 +97,11 @@ namespace CashFlowManagementProject
         {
             OpenChildForm(new ChildForms.Overview(), sender);
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChildForms.Home(), sender);
+        }
     }
 
 }

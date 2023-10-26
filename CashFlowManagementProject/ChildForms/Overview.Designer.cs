@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
             this.panel_Main = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -211,11 +212,16 @@
             this.wide6.Size = new System.Drawing.Size(379, 121);
             this.wide6.TabIndex = 8;
             // 
+=======
+            this.SuspendLayout();
+            // 
+>>>>>>> 5cb84bc3ffc715820cf2eb77270af3a164ae632a
             // Overview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1015, 1030);
             this.Controls.Add(this.panel_Main);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -225,11 +231,17 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+=======
+            this.ClientSize = new System.Drawing.Size(857, 640);
+            this.Name = "Overview";
+            this.Text = "Overview";
+>>>>>>> 5cb84bc3ffc715820cf2eb77270af3a164ae632a
             this.ResumeLayout(false);
 
         }
 
         #endregion
+<<<<<<< HEAD
 
         private Panel panel_Main;
         private Panel panel2;
@@ -246,5 +258,7 @@
         private Wide wide1;
         private Wide wide2;
         private Wide wide3;
+=======
+>>>>>>> 5cb84bc3ffc715820cf2eb77270af3a164ae632a
     }
 }

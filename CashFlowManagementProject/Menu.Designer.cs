@@ -206,6 +206,7 @@
             this.btnHome.TabIndex = 1;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // panelLogo
             // 
@@ -257,9 +258,9 @@
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.panelDesktop.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.panelDesktop.Location = new System.Drawing.Point(0, 87);
+            this.panelDesktop.Location = new System.Drawing.Point(0, 56);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1132, 626);
+            this.panelDesktop.Size = new System.Drawing.Size(1132, 657);
             this.panelDesktop.TabIndex = 5;
             // 
             // panelNavBar
@@ -270,7 +271,7 @@
             this.panelNavBar.ForeColor = System.Drawing.Color.Black;
             this.panelNavBar.Location = new System.Drawing.Point(0, 0);
             this.panelNavBar.Name = "panelNavBar";
-            this.panelNavBar.Size = new System.Drawing.Size(1132, 87);
+            this.panelNavBar.Size = new System.Drawing.Size(1132, 56);
             this.panelNavBar.TabIndex = 2;
             // 
             // tableLayoutPanel1
@@ -283,7 +284,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1132, 87);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1132, 56);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // lblTittle
@@ -294,7 +295,7 @@
             this.lblTittle.ForeColor = System.Drawing.Color.Black;
             this.lblTittle.Location = new System.Drawing.Point(3, 0);
             this.lblTittle.Name = "lblTittle";
-            this.lblTittle.Size = new System.Drawing.Size(1126, 87);
+            this.lblTittle.Size = new System.Drawing.Size(1126, 56);
             this.lblTittle.TabIndex = 1;
             this.lblTittle.Text = "HOME";
             this.lblTittle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
