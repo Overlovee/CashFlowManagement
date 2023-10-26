@@ -90,7 +90,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.51724F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.48276F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(870, 65);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(896, 65);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label2
@@ -100,7 +100,7 @@
             this.label2.Location = new System.Drawing.Point(17, 42);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.label2.Size = new System.Drawing.Size(850, 23);
+            this.label2.Size = new System.Drawing.Size(876, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Current balance";
             this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -112,7 +112,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.label1.Location = new System.Drawing.Point(17, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(850, 42);
+            this.label1.Size = new System.Drawing.Size(876, 42);
             this.label1.TabIndex = 0;
             this.label1.Text = "10,001,129 VND";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -128,7 +128,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(870, 40);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(896, 40);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // button1
@@ -136,7 +136,7 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Right;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button1.Location = new System.Drawing.Point(653, 0);
+            this.button1.Location = new System.Drawing.Point(679, 0);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(217, 40);
@@ -355,7 +355,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(896, 790);
+            this.ClientSize = new System.Drawing.Size(922, 790);
             this.Controls.Add(this.flowLayoutPanelChart);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.label3);
