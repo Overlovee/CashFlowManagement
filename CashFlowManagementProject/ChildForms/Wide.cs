@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace CashFlowManagementProject.ChildForms
 {
-    public partial class UserControl1 : UserControl
+    public partial class Wide : UserControl
     {
-        public UserControl1()
+        public Wide()
         {
             InitializeComponent();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
