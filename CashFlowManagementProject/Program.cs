@@ -1,3 +1,4 @@
+using System.Windows.Forms;
 namespace CashFlowManagementProject
 {
     internal static class Program

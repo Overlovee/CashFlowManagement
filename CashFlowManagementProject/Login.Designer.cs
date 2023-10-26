@@ -85,10 +85,10 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(525, 61);
+            this.panel1.Location = new System.Drawing.Point(524, 29);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(501, 712);
+            this.panel1.Size = new System.Drawing.Size(497, 704);
             this.panel1.TabIndex = 0;
             // 
             // button1
@@ -213,7 +213,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(427, 818);
+            this.panel2.Size = new System.Drawing.Size(427, 733);
             this.panel2.TabIndex = 1;
             // 
             // pictureBox12
@@ -394,7 +394,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1098, 818);
+            this.ClientSize = new System.Drawing.Size(1099, 733);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
