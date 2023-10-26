@@ -30,7 +30,7 @@ namespace CentosCashFlow.ChildForms
                 
                 newPanel.Controls.Add(transaction);
                 transaction.Dock = DockStyle.Top;
-                transaction.Height = 60;
+                transaction.Height = 60
             }
             
         }
