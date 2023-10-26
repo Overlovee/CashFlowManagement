@@ -61,7 +61,7 @@
     <Compile Include="ChildForms\Overview.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChildForms\Overview.designer.cs">
+    <Compile Include="ChildForms\Overview.Designer.cs">
       <DependentUpon>Overview.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForms\Paybook.cs">
@@ -81,12 +81,6 @@
     </Compile>
     <Compile Include="ChildForms\Wide.designer.cs">
       <DependentUpon>Wide.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -114,9 +108,6 @@
     <EmbeddedResource Include="ChildForms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChildForms\Overview.resx">
-      <DependentUpon>Overview.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\Paybook.resx">
       <DependentUpon>Paybook.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,9 +116,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\Wide.resx">
       <DependentUpon>Wide.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

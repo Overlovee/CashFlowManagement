@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CashFlowManagementProject.ChildForms
+namespace CentosCashFlow.ChildForms
 {
     public partial class Paybook : Form
     {

@@ -1,4 +1,4 @@
-﻿namespace CashFlowManagementProject.ChildForms
+﻿namespace CentosCashFlow.ChildForms
 {
     partial class Overview
     {
@@ -28,19 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // Overview
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(857, 640);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Overview";
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Text = "Overview";
-            this.ResumeLayout(false);
-
         }
 
         #endregion
