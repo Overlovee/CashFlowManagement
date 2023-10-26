@@ -37,7 +37,20 @@ namespace CentosCashFlow.ChildForms
             for (int i = 0; i < 10; i++)
             {
                 Panel newPanel = new Panel();
-                panelTotalCategory.Controls.Add(newPanel);
+                panelTotalIncome.Controls.Add(newPanel);
+                newPanel.Dock = DockStyle.Top;
+                newPanel.Height = 80;
+
+                Wide wide = new Wide();
+
+                newPanel.Controls.Add(wide);
+                wide.Dock = DockStyle.Top;
+                wide.Height = 60;
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                Panel newPanel = new Panel();
+                panelTotalExpenditures.Controls.Add(newPanel);
                 newPanel.Dock = DockStyle.Top;
                 newPanel.Height = 80;
 

@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,12 +49,22 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.panelTotalCategory = new System.Windows.Forms.Panel();
+            this.panelTotalIncome = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panelTotalExpenditures = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -180,14 +193,19 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.panelTotalCategory);
+            this.panel2.AutoSize = true;
+            this.panel2.Controls.Add(this.panelTotalExpenditures);
+            this.panel2.Controls.Add(this.chart2);
+            this.panel2.Controls.Add(this.tableLayoutPanel4);
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Controls.Add(this.panelTotalIncome);
             this.panel2.Controls.Add(this.chart1);
             this.panel2.Controls.Add(this.tableLayoutPanel3);
             this.panel2.Location = new System.Drawing.Point(0, 83);
             this.panel2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(32);
-            this.panel2.Size = new System.Drawing.Size(783, 1024);
+            this.panel2.Size = new System.Drawing.Size(783, 1340);
             this.panel2.TabIndex = 8;
             // 
             // tableLayoutPanel3
@@ -252,46 +270,150 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(353, 40);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Revenues";
+            this.label2.Text = "Income";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // chart1
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Top;
-            legend4.Name = "Legend1";
-            this.chart1.Legends.Add(legend4);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(32, 112);
             this.chart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chart1.Name = "chart1";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chart1.Series.Add(series4);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(719, 341);
             this.chart1.TabIndex = 7;
             this.chart1.Text = "chart1";
             // 
-            // panelTotalCategory
+            // panelTotalIncome
             // 
-            this.panelTotalCategory.AutoScroll = true;
-            this.panelTotalCategory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelTotalCategory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelTotalCategory.Location = new System.Drawing.Point(32, 453);
-            this.panelTotalCategory.Margin = new System.Windows.Forms.Padding(0);
-            this.panelTotalCategory.Name = "panelTotalCategory";
-            this.panelTotalCategory.Padding = new System.Windows.Forms.Padding(16);
-            this.panelTotalCategory.Size = new System.Drawing.Size(719, 539);
-            this.panelTotalCategory.TabIndex = 10;
+            this.panelTotalIncome.AutoScroll = true;
+            this.panelTotalIncome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelTotalIncome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTotalIncome.Location = new System.Drawing.Point(32, 453);
+            this.panelTotalIncome.Margin = new System.Windows.Forms.Padding(0);
+            this.panelTotalIncome.Name = "panelTotalIncome";
+            this.panelTotalIncome.Padding = new System.Windows.Forms.Padding(16);
+            this.panelTotalIncome.Size = new System.Drawing.Size(719, 200);
+            this.panelTotalIncome.TabIndex = 10;
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(32, 653);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(719, 34);
+            this.panel1.TabIndex = 11;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.label10, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.label11, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.label12, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label13, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(32, 687);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(719, 80);
+            this.tableLayoutPanel4.TabIndex = 13;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label10.Location = new System.Drawing.Point(362, 40);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(354, 40);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "15.000.000 VND";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label11.Location = new System.Drawing.Point(3, 40);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(353, 40);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Total";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label12.Location = new System.Drawing.Point(362, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(354, 40);
+            this.label12.TabIndex = 1;
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label13.Location = new System.Drawing.Point(3, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(353, 40);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Expenditures";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // chart2
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea1);
+            this.chart2.Dock = System.Windows.Forms.DockStyle.Top;
+            legend1.Name = "Legend1";
+            this.chart2.Legends.Add(legend1);
+            this.chart2.Location = new System.Drawing.Point(32, 767);
+            this.chart2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chart2.Name = "chart2";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart2.Series.Add(series1);
+            this.chart2.Size = new System.Drawing.Size(719, 341);
+            this.chart2.TabIndex = 15;
+            this.chart2.Text = "chart2";
+            // 
+            // panelTotalExpenditures
+            // 
+            this.panelTotalExpenditures.AutoScroll = true;
+            this.panelTotalExpenditures.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelTotalExpenditures.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTotalExpenditures.Location = new System.Drawing.Point(32, 1108);
+            this.panelTotalExpenditures.Margin = new System.Windows.Forms.Padding(0);
+            this.panelTotalExpenditures.Name = "panelTotalExpenditures";
+            this.panelTotalExpenditures.Padding = new System.Windows.Forms.Padding(16);
+            this.panelTotalExpenditures.Size = new System.Drawing.Size(719, 200);
+            this.panelTotalExpenditures.TabIndex = 16;
             // 
             // Overview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(804, 854);
+            this.ClientSize = new System.Drawing.Size(804, 1055);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -306,7 +428,11 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -322,12 +448,20 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panelTotalCategory;
+        private System.Windows.Forms.Panel panelTotalIncome;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.Panel panelTotalExpenditures;
     }
 }
