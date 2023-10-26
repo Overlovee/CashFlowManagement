@@ -42,27 +42,35 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.UnpaidDebtName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnpaidDebtAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.PaidDebtName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PaidDebtAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.OutstandingLoanName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OutstandingLoanAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.RepaidLoanName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RepaidLoanAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
+            this.panelPaidDebts = new System.Windows.Forms.Panel();
+            this.panelRepaidLoans = new System.Windows.Forms.Panel();
+            this.panelUnpaidDebts = new System.Windows.Forms.Panel();
+            this.panelOutstandingLoans = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.paybookItem1 = new CentosCashFlow.ChildForms.PaybookItem();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.paybookItem2 = new CentosCashFlow.ChildForms.PaybookItem();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.paybookItem3 = new CentosCashFlow.ChildForms.PaybookItem();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.paybookItem4 = new CentosCashFlow.ChildForms.PaybookItem();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.paybookItem5 = new CentosCashFlow.ChildForms.PaybookItem();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.paybookItem6 = new CentosCashFlow.ChildForms.PaybookItem();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.paybookItem7 = new CentosCashFlow.ChildForms.PaybookItem();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.paybookItem8 = new CentosCashFlow.ChildForms.PaybookItem();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -73,14 +81,22 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.tableLayoutPanel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.panelPaidDebts.SuspendLayout();
+            this.panelRepaidLoans.SuspendLayout();
+            this.panelUnpaidDebts.SuspendLayout();
+            this.panelOutstandingLoans.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -258,7 +274,7 @@
             this.tableLayoutPanel6.ColumnCount = 1;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.Controls.Add(this.label5, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.dataGridView4, 0, 1);
+            this.tableLayoutPanel6.Controls.Add(this.panelUnpaidDebts, 0, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 263);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
@@ -280,41 +296,7 @@
             this.label5.Size = new System.Drawing.Size(351, 45);
             this.label5.TabIndex = 0;
             this.label5.Text = "Unpaid debts:";
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.AllowUserToAddRows = false;
-            this.dataGridView4.AllowUserToDeleteRows = false;
-            this.dataGridView4.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.UnpaidDebtName,
-            this.UnpaidDebtAmount});
-            this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView4.Location = new System.Drawing.Point(3, 47);
-            this.dataGridView4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.ReadOnly = true;
-            this.dataGridView4.RowHeadersWidth = 51;
-            this.dataGridView4.RowTemplate.Height = 29;
-            this.dataGridView4.Size = new System.Drawing.Size(351, 182);
-            this.dataGridView4.TabIndex = 1;
-            // 
-            // UnpaidDebtName
-            // 
-            this.UnpaidDebtName.HeaderText = "Name";
-            this.UnpaidDebtName.MinimumWidth = 6;
-            this.UnpaidDebtName.Name = "UnpaidDebtName";
-            this.UnpaidDebtName.ReadOnly = true;
-            this.UnpaidDebtName.Width = 125;
-            // 
-            // UnpaidDebtAmount
-            // 
-            this.UnpaidDebtAmount.HeaderText = "Amount";
-            this.UnpaidDebtAmount.MinimumWidth = 6;
-            this.UnpaidDebtAmount.Name = "UnpaidDebtAmount";
-            this.UnpaidDebtAmount.ReadOnly = true;
-            this.UnpaidDebtAmount.Width = 125;
+            this.label5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label2
             // 
@@ -333,7 +315,7 @@
             this.tableLayoutPanel5.ColumnCount = 1;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.Controls.Add(this.label4, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.dataGridView1, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.panelPaidDebts, 0, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 32);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
@@ -355,41 +337,7 @@
             this.label4.Size = new System.Drawing.Size(351, 45);
             this.label4.TabIndex = 0;
             this.label4.Text = "Paid debts:";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.PaidDebtName,
-            this.PaidDebtAmount});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 47);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(351, 182);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // PaidDebtName
-            // 
-            this.PaidDebtName.HeaderText = "Name";
-            this.PaidDebtName.MinimumWidth = 6;
-            this.PaidDebtName.Name = "PaidDebtName";
-            this.PaidDebtName.ReadOnly = true;
-            this.PaidDebtName.Width = 125;
-            // 
-            // PaidDebtAmount
-            // 
-            this.PaidDebtAmount.HeaderText = "Amount";
-            this.PaidDebtAmount.MinimumWidth = 6;
-            this.PaidDebtAmount.Name = "PaidDebtAmount";
-            this.PaidDebtAmount.ReadOnly = true;
-            this.PaidDebtAmount.Width = 125;
+            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // tableLayoutPanel4
             // 
@@ -414,7 +362,7 @@
             this.tableLayoutPanel8.ColumnCount = 1;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.Controls.Add(this.label7, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.dataGridView3, 0, 1);
+            this.tableLayoutPanel8.Controls.Add(this.panelOutstandingLoans, 0, 1);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(0, 263);
             this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(0);
@@ -435,48 +383,14 @@
             this.label7.Size = new System.Drawing.Size(352, 45);
             this.label7.TabIndex = 0;
             this.label7.Text = "Outstanding loans:";
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AllowUserToAddRows = false;
-            this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.OutstandingLoanName,
-            this.OutstandingLoanAmount});
-            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView3.Location = new System.Drawing.Point(3, 47);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 29;
-            this.dataGridView3.Size = new System.Drawing.Size(352, 182);
-            this.dataGridView3.TabIndex = 1;
-            // 
-            // OutstandingLoanName
-            // 
-            this.OutstandingLoanName.HeaderText = "Name";
-            this.OutstandingLoanName.MinimumWidth = 6;
-            this.OutstandingLoanName.Name = "OutstandingLoanName";
-            this.OutstandingLoanName.ReadOnly = true;
-            this.OutstandingLoanName.Width = 125;
-            // 
-            // OutstandingLoanAmount
-            // 
-            this.OutstandingLoanAmount.HeaderText = "Amount";
-            this.OutstandingLoanAmount.MinimumWidth = 6;
-            this.OutstandingLoanAmount.Name = "OutstandingLoanAmount";
-            this.OutstandingLoanAmount.ReadOnly = true;
-            this.OutstandingLoanAmount.Width = 125;
+            this.label7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // tableLayoutPanel7
             // 
             this.tableLayoutPanel7.ColumnCount = 1;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel7.Controls.Add(this.label6, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.dataGridView2, 0, 1);
+            this.tableLayoutPanel7.Controls.Add(this.panelRepaidLoans, 0, 1);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 32);
             this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
@@ -498,41 +412,7 @@
             this.label6.Size = new System.Drawing.Size(352, 45);
             this.label6.TabIndex = 0;
             this.label6.Text = "Repaid loans:";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.RepaidLoanName,
-            this.RepaidLoanAmount});
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 47);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 29;
-            this.dataGridView2.Size = new System.Drawing.Size(352, 182);
-            this.dataGridView2.TabIndex = 1;
-            // 
-            // RepaidLoanName
-            // 
-            this.RepaidLoanName.HeaderText = "Name";
-            this.RepaidLoanName.MinimumWidth = 6;
-            this.RepaidLoanName.Name = "RepaidLoanName";
-            this.RepaidLoanName.ReadOnly = true;
-            this.RepaidLoanName.Width = 125;
-            // 
-            // RepaidLoanAmount
-            // 
-            this.RepaidLoanAmount.HeaderText = "Amount";
-            this.RepaidLoanAmount.MinimumWidth = 6;
-            this.RepaidLoanAmount.Name = "RepaidLoanAmount";
-            this.RepaidLoanAmount.ReadOnly = true;
-            this.RepaidLoanAmount.Width = 125;
+            this.label6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label3
             // 
@@ -545,6 +425,205 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Loans";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panelPaidDebts
+            // 
+            this.panelPaidDebts.AutoScroll = true;
+            this.panelPaidDebts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelPaidDebts.Controls.Add(this.panel8);
+            this.panelPaidDebts.Controls.Add(this.panel4);
+            this.panelPaidDebts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPaidDebts.Location = new System.Drawing.Point(10, 55);
+            this.panelPaidDebts.Margin = new System.Windows.Forms.Padding(10);
+            this.panelPaidDebts.Name = "panelPaidDebts";
+            this.panelPaidDebts.Padding = new System.Windows.Forms.Padding(10);
+            this.panelPaidDebts.Size = new System.Drawing.Size(337, 166);
+            this.panelPaidDebts.TabIndex = 1;
+            // 
+            // panelRepaidLoans
+            // 
+            this.panelRepaidLoans.AutoScroll = true;
+            this.panelRepaidLoans.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelRepaidLoans.Controls.Add(this.panel10);
+            this.panelRepaidLoans.Controls.Add(this.panel9);
+            this.panelRepaidLoans.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelRepaidLoans.Location = new System.Drawing.Point(10, 55);
+            this.panelRepaidLoans.Margin = new System.Windows.Forms.Padding(10);
+            this.panelRepaidLoans.Name = "panelRepaidLoans";
+            this.panelRepaidLoans.Padding = new System.Windows.Forms.Padding(10);
+            this.panelRepaidLoans.Size = new System.Drawing.Size(338, 166);
+            this.panelRepaidLoans.TabIndex = 1;
+            // 
+            // panelUnpaidDebts
+            // 
+            this.panelUnpaidDebts.AutoScroll = true;
+            this.panelUnpaidDebts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelUnpaidDebts.Controls.Add(this.panel12);
+            this.panelUnpaidDebts.Controls.Add(this.panel11);
+            this.panelUnpaidDebts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelUnpaidDebts.Location = new System.Drawing.Point(10, 55);
+            this.panelUnpaidDebts.Margin = new System.Windows.Forms.Padding(10);
+            this.panelUnpaidDebts.Name = "panelUnpaidDebts";
+            this.panelUnpaidDebts.Padding = new System.Windows.Forms.Padding(10);
+            this.panelUnpaidDebts.Size = new System.Drawing.Size(337, 166);
+            this.panelUnpaidDebts.TabIndex = 1;
+            // 
+            // panelOutstandingLoans
+            // 
+            this.panelOutstandingLoans.AutoScroll = true;
+            this.panelOutstandingLoans.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelOutstandingLoans.Controls.Add(this.panel14);
+            this.panelOutstandingLoans.Controls.Add(this.panel13);
+            this.panelOutstandingLoans.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelOutstandingLoans.Location = new System.Drawing.Point(10, 55);
+            this.panelOutstandingLoans.Margin = new System.Windows.Forms.Padding(10);
+            this.panelOutstandingLoans.Name = "panelOutstandingLoans";
+            this.panelOutstandingLoans.Padding = new System.Windows.Forms.Padding(10);
+            this.panelOutstandingLoans.Size = new System.Drawing.Size(338, 166);
+            this.panelOutstandingLoans.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.paybookItem1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(10, 10);
+            this.panel4.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(315, 70);
+            this.panel4.TabIndex = 0;
+            // 
+            // paybookItem1
+            // 
+            this.paybookItem1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.paybookItem1.Location = new System.Drawing.Point(0, 0);
+            this.paybookItem1.Name = "paybookItem1";
+            this.paybookItem1.Size = new System.Drawing.Size(315, 60);
+            this.paybookItem1.TabIndex = 0;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.paybookItem2);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(10, 80);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(315, 70);
+            this.panel8.TabIndex = 1;
+            // 
+            // paybookItem2
+            // 
+            this.paybookItem2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.paybookItem2.Location = new System.Drawing.Point(0, 0);
+            this.paybookItem2.Name = "paybookItem2";
+            this.paybookItem2.Size = new System.Drawing.Size(315, 60);
+            this.paybookItem2.TabIndex = 0;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.paybookItem3);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(10, 10);
+            this.panel9.Margin = new System.Windows.Forms.Padding(0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(316, 70);
+            this.panel9.TabIndex = 1;
+            // 
+            // paybookItem3
+            // 
+            this.paybookItem3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.paybookItem3.Location = new System.Drawing.Point(0, 0);
+            this.paybookItem3.Name = "paybookItem3";
+            this.paybookItem3.Size = new System.Drawing.Size(316, 60);
+            this.paybookItem3.TabIndex = 0;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.paybookItem4);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(10, 80);
+            this.panel10.Margin = new System.Windows.Forms.Padding(0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(316, 70);
+            this.panel10.TabIndex = 2;
+            // 
+            // paybookItem4
+            // 
+            this.paybookItem4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.paybookItem4.Location = new System.Drawing.Point(0, 0);
+            this.paybookItem4.Name = "paybookItem4";
+            this.paybookItem4.Size = new System.Drawing.Size(316, 60);
+            this.paybookItem4.TabIndex = 0;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.paybookItem5);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11.Location = new System.Drawing.Point(10, 10);
+            this.panel11.Margin = new System.Windows.Forms.Padding(0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(315, 70);
+            this.panel11.TabIndex = 2;
+            // 
+            // paybookItem5
+            // 
+            this.paybookItem5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.paybookItem5.Location = new System.Drawing.Point(0, 0);
+            this.paybookItem5.Name = "paybookItem5";
+            this.paybookItem5.Size = new System.Drawing.Size(315, 60);
+            this.paybookItem5.TabIndex = 0;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.paybookItem6);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(10, 80);
+            this.panel12.Margin = new System.Windows.Forms.Padding(0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(315, 70);
+            this.panel12.TabIndex = 3;
+            // 
+            // paybookItem6
+            // 
+            this.paybookItem6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.paybookItem6.Location = new System.Drawing.Point(0, 0);
+            this.paybookItem6.Name = "paybookItem6";
+            this.paybookItem6.Size = new System.Drawing.Size(315, 60);
+            this.paybookItem6.TabIndex = 0;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.paybookItem7);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(10, 10);
+            this.panel13.Margin = new System.Windows.Forms.Padding(0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(316, 70);
+            this.panel13.TabIndex = 3;
+            // 
+            // paybookItem7
+            // 
+            this.paybookItem7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.paybookItem7.Location = new System.Drawing.Point(0, 0);
+            this.paybookItem7.Name = "paybookItem7";
+            this.paybookItem7.Size = new System.Drawing.Size(316, 60);
+            this.paybookItem7.TabIndex = 0;
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.paybookItem8);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Location = new System.Drawing.Point(10, 80);
+            this.panel14.Margin = new System.Windows.Forms.Padding(0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(316, 70);
+            this.panel14.TabIndex = 4;
+            // 
+            // paybookItem8
+            // 
+            this.paybookItem8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.paybookItem8.Location = new System.Drawing.Point(0, 0);
+            this.paybookItem8.Name = "paybookItem8";
+            this.paybookItem8.Size = new System.Drawing.Size(316, 60);
+            this.paybookItem8.TabIndex = 0;
             // 
             // Paybook
             // 
@@ -569,18 +648,26 @@
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.panelPaidDebts.ResumeLayout(false);
+            this.panelRepaidLoans.ResumeLayout(false);
+            this.panelUnpaidDebts.ResumeLayout(false);
+            this.panelOutstandingLoans.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -602,25 +689,33 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PaidDebtName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PaidDebtAmount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UnpaidDebtName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UnpaidDebtAmount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OutstandingLoanName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OutstandingLoanAmount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RepaidLoanName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RepaidLoanAmount;
+        private System.Windows.Forms.Panel panelUnpaidDebts;
+        private System.Windows.Forms.Panel panelPaidDebts;
+        private System.Windows.Forms.Panel panelOutstandingLoans;
+        private System.Windows.Forms.Panel panelRepaidLoans;
+        private System.Windows.Forms.Panel panel8;
+        private PaybookItem paybookItem2;
+        private System.Windows.Forms.Panel panel4;
+        private PaybookItem paybookItem1;
+        private System.Windows.Forms.Panel panel12;
+        private PaybookItem paybookItem6;
+        private System.Windows.Forms.Panel panel11;
+        private PaybookItem paybookItem5;
+        private System.Windows.Forms.Panel panel14;
+        private PaybookItem paybookItem8;
+        private System.Windows.Forms.Panel panel13;
+        private PaybookItem paybookItem7;
+        private System.Windows.Forms.Panel panel10;
+        private PaybookItem paybookItem4;
+        private System.Windows.Forms.Panel panel9;
+        private PaybookItem paybookItem3;
     }
 }

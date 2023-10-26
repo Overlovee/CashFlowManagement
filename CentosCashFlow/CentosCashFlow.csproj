@@ -71,6 +71,12 @@
     <Compile Include="ChildForms\Paybook.designer.cs">
       <DependentUpon>Paybook.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForms\PaybookItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChildForms\PaybookItem.Designer.cs">
+      <DependentUpon>PaybookItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildForms\Settings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\Paybook.resx">
       <DependentUpon>Paybook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\PaybookItem.resx">
+      <DependentUpon>PaybookItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
