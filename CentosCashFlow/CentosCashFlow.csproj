@@ -77,6 +77,12 @@
     <Compile Include="ChildForms\Settings.designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForms\TransactionItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChildForms\TransactionItem.Designer.cs">
+      <DependentUpon>TransactionItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildForms\Wide.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\TransactionItem.resx">
+      <DependentUpon>TransactionItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\Wide.resx">
       <DependentUpon>Wide.cs</DependentUpon>
