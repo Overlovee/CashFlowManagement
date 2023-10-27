@@ -102,6 +102,34 @@ namespace CentosCashFlow
         {
             OpenChildForm(new ChildForms.Home(), sender);
         }
+
+        private void btnCategory_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChildForms.Category(), sender);
+        }
+
+        private void btnTransaction_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChildForms.Transaction(), sender);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            Form childForm = new ChildForms.Home();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.panelDesktop.Controls.Add(childForm);
+            this.panelDesktop.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            lblTittle.Text = childForm.Text;
+        }
     }
 
 }

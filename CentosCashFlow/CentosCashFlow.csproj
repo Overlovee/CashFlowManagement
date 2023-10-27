@@ -53,6 +53,24 @@
     <Compile Include="ChildForms\Account.designer.cs">
       <DependentUpon>Account.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForms\1Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\1Category.designer.cs">
+      <DependentUpon>1Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\Category.Designer.cs">
+      <DependentUpon>Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\1Transaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\1Transaction.designer.cs">
+      <DependentUpon>1Transaction.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildForms\Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +100,12 @@
     </Compile>
     <Compile Include="ChildForms\Settings.designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\Transaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\Transaction.Designer.cs">
+      <DependentUpon>Transaction.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForms\TransactionItem.cs">
       <SubType>UserControl</SubType>
@@ -118,6 +142,15 @@
     <EmbeddedResource Include="ChildForms\Account.resx">
       <DependentUpon>Account.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\1Category.resx">
+      <DependentUpon>1Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\Category.resx">
+      <DependentUpon>Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\1Transaction.resx">
+      <DependentUpon>1Transaction.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\Transaction.resx">
+      <DependentUpon>Transaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\TransactionItem.resx">
       <DependentUpon>TransactionItem.cs</DependentUpon>
