@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnSettings = new System.Windows.Forms.Button();
+            this.btnUserAccount = new System.Windows.Forms.Button();
             this.btnAccount = new System.Windows.Forms.Button();
             this.btnPaybook = new System.Windows.Forms.Button();
             this.btnCategory = new System.Windows.Forms.Button();
@@ -56,6 +57,7 @@
             // 
             this.panelMenu.BackColor = System.Drawing.Color.Black;
             this.panelMenu.Controls.Add(this.btnSettings);
+            this.panelMenu.Controls.Add(this.btnUserAccount);
             this.panelMenu.Controls.Add(this.btnAccount);
             this.panelMenu.Controls.Add(this.btnPaybook);
             this.panelMenu.Controls.Add(this.btnCategory);
@@ -67,7 +69,7 @@
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(250, 570);
+            this.panelMenu.Size = new System.Drawing.Size(250, 753);
             this.panelMenu.TabIndex = 0;
             // 
             // btnSettings
@@ -81,15 +83,35 @@
             this.btnSettings.ForeColor = System.Drawing.Color.White;
             this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
             this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSettings.Location = new System.Drawing.Point(0, 406);
+            this.btnSettings.Location = new System.Drawing.Point(0, 462);
             this.btnSettings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
             this.btnSettings.Size = new System.Drawing.Size(250, 56);
-            this.btnSettings.TabIndex = 10;
+            this.btnSettings.TabIndex = 12;
             this.btnSettings.Text = "Settings";
             this.btnSettings.UseVisualStyleBackColor = false;
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
+            // btnUserAccount
+            // 
+            this.btnUserAccount.BackColor = System.Drawing.Color.Black;
+            this.btnUserAccount.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUserAccount.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnUserAccount.FlatAppearance.BorderSize = 0;
+            this.btnUserAccount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUserAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnUserAccount.ForeColor = System.Drawing.Color.White;
+            this.btnUserAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnUserAccount.Image")));
+            this.btnUserAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUserAccount.Location = new System.Drawing.Point(0, 406);
+            this.btnUserAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUserAccount.Name = "btnUserAccount";
+            this.btnUserAccount.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnUserAccount.Size = new System.Drawing.Size(250, 56);
+            this.btnUserAccount.TabIndex = 11;
+            this.btnUserAccount.Text = "User Accounts";
+            this.btnUserAccount.UseVisualStyleBackColor = false;
+            this.btnUserAccount.Click += new System.EventHandler(this.btnUserAccount_Click);
             // 
             // btnAccount
             // 
@@ -260,7 +282,7 @@
             this.panel1.Location = new System.Drawing.Point(250, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1162, 570);
+            this.panel1.Size = new System.Drawing.Size(1352, 753);
             this.panel1.TabIndex = 3;
             // 
             // panelDesktop
@@ -274,7 +296,7 @@
             this.panelDesktop.Location = new System.Drawing.Point(0, 51);
             this.panelDesktop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1162, 519);
+            this.panelDesktop.Size = new System.Drawing.Size(1352, 702);
             this.panelDesktop.TabIndex = 5;
             // 
             // panelNavBar
@@ -286,7 +308,7 @@
             this.panelNavBar.Location = new System.Drawing.Point(0, 0);
             this.panelNavBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelNavBar.Name = "panelNavBar";
-            this.panelNavBar.Size = new System.Drawing.Size(1162, 51);
+            this.panelNavBar.Size = new System.Drawing.Size(1352, 51);
             this.panelNavBar.TabIndex = 2;
             // 
             // tableLayoutPanel1
@@ -300,7 +322,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1162, 51);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1352, 51);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // lblTittle
@@ -311,7 +333,7 @@
             this.lblTittle.ForeColor = System.Drawing.Color.Black;
             this.lblTittle.Location = new System.Drawing.Point(3, 0);
             this.lblTittle.Name = "lblTittle";
-            this.lblTittle.Size = new System.Drawing.Size(1156, 51);
+            this.lblTittle.Size = new System.Drawing.Size(1346, 51);
             this.lblTittle.TabIndex = 1;
             this.lblTittle.Text = "HOME";
             this.lblTittle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -323,13 +345,13 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1412, 570);
+            this.ClientSize = new System.Drawing.Size(1602, 753);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMenu);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(1420, 617);
+            this.MinimumSize = new System.Drawing.Size(1620, 800);
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cash Flow Management";
@@ -353,7 +375,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnTransaction;
         private System.Windows.Forms.Button btnOverview;
-        private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Button btnAccount;
         private System.Windows.Forms.Button btnPaybook;
         private System.Windows.Forms.Button btnCategory;
@@ -362,6 +383,8 @@
         private System.Windows.Forms.Panel panelNavBar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label lblTittle;
+        private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.Button btnUserAccount;
     }
 }
 

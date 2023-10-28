@@ -53,29 +53,65 @@
     <Compile Include="ChildForms\Account.designer.cs">
       <DependentUpon>Account.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChildForms\1Category.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ChildForms\1Category.designer.cs">
-      <DependentUpon>1Category.cs</DependentUpon>
-    </Compile>
     <Compile Include="ChildForms\Category.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ChildForms\Category.Designer.cs">
       <DependentUpon>Category.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChildForms\1Transaction.cs">
+    <Compile Include="ChildForms\CategoryAddingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChildForms\1Transaction.designer.cs">
-      <DependentUpon>1Transaction.cs</DependentUpon>
+    <Compile Include="ChildForms\CategoryAddingForm.Designer.cs">
+      <DependentUpon>CategoryAddingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\CategoryEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\CategoryEditForm.Designer.cs">
+      <DependentUpon>CategoryEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\CategoryItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChildForms\CategoryItem.Designer.cs">
+      <DependentUpon>CategoryItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\ChangingPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\ChangingPasswordForm.Designer.cs">
+      <DependentUpon>ChangingPasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\DebtItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChildForms\DebtItem.Designer.cs">
+      <DependentUpon>DebtItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\FriendAccountAddingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\FriendAccountAddingForm.Designer.cs">
+      <DependentUpon>FriendAccountAddingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForms\Home.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ChildForms\Home.designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\LoanItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChildForms\LoanItem.Designer.cs">
+      <DependentUpon>LoanItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\ManageUserAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\ManageUserAccount.Designer.cs">
+      <DependentUpon>ManageUserAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForms\Overview.cs">
       <SubType>Form</SubType>
@@ -89,12 +125,6 @@
     <Compile Include="ChildForms\Paybook.designer.cs">
       <DependentUpon>Paybook.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChildForms\PaybookItem.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ChildForms\PaybookItem.Designer.cs">
-      <DependentUpon>PaybookItem.cs</DependentUpon>
-    </Compile>
     <Compile Include="ChildForms\Settings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,11 +137,29 @@
     <Compile Include="ChildForms\Transaction.Designer.cs">
       <DependentUpon>Transaction.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForms\TransactionEditingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\TransactionEditingForm.Designer.cs">
+      <DependentUpon>TransactionEditingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildForms\TransactionItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ChildForms\TransactionItem.Designer.cs">
       <DependentUpon>TransactionItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\UserAccountEditingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\UserAccountEditingForm.Designer.cs">
+      <DependentUpon>UserAccountEditingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\UserAccountItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChildForms\UserAccountItem.Designer.cs">
+      <DependentUpon>UserAccountItem.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForms\Wide.cs">
       <SubType>UserControl</SubType>
@@ -142,17 +190,35 @@
     <EmbeddedResource Include="ChildForms\Account.resx">
       <DependentUpon>Account.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChildForms\1Category.resx">
-      <DependentUpon>1Category.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\Category.resx">
       <DependentUpon>Category.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChildForms\1Transaction.resx">
-      <DependentUpon>1Transaction.cs</DependentUpon>
+    <EmbeddedResource Include="ChildForms\CategoryAddingForm.resx">
+      <DependentUpon>CategoryAddingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\CategoryEditForm.resx">
+      <DependentUpon>CategoryEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\CategoryItem.resx">
+      <DependentUpon>CategoryItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\ChangingPasswordForm.resx">
+      <DependentUpon>ChangingPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\DebtItem.resx">
+      <DependentUpon>DebtItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\FriendAccountAddingForm.resx">
+      <DependentUpon>FriendAccountAddingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\LoanItem.resx">
+      <DependentUpon>LoanItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\ManageUserAccount.resx">
+      <DependentUpon>ManageUserAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\Overview.resx">
       <DependentUpon>Overview.cs</DependentUpon>
@@ -160,17 +226,23 @@
     <EmbeddedResource Include="ChildForms\Paybook.resx">
       <DependentUpon>Paybook.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChildForms\PaybookItem.resx">
-      <DependentUpon>PaybookItem.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\Transaction.resx">
       <DependentUpon>Transaction.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\TransactionEditingForm.resx">
+      <DependentUpon>TransactionEditingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\TransactionItem.resx">
       <DependentUpon>TransactionItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\UserAccountEditingForm.resx">
+      <DependentUpon>UserAccountEditingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\UserAccountItem.resx">
+      <DependentUpon>UserAccountItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\Wide.resx">
       <DependentUpon>Wide.cs</DependentUpon>
@@ -222,6 +294,7 @@
     <Content Include="Resources\puzzle-piece.png" />
     <Content Include="Resources\settings.png" />
     <Content Include="Resources\transaction.png" />
+    <None Include="Resources\user.png" />
     <Content Include="Resources\Very-Basic-Menu-icon.png" />
     <Content Include="Resources\x-24-icon.png" />
   </ItemGroup>

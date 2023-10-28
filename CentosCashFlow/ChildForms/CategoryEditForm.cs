@@ -10,17 +10,12 @@ using System.Windows.Forms;
 
 namespace CentosCashFlow.ChildForms
 {
-    public partial class TransactionItem : UserControl
+    public partial class CategoryEditForm : Form
     {
-        public TransactionItem()
+        public CategoryEditForm()
         {
             InitializeComponent();
         }
 
-        private void btnEditingTransaction_Click(object sender, EventArgs e)
-        {
-            TransactionEditingForm form = new TransactionEditingForm();
-            form.ShowDialog();
-        }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CentosCashFlow.ChildForms
 {
-    public partial class PaybookItem : UserControl
+    public partial class UserAccountEditingForm : Form
     {
-        public PaybookItem()
+        public UserAccountEditingForm()
         {
             InitializeComponent();
         }

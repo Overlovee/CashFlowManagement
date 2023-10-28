@@ -16,5 +16,17 @@ namespace CentosCashFlow.ChildForms
         {
             InitializeComponent();
         }
+
+        private void btnIncomeAdding_Click(object sender, EventArgs e)
+        {
+            CategoryAddingForm form= new CategoryAddingForm();
+            form.ShowDialog();
+        }
+
+        private void btnExpendituresAdding_Click(object sender, EventArgs e)
+        {
+            CategoryAddingForm form = new CategoryAddingForm();
+            form.ShowDialog();
+        }
     }
 }

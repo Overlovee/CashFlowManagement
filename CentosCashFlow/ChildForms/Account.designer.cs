@@ -32,7 +32,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDeleteAccount = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -41,7 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabelChangingPassword = new System.Windows.Forms.LinkLabel();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -78,7 +78,7 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.btnDeleteAccount);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 130);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -86,18 +86,19 @@
             this.panel4.Size = new System.Drawing.Size(582, 32);
             this.panel4.TabIndex = 1;
             // 
-            // button1
+            // btnDeleteAccount
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(582, 32);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Delete Account";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDeleteAccount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDeleteAccount.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.btnDeleteAccount.ForeColor = System.Drawing.Color.Red;
+            this.btnDeleteAccount.Location = new System.Drawing.Point(0, 0);
+            this.btnDeleteAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDeleteAccount.Name = "btnDeleteAccount";
+            this.btnDeleteAccount.Size = new System.Drawing.Size(582, 32);
+            this.btnDeleteAccount.TabIndex = 0;
+            this.btnDeleteAccount.Text = "Delete Account";
+            this.btnDeleteAccount.UseVisualStyleBackColor = true;
+            this.btnDeleteAccount.Click += new System.EventHandler(this.btnDeleteAccount_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -111,7 +112,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label11, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.linkLabel1, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.linkLabelChangingPassword, 1, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -209,18 +210,19 @@
             this.label11.Text = "10,001,230 VND";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // linkLabel1
+            // linkLabelChangingPassword
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.linkLabel1.Location = new System.Drawing.Point(294, 96);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(285, 32);
-            this.linkLabel1.TabIndex = 11;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Change password";
-            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.linkLabelChangingPassword.AutoSize = true;
+            this.linkLabelChangingPassword.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.linkLabelChangingPassword.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.linkLabelChangingPassword.Location = new System.Drawing.Point(294, 96);
+            this.linkLabelChangingPassword.Name = "linkLabelChangingPassword";
+            this.linkLabelChangingPassword.Size = new System.Drawing.Size(285, 32);
+            this.linkLabelChangingPassword.TabIndex = 11;
+            this.linkLabelChangingPassword.TabStop = true;
+            this.linkLabelChangingPassword.Text = "Change password";
+            this.linkLabelChangingPassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.linkLabelChangingPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelChangingPassword_LinkClicked);
             // 
             // Account
             // 
@@ -247,7 +249,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDeleteAccount;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -256,6 +258,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabelChangingPassword;
     }
 }

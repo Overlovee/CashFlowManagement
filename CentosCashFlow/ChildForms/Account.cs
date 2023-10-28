@@ -16,5 +16,19 @@ namespace CentosCashFlow.ChildForms
         {
             InitializeComponent();
         }
+
+        private void linkLabelChangingPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ChangingPasswordForm form = new ChangingPasswordForm();
+            form.ShowDialog();
+        }
+
+        private void btnDeleteAccount_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to delete your account?", "",
+                  MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+            }
+        }
     }
 }

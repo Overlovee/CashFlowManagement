@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAddNewTransaction = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
@@ -43,18 +43,18 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelCurrentTransactions = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -104,7 +104,7 @@
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnAddNewTransaction, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 42);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -114,18 +114,19 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(788, 30);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
-            // button1
+            // btnAddNewTransaction
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button1.Location = new System.Drawing.Point(595, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(193, 30);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "+ Add new transaction";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAddNewTransaction.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnAddNewTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddNewTransaction.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnAddNewTransaction.Location = new System.Drawing.Point(595, 0);
+            this.btnAddNewTransaction.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAddNewTransaction.Name = "btnAddNewTransaction";
+            this.btnAddNewTransaction.Size = new System.Drawing.Size(193, 30);
+            this.btnAddNewTransaction.TabIndex = 0;
+            this.btnAddNewTransaction.Text = "+ Add new transaction";
+            this.btnAddNewTransaction.UseVisualStyleBackColor = true;
+            this.btnAddNewTransaction.Click += new System.EventHandler(this.btnAddNewTransaction_Click);
             // 
             // label3
             // 
@@ -217,82 +218,85 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.panelCurrentTransactions);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.chart1);
             this.panel1.Location = new System.Drawing.Point(0, 132);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(32, 12, 32, 32);
             this.panel1.Size = new System.Drawing.Size(788, 922);
             this.panel1.TabIndex = 6;
             // 
-            // chart1
-            // 
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            this.chart1.Dock = System.Windows.Forms.DockStyle.Top;
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
-            this.chart1.Location = new System.Drawing.Point(32, 12);
-            this.chart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chart1.Name = "chart1";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(724, 392);
-            this.chart1.TabIndex = 10;
-            this.chart1.Text = "chart1";
-            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.panelCurrentTransactions);
             this.panel2.Controls.Add(this.tableLayoutPanel4);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(32, 404);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(724, 30);
+            this.panel2.Padding = new System.Windows.Forms.Padding(0, 20, 0, 0);
+            this.panel2.Size = new System.Drawing.Size(724, 486);
             this.panel2.TabIndex = 11;
             // 
             // panelCurrentTransactions
             // 
             this.panelCurrentTransactions.AutoScroll = true;
             this.panelCurrentTransactions.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelCurrentTransactions.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCurrentTransactions.Location = new System.Drawing.Point(32, 434);
+            this.panelCurrentTransactions.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelCurrentTransactions.Location = new System.Drawing.Point(0, 73);
             this.panelCurrentTransactions.Margin = new System.Windows.Forms.Padding(0);
             this.panelCurrentTransactions.Name = "panelCurrentTransactions";
             this.panelCurrentTransactions.Padding = new System.Windows.Forms.Padding(18, 16, 18, 16);
             this.panelCurrentTransactions.Size = new System.Drawing.Size(724, 456);
-            this.panelCurrentTransactions.TabIndex = 13;
+            this.panelCurrentTransactions.TabIndex = 16;
             // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 1;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.label8, 0, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 20);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(724, 30);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(724, 53);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.DarkViolet;
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(0, 0);
-            this.label8.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.label8.Margin = new System.Windows.Forms.Padding(0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(724, 30);
-            this.label8.TabIndex = 1;
+            this.label8.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.label8.Size = new System.Drawing.Size(724, 53);
+            this.label8.TabIndex = 3;
             this.label8.Text = "Current Transactions";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            this.chart1.Dock = System.Windows.Forms.DockStyle.Top;
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(32, 12);
+            this.chart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(724, 392);
+            this.chart1.TabIndex = 10;
+            this.chart1.Text = "chart1";
             // 
             // Home
             // 
@@ -315,10 +319,10 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,7 +334,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAddNewTransaction;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label7;
@@ -339,8 +343,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.Panel panelCurrentTransactions;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelCurrentTransactions;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Label label8;
     }

@@ -130,6 +130,11 @@ namespace CentosCashFlow
             childForm.Show();
             lblTittle.Text = childForm.Text;
         }
+
+        private void btnUserAccount_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChildForms.ManageUserAccount(), sender);
+        }
     }
 
 }
