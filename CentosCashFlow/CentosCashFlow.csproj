@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
@@ -131,11 +132,17 @@
     <Compile Include="ChildForms\Settings.designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChildForms\Transaction.cs">
+    <Compile Include="ChildForms\TransactionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChildForms\Transaction.Designer.cs">
-      <DependentUpon>Transaction.cs</DependentUpon>
+    <Compile Include="ChildForms\TransactionForm.Designer.cs">
+      <DependentUpon>TransactionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\TransactionAddingChildForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\TransactionAddingChildForm.Designer.cs">
+      <DependentUpon>TransactionAddingChildForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForms\TransactionEditingForm.cs">
       <SubType>Form</SubType>
@@ -179,6 +186,10 @@
     <Compile Include="Menu.designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\ConnectCategory.cs" />
+    <Compile Include="Models\ConnectTransaction.cs" />
+    <Compile Include="Models\Transaction.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.cs">
@@ -229,8 +240,11 @@
     <EmbeddedResource Include="ChildForms\Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChildForms\Transaction.resx">
-      <DependentUpon>Transaction.cs</DependentUpon>
+    <EmbeddedResource Include="ChildForms\TransactionForm.resx">
+      <DependentUpon>TransactionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\TransactionAddingChildForm.resx">
+      <DependentUpon>TransactionAddingChildForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\TransactionEditingForm.resx">
       <DependentUpon>TransactionEditingForm.cs</DependentUpon>
@@ -283,8 +297,10 @@
     <Content Include="Resources\account.png" />
     <Content Include="Resources\Cat-With-Wry-Smile-icon.png" />
     <Content Include="Resources\categories.png" />
+    <Content Include="Resources\category_df.png" />
     <Content Include="Resources\centos.png" />
     <Content Include="Resources\creative-commons-nc.png" />
+    <None Include="Resources\file.png" />
     <Content Include="Resources\home.png" />
     <Content Include="Resources\icon.ico" />
     <Content Include="Resources\icon.png" />
@@ -298,5 +314,6 @@
     <Content Include="Resources\Very-Basic-Menu-icon.png" />
     <Content Include="Resources\x-24-icon.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

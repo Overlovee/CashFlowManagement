@@ -28,5 +28,35 @@ namespace CentosCashFlow.ChildForms
             CategoryAddingForm form = new CategoryAddingForm();
             form.ShowDialog();
         }
+
+        private void Category_Load(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                Panel newPanel = new Panel();
+                panelIncomeCategoryItem.Controls.Add(newPanel);
+                newPanel.Dock = DockStyle.Top;
+                newPanel.Height = 70;
+
+                CategoryItem item = new CategoryItem();
+
+                newPanel.Controls.Add(item);
+                item.Dock = DockStyle.Top;
+                item.Height = 50;
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                Panel newPanel = new Panel();
+                panelExpendituresCategoryItem.Controls.Add(newPanel);
+                newPanel.Dock = DockStyle.Top;
+                newPanel.Height = 70;
+
+                CategoryItem item = new CategoryItem();
+
+                newPanel.Controls.Add(item);
+                item.Dock = DockStyle.Top;
+                item.Height = 50;
+            }
+        }
     }
 }

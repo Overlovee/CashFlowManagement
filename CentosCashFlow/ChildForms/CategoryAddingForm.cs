@@ -16,5 +16,17 @@ namespace CentosCashFlow.ChildForms
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using(OpenFileDialog df = new OpenFileDialog() { Filter= "Image files (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png" })
+            {
+                if(df.ShowDialog() == DialogResult.OK)
+                {
+                    //pictureBox1.BackgroundImage = Image.FromFile(df.FileName);
+                    textBoxCategoryImgPath.Text= df.FileName;
+                }
+            }
+        }
     }
 }

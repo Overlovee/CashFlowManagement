@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CentosCashFlow.ChildForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -64,19 +65,6 @@ namespace CentosCashFlow
             childForm.Show();
             lblTittle.Text = childForm.Text;
         }
-        //private void btnCloseChildForm_Click(object sender, EventArgs e)
-        //{
-        //    if (activeForm != null)
-        //        activeForm.Close();
-        //    Reset();
-        //}
-        //private void Reset()
-        //{
-        //    DisableButton();
-        //    lblTittle.Text = "HOME";
-        //    currentButton = null;
-        //    btnCloseChildForm.Visible = false;
-        //}
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
@@ -101,6 +89,7 @@ namespace CentosCashFlow
         private void btnHome_Click(object sender, EventArgs e)
         {
             OpenChildForm(new ChildForms.Home(), sender);
+
         }
 
         private void btnCategory_Click(object sender, EventArgs e)
@@ -110,7 +99,7 @@ namespace CentosCashFlow
 
         private void btnTransaction_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ChildForms.Transaction(), sender);
+            OpenChildForm(new ChildForms.TransactionForm(), sender);
         }
 
         private void label1_Click(object sender, EventArgs e)

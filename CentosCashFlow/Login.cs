@@ -14,16 +14,12 @@ namespace CentosCashFlow
 {
     public partial class Login : Form
     {
-        //public SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["connect"].ToString());
+        //public SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["DB_CashFlowManagement"].ToString());
         public Login()
         {
             InitializeComponent();
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-            //
-        }
 
         private void Login_Load(object sender, EventArgs e)
         {

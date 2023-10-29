@@ -34,10 +34,10 @@ namespace CentosCashFlow.ChildForms
             }
             
         }
-
         private void btnAddNewTransaction_Click(object sender, EventArgs e)
         {
-
+            TransactionAddingChildForm form = new TransactionAddingChildForm();
+            form.ShowDialog();
         }
     }
 }

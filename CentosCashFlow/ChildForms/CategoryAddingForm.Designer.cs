@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -41,7 +45,10 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.textBoxCategoryImgPath = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -51,6 +58,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel5);
@@ -59,8 +67,56 @@
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(582, 393);
+            this.panel1.Size = new System.Drawing.Size(582, 493);
             this.panel1.TabIndex = 2;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.textBoxCategoryImgPath);
+            this.panel4.Controls.Add(this.button2);
+            this.panel4.Controls.Add(this.tableLayoutPanel3);
+            this.panel4.Location = new System.Drawing.Point(25, 310);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(531, 77);
+            this.panel4.TabIndex = 13;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(392, 35);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(120, 35);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Choose file";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.label3, 0, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(17, -1);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(495, 30);
+            this.tableLayoutPanel3.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(489, 30);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Choose Category Image";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel3
             // 
@@ -205,7 +261,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(25, 313);
+            this.button1.Location = new System.Drawing.Point(25, 403);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(531, 70);
@@ -213,17 +269,31 @@
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // textBoxCategoryImgPath
+            // 
+            this.textBoxCategoryImgPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBoxCategoryImgPath.Location = new System.Drawing.Point(17, 38);
+            this.textBoxCategoryImgPath.Name = "textBoxCategoryImgPath";
+            this.textBoxCategoryImgPath.ReadOnly = true;
+            this.textBoxCategoryImgPath.Size = new System.Drawing.Size(359, 26);
+            this.textBoxCategoryImgPath.TabIndex = 4;
+            // 
             // CategoryAddingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 393);
+            this.ClientSize = new System.Drawing.Size(582, 493);
             this.Controls.Add(this.panel1);
-            this.MaximumSize = new System.Drawing.Size(600, 440);
+            this.MaximumSize = new System.Drawing.Size(600, 540);
             this.MinimumSize = new System.Drawing.Size(600, 440);
             this.Name = "CategoryAddingForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CategoryAddingForm";
             this.panel1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -253,5 +323,10 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBoxCategoryImgPath;
     }
 }
