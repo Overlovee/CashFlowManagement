@@ -21,6 +21,7 @@ namespace CentosCashFlow.ChildForms
         private void TransactionAddingChildForm_Load(object sender, EventArgs e)
         {
             textBoxDateTime.Text = DateTime.Now.Date.ToString("d");
+            comboBoxTransactionType.Items.Clear();
             comboBoxTransactionType.Items.Add("Income");
             comboBoxTransactionType.Items.Add("Expenditure");
             comboBoxTransactionType.SelectedItem = "Expenditure";

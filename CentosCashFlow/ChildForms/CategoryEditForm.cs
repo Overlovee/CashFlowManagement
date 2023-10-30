@@ -12,10 +12,91 @@ namespace CentosCashFlow.ChildForms
 {
     public partial class CategoryEditForm : Form
     {
+        Models.ConnectCategory connect = new Models.ConnectCategory();
+        Models.Category category;
+
+        public bool isChanged { get; set; }
         public CategoryEditForm()
         {
             InitializeComponent();
+            isChanged= false;
         }
 
+        private void CategoryEditForm_Load(object sender, EventArgs e)
+        {
+            category = connect.getDataByID(this.Tag.ToString());
+
+            comboBoxTransactionType.Items.Clear();
+            comboBoxTransactionType.Items.Add("Income");
+            comboBoxTransactionType.Items.Add("Expenditure");
+            
+            if (category.CategoryType.Contains("Income"))
+            {
+                comboBoxTransactionType.SelectedItem = "Income";
+            }
+            else
+            {
+                comboBoxTransactionType.SelectedItem = "Expenditure";
+            }
+            
+            
+            textBoxCategoryID.Text = category.CategoryID;
+            textBoxCategoryName.Text = category.CategoryName;
+            textBoxCategoryImage.Text = category.CategoryImg;
+        }
+
+        private void btnSaveCategoryEditing_Click(object sender, EventArgs e)
+        {
+            if (category.CategoryName != textBoxCategoryName.Text
+                || !category.CategoryType.Contains(comboBoxTransactionType.SelectedItem.ToString())
+                || category.CategoryImg != textBoxCategoryImage.Text)
+            {
+                category.CategoryName= textBoxCategoryName.Text;
+                category.CategoryType = comboBoxTransactionType.SelectedItem.ToString();
+                category.CategoryImg = textBoxCategoryImage.Text;
+
+                int kt = connect.updateDataForItem(category);
+
+                if(kt != 0)
+                {
+                    if (MessageBox.Show("Completely updating!", "", MessageBoxButtons.OK) == DialogResult.OK)
+                    {
+                        isChanged = true;
+                        this.Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Cannot update!", "", MessageBoxButtons.OK);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please type your change!", "", MessageBoxButtons.OK);
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnDeleteCategory_Click(object sender, EventArgs e)
+        {
+            int kt = connect.deleteDataById(category.CategoryID);
+
+            if (kt != 0)
+            {
+                if (MessageBox.Show("Completely deleting!", "", MessageBoxButtons.OK) == DialogResult.OK)
+                {
+                    isChanged = true;
+                    this.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Cannot delete!", "", MessageBoxButtons.OK);
+            }
+        }
     }
 }

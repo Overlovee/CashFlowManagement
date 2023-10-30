@@ -32,8 +32,8 @@
             this.pictureBoxCategory = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnEditingCategory = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.labelCategoryName = new System.Windows.Forms.Label();
+            this.btnDeleteCategoryItem = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCategory)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -72,8 +72,8 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.Controls.Add(this.btnEditingCategory, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.labelCategoryName, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnDeleteCategoryItem, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(50, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -102,36 +102,37 @@
             this.btnEditingCategory.UseVisualStyleBackColor = false;
             this.btnEditingCategory.Click += new System.EventHandler(this.btnEditingCategory_Click);
             // 
-            // label1
+            // labelCategoryName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 50);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Category name";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelCategoryName.AutoSize = true;
+            this.labelCategoryName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelCategoryName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelCategoryName.Location = new System.Drawing.Point(0, 0);
+            this.labelCategoryName.Margin = new System.Windows.Forms.Padding(0);
+            this.labelCategoryName.Name = "labelCategoryName";
+            this.labelCategoryName.Size = new System.Drawing.Size(125, 50);
+            this.labelCategoryName.TabIndex = 5;
+            this.labelCategoryName.Text = "Category name";
+            this.labelCategoryName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // button1
+            // btnDeleteCategoryItem
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(197, 10);
-            this.button1.Margin = new System.Windows.Forms.Padding(10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(43, 30);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Delete";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnDeleteCategoryItem.BackColor = System.Drawing.Color.Black;
+            this.btnDeleteCategoryItem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDeleteCategoryItem.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnDeleteCategoryItem.FlatAppearance.BorderSize = 0;
+            this.btnDeleteCategoryItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDeleteCategoryItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnDeleteCategoryItem.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteCategoryItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeleteCategoryItem.Location = new System.Drawing.Point(197, 10);
+            this.btnDeleteCategoryItem.Margin = new System.Windows.Forms.Padding(10);
+            this.btnDeleteCategoryItem.Name = "btnDeleteCategoryItem";
+            this.btnDeleteCategoryItem.Size = new System.Drawing.Size(43, 30);
+            this.btnDeleteCategoryItem.TabIndex = 13;
+            this.btnDeleteCategoryItem.Text = "Delete";
+            this.btnDeleteCategoryItem.UseVisualStyleBackColor = false;
+            this.btnDeleteCategoryItem.Click += new System.EventHandler(this.btnDeleteCategoryItem_Click);
             // 
             // CategoryItem
             // 
@@ -157,8 +158,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBoxCategory;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label labelCategoryName;
+        private System.Windows.Forms.Button btnDeleteCategoryItem;
         private System.Windows.Forms.Button btnEditingCategory;
     }
 }

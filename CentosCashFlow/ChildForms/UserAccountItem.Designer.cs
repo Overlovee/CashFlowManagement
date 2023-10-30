@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.labelUserEmail = new System.Windows.Forms.Label();
-            this.labelUserName = new System.Windows.Forms.Label();
-            this.btnDeleteUserAccount = new System.Windows.Forms.Button();
-            this.btnEditingUserAccount = new System.Windows.Forms.Button();
             this.pictureBoxAvatar = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnEditingUserAccount = new System.Windows.Forms.Button();
+            this.btnDeleteUserAccount = new System.Windows.Forms.Button();
+            this.labelUserName = new System.Windows.Forms.Label();
+            this.labelUserEmail = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvatar)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -53,6 +53,18 @@
             this.panel1.Padding = new System.Windows.Forms.Padding(5);
             this.panel1.Size = new System.Drawing.Size(60, 60);
             this.panel1.TabIndex = 2;
+            // 
+            // pictureBoxAvatar
+            // 
+            this.pictureBoxAvatar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBoxAvatar.Image = global::CentosCashFlow.Properties.Resources.user;
+            this.pictureBoxAvatar.Location = new System.Drawing.Point(5, 5);
+            this.pictureBoxAvatar.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBoxAvatar.Name = "pictureBoxAvatar";
+            this.pictureBoxAvatar.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxAvatar.TabIndex = 0;
+            this.pictureBoxAvatar.TabStop = false;
             // 
             // tableLayoutPanel1
             // 
@@ -73,50 +85,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(638, 58);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
-            // labelUserEmail
-            // 
-            this.labelUserEmail.AutoSize = true;
-            this.labelUserEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelUserEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.labelUserEmail.Location = new System.Drawing.Point(219, 0);
-            this.labelUserEmail.Margin = new System.Windows.Forms.Padding(0);
-            this.labelUserEmail.Name = "labelUserEmail";
-            this.labelUserEmail.Size = new System.Drawing.Size(219, 58);
-            this.labelUserEmail.TabIndex = 38;
-            this.labelUserEmail.Text = "example123@gmail.com";
-            this.labelUserEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelUserName
-            // 
-            this.labelUserName.AutoSize = true;
-            this.labelUserName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.labelUserName.Location = new System.Drawing.Point(0, 0);
-            this.labelUserName.Margin = new System.Windows.Forms.Padding(0);
-            this.labelUserName.Name = "labelUserName";
-            this.labelUserName.Size = new System.Drawing.Size(219, 58);
-            this.labelUserName.TabIndex = 39;
-            this.labelUserName.Text = "John Dor";
-            this.labelUserName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btnDeleteUserAccount
-            // 
-            this.btnDeleteUserAccount.BackColor = System.Drawing.Color.DarkViolet;
-            this.btnDeleteUserAccount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDeleteUserAccount.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnDeleteUserAccount.FlatAppearance.BorderSize = 0;
-            this.btnDeleteUserAccount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDeleteUserAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnDeleteUserAccount.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteUserAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteUserAccount.Location = new System.Drawing.Point(548, 10);
-            this.btnDeleteUserAccount.Margin = new System.Windows.Forms.Padding(10);
-            this.btnDeleteUserAccount.Name = "btnDeleteUserAccount";
-            this.btnDeleteUserAccount.Size = new System.Drawing.Size(80, 38);
-            this.btnDeleteUserAccount.TabIndex = 40;
-            this.btnDeleteUserAccount.Text = "Delete";
-            this.btnDeleteUserAccount.UseVisualStyleBackColor = false;
-            // 
             // btnEditingUserAccount
             // 
             this.btnEditingUserAccount.BackColor = System.Drawing.Color.DarkViolet;
@@ -136,17 +104,49 @@
             this.btnEditingUserAccount.UseVisualStyleBackColor = false;
             this.btnEditingUserAccount.Click += new System.EventHandler(this.btnEditingUserAccount_Click);
             // 
-            // pictureBoxAvatar
+            // btnDeleteUserAccount
             // 
-            this.pictureBoxAvatar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBoxAvatar.Image = global::CentosCashFlow.Properties.Resources.user;
-            this.pictureBoxAvatar.Location = new System.Drawing.Point(5, 5);
-            this.pictureBoxAvatar.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBoxAvatar.Name = "pictureBoxAvatar";
-            this.pictureBoxAvatar.Size = new System.Drawing.Size(50, 50);
-            this.pictureBoxAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxAvatar.TabIndex = 0;
-            this.pictureBoxAvatar.TabStop = false;
+            this.btnDeleteUserAccount.BackColor = System.Drawing.Color.DarkViolet;
+            this.btnDeleteUserAccount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDeleteUserAccount.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnDeleteUserAccount.FlatAppearance.BorderSize = 0;
+            this.btnDeleteUserAccount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDeleteUserAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnDeleteUserAccount.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteUserAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeleteUserAccount.Location = new System.Drawing.Point(548, 10);
+            this.btnDeleteUserAccount.Margin = new System.Windows.Forms.Padding(10);
+            this.btnDeleteUserAccount.Name = "btnDeleteUserAccount";
+            this.btnDeleteUserAccount.Size = new System.Drawing.Size(80, 38);
+            this.btnDeleteUserAccount.TabIndex = 40;
+            this.btnDeleteUserAccount.Text = "Delete";
+            this.btnDeleteUserAccount.UseVisualStyleBackColor = false;
+            // 
+            // labelUserName
+            // 
+            this.labelUserName.AutoSize = true;
+            this.labelUserName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelUserName.Location = new System.Drawing.Point(0, 0);
+            this.labelUserName.Margin = new System.Windows.Forms.Padding(0);
+            this.labelUserName.Name = "labelUserName";
+            this.labelUserName.Size = new System.Drawing.Size(219, 58);
+            this.labelUserName.TabIndex = 39;
+            this.labelUserName.Text = "John Dor";
+            this.labelUserName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelUserEmail
+            // 
+            this.labelUserEmail.AutoSize = true;
+            this.labelUserEmail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelUserEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelUserEmail.Location = new System.Drawing.Point(219, 0);
+            this.labelUserEmail.Margin = new System.Windows.Forms.Padding(0);
+            this.labelUserEmail.Name = "labelUserEmail";
+            this.labelUserEmail.Size = new System.Drawing.Size(219, 58);
+            this.labelUserEmail.TabIndex = 38;
+            this.labelUserEmail.Text = "example123@gmail.com";
+            this.labelUserEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // UserAccountItem
             // 
@@ -155,14 +155,14 @@
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.MinimumSize = new System.Drawing.Size(500, 60);
             this.Name = "UserAccountItem";
             this.Size = new System.Drawing.Size(698, 58);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvatar)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvatar)).EndInit();
             this.ResumeLayout(false);
 
         }
