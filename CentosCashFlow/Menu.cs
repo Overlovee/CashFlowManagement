@@ -1,4 +1,5 @@
 ﻿using CentosCashFlow.ChildForms;
+using CentosCashFlow.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,10 +16,13 @@ namespace CentosCashFlow
     {
         private Button currentButton;
         private Form activeForm;
+        public bool isClosing { get; set; } 
+        public User user { get; set; }
         public Menu()
         {
             InitializeComponent();
-            //btnCloseChildForm.Visible = false;
+            user = null;
+            isClosing = false;
         }
         private void ActivateButton(object btnSender)
         {
@@ -32,7 +36,6 @@ namespace CentosCashFlow
                     currentButton.ForeColor = Color.White;
                     currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
-                    //btnCloseChildForm.Visible = true;
                 }
             }
         }
@@ -56,6 +59,7 @@ namespace CentosCashFlow
             }
             ActivateButton(btnSender);
             activeForm = childForm;
+            childForm.Tag = this.Tag;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
@@ -102,7 +106,19 @@ namespace CentosCashFlow
             OpenChildForm(new ChildForms.TransactionForm(), sender);
         }
 
-        private void label1_Click(object sender, EventArgs e)
+
+        private void btnUserAccount_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChildForms.ManageUserAccount(), sender);
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            this.Tag = user.Id.ToString();
+            this.Show();
+            goToHome();
+        }
+        private void goToHome()
         {
             if (activeForm != null)
             {
@@ -110,6 +126,7 @@ namespace CentosCashFlow
             }
             Form childForm = new ChildForms.Home();
             activeForm = childForm;
+            childForm.Tag = this.Tag;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
@@ -119,10 +136,14 @@ namespace CentosCashFlow
             childForm.Show();
             lblTittle.Text = childForm.Text;
         }
-
-        private void btnUserAccount_Click(object sender, EventArgs e)
+        private void labelIcon_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ChildForms.ManageUserAccount(), sender);
+            goToHome();
+        }
+
+        private void Menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            isClosing = true;
         }
     }
 

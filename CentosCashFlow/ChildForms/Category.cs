@@ -22,13 +22,23 @@ namespace CentosCashFlow.ChildForms
         private void btnIncomeAdding_Click(object sender, EventArgs e)
         {
             CategoryAddingForm form= new CategoryAddingForm();
+            form.Tag = "Income";
             form.ShowDialog();
+            if (form.isChanged)
+            {
+                Reload_Data();
+            }
         }
 
         private void btnExpendituresAdding_Click(object sender, EventArgs e)
         {
             CategoryAddingForm form = new CategoryAddingForm();
+            form.Tag = "Expenditure";
             form.ShowDialog();
+            if (form.isChanged)
+            {
+                Reload_Data();
+            }
         }
 
         private void Load_Data()

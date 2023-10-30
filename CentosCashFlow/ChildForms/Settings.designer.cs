@@ -149,9 +149,6 @@
             this.cbbExport.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.cbbExport.FormattingEnabled = true;
             this.cbbExport.ItemHeight = 30;
-            this.cbbExport.Items.AddRange(new object[] {
-            "Export CSV File",
-            "Export Excel File"});
             this.cbbExport.Location = new System.Drawing.Point(3, 130);
             this.cbbExport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbExport.Name = "cbbExport";
@@ -214,10 +211,6 @@
             this.cbbLanguages.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.cbbLanguages.FormattingEnabled = true;
             this.cbbLanguages.ItemHeight = 30;
-            this.cbbLanguages.Items.AddRange(new object[] {
-            "Chinese",
-            "English",
-            "Vietnamese"});
             this.cbbLanguages.Location = new System.Drawing.Point(324, 2);
             this.cbbLanguages.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbLanguages.Name = "cbbLanguages";
@@ -231,10 +224,6 @@
             this.cbbTimeFormat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbTimeFormat.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.cbbTimeFormat.FormattingEnabled = true;
-            this.cbbTimeFormat.Items.AddRange(new object[] {
-            "dd/mm/yyyy",
-            "mm/dd/yyyy",
-            "yyyy/mm/dd"});
             this.cbbTimeFormat.Location = new System.Drawing.Point(324, 34);
             this.cbbTimeFormat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbTimeFormat.Name = "cbbTimeFormat";
@@ -248,9 +237,6 @@
             this.cbbOverviewDisplayMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbOverviewDisplayMode.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.cbbOverviewDisplayMode.FormattingEnabled = true;
-            this.cbbOverviewDisplayMode.Items.AddRange(new object[] {
-            "beginning/ending balance",
-            "money in/money out"});
             this.cbbOverviewDisplayMode.Location = new System.Drawing.Point(324, 98);
             this.cbbOverviewDisplayMode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbOverviewDisplayMode.Name = "cbbOverviewDisplayMode";
@@ -264,11 +250,6 @@
             this.cbbCurrencyUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbCurrencyUnit.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.cbbCurrencyUnit.FormattingEnabled = true;
-            this.cbbCurrencyUnit.Items.AddRange(new object[] {
-            "EUR - Euro",
-            "GBP - Pound",
-            "USD - United States Dollar",
-            "VND - Việt Nam Đồng"});
             this.cbbCurrencyUnit.Location = new System.Drawing.Point(324, 66);
             this.cbbCurrencyUnit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbCurrencyUnit.Name = "cbbCurrencyUnit";
@@ -299,6 +280,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Settings";
             this.Text = "Settings";
+            this.Load += new System.EventHandler(this.Settings_Load);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);

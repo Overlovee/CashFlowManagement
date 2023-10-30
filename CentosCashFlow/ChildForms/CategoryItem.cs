@@ -56,12 +56,13 @@ namespace CentosCashFlow.ChildForms
             labelCategoryName.Text = CategoryItem_Name;
 
             string imagePath = CategoryItem_Img;
+            Console.WriteLine(imagePath);
             string projectPath = Path.GetDirectoryName(Path.GetDirectoryName(System.Windows.Forms.Application.StartupPath));
             if (!CategoryItem_Img.Contains("\\"))
             {
                 imagePath = Path.Combine(projectPath, @"Resources", CategoryItem_Img);
             }
-
+            
             if (File.Exists(imagePath))
             {
                 pictureBoxCategory.Image = System.Drawing.Image.FromFile(imagePath);

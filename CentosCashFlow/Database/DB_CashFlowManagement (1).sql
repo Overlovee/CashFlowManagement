@@ -17,13 +17,24 @@ CREATE TABLE Categories (
 CREATE TABLE Users (
     ID INT IDENTITY(1, 1) NOT NULL,
     Name NVARCHAR(255) NOT NULL,
-    Email CHAR(255) UNIQUE,
+    Email NVARCHAR(255) NOT NULL,
     Password NVARCHAR(255) NOT NULL,
 	Role NVARCHAR(20) DEFAULT N'User',
     Available_Money DECIMAL(18, 2) DEFAULT 0, -- Tiền mặc định = 0 (nếu không nhập)
 	CONSTRAINT PK_Users PRIMARY KEY (ID)
 );
+-- Tạo bảng Users (User)
+CREATE TABLE Setting (
+    SettingID INT IDENTITY(1, 1) NOT NULL,
+	User_ID INT NOT NULL,
+    Languages NVARCHAR(255) NOT NULL,
+    TimeFormat NVARCHAR(255) NOT NULL,
+    CurrencyUnit NVARCHAR(255) NOT NULL,
+	OverviewDisplayMode NVARCHAR(20),
+	CONSTRAINT PK_Setting PRIMARY KEY (SettingID),
+	CONSTRAINT FK_Settings_Users_ID FOREIGN KEY (User_ID) REFERENCES Users(ID)
 
+);
 -- Tạo bảng Giao dịch (Transaction)
 CREATE TABLE Transactions (
     ID INT IDENTITY(1, 1) NOT NULL,
@@ -33,6 +44,7 @@ CREATE TABLE Transactions (
     Amount DECIMAL(18, 2) NOT NULL,
     Transaction_Date DATE DEFAULT GETDATE(), -- Ngày giao dịch mặc định là ngày hiện tại
     Transaction_Description NVARCHAR(1000) DEFAULT 'Nah', -- Mô tả giao dịch mặc định = Nah
+	Transaction_Currency CHAR(4) DEFAULT 'VND', -- Loại tiền tệ giao dịch mặc định = VND
 
 	CONSTRAINT PK_Transactions PRIMARY KEY (ID),
     CONSTRAINT FK_Transactions_Users_ID FOREIGN KEY (User_ID) REFERENCES Users(ID),
@@ -40,30 +52,6 @@ CREATE TABLE Transactions (
 	CONSTRAINT CHECK_Transactions_Amount CHECK(Amount > 0), -- Lượng tiền chi cho mỗi giao dịch > 0 
 	CONSTRAINT CHECK_Transactions_Type CHECK(Transaction_Type IN ('Income', 'Expenditure')), -- Loại giao dịch là Thu hoặc Chi
 	CONSTRAINT CHECK_Transaction_Date CHECK (Transaction_Date <= GETDATE()) -- Ngày giao dịch phải là hiện tại hoặc quá khứ
-);
-CREATE TABLE Languages (
-    Language_Code CHAR(2) PRIMARY KEY,
-    Language_Name NVARCHAR(255) NOT NULL
-);
-
-CREATE TABLE Currency (
-    Currency_Code CHAR(3) PRIMARY KEY,
-    Currency_Name NVARCHAR(255) NOT NULL,
-	ExchangeRateUSD decimal(18, 2) NOT NULL
-);
--- Tạo bảng Setting
-CREATE TABLE Setting (
-	User_ID INT NOT NULL,
-    Language_Code CHAR(2) NOT NULL,
-    TimeFormat CHAR(10) DEFAULT 'dd/mm/yyyy',
-    Currency_Code CHAR(3) NOT NULL,
-	OverviewDisplayMode NVARCHAR(100) DEFAULT N'beginning/ending balance',
-	CONSTRAINT PK_Setting PRIMARY KEY (User_ID),
-	CONSTRAINT FK_Settings_Users_ID FOREIGN KEY (User_ID) REFERENCES Users(ID),
-	CONSTRAINT FK_Settings_Users_Currency FOREIGN KEY (Currency_Code) REFERENCES Currency(Currency_Code),
-	CONSTRAINT FK_Settings_Users_Language FOREIGN KEY (Language_Code) REFERENCES Languages(Language_Code),
-	CONSTRAINT CHK_TimeFormat CHECK (TimeFormat IN ('dd/mm/yyyy', 'mm/dd/yyyy', 'yyyy/mm/dd')),
-	CONSTRAINT CHK_OverviewDisplayMode CHECK (OverviewDisplayMode IN (N'beginning/ending balance', N'money in/money out'))
 );
 --Trigger
 CREATE TRIGGER UPDATE_Income_Available_Money
@@ -116,15 +104,6 @@ BEGIN
 END;
 
 --
-INSERT INTO Languages
-VALUES ('EN', N'English'),
-('VN', N'Vietnamese')
---
-INSERT INTO Currency
-VALUES ('USD', N'United State Dollar', 1),
-('VND', N'Việt Nam Đồng', 23.585)
-
---
 INSERT INTO Categories(ID, Category_Name, Category_Type)
 VALUES('CTP',N'Thực Phẩm', 'Expenditure'),
 ('CSH',N'Sinh Hoạt Phí', 'Expenditure'),
@@ -144,40 +123,26 @@ VALUES(N'Trương Quốc Huy',N'Huy5512@gmail.com',N'Huy12445'),
 (N'Vương Kim Dinh',N'Dinh0201@gmail.com',N'Din4124'),
 (N'Trương Thế Vinh',N'Vinh0111@gmail.com',N'Vinh2217');
 
---
-INSERT INTO Setting(User_ID, Language_Code, Currency_Code)
-VALUES (3, 'EN', 'VND'),
-(2, 'EN', 'USD')
-
-
 INSERT INTO Transactions
-VALUES(1,'TTN','Income',1000000,'2023/8/10',N'Lương Tháng 8');
+VALUES(4,'TTN','Income',1000000,'2023/8/10',N'Lương Tháng 8','VND');
 INSERT INTO Transactions
-VALUES(3,'TTN','Income',150000,'2023/8/19',N'Lương Tháng 8');
+VALUES(3,'TTN','Income',150000,'2023/8/19',N'Lương Tháng 8','VND');
 INSERT INTO Transactions
-VALUES(2,'TKK','Income',3000000,'2023/9/1',N'Mẹ Gửi');
+VALUES(5,'TKK','Income',3000000,'2023/9/1',N'Mẹ Gửi','VND');
 INSERT INTO Transactions
-VALUES(1,'CTT','Expenditure',500000,GETDATE(),N'Đóng Trọ Tháng 9');
+VALUES(5,'CTT','Expenditure',500000,GETDATE(),N'Đóng Trọ Tháng 9','VND');
 INSERT INTO Transactions
-VALUES(3,'CTP','Expenditure',15000,'2023/9/1',N'Mua Đồ ăn');
+VALUES(3,'CTP','Expenditure',15000,'2023/9/1',N'Mua Đồ ăn','VND');
 INSERT INTO Transactions
-VALUES(2,'CTD','Expenditure',200000,GETDATE(),N'Điện Tháng 8');
+VALUES(4,'CTD','Expenditure',200000,GETDATE(),N'Điện Tháng 8','VND');
 GO
 
 SELECT* FROM Users
-SELECT* FROM Setting
 SELECT* FROM Categories
 SELECT* FROM Transactions
-SELECT* FROM Languages
-SELECT* FROM Currency
 
 --EXEC DeleteCategory @Category_ID = 'CTP';
 
-
+--Drop table Users
 --Drop table Transactions
 --Drop table Categories
---Drop table Users
---Drop table Setting
---Drop table Currency
-
-SELECT * FROM Setting WHERE User_ID = 3

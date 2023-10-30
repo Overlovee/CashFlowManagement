@@ -12,27 +12,38 @@ namespace CentosCashFlow.ChildForms
 {
     public partial class Home : Form
     {
+        public Models.Settings userSettings { get; set; }
         public Home()
         {
             InitializeComponent();
         }
 
-        private void Home_Load(object sender, EventArgs e)
+        public void Load_Data()
         {
-            for(int i = 0; i < 10; i++)
+            Models.ConnectTransaction connect = new Models.ConnectTransaction();
+            Models.ConnectUsers connectUsers = new Models.ConnectUsers();
+            userSettings = connectUsers.getUserSettingsByID(int.Parse(this.Tag.ToString()));
+            List<Models.Transaction> list = connect.getCurrentDataByID(int.Parse(this.Tag.ToString()));
+
+            foreach (Models.Transaction transaction in list)
             {
                 Panel newPanel = new Panel();
                 panelCurrentTransactions.Controls.Add(newPanel);
                 newPanel.Dock = DockStyle.Top;
                 newPanel.Height = 80;
 
-                TransactionItem transaction = new TransactionItem();
-                
-                newPanel.Controls.Add(transaction);
-                transaction.Dock = DockStyle.Top;
-                transaction.Height = 60;
+                TransactionItem item = new TransactionItem();
+                item.TransModel = transaction;
+
+                newPanel.Controls.Add(item);
+                item.Dock = DockStyle.Top;
+                item.Height = 60;
             }
-            
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            Load_Data();
         }
         private void btnAddNewTransaction_Click(object sender, EventArgs e)
         {

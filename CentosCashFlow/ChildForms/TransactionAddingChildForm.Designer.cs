@@ -34,7 +34,6 @@
             this.richTextBoxDescription = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBoxDateTime = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.comboBoxCategory = new System.Windows.Forms.ComboBox();
@@ -45,6 +44,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBoxAmount = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePickerCategory = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -122,23 +122,12 @@
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.textBoxDateTime);
+            this.panel5.Controls.Add(this.dateTimePickerCategory);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Location = new System.Drawing.Point(25, 292);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(387, 70);
             this.panel5.TabIndex = 3;
-            // 
-            // textBoxDateTime
-            // 
-            this.textBoxDateTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxDateTime.Location = new System.Drawing.Point(157, 23);
-            this.textBoxDateTime.Name = "textBoxDateTime";
-            this.textBoxDateTime.Size = new System.Drawing.Size(211, 28);
-            this.textBoxDateTime.TabIndex = 2;
-            this.textBoxDateTime.Text = "10/01/2022";
-            this.textBoxDateTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
@@ -253,6 +242,20 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Amount";
             // 
+            // dateTimePickerCategory
+            // 
+            this.dateTimePickerCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePickerCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.dateTimePickerCategory.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerCategory.Location = new System.Drawing.Point(157, 23);
+            this.dateTimePickerCategory.Margin = new System.Windows.Forms.Padding(0);
+            this.dateTimePickerCategory.MaxDate = new System.DateTime(2023, 10, 30, 13, 47, 27, 0);
+            this.dateTimePickerCategory.Name = "dateTimePickerCategory";
+            this.dateTimePickerCategory.Size = new System.Drawing.Size(211, 28);
+            this.dateTimePickerCategory.TabIndex = 2;
+            this.dateTimePickerCategory.Value = new System.DateTime(2023, 10, 30, 0, 0, 0, 0);
+            // 
             // TransactionAddingChildForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -288,7 +291,6 @@
         private System.Windows.Forms.RichTextBox richTextBoxDescription;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBoxDateTime;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ComboBox comboBoxCategory;
@@ -299,5 +301,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox textBoxAmount;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerCategory;
     }
 }

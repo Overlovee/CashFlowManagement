@@ -42,18 +42,18 @@ namespace CentosCashFlow.ChildForms
             
             textBoxCategoryID.Text = category.CategoryID;
             textBoxCategoryName.Text = category.CategoryName;
-            textBoxCategoryImage.Text = category.CategoryImg;
+            textBoxCategoryImagePath.Text = category.CategoryImg;
         }
 
         private void btnSaveCategoryEditing_Click(object sender, EventArgs e)
         {
             if (category.CategoryName != textBoxCategoryName.Text
                 || !category.CategoryType.Contains(comboBoxTransactionType.SelectedItem.ToString())
-                || category.CategoryImg != textBoxCategoryImage.Text)
+                || category.CategoryImg != textBoxCategoryImagePath.Text)
             {
                 category.CategoryName= textBoxCategoryName.Text;
                 category.CategoryType = comboBoxTransactionType.SelectedItem.ToString();
-                category.CategoryImg = textBoxCategoryImage.Text;
+                category.CategoryImg = textBoxCategoryImagePath.Text;
 
                 int kt = connect.updateDataForItem(category);
 
@@ -96,6 +96,18 @@ namespace CentosCashFlow.ChildForms
             else
             {
                 MessageBox.Show("Cannot delete!", "", MessageBoxButtons.OK);
+            }
+        }
+
+        private void btnChooseImg_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog df = new OpenFileDialog() { Filter = "Image files (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png" })
+            {
+                if (df.ShowDialog() == DialogResult.OK)
+                {
+                    //pictureBox1.BackgroundImage = Image.FromFile(df.FileName);
+                    textBoxCategoryImagePath.Text = df.FileName;
+                }
             }
         }
     }

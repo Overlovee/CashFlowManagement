@@ -10,23 +10,23 @@ namespace CentosCashFlow.Models
     {
         public int TransactionID { get; set; }
         public int UserID { get; set; }
-        public string CategoryID { get; set; }
+        public string CategoryName { get; set; }
         public string TransactionType { get; set; }
         public decimal Amount { get; set; }
-        public string TransactionDateTime { get; set; }
+        public DateTime TransactionDate { get; set; }
         public string TransactionDescription { get; set; }
-        public string TransactionCurrency { get; set; }
+        public string TransactionImg { get; set; }
 
         public Transaction()
         {
             TransactionID = 0;
             UserID = 0;
-            CategoryID = "TTN";
+            CategoryName = "Thu Nhập";
             TransactionType = "Income";
             Amount= 0;
-            TransactionDateTime = DateTime.Now.Date.ToString();
+            TransactionDate = DateTime.Now.Date;
             TransactionDescription = "";
-            TransactionCurrency = "VND";
+            TransactionImg = "category_df.png";
         }
 
     }

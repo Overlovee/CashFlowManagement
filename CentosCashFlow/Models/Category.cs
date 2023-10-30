@@ -18,7 +18,7 @@ namespace CentosCashFlow.Models
             CategoryID = "None";
             CategoryName= "None";
             CategoryType = "Income";
-            CategoryImg = "category_df";
+            CategoryImg = "category_df.png";
         }
     }
 }

@@ -20,7 +20,9 @@ namespace CentosCashFlow.ChildForms
 
         private void TransactionAddingChildForm_Load(object sender, EventArgs e)
         {
-            textBoxDateTime.Text = DateTime.Now.Date.ToString("d");
+            dateTimePickerCategory.MaxDate = DateTime.Now.AddMonths(3);
+            dateTimePickerCategory.Value = DateTime.Now;
+            dateTimePickerCategory.MaxDate = DateTime.Today;
             comboBoxTransactionType.Items.Clear();
             comboBoxTransactionType.Items.Add("Income");
             comboBoxTransactionType.Items.Add("Expenditure");

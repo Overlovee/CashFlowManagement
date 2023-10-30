@@ -39,7 +39,7 @@
             this.btnOverview = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelIcon = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
@@ -194,7 +194,7 @@
             this.btnTransaction.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
             this.btnTransaction.Size = new System.Drawing.Size(250, 56);
             this.btnTransaction.TabIndex = 3;
-            this.btnTransaction.Text = "+ Add Transaction";
+            this.btnTransaction.Text = "Transaction";
             this.btnTransaction.UseVisualStyleBackColor = false;
             this.btnTransaction.Click += new System.EventHandler(this.btnTransaction_Click);
             // 
@@ -243,7 +243,7 @@
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.panelLogo.Controls.Add(this.label1);
+            this.panelLogo.Controls.Add(this.labelIcon);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -251,18 +251,18 @@
             this.panelLogo.Size = new System.Drawing.Size(250, 70);
             this.panelLogo.TabIndex = 0;
             // 
-            // label1
+            // labelIcon
             // 
-            this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(250, 70);
-            this.label1.TabIndex = 0;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.labelIcon.BackColor = System.Drawing.Color.Black;
+            this.labelIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelIcon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelIcon.ForeColor = System.Drawing.Color.White;
+            this.labelIcon.Image = ((System.Drawing.Image)(resources.GetObject("labelIcon.Image")));
+            this.labelIcon.Location = new System.Drawing.Point(0, 0);
+            this.labelIcon.Name = "labelIcon";
+            this.labelIcon.Size = new System.Drawing.Size(250, 70);
+            this.labelIcon.TabIndex = 0;
+            this.labelIcon.Click += new System.EventHandler(this.labelIcon_Click);
             // 
             // button1
             // 
@@ -283,7 +283,7 @@
             this.panel1.Location = new System.Drawing.Point(250, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1352, 753);
+            this.panel1.Size = new System.Drawing.Size(1332, 753);
             this.panel1.TabIndex = 3;
             // 
             // panelDesktop
@@ -297,7 +297,7 @@
             this.panelDesktop.Location = new System.Drawing.Point(0, 51);
             this.panelDesktop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1352, 702);
+            this.panelDesktop.Size = new System.Drawing.Size(1332, 702);
             this.panelDesktop.TabIndex = 5;
             // 
             // panelNavBar
@@ -309,7 +309,7 @@
             this.panelNavBar.Location = new System.Drawing.Point(0, 0);
             this.panelNavBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelNavBar.Name = "panelNavBar";
-            this.panelNavBar.Size = new System.Drawing.Size(1352, 51);
+            this.panelNavBar.Size = new System.Drawing.Size(1332, 51);
             this.panelNavBar.TabIndex = 2;
             // 
             // tableLayoutPanel1
@@ -323,7 +323,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1352, 51);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1332, 51);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // lblTittle
@@ -334,7 +334,7 @@
             this.lblTittle.ForeColor = System.Drawing.Color.Black;
             this.lblTittle.Location = new System.Drawing.Point(3, 0);
             this.lblTittle.Name = "lblTittle";
-            this.lblTittle.Size = new System.Drawing.Size(1346, 51);
+            this.lblTittle.Size = new System.Drawing.Size(1326, 51);
             this.lblTittle.TabIndex = 1;
             this.lblTittle.Text = "HOME";
             this.lblTittle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -346,16 +346,18 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1602, 753);
+            this.ClientSize = new System.Drawing.Size(1582, 753);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMenu);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(1620, 800);
+            this.MinimumSize = new System.Drawing.Size(1600, 800);
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cash Flow Management";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Menu_FormClosing);
+            this.Load += new System.EventHandler(this.Menu_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -373,7 +375,7 @@
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelIcon;
         private System.Windows.Forms.Button btnTransaction;
         private System.Windows.Forms.Button btnOverview;
         private System.Windows.Forms.Button btnAccount;

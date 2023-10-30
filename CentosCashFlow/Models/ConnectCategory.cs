@@ -28,6 +28,7 @@ namespace CentosCashFlow.Models
                 emp.CategoryID = rdr.GetValue(0).ToString();
                 emp.CategoryName = rdr.GetValue(1).ToString();
                 emp.CategoryType = rdr.GetValue(2).ToString();
+                emp.CategoryImg = rdr.GetValue(3).ToString();
 
                 list.Add(emp);
             }
@@ -76,7 +77,41 @@ namespace CentosCashFlow.Models
 
             return emp;
         }
+        public Category getDataByName(string name)
+        {
+            Category emp = new Category();
+            con.Open();
+            string sql = ("Select * from Categories where Category_Name = @name");
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("@name", name);
+            SqlDataReader rdr = cmd.ExecuteReader();
+            if (rdr.Read())
+            {
+                emp.CategoryID = rdr.GetValue(0).ToString();
+                emp.CategoryName = rdr.GetValue(1).ToString();
+                emp.CategoryType = rdr.GetValue(2).ToString();
+                emp.CategoryImg = rdr.GetValue(3).ToString();
+            }
+            con.Close();
 
+            return emp;
+        }
+        public int addNewItem(Category category)
+        {
+            con.Open();
+            int rs = 0;
+            string sql = "INSERT INTO Categories VALUES(@id, @name, @type, @img)";
+
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@id", category.CategoryID);
+            cmd.Parameters.AddWithValue("@name", category.CategoryName);
+            cmd.Parameters.AddWithValue("@type", category.CategoryType);
+            cmd.Parameters.AddWithValue("@img", category.CategoryImg);
+            rs = cmd.ExecuteNonQuery();
+            con.Close();
+            return rs;
+        }
         public int updateDataForItem(Category category)
         {
             con.Open();

@@ -14,7 +14,6 @@ namespace CentosCashFlow
 {
     public partial class Login : Form
     {
-        //public SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["DB_CashFlowManagement"].ToString());
         public Login()
         {
             InitializeComponent();
@@ -36,45 +35,46 @@ namespace CentosCashFlow
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //if (textBox_Username.Text == "")
-            //{
-            //    this.errorProvider1.SetError(textBox_Username, "Username is required");
-            //}
-            //if (textBox_Password.Text == "")
-            //{
-            //    this.errorProvider2.SetError(textBox_Password, "Password is required");
-            //}
-            //else
-            //{
-            //    con.Open();
-            //    int count = 0;
-            //    string sql = ("Select * from Users where Email = '" + textBox_Username.Text + "' and Password = '" + textBox_Password.Text + "'");
-            //    SqlCommand cmd = new SqlCommand(sql, con);
-            //    cmd.CommandType = CommandType.Text;
-            //    SqlDataReader rdr = cmd.ExecuteReader();
-            //    if (rdr.Read())
-            //    {
-            //        Menu menu = new Menu();
-            //        this.Hide();
-            //        menu.ShowDialog();
-
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Check your username and password");
-            //    }
-            //    con.Close();
-
-            //}
-        }
-
         private void linkLabel_Register_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Register register = new Register();
             this.Hide();
             register.ShowDialog();
+        }
+        private void Reset_Login()
+        {
+            textBoxEmail.Text = "";
+            textBoxPassword.Text = "";
+        }
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string email = textBoxEmail.Text;
+            string password = textBoxPassword.Text;
+            email = "Huy5512@gmail.com";
+            password = "Huy12445";
+
+            Models.ConnectUsers connect = new Models.ConnectUsers();
+            Models.User user = connect.Login(email, password);
+            if(user is null)
+            {
+                MessageBox.Show("Email or password is incorrect!", "", MessageBoxButtons.OK);
+            }
+            else
+            {
+                this.Hide();
+                Menu menu = new Menu();
+                menu.user = user;
+                menu.ShowDialog();
+                if (menu.isClosing)
+                {
+                    this.Close();
+                }
+                else
+                {
+                    Reset_Login();
+                    this.Show();
+                }
+            }
         }
     }
 }
