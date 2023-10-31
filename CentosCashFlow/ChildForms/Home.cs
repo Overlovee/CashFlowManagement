@@ -41,6 +41,17 @@ namespace CentosCashFlow.ChildForms
             }
         }
 
+        public void Reload_Data()
+        {
+            foreach (Control control in panelCurrentTransactions.Controls)
+            {
+                control.Dispose();
+            }
+
+            panelCurrentTransactions.Controls.Clear();
+
+            Load_Data();
+        }
         private void Home_Load(object sender, EventArgs e)
         {
             Load_Data();
@@ -48,7 +59,12 @@ namespace CentosCashFlow.ChildForms
         private void btnAddNewTransaction_Click(object sender, EventArgs e)
         {
             TransactionAddingChildForm form = new TransactionAddingChildForm();
+            form.Tag= this.Tag;
             form.ShowDialog();
+            if (form.isChanged)
+            {
+                Reload_Data();
+            }
         }
     }
 }

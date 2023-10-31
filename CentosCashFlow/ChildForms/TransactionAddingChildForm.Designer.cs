@@ -34,6 +34,7 @@
             this.richTextBoxDescription = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.dateTimePickerCategory = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.comboBoxCategory = new System.Windows.Forms.ComboBox();
@@ -44,17 +45,21 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBoxAmount = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePickerCategory = new System.Windows.Forms.DateTimePicker();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.comboBoxCurrency = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.btnAddNewTransaction);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel5);
@@ -65,7 +70,7 @@
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(902, 383);
+            this.panel1.Size = new System.Drawing.Size(902, 473);
             this.panel1.TabIndex = 1;
             // 
             // btnAddNewTransaction
@@ -75,13 +80,14 @@
             this.btnAddNewTransaction.FlatAppearance.BorderSize = 0;
             this.btnAddNewTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddNewTransaction.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAddNewTransaction.Location = new System.Drawing.Point(444, 292);
+            this.btnAddNewTransaction.Location = new System.Drawing.Point(444, 380);
             this.btnAddNewTransaction.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddNewTransaction.Name = "btnAddNewTransaction";
             this.btnAddNewTransaction.Size = new System.Drawing.Size(436, 70);
             this.btnAddNewTransaction.TabIndex = 8;
             this.btnAddNewTransaction.Text = "Add new";
             this.btnAddNewTransaction.UseVisualStyleBackColor = false;
+            this.btnAddNewTransaction.Click += new System.EventHandler(this.btnAddNewTransaction_Click);
             // 
             // panel6
             // 
@@ -92,7 +98,7 @@
             this.panel6.Location = new System.Drawing.Point(444, 20);
             this.panel6.Margin = new System.Windows.Forms.Padding(0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(436, 252);
+            this.panel6.Size = new System.Drawing.Size(436, 340);
             this.panel6.TabIndex = 4;
             // 
             // richTextBoxDescription
@@ -102,7 +108,7 @@
             this.richTextBoxDescription.Location = new System.Drawing.Point(19, 27);
             this.richTextBoxDescription.Margin = new System.Windows.Forms.Padding(0);
             this.richTextBoxDescription.Name = "richTextBoxDescription";
-            this.richTextBoxDescription.Size = new System.Drawing.Size(399, 205);
+            this.richTextBoxDescription.Size = new System.Drawing.Size(399, 293);
             this.richTextBoxDescription.TabIndex = 1;
             this.richTextBoxDescription.Text = "";
             // 
@@ -124,10 +130,24 @@
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.dateTimePickerCategory);
             this.panel5.Controls.Add(this.label4);
-            this.panel5.Location = new System.Drawing.Point(25, 292);
+            this.panel5.Location = new System.Drawing.Point(25, 380);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(387, 70);
             this.panel5.TabIndex = 3;
+            // 
+            // dateTimePickerCategory
+            // 
+            this.dateTimePickerCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePickerCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.dateTimePickerCategory.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerCategory.Location = new System.Drawing.Point(157, 23);
+            this.dateTimePickerCategory.Margin = new System.Windows.Forms.Padding(0);
+            this.dateTimePickerCategory.MaxDate = new System.DateTime(2023, 10, 30, 13, 47, 27, 0);
+            this.dateTimePickerCategory.Name = "dateTimePickerCategory";
+            this.dateTimePickerCategory.Size = new System.Drawing.Size(211, 28);
+            this.dateTimePickerCategory.TabIndex = 2;
+            this.dateTimePickerCategory.Value = new System.DateTime(2023, 10, 30, 0, 0, 0, 0);
             // 
             // label4
             // 
@@ -147,7 +167,7 @@
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.comboBoxCategory);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Location = new System.Drawing.Point(25, 202);
+            this.panel4.Location = new System.Drawing.Point(25, 290);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(387, 70);
             this.panel4.TabIndex = 2;
@@ -181,7 +201,7 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.comboBoxTransactionType);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(25, 114);
+            this.panel3.Location = new System.Drawing.Point(25, 202);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(387, 70);
             this.panel3.TabIndex = 1;
@@ -242,28 +262,48 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Amount";
             // 
-            // dateTimePickerCategory
+            // panel7
             // 
-            this.dateTimePickerCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePickerCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.dateTimePickerCategory.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerCategory.Location = new System.Drawing.Point(157, 23);
-            this.dateTimePickerCategory.Margin = new System.Windows.Forms.Padding(0);
-            this.dateTimePickerCategory.MaxDate = new System.DateTime(2023, 10, 30, 13, 47, 27, 0);
-            this.dateTimePickerCategory.Name = "dateTimePickerCategory";
-            this.dateTimePickerCategory.Size = new System.Drawing.Size(211, 28);
-            this.dateTimePickerCategory.TabIndex = 2;
-            this.dateTimePickerCategory.Value = new System.DateTime(2023, 10, 30, 0, 0, 0, 0);
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.comboBoxCurrency);
+            this.panel7.Controls.Add(this.label6);
+            this.panel7.Location = new System.Drawing.Point(25, 110);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(387, 70);
+            this.panel7.TabIndex = 9;
+            // 
+            // comboBoxCurrency
+            // 
+            this.comboBoxCurrency.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxCurrency.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCurrency.FormattingEnabled = true;
+            this.comboBoxCurrency.Location = new System.Drawing.Point(157, 20);
+            this.comboBoxCurrency.Name = "comboBoxCurrency";
+            this.comboBoxCurrency.Size = new System.Drawing.Size(211, 30);
+            this.comboBoxCurrency.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 23);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(124, 24);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Currency Unit";
             // 
             // TransactionAddingChildForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(902, 383);
+            this.ClientSize = new System.Drawing.Size(902, 473);
             this.Controls.Add(this.panel1);
-            this.MaximumSize = new System.Drawing.Size(920, 430);
-            this.MinimumSize = new System.Drawing.Size(920, 430);
+            this.MaximumSize = new System.Drawing.Size(920, 520);
+            this.MinimumSize = new System.Drawing.Size(920, 520);
             this.Name = "TransactionAddingChildForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TransactionAddingChildForm";
@@ -279,6 +319,8 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -302,5 +344,8 @@
         private System.Windows.Forms.TextBox textBoxAmount;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePickerCategory;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.ComboBox comboBoxCurrency;
+        private System.Windows.Forms.Label label6;
     }
 }

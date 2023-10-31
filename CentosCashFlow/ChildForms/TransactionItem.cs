@@ -48,6 +48,10 @@ namespace CentosCashFlow.ChildForms
 
         private void TransactionItem_Load(object sender, EventArgs e)
         {
+            Models.ConnectUsers connectUsers = new Models.ConnectUsers();
+            userSettings = connectUsers.getUserSettingsByID(TransModel.UserID);
+
+
             labelTransactionTitle.Text = TransModel.CategoryName;
             labelDateTime.Text = TransModel.TransactionDate.ToString("d");
             if(TransModel.TransactionType.Contains("Expenditure"))
