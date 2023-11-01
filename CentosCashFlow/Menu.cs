@@ -143,7 +143,7 @@ namespace CentosCashFlow
 
         private void Menu_FormClosing(object sender, FormClosingEventArgs e)
         {
-            isClosing = true;
+            
         }
     }
 

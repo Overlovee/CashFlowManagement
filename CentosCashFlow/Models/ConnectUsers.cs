@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -9,25 +10,58 @@ namespace CentosCashFlow.Models
 {
     public class ConnectUsers
     {
-        public SqlConnection con = new SqlConnection("Data Source=LAPTOP-G5HQJSJ2\\SQLEXPRESS; Initial Catalog=DB_CashFlowManagement;Integrated Security=True");
+        DbContext dbContext = new DbContext();
+        public List<UserAccountInfo> getUserAccountsInfo()
+        {
+            List<UserAccountInfo> list = new List<UserAccountInfo>();
+            string sql = ("SELECT ID, Name, Email FROM Users WHERE Role = 'User'");
+            SqlDataReader rdr = dbContext.ExcuteQuery(sql);
+            while (rdr.Read())
+            {
+                UserAccountInfo emp = new UserAccountInfo();
+                emp.Id = int.Parse(rdr.GetValue(0).ToString());
+                emp.UserName = rdr.GetValue(1).ToString();
+                emp.Email = rdr.GetValue(2).ToString().Trim();
+
+                list.Add(emp);
+            }
+            rdr.Close();
+            return list;
+        }
+        public int updateUserAccountInfo(UserAccountInfo user)
+        {
+            int rs = 0;
+            string sql = "UPDATE " +
+                "@UserID = '" + user.Id + "', " +
+                "@NewName = '" + user.UserName + "', " +
+                "@NewEmail = '" + user.Email + "' ";
+
+            rs = dbContext.ExcuteNonQuery(sql);
+            return rs;
+        }
         public User getUserDataByID(int id)
         {
-         
             User emp = new User();
             string sql = ("SELECT " +
-                "ID, Name, Email, Password, Role, Available_Money, Language_Code, TimeFormat, Currency_Code, OverviewDisplayMode " +
-                "FROM Users, Setting " +
-                "WHERE Users.ID = @id and Users.ID = Setting.User_ID;");
-            con.Open();
-            SqlCommand cmd = new SqlCommand(sql, con);
-            
-            cmd.Parameters.AddWithValue("@id", id);
-            SqlDataReader rdr = cmd.ExecuteReader();
+                "U.ID, " +
+                "U.Name, " +
+                "U.Email, " +
+                "U.Password, " +
+                "U.Role, " +
+                "U.Available_Money, " +
+                "S.Language_Code, " +
+                "S.TimeFormat, " +
+                "S.Currency_Code, " +
+                "S.OverviewDisplayMode " +
+                "FROM Users U " +
+                "INNER JOIN Setting S ON U.ID = S.User_ID " +
+                "WHERE U.ID = '" + id+ "';");
+            SqlDataReader rdr = dbContext.ExcuteQuery(sql);
             if(rdr.Read())
             {
                 emp.Id = int.Parse(rdr.GetValue(0).ToString());
                 emp.Name = rdr.GetValue(1).ToString();
-                emp.Email = rdr.GetValue(2).ToString();
+                emp.Email = rdr.GetValue(2).ToString().Trim();
                 emp.Password = rdr.GetValue(3).ToString();
                 emp.Role = rdr.GetValue(4).ToString();
                 emp.AvailableMoney = decimal.Parse(rdr.GetValue(5).ToString());
@@ -38,22 +72,29 @@ namespace CentosCashFlow.Models
                 emp.UserSettings.OverviewDisplayMode = rdr.GetValue(9).ToString();
 
             }
-            con.Close();
+
+            return emp;
+        }
+        public string getUserPasswordByID(int id)
+        {
+            string emp = "";
+            string sql = ("SELECT Password FROM Users WHERE ID = '" + id + "';");
+            SqlDataReader rdr = dbContext.ExcuteQuery(sql);
+            if (rdr.Read())
+            {
+                emp = rdr.GetValue(0).ToString().Trim();
+            }
 
             return emp;
         }
         public User Login(string email, string password)
         {
-            string sql = ("SELECT ID FROM Users WHERE Email = @email and Password = @password");
-            SqlCommand cmd = new SqlCommand(sql, con);
-            con.Open();
-            cmd.Parameters.AddWithValue("@email", email);
-            cmd.Parameters.AddWithValue("@password", password);
-            SqlDataReader rdr = cmd.ExecuteReader();
+            string sql = ("SELECT ID FROM Users WHERE Email = '"+ email + "' and Password = '"+ password + "'");
+            SqlDataReader rdr = dbContext.ExcuteQuery(sql);
             if (rdr.Read())
             {
                 int id = int.Parse(rdr.GetValue(0).ToString());
-                con.Close();
+                rdr.Close();
                 return getUserDataByID(id);
             }
             return null;
@@ -63,12 +104,8 @@ namespace CentosCashFlow.Models
         {
 
             Settings emp = new Settings();
-            string sql = ("SELECT * FROM Setting WHERE User_ID = @id");
-            con.Open();
-            SqlCommand cmd = new SqlCommand(sql, con);
-
-            cmd.Parameters.AddWithValue("@id", id);
-            SqlDataReader rdr = cmd.ExecuteReader();
+            string sql = ("SELECT * FROM Setting WHERE User_ID = '"+id+"'");
+            SqlDataReader rdr = dbContext.ExcuteQuery(sql);
             if (rdr.Read())
             {
                 emp.UserID = int.Parse(rdr.GetValue(0).ToString());
@@ -77,9 +114,37 @@ namespace CentosCashFlow.Models
                 emp.CurrencyCode = rdr.GetValue(3).ToString();
                 emp.OverviewDisplayMode = rdr.GetValue(4).ToString();
             }
-            con.Close();
-
+            rdr.Close();
             return emp;
+        }
+
+        public int updateInfoFor(User user)
+        {
+            int rs = 0;
+            string sql = "EXEC UpdateUser " +
+                "@UserID = '"+ user.Id + "', " +
+                "@NewName = '"+ user.Name + "', " +
+                "@NewEmail = '"+ user.Email + "', " +
+                "@NewAvailableMoney = '"+ user.AvailableMoney + "'";
+
+            rs = dbContext.ExcuteNonQuery(sql);
+            return rs;
+        }
+        public int updatePasswordFor(User user)
+        {
+            int rs = 0;
+            string sql = "EXEC UpdateUser " +
+                "@UserID = '"+ user.Id + "', " +
+                "@NewPassword = '"+ user.Password + "'";
+            rs = dbContext.ExcuteNonQuery(sql);
+            return rs;
+        }
+        public int deleteAccountByID(int id) {
+            int rs = 0;
+            string sql = "EXEC deleteUser '" + id + "'";
+
+            rs = dbContext.ExcuteNonQuery(sql);
+            return rs;
         }
     }
 }

@@ -68,10 +68,10 @@ CREATE TABLE Setting (
 --Trigger
 CREATE TRIGGER UPDATE_Income_Available_Money
 ON Transactions
-AFTER INSERT, UPDATE
+AFTER INSERT
 AS
 BEGIN
-	IF((SELECT Transaction_Type FROM INSERTED) = 'Income')	
+	IF((SELECT Transaction_Type FROM INSERTED) = 'Income')
 		UPDATE Users
 		SET Available_Money += (SELECT Amount FROM INSERTED WHERE inserted.User_ID = Users.ID and inserted.Transaction_Type = 'Income') 
 		FROM Users
@@ -81,7 +81,7 @@ GO
 
 CREATE TRIGGER UPDATE_Expenditures_Available_Money
 ON Transactions
-AFTER INSERT, UPDATE
+AFTER INSERT
 AS
 BEGIN
 	IF((SELECT Transaction_Type FROM INSERTED) = 'Expenditure')	
@@ -115,6 +115,126 @@ BEGIN
     COMMIT; -- Kết thúc giao dịch
 END;
 
+--
+CREATE PROCEDURE DeleteTransaction
+    @TransactionID INT
+AS
+BEGIN
+    DECLARE @TransactionAmount DECIMAL(18, 2);
+    DECLARE @TransactionType CHAR(30);
+
+    -- Lấy Transaction Amount và Transaction Type từ Transactions
+    SELECT @TransactionAmount = Amount, @TransactionType = Transaction_Type
+    FROM Transactions
+    WHERE ID = @TransactionID;
+
+    -- Cộng hoặc trừ Amount vào Available_Money dựa vào Transaction_Type
+    UPDATE U
+    SET U.Available_Money = 
+        CASE 
+            WHEN @TransactionType = 'Income' THEN U.Available_Money + @TransactionAmount
+            WHEN @TransactionType = 'Expenditure' THEN U.Available_Money - @TransactionAmount
+            ELSE U.Available_Money
+        END
+    FROM Users U
+    WHERE U.ID = (SELECT User_ID FROM Transactions WHERE ID = @TransactionID);
+
+    -- Xoá Transaction
+    DELETE FROM Transactions
+    WHERE ID = @TransactionID;
+END
+--
+CREATE PROCEDURE UpdateTransaction
+    @TransactionID INT,
+    @NewAmount DECIMAL(18, 2),
+    @NewCategoryID CHAR(10),
+    @NewTransactionType CHAR(30),
+    @NewTransactionDate DATE,
+    @NewTransactionDescription NVARCHAR(1000)
+AS
+BEGIN
+    DECLARE @OldTransactionType CHAR(30);
+	DECLARE @OldAmount DECIMAL(18, 2);
+	DECLARE @UserID INT;
+    -- Lấy thông tin giao dịch hiện tại
+    SELECT @OldTransactionType = Transaction_Type, @OldAmount = Amount, @UserID = User_ID
+    FROM Transactions
+    WHERE ID = @TransactionID;
+    -- 
+    IF @OldTransactionType != @NewTransactionType AND @OldTransactionType = 'Expenditure' AND @NewTransactionType = 'Income'
+    BEGIN
+        UPDATE Users
+        SET Available_Money = Available_Money + @OldAmount + @NewAmount
+        WHERE ID = @UserID;
+    END
+	ELSE IF @OldTransactionType != @NewTransactionType AND @OldTransactionType = 'Income' AND @NewTransactionType = 'Expenditure'
+    BEGIN
+        UPDATE Users
+        SET Available_Money = Available_Money - @OldAmount - @NewAmount
+        WHERE ID = @UserID;
+    END
+	ELSE 
+	
+	IF @OldTransactionType = @NewTransactionType
+    BEGIN
+		IF @OldTransactionType = 'Income'
+		BEGIN
+			UPDATE Users
+			SET Available_Money = Available_Money - (@OldAmount - @NewAmount)
+			WHERE ID = @UserID;
+		END
+		IF @NewTransactionType = 'Expenditure'
+		BEGIN
+			UPDATE Users
+			SET Available_Money = Available_Money + (@OldAmount - @NewAmount)
+			WHERE ID = @UserID;
+		END
+    END
+	-- Cập nhật giao dịch
+    UPDATE Transactions
+    SET Amount = @NewAmount,
+        Transaction_Type = @NewTransactionType,
+        Transaction_Date = @NewTransactionDate,
+        Transaction_Description = @NewTransactionDescription,
+		Category_ID = @NewCategoryID
+    WHERE ID = @TransactionID;
+END
+
+--
+CREATE PROCEDURE UpdateUser
+    @UserID INT,
+    @NewName NVARCHAR(255) = NULL,
+    @NewEmail CHAR(255) = NULL,
+    @NewPassword NVARCHAR(255) = NULL,
+    @NewRole NVARCHAR(20) = NULL,
+    @NewAvailableMoney DECIMAL(18, 2) = NULL
+AS
+BEGIN
+    UPDATE Users
+    SET 
+        Name = ISNULL(@NewName, Name),
+        Email = ISNULL(@NewEmail, Email),
+        Password = ISNULL(@NewPassword, Password),
+        Role = ISNULL(@NewRole, Role),
+        Available_Money = ISNULL(@NewAvailableMoney, Available_Money)
+    WHERE ID = @UserID;
+END
+
+--
+CREATE PROCEDURE deleteUser
+    @UserID INT
+AS
+BEGIN
+    DELETE FROM Transactions
+    WHERE User_ID = @UserID;
+
+	DELETE FROM Setting
+    WHERE User_ID = @UserID;
+
+    -- Xóa user từ bảng Users
+    DELETE FROM Users
+    WHERE ID = @UserID;
+END
 --
 INSERT INTO Languages
 VALUES ('EN', N'English'),
@@ -164,7 +284,8 @@ INSERT INTO Transactions
 VALUES(2,'CTD','Expenditure',200000,GETDATE(),N'Điện Tháng 8');
 GO
 
-SELECT* FROM Users
+SELECT ID, Name, Email FROM Users WHERE Role = 'User'
+
 SELECT* FROM Setting
 SELECT* FROM Categories
 SELECT* FROM Transactions
@@ -173,11 +294,24 @@ SELECT* FROM Currency
 
 --EXEC DeleteCategory @Category_ID = 'CTP';
 
+--EXEC DeleteTransaction 1;
+
+--EXEC UpdateTransaction @TransactionID = 22,
+--    @NewAmount = 2000000,
+--    @NewCategoryID = 'CKK',
+--    @NewTransactionType = 'Expenditure',
+--    @NewTransactionDate = '2023/08/10',
+--    @NewTransactionDescription = 'Chi' 
 
 --Drop table Transactions
 --Drop table Categories
---Drop table Users
 --Drop table Setting
+--Drop table Users
 --Drop table Currency
 
-SELECT * FROM Setting WHERE User_ID = 3
+--SELECT T.ID, T.User_ID, C.Category_Name AS Category_Name, T.Transaction_Type, T.Amount, T.Transaction_Date, T.Transaction_Description, C.Category_Img 
+--FROM Transactions T
+--JOIN Categories C ON T.Category_ID = C.ID
+--WHERE T.User_ID = 3
+--AND MONTH(T.Transaction_Date) = 9 AND YEAR(T.Transaction_Date) = 2023
+--ORDER BY T.Transaction_Date ASC;	

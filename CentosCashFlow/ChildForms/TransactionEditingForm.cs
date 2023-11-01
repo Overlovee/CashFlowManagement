@@ -59,7 +59,7 @@ namespace CentosCashFlow.ChildForms
         }
         private void TransactionEditingForm_Load(object sender, EventArgs e)
         {
-            
+            dateTimePickerCategory.MaxDate = DateTime.Now.AddMonths(3);
             if (TransModel != null)
             {
                 Models.ConnectCurrency connectCurrency = new Models.ConnectCurrency();

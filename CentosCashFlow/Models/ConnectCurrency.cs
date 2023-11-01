@@ -10,15 +10,12 @@ namespace CentosCashFlow.Models
 {
     public class ConnectCurrency
     {
-        SqlConnection con = new SqlConnection("Data Source=LAPTOP-G5HQJSJ2\\SQLEXPRESS; Initial Catalog=DB_CashFlowManagement;Integrated Security=True");
-
+        DbContext dbContext = new DbContext();
         public List<Currency> getData()
         {
             List<Currency> list = new List<Currency>();
             string sql = ("Select * from Currency");
-            SqlCommand cmd = new SqlCommand(sql, con);
-            con.Open();
-            SqlDataReader rdr = cmd.ExecuteReader();
+            SqlDataReader rdr = dbContext.ExcuteQuery(sql);
             while (rdr.Read())
             {
                 Currency emp = new Currency();
@@ -28,7 +25,6 @@ namespace CentosCashFlow.Models
 
                 list.Add(emp);
             }
-            con.Close();
 
             return list;
         }

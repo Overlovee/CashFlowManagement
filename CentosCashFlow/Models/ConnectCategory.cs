@@ -7,21 +7,20 @@ using System.Data;
 using System.Configuration;
 using System.Data.SqlClient;
 using Microsoft.SqlServer.Server;
+using CentosCashFlow.ChildForms;
 
 namespace CentosCashFlow.Models
 {
 
     public class ConnectCategory
     {
-        //public SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["DB_CashFlowManagement"].ToString());
-        public SqlConnection con = new SqlConnection("Data Source=LAPTOP-G5HQJSJ2\\SQLEXPRESS; Initial Catalog=DB_CashFlowManagement;Integrated Security=True");
+        DbContext dbContext = new DbContext();
         public List<Category> getIncomeTypeData()
         {
+         
             List<Category> list = new List<Category>();
             string sql = ("Select * from Categories where Category_Type = 'Income'");
-            SqlCommand cmd = new SqlCommand(sql, con);
-            con.Open();
-            SqlDataReader rdr = cmd.ExecuteReader();
+            SqlDataReader rdr = dbContext.ExcuteQuery(sql);
             while (rdr.Read())
             {
                 Category emp = new Category();
@@ -32,17 +31,14 @@ namespace CentosCashFlow.Models
 
                 list.Add(emp);
             }
-            con.Close();
-
+            rdr.Close();
             return list;
         }
         public List<Category> getExpenditureTypeData()
         {
             List<Category> list = new List<Category>();
-            con.Open();
             string sql = ("Select * from Categories where Category_Type = 'Expenditure'");
-            SqlCommand cmd = new SqlCommand(sql, con);
-            SqlDataReader rdr = cmd.ExecuteReader();
+            SqlDataReader rdr = dbContext.ExcuteQuery(sql);
             while (rdr.Read())
             {
                 Category emp = new Category();
@@ -53,18 +49,14 @@ namespace CentosCashFlow.Models
 
                 list.Add(emp);
             }
-            con.Close();
-
+            rdr.Close();
             return list;
         }
         public Category getDataByID(string id)
         {
             Category emp = new Category();
-            con.Open();
-            string sql = ("Select * from Categories where ID = @id");
-            SqlCommand cmd = new SqlCommand(sql, con);
-            cmd.Parameters.AddWithValue("@id", id);
-            SqlDataReader rdr = cmd.ExecuteReader();
+            string sql = ("Select * from Categories where ID = '"+id+"'");
+            SqlDataReader rdr = dbContext.ExcuteQuery(sql);
             if (rdr.Read())
             {
                 emp.CategoryID = rdr.GetValue(0).ToString();
@@ -73,18 +65,14 @@ namespace CentosCashFlow.Models
                 emp.CategoryImg = rdr.GetValue(3).ToString();
 
             }
-            con.Close();
-
+            rdr.Close();
             return emp;
         }
         public Category getDataByName(string name)
         {
             Category emp = new Category();
-            con.Open();
-            string sql = ("Select * from Categories where Category_Name = @name");
-            SqlCommand cmd = new SqlCommand(sql, con);
-            cmd.Parameters.AddWithValue("@name", name);
-            SqlDataReader rdr = cmd.ExecuteReader();
+            string sql = ("Select * from Categories where Category_Name = N'"+name+"'");
+            SqlDataReader rdr = dbContext.ExcuteQuery(sql);
             if (rdr.Read())
             {
                 emp.CategoryID = rdr.GetValue(0).ToString();
@@ -92,54 +80,35 @@ namespace CentosCashFlow.Models
                 emp.CategoryType = rdr.GetValue(2).ToString();
                 emp.CategoryImg = rdr.GetValue(3).ToString();
             }
-            con.Close();
-
+            rdr.Close();
             return emp;
         }
         public int addNewItem(Category category)
         {
-            con.Open();
             int rs = 0;
-            string sql = "INSERT INTO Categories VALUES(@id, @name, @type, @img)";
-
-            SqlCommand cmd = new SqlCommand(sql, con);
-            cmd.CommandType = CommandType.Text;
-            cmd.Parameters.AddWithValue("@id", category.CategoryID);
-            cmd.Parameters.AddWithValue("@name", category.CategoryName);
-            cmd.Parameters.AddWithValue("@type", category.CategoryType);
-            cmd.Parameters.AddWithValue("@img", category.CategoryImg);
-            rs = cmd.ExecuteNonQuery();
-            con.Close();
+            string sql = "INSERT INTO Categories VALUES('" + category.CategoryID+
+                "', N'" + category.CategoryName +
+                "', '" + category.CategoryType + "', '" + category.CategoryImg + "')";
+            rs = dbContext.ExcuteNonQuery(sql);
             return rs;
         }
         public int updateDataForItem(Category category)
         {
-            con.Open();
             int rs = 0;
-            string sql = "UPDATE Categories SET Category_Type = @type, Category_Name = @name, Category_Img = @img WHERE ID = @id";
-
-            SqlCommand cmd = new SqlCommand(sql, con);
-            cmd.CommandType = CommandType.Text;
-            cmd.Parameters.AddWithValue("@id", category.CategoryID);
-            cmd.Parameters.AddWithValue("@type", category.CategoryType);
-            cmd.Parameters.AddWithValue("@name", category.CategoryName);
-            cmd.Parameters.AddWithValue("@img", category.CategoryImg);
-            rs = cmd.ExecuteNonQuery();
-            con.Close();
+            string sql = "UPDATE Categories " +
+                "SET Category_Type = '" + category.CategoryType + "', " +
+                "Category_Name = N'" + category.CategoryName + "', " +
+                "Category_Img = '" + category.CategoryImg + "' " +
+                "WHERE ID = '" + category.CategoryID + "'";
+            rs = dbContext.ExcuteNonQuery(sql);
             return rs;
         }
 
         public int deleteDataById(string id)
         {
-            con.Open();
             int rs = 0;
-            string sql = "EXEC DeleteCategory @Category_ID = @id";
-
-            SqlCommand cmd = new SqlCommand(sql, con);
-            cmd.CommandType = CommandType.Text;
-            cmd.Parameters.AddWithValue("@id", id);
-            rs = cmd.ExecuteNonQuery();
-            con.Close();
+            string sql = "EXEC DeleteCategory @Category_ID = '"+id+"'";
+            rs = dbContext.ExcuteNonQuery(sql);
             return rs;
         }
     }

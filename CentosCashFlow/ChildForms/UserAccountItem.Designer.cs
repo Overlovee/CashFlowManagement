@@ -65,6 +65,7 @@
             this.pictureBoxAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxAvatar.TabIndex = 0;
             this.pictureBoxAvatar.TabStop = false;
+            this.pictureBoxAvatar.Click += new System.EventHandler(this.btnEditingUserAccount_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -121,6 +122,7 @@
             this.btnDeleteUserAccount.TabIndex = 40;
             this.btnDeleteUserAccount.Text = "Delete";
             this.btnDeleteUserAccount.UseVisualStyleBackColor = false;
+            this.btnDeleteUserAccount.Click += new System.EventHandler(this.btnDeleteUserAccount_Click);
             // 
             // labelUserName
             // 
@@ -134,6 +136,7 @@
             this.labelUserName.TabIndex = 39;
             this.labelUserName.Text = "John Dor";
             this.labelUserName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelUserName.Click += new System.EventHandler(this.btnEditingUserAccount_Click);
             // 
             // labelUserEmail
             // 
@@ -147,6 +150,7 @@
             this.labelUserEmail.TabIndex = 38;
             this.labelUserEmail.Text = "example123@gmail.com";
             this.labelUserEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelUserEmail.Click += new System.EventHandler(this.btnEditingUserAccount_Click);
             // 
             // UserAccountItem
             // 
@@ -159,6 +163,7 @@
             this.MinimumSize = new System.Drawing.Size(500, 60);
             this.Name = "UserAccountItem";
             this.Size = new System.Drawing.Size(698, 58);
+            this.Load += new System.EventHandler(this.UserAccountItem_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvatar)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);

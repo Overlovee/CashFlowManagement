@@ -54,6 +54,12 @@
     <Compile Include="ChildForms\Account.designer.cs">
       <DependentUpon>Account.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForms\AccountEditingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\AccountEditingForm.Designer.cs">
+      <DependentUpon>AccountEditingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildForms\Category.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,12 @@
     </Compile>
     <Compile Include="ChildForms\ChangingPasswordForm.Designer.cs">
       <DependentUpon>ChangingPasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\ConfirmPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\ConfirmPasswordForm.Designer.cs">
+      <DependentUpon>ConfirmPasswordForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForms\DebtItem.cs">
       <SubType>UserControl</SubType>
@@ -193,10 +205,12 @@
     <Compile Include="Models\ConnectTransaction.cs" />
     <Compile Include="Models\ConnectUsers.cs" />
     <Compile Include="Models\Currency.cs" />
+    <Compile Include="Models\DbContext.cs" />
     <Compile Include="Models\Language.cs" />
     <Compile Include="Models\Settings.cs" />
     <Compile Include="Models\Transaction.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserAccountInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.cs">
@@ -207,6 +221,9 @@
     </Compile>
     <EmbeddedResource Include="ChildForms\Account.resx">
       <DependentUpon>Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\AccountEditingForm.resx">
+      <DependentUpon>AccountEditingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\Category.resx">
       <DependentUpon>Category.cs</DependentUpon>
@@ -222,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\ChangingPasswordForm.resx">
       <DependentUpon>ChangingPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\ConfirmPasswordForm.resx">
+      <DependentUpon>ConfirmPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\DebtItem.resx">
       <DependentUpon>DebtItem.cs</DependentUpon>

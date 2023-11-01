@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelCurrentBalance = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAddNewTransaction = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelTotalMonthExpenditure = new System.Windows.Forms.Label();
+            this.labellabelTitleMonthExpenditure = new System.Windows.Forms.Label();
+            this.labelTotalMonthIncome = new System.Windows.Forms.Label();
+            this.labelTitleMonthIncome = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelCurrentTransactions = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartMonthCashFlow = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartMonthCashFlow)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -62,7 +62,7 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.labelCurrentBalance, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
@@ -87,18 +87,18 @@
             this.label2.Text = "Current balance";
             this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // label1
+            // labelCurrentBalance
             // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label1.Location = new System.Drawing.Point(28, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(760, 27);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "10,001,129 VND";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.labelCurrentBalance.AutoSize = true;
+            this.labelCurrentBalance.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelCurrentBalance.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.labelCurrentBalance.Location = new System.Drawing.Point(28, 0);
+            this.labelCurrentBalance.Margin = new System.Windows.Forms.Padding(0);
+            this.labelCurrentBalance.Name = "labelCurrentBalance";
+            this.labelCurrentBalance.Size = new System.Drawing.Size(760, 27);
+            this.labelCurrentBalance.TabIndex = 0;
+            this.labelCurrentBalance.Text = "10,001,129 VND";
+            this.labelCurrentBalance.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // tableLayoutPanel2
             // 
@@ -146,10 +146,10 @@
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.label7, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.label6, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.label5, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.label4, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.labelTotalMonthExpenditure, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.labellabelTitleMonthExpenditure, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.labelTotalMonthIncome, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.labelTitleMonthIncome, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 72);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
@@ -160,66 +160,66 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(788, 60);
             this.tableLayoutPanel3.TabIndex = 5;
             // 
-            // label7
+            // labelTotalMonthExpenditure
             // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label7.Location = new System.Drawing.Point(394, 30);
-            this.label7.Margin = new System.Windows.Forms.Padding(0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(394, 30);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "10,001,129 VND";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.labelTotalMonthExpenditure.AutoSize = true;
+            this.labelTotalMonthExpenditure.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelTotalMonthExpenditure.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.labelTotalMonthExpenditure.Location = new System.Drawing.Point(394, 30);
+            this.labelTotalMonthExpenditure.Margin = new System.Windows.Forms.Padding(0);
+            this.labelTotalMonthExpenditure.Name = "labelTotalMonthExpenditure";
+            this.labelTotalMonthExpenditure.Size = new System.Drawing.Size(394, 30);
+            this.labelTotalMonthExpenditure.TabIndex = 9;
+            this.labelTotalMonthExpenditure.Text = "10,001,129 VND";
+            this.labelTotalMonthExpenditure.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
-            // label6
+            // labellabelTitleMonthExpenditure
             // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label6.Location = new System.Drawing.Point(0, 30);
-            this.label6.Margin = new System.Windows.Forms.Padding(0);
-            this.label6.Name = "label6";
-            this.label6.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
-            this.label6.Size = new System.Drawing.Size(394, 30);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Total Expenditures In This Month";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.labellabelTitleMonthExpenditure.AutoSize = true;
+            this.labellabelTitleMonthExpenditure.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labellabelTitleMonthExpenditure.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.labellabelTitleMonthExpenditure.Location = new System.Drawing.Point(0, 30);
+            this.labellabelTitleMonthExpenditure.Margin = new System.Windows.Forms.Padding(0);
+            this.labellabelTitleMonthExpenditure.Name = "labellabelTitleMonthExpenditure";
+            this.labellabelTitleMonthExpenditure.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
+            this.labellabelTitleMonthExpenditure.Size = new System.Drawing.Size(394, 30);
+            this.labellabelTitleMonthExpenditure.TabIndex = 8;
+            this.labellabelTitleMonthExpenditure.Text = "Total Expenditures In This Month";
+            this.labellabelTitleMonthExpenditure.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // label5
+            // labelTotalMonthIncome
             // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label5.Location = new System.Drawing.Point(394, 0);
-            this.label5.Margin = new System.Windows.Forms.Padding(0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(394, 30);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "10,001,129 VND";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.labelTotalMonthIncome.AutoSize = true;
+            this.labelTotalMonthIncome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelTotalMonthIncome.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.labelTotalMonthIncome.Location = new System.Drawing.Point(394, 0);
+            this.labelTotalMonthIncome.Margin = new System.Windows.Forms.Padding(0);
+            this.labelTotalMonthIncome.Name = "labelTotalMonthIncome";
+            this.labelTotalMonthIncome.Size = new System.Drawing.Size(394, 30);
+            this.labelTotalMonthIncome.TabIndex = 7;
+            this.labelTotalMonthIncome.Text = "10,001,129 VND";
+            this.labelTotalMonthIncome.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
-            // label4
+            // labelTitleMonthIncome
             // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Margin = new System.Windows.Forms.Padding(0);
-            this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
-            this.label4.Size = new System.Drawing.Size(394, 30);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Total Income In This Month";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.labelTitleMonthIncome.AutoSize = true;
+            this.labelTitleMonthIncome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelTitleMonthIncome.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.labelTitleMonthIncome.Location = new System.Drawing.Point(0, 0);
+            this.labelTitleMonthIncome.Margin = new System.Windows.Forms.Padding(0);
+            this.labelTitleMonthIncome.Name = "labelTitleMonthIncome";
+            this.labelTitleMonthIncome.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
+            this.labelTitleMonthIncome.Size = new System.Drawing.Size(394, 30);
+            this.labelTitleMonthIncome.TabIndex = 6;
+            this.labelTitleMonthIncome.Text = "Total Income In This Month";
+            this.labelTitleMonthIncome.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.chart1);
+            this.panel1.Controls.Add(this.chartMonthCashFlow);
             this.panel1.Location = new System.Drawing.Point(0, 132);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
@@ -280,23 +280,31 @@
             this.label8.Text = "Current Transactions";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // chart1
+            // chartMonthCashFlow
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            this.chart1.Dock = System.Windows.Forms.DockStyle.Top;
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(32, 12);
-            this.chart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(724, 392);
-            this.chart1.TabIndex = 10;
-            this.chart1.Text = "chart1";
+            chartArea1.Name = "ChartArea1";
+            this.chartMonthCashFlow.ChartAreas.Add(chartArea1);
+            this.chartMonthCashFlow.Dock = System.Windows.Forms.DockStyle.Top;
+            legend1.Name = "Legend1";
+            this.chartMonthCashFlow.Legends.Add(legend1);
+            this.chartMonthCashFlow.Location = new System.Drawing.Point(32, 12);
+            this.chartMonthCashFlow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chartMonthCashFlow.Name = "chartMonthCashFlow";
+            this.chartMonthCashFlow.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
+            series1.BorderColor = System.Drawing.Color.Black;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            series1.IsValueShownAsLabel = true;
+            series1.IsXValueIndexed = true;
+            series1.LabelBackColor = System.Drawing.Color.White;
+            series1.LabelBorderColor = System.Drawing.Color.White;
+            series1.Legend = "Legend1";
+            series1.Name = "Cash Flow";
+            this.chartMonthCashFlow.Series.Add(series1);
+            this.chartMonthCashFlow.Size = new System.Drawing.Size(724, 392);
+            this.chartMonthCashFlow.TabIndex = 10;
+            this.chartMonthCashFlow.Text = "chart1";
             // 
             // Home
             // 
@@ -322,7 +330,7 @@
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartMonthCashFlow)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -332,17 +340,17 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelCurrentBalance;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button btnAddNewTransaction;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelTotalMonthExpenditure;
+        private System.Windows.Forms.Label labellabelTitleMonthExpenditure;
+        private System.Windows.Forms.Label labelTotalMonthIncome;
+        private System.Windows.Forms.Label labelTitleMonthIncome;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartMonthCashFlow;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelCurrentTransactions;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;

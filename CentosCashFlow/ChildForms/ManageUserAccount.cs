@@ -17,21 +17,40 @@ namespace CentosCashFlow.ChildForms
             InitializeComponent();
         }
 
-        private void ManageUserAccount_Load(object sender, EventArgs e)
+        public void Load_Data()
         {
-            for (int i = 0; i < 10; i++)
+            Models.ConnectUsers connectUsers = new Models.ConnectUsers();
+            List<Models.UserAccountInfo> list = new List<Models.UserAccountInfo>();
+            list = connectUsers.getUserAccountsInfo();
+            foreach (Models.UserAccountInfo info in list)
             {
                 Panel newPanel = new Panel();
                 panelUserAccountsLoad.Controls.Add(newPanel);
                 newPanel.Dock = DockStyle.Top;
                 newPanel.Height = 80;
 
-                UserAccountItem transaction = new UserAccountItem();
-
-                newPanel.Controls.Add(transaction);
-                transaction.Dock = DockStyle.Top;
-                transaction.Height = 60;
+                UserAccountItem item = new UserAccountItem();
+                item.user = info;
+                item.Tag = this.Tag;
+                newPanel.Controls.Add(item);
+                item.Dock = DockStyle.Top;
+                item.Height = 60;
             }
+        }
+        public void Reload_Data()
+        {
+            foreach (Control control in panelUserAccountsLoad.Controls)
+            {
+                control.Dispose();
+            }
+
+            panelUserAccountsLoad.Controls.Clear();
+
+            Load_Data();
+        }
+        private void ManageUserAccount_Load(object sender, EventArgs e)
+        {
+            Load_Data();
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -91,15 +92,15 @@ namespace CentosCashFlow.ChildForms
             int count = 0;
             if (!char.IsDigit(e.KeyChar) && e.KeyChar != '-' && e.KeyChar != (char)Keys.Back && e.KeyChar != 32 && e.KeyChar != '.')
             {
-                if(e.KeyChar == '.')
-                {
-                    count += 1;
-                }
+                e.Handled = true; // Chặn ký tự không hợp lệ
+            }
+            if(e.KeyChar == '.')
+            {
+                count++;
                 if(count >= 2)
                 {
-                    e.Handled = true; // Chặn ký tự không hợp lệ
+                    e.Handled = true;
                 }
-                e.Handled = true; // Chặn ký tự không hợp lệ
             }
         }
 

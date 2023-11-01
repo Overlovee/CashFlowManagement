@@ -27,12 +27,7 @@ namespace CentosCashFlow
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Bạn chắc chắn muốn thoát", "",
-                  MessageBoxButtons.YesNo) == DialogResult.No)
-            {
-                // Đóng form
-                e.Cancel = true;
-            }
+            
         }
 
         private void linkLabel_Register_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -55,7 +50,7 @@ namespace CentosCashFlow
 
             Models.ConnectUsers connect = new Models.ConnectUsers();
             Models.User user = connect.Login(email, password);
-            if(user is null)
+            if(user is null || user.Id == 0)
             {
                 MessageBox.Show("Email or password is incorrect!", "", MessageBoxButtons.OK);
             }
@@ -71,8 +66,8 @@ namespace CentosCashFlow
                 }
                 else
                 {
-                    Reset_Login();
                     this.Show();
+                    Reset_Login();
                 }
             }
         }

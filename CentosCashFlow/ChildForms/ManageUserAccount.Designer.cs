@@ -44,7 +44,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.panel7.Margin = new System.Windows.Forms.Padding(0);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1124, 501);
             this.panel7.TabIndex = 2;
@@ -57,7 +57,7 @@
             this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel12.Controls.Add(this.panelUserAccountsLoad);
             this.panel12.Controls.Add(this.tableLayoutPanel1);
-            this.panel12.Location = new System.Drawing.Point(29, 12);
+            this.panel12.Location = new System.Drawing.Point(28, 18);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(1073, 462);
             this.panel12.TabIndex = 0;

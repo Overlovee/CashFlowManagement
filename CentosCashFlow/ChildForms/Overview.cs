@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CentosCashFlow.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,28 +13,23 @@ namespace CentosCashFlow.ChildForms
 {
     public partial class Overview : Form
     {
+        DbContext dbContext = new DbContext();
         public Overview()
         {
             InitializeComponent();
         }
 
-        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        public void Load_Data()
         {
+            int month = dateTimePickerOverview.Value.Month;
+            int year = dateTimePickerOverview.Value.Year;
 
-        }
+            labelIncomeMonth.Text = "Incomes in " + dateTimePickerOverview.Value.ToString("MM/yyyy");
+            labelExpendituresMonth.Text = "Expenditures in " + dateTimePickerOverview.Value.ToString("MM/yyyy");
 
-        private void label7_Click(object sender, EventArgs e)
-        {
+            string sql = "";
+            DataTable dataTable = new DataTable();
 
-        }
-
-        private void chart1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Overview_Load(object sender, EventArgs e)
-        {
             for (int i = 0; i < 10; i++)
             {
                 Panel newPanel = new Panel();
@@ -60,6 +56,15 @@ namespace CentosCashFlow.ChildForms
                 wide.Dock = DockStyle.Top;
                 wide.Height = 60;
             }
+        }
+        private void Overview_Load(object sender, EventArgs e)
+        {
+            dateTimePickerOverview.CustomFormat = "MM/yyyy";
+            dateTimePickerOverview.Format = DateTimePickerFormat.Custom;
+            dateTimePickerOverview.MaxDate = DateTime.Now.AddMonths(3);
+            dateTimePickerOverview.Value = DateTime.Now;
+            dateTimePickerOverview.MaxDate = DateTime.Today;
+            Load_Data();
         }
     }
 }

@@ -9,14 +9,12 @@ namespace CentosCashFlow.Models
 {
     public class ConnectLanguage
     {
-        public SqlConnection con = new SqlConnection("Data Source=LAPTOP-G5HQJSJ2\\SQLEXPRESS; Initial Catalog=DB_CashFlowManagement;Integrated Security=True");
+        DbContext dbContext = new DbContext();
         public List<Language> getData()
         {
             List<Language> list = new List<Language>();
             string sql = ("Select * from Languages");
-            SqlCommand cmd = new SqlCommand(sql, con);
-            con.Open();
-            SqlDataReader rdr = cmd.ExecuteReader();
+            SqlDataReader rdr = dbContext.ExcuteQuery(sql);
             while (rdr.Read())
             {
                 Language emp = new Language();
@@ -25,25 +23,19 @@ namespace CentosCashFlow.Models
 
                 list.Add(emp);
             }
-            con.Close();
-
+            rdr.Close();
             return list;
         }
         public Language getDataByID(string id)
         {
             Language emp = new Language();
-            con.Open();
-            string sql = ("Select * from Languages where Language_Code = @id");
-            SqlCommand cmd = new SqlCommand(sql, con);
-            cmd.Parameters.AddWithValue("@id", id);
-            SqlDataReader rdr = cmd.ExecuteReader();
+            string sql = ("Select * from Languages where Language_Code = '"+id+"'");
+            SqlDataReader rdr = dbContext.ExcuteQuery(sql);
             if (rdr.Read())
             {
                 emp.Language_Code = rdr.GetValue(0).ToString();
                 emp.Language_Name = rdr.GetValue(1).ToString();
             }
-            con.Close();
-
             return emp;
         }
     }

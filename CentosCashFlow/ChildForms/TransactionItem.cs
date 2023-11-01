@@ -37,11 +37,20 @@ namespace CentosCashFlow.ChildForms
                     control = control.Parent;
                 }
                 // Kiểm tra xem control.Parent có phải là Form
-                if (control.Parent is Form && control.Parent is TransactionForm)
+                if (control.Parent is Form)
                 {
-                    TransactionForm f = (TransactionForm)control.Parent;
+                    if(control.Parent is TransactionForm)
+                    {
+                        TransactionForm f = (TransactionForm)control.Parent;
 
-                    f.Reload_Data();
+                        f.Reload_Data();
+                    }
+                    if(control.Parent is Home)
+                    {
+                        Home f = (Home)control.Parent;
+
+                        f.Reload_Data();
+                    }
                 }
             }
         }
@@ -88,12 +97,27 @@ namespace CentosCashFlow.ChildForms
             if (kt != 0)
             {
                 MessageBox.Show("Completely deleting!", "", MessageBoxButtons.OK);
-                Panel panel = (Panel)this.Parent;
-                Panel ParentPanel = (Panel)panel.Parent;
-                panel.Controls.Remove(this);
-                this.Dispose();
-                ParentPanel.Controls.Remove(panel);
-                panel.Dispose();
+                Control control = (Control)this;
+                while (control.Parent != null && !(control.Parent is Form))
+                {
+                    control = control.Parent;
+                }
+                // Kiểm tra xem control.Parent có phải là Form
+                if (control.Parent is Form)
+                {
+                    if (control.Parent is TransactionForm)
+                    {
+                        TransactionForm f = (TransactionForm)control.Parent;
+
+                        f.Reload_Data();
+                    }
+                    if (control.Parent is Home)
+                    {
+                        Home f = (Home)control.Parent;
+
+                        f.Reload_Data();
+                    }
+                }
             }
             else
             {

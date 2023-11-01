@@ -11,10 +11,9 @@ namespace CentosCashFlow.Models
 {
     public class ConnectTransaction
     {
-        public SqlConnection con = new SqlConnection("Data Source=LAPTOP-G5HQJSJ2\\SQLEXPRESS; Initial Catalog=DB_CashFlowManagement;Integrated Security=True");
+        DbContext dbContext = new DbContext();
         public List<Transaction> getCurrentDataByID(int id)
         {
-
             List<Transaction> list = new List<Transaction>();
             string sql = ("SELECT TOP 20" +
                 "T.ID AS Transaction_ID, " +
@@ -27,12 +26,9 @@ namespace CentosCashFlow.Models
                 "C.Category_Img " +
                 "FROM Transactions AS T " +
                 "JOIN Categories AS C ON T.Category_ID = C.ID " +
-                "WHERE T.User_ID = @id " +
-                "ORDER BY T.Transaction_Date DESC;");
-            SqlCommand cmd = new SqlCommand(sql, con);
-            con.Open();
-            cmd.Parameters.AddWithValue("id", id);
-            SqlDataReader rdr = cmd.ExecuteReader();
+                "WHERE T.User_ID = '"+ id +"' " +
+                "ORDER BY T.Transaction_Date ASC;");
+            SqlDataReader rdr = dbContext.ExcuteQuery(sql);
             while (rdr.Read())
             {
                 Transaction emp = new Transaction();
@@ -47,70 +43,80 @@ namespace CentosCashFlow.Models
 
                 list.Add(emp);
             }
-            con.Close();
 
             return list;
         }
+        public List<Transaction> getMonthDataByID(int id, int month, int year)
+        {
+            List<Transaction> list = new List<Transaction>();
+            string sql = ("SELECT " +
+                "T.ID, " +
+                "T.User_ID, " +
+                "C.Category_Name, " +
+                "T.Transaction_Type, " +
+                "T.Amount, " +
+                "T.Transaction_Date, " +
+                "T.Transaction_Description, " +
+                "C.Category_Img " +
+                "FROM Transactions T " +
+                "JOIN Categories C ON T.Category_ID = C.ID " +
+                "WHERE T.User_ID = '" + id + "' AND MONTH(T.Transaction_Date) = '" + month + "' AND YEAR(T.Transaction_Date) = '" + year + "' " +
+                "ORDER BY T.Transaction_Date ASC;");
+            SqlDataReader rdr = dbContext.ExcuteQuery(sql);
+            while (rdr.Read())
+            {
+                Transaction emp = new Transaction();
+                emp.TransactionID = int.Parse(rdr.GetValue(0).ToString());
+                emp.UserID = int.Parse(rdr.GetValue(1).ToString());
+                emp.CategoryName = rdr.GetValue(2).ToString();
+                emp.TransactionType = rdr.GetValue(3).ToString();
+                emp.Amount = decimal.Parse(rdr.GetValue(4).ToString());
+                emp.TransactionDate = DateTime.Parse(rdr.GetValue(5).ToString());
+                emp.TransactionDescription = rdr.GetValue(6).ToString();
+                emp.TransactionImg = rdr.GetValue(7).ToString();
 
+                list.Add(emp);
+            }
+
+            return list;
+        }
         public int addNewItem(Transaction transaction)
         {
             Models.ConnectCategory connectCategory = new Models.ConnectCategory();
             Models.Category category = connectCategory.getDataByName(transaction.CategoryName);
-            con.Open();
             int rs = 0;
-            string sql = "INSERT INTO Transactions " +
-                "VALUES(@userID, @categoryID, @transactionType, @amount, @transactionDate, @transactionDescription)";
+            string sql = "Set dateformat dmy INSERT INTO Transactions " +
+                "VALUES('" + transaction.UserID + "', '" 
+                + category.CategoryID + "', '" 
+                + transaction.TransactionType + "', '" 
+                + transaction.Amount + "', '" 
+                + transaction.TransactionDate + "', 'N" 
+                + transaction.TransactionDescription + "')";
 
-            SqlCommand cmd = new SqlCommand(sql, con);
-            cmd.CommandType = CommandType.Text;
-            cmd.Parameters.AddWithValue("@userID", transaction.UserID);
-            cmd.Parameters.AddWithValue("@categoryID", category.CategoryID);
-            cmd.Parameters.AddWithValue("@transactionType", transaction.TransactionType);
-            cmd.Parameters.AddWithValue("@amount", transaction.Amount);
-            cmd.Parameters.AddWithValue("@transactionDate", transaction.TransactionDate);
-            cmd.Parameters.AddWithValue("@transactionDescription", transaction.TransactionDescription);
-            rs = cmd.ExecuteNonQuery();
-            con.Close();
+            rs = dbContext.ExcuteNonQuery(sql);
             return rs;
         }
         public int updateDataForItem(Transaction transaction)
         {
             Models.ConnectCategory connectCategory = new Models.ConnectCategory();
             Models.Category category = connectCategory.getDataByName(transaction.CategoryName);
-            con.Open();
             int rs = 0;
-            string sql = "UPDATE Transactions " +
-                "SET Category_ID = @categoryID, " +
-                "Transaction_Type = @transactionType, " +
-                "Amount = @amount, " +
-                "Transaction_Date = @transactionDate, " +
-                "Transaction_Description = @transactionDescription " +
-                "WHERE ID = @id";
-
-            SqlCommand cmd = new SqlCommand(sql, con);
-            cmd.CommandType = CommandType.Text;
-            cmd.Parameters.AddWithValue("@id", transaction.TransactionID);
-            cmd.Parameters.AddWithValue("@categoryID", category.CategoryID);
-            cmd.Parameters.AddWithValue("@transactionType", transaction.TransactionType);
-            cmd.Parameters.AddWithValue("@amount", transaction.Amount);
-            cmd.Parameters.AddWithValue("@transactionDate", transaction.TransactionDate);
-            cmd.Parameters.AddWithValue("@transactionDescription", transaction.TransactionDescription);
-
-            rs = cmd.ExecuteNonQuery();
-            con.Close();
+            string sql = "Set dateformat dmy " +
+                "EXEC UpdateTransaction " +
+                "@TransactionID = '"+ transaction.TransactionID + "', " +
+                "@NewAmount = '"+ transaction.Amount + "', " +
+                "@NewCategoryID = '"+ category.CategoryID + "', " +
+                "@NewTransactionType = '"+ transaction.TransactionType + "', " +
+                "@NewTransactionDate = '"+ transaction.TransactionDate + "', " +
+                "@NewTransactionDescription = '"+ transaction.TransactionDescription + "' ";
+            rs = dbContext.ExcuteNonQuery(sql);
             return rs;
         }
         public int deleteDataById(int id)
         {
-            con.Open();
             int rs = 0;
-            string sql = "Delete from Transactions where ID = @id";
-
-            SqlCommand cmd = new SqlCommand(sql, con);
-            cmd.CommandType = CommandType.Text;
-            cmd.Parameters.AddWithValue("@id", id);
-            rs = cmd.ExecuteNonQuery();
-            con.Close();
+            string sql = "EXEC DeleteTransaction '"+id+"'";
+            rs = dbContext.ExcuteNonQuery(sql);
             return rs;
         }
     }
