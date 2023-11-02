@@ -114,7 +114,7 @@
             this.button3.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
             this.button3.Size = new System.Drawing.Size(250, 56);
             this.button3.TabIndex = 16;
-            this.button3.Text = "Manage Currency";
+            this.button3.Text = "              Manage                 Currency";
             this.button3.UseVisualStyleBackColor = false;
             // 
             // button2
@@ -134,7 +134,7 @@
             this.button2.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
             this.button2.Size = new System.Drawing.Size(250, 56);
             this.button2.TabIndex = 15;
-            this.button2.Text = "        Manage Languages";
+            this.button2.Text = "            Manage               Languages";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // btnAdminAccount
