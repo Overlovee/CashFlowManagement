@@ -321,6 +321,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Database\DB_CashFlowManagement.sql" />
     <Content Include="Resources\account.png" />
     <Content Include="Resources\Cat-With-Wry-Smile-icon.png" />
     <Content Include="Resources\categories.png" />
