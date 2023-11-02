@@ -31,7 +31,7 @@ namespace CentosCashFlow.ChildForms
             int month = DateTime.Now.Month;
             List<Models.Transaction> listCurrrentMonth = connectTransaction.getMonthDataByID(int.Parse(this.Tag.ToString()), month, year);
 
-            labelCurrentBalance.Text = user.AvailableMoney.ToString();
+            labelCurrentBalance.Text = user.AvailableMoney.ToString() + " " + user.UserSettings.CurrencyCode;
             decimal totalIncomes = 0;
             decimal totalEnpenditures = 0;
             foreach (Models.Transaction transaction in listCurrrentMonth)
@@ -56,8 +56,8 @@ namespace CentosCashFlow.ChildForms
                 item.Dock = DockStyle.Top;
                 item.Height = 60;
             }
-            labelTotalMonthIncome.Text = totalIncomes.ToString() + " " + user.UserSettings.CurrencyCode;
-            labelTotalMonthExpenditure.Text = totalEnpenditures.ToString() + " " + user.UserSettings.CurrencyCode;
+            labelTotalMonthIncome.Text = "+" + totalIncomes.ToString() + " " + user.UserSettings.CurrencyCode;
+            labelTotalMonthExpenditure.Text = "-" + totalEnpenditures.ToString() + " " + user.UserSettings.CurrencyCode;
 
             chartMonthCashFlow.ChartAreas["ChartArea1"].AxisX.Title = "This month";
             chartMonthCashFlow.ChartAreas["ChartArea1"].AxisY.Title = user.UserSettings.CurrencyCode;

@@ -88,7 +88,7 @@
             // 
             // btnEditingUserAccount
             // 
-            this.btnEditingUserAccount.BackColor = System.Drawing.Color.DarkViolet;
+            this.btnEditingUserAccount.BackColor = System.Drawing.Color.Black;
             this.btnEditingUserAccount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnEditingUserAccount.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.btnEditingUserAccount.FlatAppearance.BorderSize = 0;
@@ -107,7 +107,7 @@
             // 
             // btnDeleteUserAccount
             // 
-            this.btnDeleteUserAccount.BackColor = System.Drawing.Color.DarkViolet;
+            this.btnDeleteUserAccount.BackColor = System.Drawing.Color.DeepPink;
             this.btnDeleteUserAccount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDeleteUserAccount.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.btnDeleteUserAccount.FlatAppearance.BorderSize = 0;
@@ -129,6 +129,7 @@
             this.labelUserName.AutoSize = true;
             this.labelUserName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelUserName.ForeColor = System.Drawing.Color.Black;
             this.labelUserName.Location = new System.Drawing.Point(0, 0);
             this.labelUserName.Margin = new System.Windows.Forms.Padding(0);
             this.labelUserName.Name = "labelUserName";
@@ -143,6 +144,7 @@
             this.labelUserEmail.AutoSize = true;
             this.labelUserEmail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelUserEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelUserEmail.ForeColor = System.Drawing.Color.Black;
             this.labelUserEmail.Location = new System.Drawing.Point(219, 0);
             this.labelUserEmail.Margin = new System.Windows.Forms.Padding(0);
             this.labelUserEmail.Name = "labelUserEmail";

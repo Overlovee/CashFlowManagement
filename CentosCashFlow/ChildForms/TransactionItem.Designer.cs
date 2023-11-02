@@ -111,7 +111,7 @@
             // 
             // btnDeletingTransaction
             // 
-            this.btnDeletingTransaction.BackColor = System.Drawing.Color.Black;
+            this.btnDeletingTransaction.BackColor = System.Drawing.Color.DeepPink;
             this.btnDeletingTransaction.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDeletingTransaction.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.btnDeletingTransaction.FlatAppearance.BorderSize = 0;
@@ -143,6 +143,7 @@
             // 
             this.labelDateTime.AutoSize = true;
             this.labelDateTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.labelDateTime.ForeColor = System.Drawing.Color.Black;
             this.labelDateTime.Location = new System.Drawing.Point(0, 25);
             this.labelDateTime.Margin = new System.Windows.Forms.Padding(0);
             this.labelDateTime.Name = "labelDateTime";
@@ -155,6 +156,7 @@
             // 
             this.labelTransactionTitle.AutoSize = true;
             this.labelTransactionTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelTransactionTitle.ForeColor = System.Drawing.Color.Black;
             this.labelTransactionTitle.Location = new System.Drawing.Point(0, 5);
             this.labelTransactionTitle.Margin = new System.Windows.Forms.Padding(0);
             this.labelTransactionTitle.Name = "labelTransactionTitle";
@@ -167,7 +169,7 @@
             // 
             this.labelAmount.AutoSize = true;
             this.labelAmount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelAmount.Font = new System.Drawing.Font("Montserrat ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAmount.Location = new System.Drawing.Point(162, 0);
             this.labelAmount.Margin = new System.Windows.Forms.Padding(0);
             this.labelAmount.Name = "labelAmount";

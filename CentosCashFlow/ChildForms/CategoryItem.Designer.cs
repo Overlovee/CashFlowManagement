@@ -107,6 +107,7 @@
             this.labelCategoryName.AutoSize = true;
             this.labelCategoryName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelCategoryName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelCategoryName.ForeColor = System.Drawing.Color.Black;
             this.labelCategoryName.Location = new System.Drawing.Point(0, 0);
             this.labelCategoryName.Margin = new System.Windows.Forms.Padding(0);
             this.labelCategoryName.Name = "labelCategoryName";
@@ -117,7 +118,7 @@
             // 
             // btnDeleteCategoryItem
             // 
-            this.btnDeleteCategoryItem.BackColor = System.Drawing.Color.Black;
+            this.btnDeleteCategoryItem.BackColor = System.Drawing.Color.DeepPink;
             this.btnDeleteCategoryItem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDeleteCategoryItem.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.btnDeleteCategoryItem.FlatAppearance.BorderSize = 0;

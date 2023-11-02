@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnSettings = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnAdminAccount = new System.Windows.Forms.Button();
             this.btnUserAccount = new System.Windows.Forms.Button();
             this.btnAccount = new System.Windows.Forms.Button();
             this.btnCategory = new System.Windows.Forms.Button();
@@ -44,10 +48,6 @@
             this.panelNavBar = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblTittle = new System.Windows.Forms.Label();
-            this.btnAdminAccount = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btnSettings = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -75,6 +75,87 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(250, 753);
             this.panelMenu.TabIndex = 0;
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.BackColor = System.Drawing.Color.Black;
+            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSettings.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnSettings.FlatAppearance.BorderSize = 0;
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnSettings.ForeColor = System.Drawing.Color.White;
+            this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
+            this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSettings.Location = new System.Drawing.Point(0, 574);
+            this.btnSettings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnSettings.Size = new System.Drawing.Size(250, 56);
+            this.btnSettings.TabIndex = 17;
+            this.btnSettings.Text = "Settings";
+            this.btnSettings.UseVisualStyleBackColor = false;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Black;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(0, 518);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(250, 56);
+            this.button3.TabIndex = 16;
+            this.button3.Text = "Manage Currency";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(0, 462);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(250, 56);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "        Manage Languages";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // btnAdminAccount
+            // 
+            this.btnAdminAccount.BackColor = System.Drawing.Color.Black;
+            this.btnAdminAccount.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAdminAccount.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnAdminAccount.FlatAppearance.BorderSize = 0;
+            this.btnAdminAccount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAdminAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnAdminAccount.ForeColor = System.Drawing.Color.White;
+            this.btnAdminAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnAdminAccount.Image")));
+            this.btnAdminAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdminAccount.Location = new System.Drawing.Point(0, 406);
+            this.btnAdminAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAdminAccount.Name = "btnAdminAccount";
+            this.btnAdminAccount.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnAdminAccount.Size = new System.Drawing.Size(250, 56);
+            this.btnAdminAccount.TabIndex = 13;
+            this.btnAdminAccount.Text = "Admin Accounts";
+            this.btnAdminAccount.UseVisualStyleBackColor = false;
             // 
             // btnUserAccount
             // 
@@ -301,87 +382,6 @@
             this.lblTittle.TabIndex = 1;
             this.lblTittle.Text = "HOME";
             this.lblTittle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnAdminAccount
-            // 
-            this.btnAdminAccount.BackColor = System.Drawing.Color.Black;
-            this.btnAdminAccount.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAdminAccount.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnAdminAccount.FlatAppearance.BorderSize = 0;
-            this.btnAdminAccount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAdminAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnAdminAccount.ForeColor = System.Drawing.Color.White;
-            this.btnAdminAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnAdminAccount.Image")));
-            this.btnAdminAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdminAccount.Location = new System.Drawing.Point(0, 406);
-            this.btnAdminAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAdminAccount.Name = "btnAdminAccount";
-            this.btnAdminAccount.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnAdminAccount.Size = new System.Drawing.Size(250, 56);
-            this.btnAdminAccount.TabIndex = 13;
-            this.btnAdminAccount.Text = "Admin Accounts";
-            this.btnAdminAccount.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 462);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(250, 56);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Manage Languages";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Black;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 518);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(250, 56);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Manage Currency";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // btnSettings
-            // 
-            this.btnSettings.BackColor = System.Drawing.Color.Black;
-            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSettings.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnSettings.FlatAppearance.BorderSize = 0;
-            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
-            this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSettings.Location = new System.Drawing.Point(0, 574);
-            this.btnSettings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnSettings.Size = new System.Drawing.Size(250, 56);
-            this.btnSettings.TabIndex = 17;
-            this.btnSettings.Text = "Settings";
-            this.btnSettings.UseVisualStyleBackColor = false;
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // Menu
             // 

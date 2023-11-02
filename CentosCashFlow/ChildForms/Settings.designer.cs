@@ -147,6 +147,7 @@
             this.cbbExport.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbbExport.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbExport.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.cbbExport.ForeColor = System.Drawing.Color.Black;
             this.cbbExport.FormattingEnabled = true;
             this.cbbExport.ItemHeight = 30;
             this.cbbExport.Location = new System.Drawing.Point(3, 130);
@@ -161,6 +162,7 @@
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(3, 96);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(315, 32);
@@ -173,6 +175,7 @@
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(3, 64);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(315, 32);
@@ -185,6 +188,7 @@
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(3, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(315, 32);
@@ -197,6 +201,7 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(315, 32);
@@ -209,6 +214,7 @@
             this.cbbLanguages.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbbLanguages.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbLanguages.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.cbbLanguages.ForeColor = System.Drawing.Color.Black;
             this.cbbLanguages.FormattingEnabled = true;
             this.cbbLanguages.ItemHeight = 30;
             this.cbbLanguages.Location = new System.Drawing.Point(324, 2);
@@ -223,6 +229,7 @@
             this.cbbTimeFormat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbbTimeFormat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbTimeFormat.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.cbbTimeFormat.ForeColor = System.Drawing.Color.Black;
             this.cbbTimeFormat.FormattingEnabled = true;
             this.cbbTimeFormat.Location = new System.Drawing.Point(324, 34);
             this.cbbTimeFormat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -236,6 +243,7 @@
             this.cbbOverviewDisplayMode.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbbOverviewDisplayMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbOverviewDisplayMode.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.cbbOverviewDisplayMode.ForeColor = System.Drawing.Color.Black;
             this.cbbOverviewDisplayMode.FormattingEnabled = true;
             this.cbbOverviewDisplayMode.Location = new System.Drawing.Point(324, 98);
             this.cbbOverviewDisplayMode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -249,6 +257,7 @@
             this.cbbCurrencyUnit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbbCurrencyUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbCurrencyUnit.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.cbbCurrencyUnit.ForeColor = System.Drawing.Color.Black;
             this.cbbCurrencyUnit.FormattingEnabled = true;
             this.cbbCurrencyUnit.Location = new System.Drawing.Point(324, 66);
             this.cbbCurrencyUnit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -261,6 +270,7 @@
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(321, 128);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";

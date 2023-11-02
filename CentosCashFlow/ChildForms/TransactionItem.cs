@@ -65,10 +65,12 @@ namespace CentosCashFlow.ChildForms
             labelDateTime.Text = TransModel.TransactionDate.ToString("d");
             if(TransModel.TransactionType.Contains("Expenditure"))
             {
+                labelAmount.ForeColor = Color.LightCoral;
                 labelAmount.Text = "-" + TransModel.Amount.ToString() + " " + userSettings.CurrencyCode;
             }
             else
             {
+                labelAmount.ForeColor = Color.Chartreuse;
                 labelAmount.Text = "+" + TransModel.Amount.ToString() + " " + userSettings.CurrencyCode;
             }
             

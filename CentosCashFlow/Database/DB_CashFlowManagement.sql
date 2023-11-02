@@ -315,3 +315,13 @@ SELECT* FROM Currency
 --WHERE T.User_ID = 3
 --AND MONTH(T.Transaction_Date) = 9 AND YEAR(T.Transaction_Date) = 2023
 --ORDER BY T.Transaction_Date ASC;	
+
+SELECT c.Category_Img, c.Category_Name, SUM(t.Amount) AS TotalMoneyIn
+FROM Categories AS c
+JOIN Transactions AS t ON c.ID = t.Category_ID
+WHERE t.Transaction_Type = 'Expenditure'
+    AND YEAR(t.Transaction_Date) = 2023
+    AND MONTH(t.Transaction_Date) = 11
+	AND t.User_ID = 3
+GROUP BY c.Category_Img, c.Category_Name
+ORDER BY TotalMoneyIn ASC;
