@@ -49,7 +49,22 @@ namespace CentosCashFlow
             }
             else
             {
-                
+                string name = textBox_FullName.Text;
+                string email = textBox_RgEmail.Text;
+                string password = textbox_RgPassword.Text;
+                Models.ConnectUsers connect = new Models.ConnectUsers();
+                int rs = connect.Register(name, email, password);
+                if (rs == 0)
+                {
+                    MessageBox.Show("Cannot Register!!");
+                }
+                else if (rs == 1)
+                {
+                    MessageBox.Show("Register success");
+                    Login login = new Login();
+                    this.Hide();
+                    login.ShowDialog();
+                }
 
             }
         }

@@ -236,6 +236,13 @@ BEGIN
     WHERE ID = @UserID;
 END
 --
+CREATE PROCEDURE InsertUser
+@name NVARCHAR(255),@email NVARCHAR(255),@password NVARCHAR(255)
+AS
+	INSERT INTO Users(Name,Email,Password)
+	VALUES(@name,@email,@password);
+GO
+--
 INSERT INTO Languages
 VALUES ('EN', N'English'),
 ('VN', N'Vietnamese')
@@ -286,6 +293,7 @@ GO
 
 SELECT ID, Name, Email FROM Users WHERE Role = 'User'
 
+SELECT* FROM Users
 SELECT* FROM Setting
 SELECT* FROM Categories
 SELECT* FROM Transactions
