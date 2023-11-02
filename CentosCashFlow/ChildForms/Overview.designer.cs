@@ -312,7 +312,7 @@
             this.chartMoneyIn.Series.Add(series2);
             this.chartMoneyIn.Size = new System.Drawing.Size(759, 341);
             this.chartMoneyIn.TabIndex = 7;
-            this.chartMoneyIn.Text = "chart1";
+            this.chartMoneyIn.Text = "chartIncome";
             // 
             // tableLayoutPanel3
             // 
