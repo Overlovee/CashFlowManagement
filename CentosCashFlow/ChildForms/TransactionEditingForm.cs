@@ -67,7 +67,6 @@ namespace CentosCashFlow.ChildForms
                 Load_CurrencyCombobox();
                 comboBoxTransactionType.Items.Add("Income");
                 comboBoxTransactionType.Items.Add("Expenditure");
-                Console.WriteLine(TransModel.TransactionType);
                 if (TransModel.TransactionType.Contains("Income"))
                 {
                     comboBoxTransactionType.SelectedItem = "Income";

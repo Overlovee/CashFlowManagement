@@ -56,7 +56,6 @@ namespace CentosCashFlow.ChildForms
             labelCategoryName.Text = CategoryItem_Name;
 
             string imagePath = CategoryItem_Img;
-            Console.WriteLine(imagePath);
             string projectPath = Path.GetDirectoryName(Path.GetDirectoryName(System.Windows.Forms.Application.StartupPath));
             if (!CategoryItem_Img.Contains("\\"))
             {

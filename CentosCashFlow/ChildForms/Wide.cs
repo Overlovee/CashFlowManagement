@@ -17,6 +17,8 @@ namespace CentosCashFlow.ChildForms
         public string CategoryItem_Img { get; set; }
         public string CategoryItem_Type { get; set; }
         public decimal TotalMoney { get; set; }
+        public int month { get; set; }
+        public int year { get; set; }
         public Models.Settings userSettings { get; set; }
         public Wide()
         {
@@ -43,7 +45,6 @@ namespace CentosCashFlow.ChildForms
             }
 
             string imagePath = CategoryItem_Img;
-            Console.WriteLine(imagePath);
             string projectPath = Path.GetDirectoryName(Path.GetDirectoryName(System.Windows.Forms.Application.StartupPath));
             if (!CategoryItem_Img.Contains("\\"))
             {
@@ -57,6 +58,32 @@ namespace CentosCashFlow.ChildForms
             else
             {
                 pictureBoxCategory.Image = CentosCashFlow.Properties.Resources.category_df;
+            }
+        }
+
+        private void labelAmount_Click(object sender, EventArgs e)
+        {
+            TransactionListView form = new TransactionListView();
+            form.userSettings = userSettings;
+            form.CategoryItem_Name = CategoryItem_Name;
+            form.month = month;
+            form.year = year;
+
+            form.ShowDialog();
+            if(form.isChanged)
+            {
+                Control control = (Control)this;
+                while (control.Parent != null && !(control.Parent is Form))
+                {
+                    control = control.Parent;
+                }
+                // Kiểm tra xem control.Parent có phải là Form
+                if (control.Parent is Form && control.Parent is Overview)
+                {
+                    Overview f = (Overview)control.Parent;
+
+                    f.Reload_Data();
+                }
             }
         }
     }

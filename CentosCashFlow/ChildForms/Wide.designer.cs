@@ -67,6 +67,7 @@
             this.pictureBoxCategory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxCategory.TabIndex = 0;
             this.pictureBoxCategory.TabStop = false;
+            this.pictureBoxCategory.Click += new System.EventHandler(this.labelAmount_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -95,6 +96,7 @@
             this.labelAmount.TabIndex = 10;
             this.labelAmount.Text = "10,000,000 VND";
             this.labelAmount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelAmount.Click += new System.EventHandler(this.labelAmount_Click);
             // 
             // panel2
             // 
@@ -130,6 +132,7 @@
             this.labelName.TabIndex = 5;
             this.labelName.Text = "Category name";
             this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelName.Click += new System.EventHandler(this.labelAmount_Click);
             // 
             // Wide
             // 

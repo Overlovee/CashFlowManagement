@@ -28,12 +28,29 @@ namespace CentosCashFlow.Models
             rdr.Close();
             return list;
         }
+        public List<UserAccountInfo> getAdminAccountsInfo()
+        {
+            List<UserAccountInfo> list = new List<UserAccountInfo>();
+            string sql = ("SELECT ID, Name, Email FROM Users WHERE Role = 'Admin'");
+            SqlDataReader rdr = dbContext.ExcuteQuery(sql);
+            while (rdr.Read())
+            {
+                UserAccountInfo emp = new UserAccountInfo();
+                emp.Id = int.Parse(rdr.GetValue(0).ToString());
+                emp.UserName = rdr.GetValue(1).ToString();
+                emp.Email = rdr.GetValue(2).ToString().Trim();
+
+                list.Add(emp);
+            }
+            rdr.Close();
+            return list;
+        }
         public int updateUserAccountInfo(UserAccountInfo user)
         {
             int rs = 0;
-            string sql = "UPDATE " +
+            string sql = "EXEC UpdateUser " +
                 "@UserID = '" + user.Id + "', " +
-                "@NewName = '" + user.UserName + "', " +
+                "@NewName = N'" + user.UserName + "', " +
                 "@NewEmail = '" + user.Email + "' ";
 
             rs = dbContext.ExcuteNonQuery(sql);

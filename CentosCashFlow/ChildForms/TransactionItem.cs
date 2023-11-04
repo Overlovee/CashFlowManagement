@@ -51,6 +51,12 @@ namespace CentosCashFlow.ChildForms
 
                         f.Reload_Data();
                     }
+                    if (control.Parent is TransactionListView)
+                    {
+                        TransactionListView f = (TransactionListView)control.Parent;
+                        f.isChanged = true;
+                        f.Reload_Data();
+                    }
                 }
             }
         }
@@ -113,10 +119,10 @@ namespace CentosCashFlow.ChildForms
 
                         f.Reload_Data();
                     }
-                    if (control.Parent is Home)
+                    if (control.Parent is TransactionListView)
                     {
-                        Home f = (Home)control.Parent;
-
+                        TransactionListView f = (TransactionListView)control.Parent;
+                        f.isChanged = true;
                         f.Reload_Data();
                     }
                 }

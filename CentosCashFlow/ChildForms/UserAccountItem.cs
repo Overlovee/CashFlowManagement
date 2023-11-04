@@ -41,6 +41,12 @@ namespace CentosCashFlow.ChildForms
 
                         f.Reload_Data();
                     }
+                    if (control.Parent is ManageAdminAccounts)
+                    {
+                        ManageAdminAccounts f = (ManageAdminAccounts)control.Parent;
+
+                        f.Reload_Data();
+                    }
                 }
             }
         }
@@ -58,7 +64,6 @@ namespace CentosCashFlow.ChildForms
             {
                 Models.ConnectUsers connectUsers = new Models.ConnectUsers();
                 string password = connectUsers.getUserPasswordByID(int.Parse(this.Tag.ToString()));
-
                 ConfirmPasswordForm form = new ConfirmPasswordForm();
                 form.Password = password;
                 form.ShowDialog();
@@ -77,6 +82,12 @@ namespace CentosCashFlow.ChildForms
                         if (control.Parent is ManageUserAccount)
                         {
                             ManageUserAccount f = (ManageUserAccount)control.Parent;
+
+                            f.Reload_Data();
+                        }
+                        if (control.Parent is ManageAdminAccounts)
+                        {
+                            ManageAdminAccounts f = (ManageAdminAccounts)control.Parent;
 
                             f.Reload_Data();
                         }

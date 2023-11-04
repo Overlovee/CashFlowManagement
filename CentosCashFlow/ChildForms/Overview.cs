@@ -66,6 +66,8 @@ namespace CentosCashFlow.ChildForms
                     wide.CategoryItem_Type = "Income";
                     wide.TotalMoney = decimal.Parse(dt.Rows[i]["TotalMoneyIn"].ToString());
                     wide.userSettings = userSettings;
+                    wide.month = month;
+                    wide.year = year;
                     totalMoneyIn += wide.TotalMoney;
                     newPanel.Controls.Add(wide);
                     wide.Dock = DockStyle.Top;
@@ -106,12 +108,16 @@ namespace CentosCashFlow.ChildForms
                     wide.CategoryItem_Type = "Expenditure";
                     wide.TotalMoney = decimal.Parse(dt.Rows[i]["TotalMoneyOut"].ToString());
                     wide.userSettings = userSettings;
+                    wide.month = month;
+                    wide.year = year;
                     totalMoneyOut += wide.TotalMoney;
                     newPanel.Controls.Add(wide);
                     wide.Dock = DockStyle.Top;
                     wide.Height = 60;
                 }
             }
+            labelTotalIncome.Text = "+" + totalMoneyIn.ToString() + " " + userSettings.CurrencyCode;
+            labelTotalExpenditures.Text = "-" + totalMoneyOut.ToString() + " " + userSettings.CurrencyCode;
         }
         private void Overview_Load(object sender, EventArgs e)
         {
@@ -120,7 +126,31 @@ namespace CentosCashFlow.ChildForms
             dateTimePickerOverview.MaxDate = DateTime.Now.AddMonths(3);
             dateTimePickerOverview.Value = DateTime.Now;
             dateTimePickerOverview.MaxDate = DateTime.Today;
+        }
+
+        public void Reload_Data()
+        {
+            chartMoneyIn.Series["Money in"].Points.Clear();
+            chartMoneyOut.Series["Money out"].Points.Clear();
+            foreach (Control control in panelTotalIncome.Controls)
+            {
+                control.Dispose();
+            }
+
+            panelTotalIncome.Controls.Clear();
+
+            foreach (Control control in panelTotalExpenditures.Controls)
+            {
+                control.Dispose();
+            }
+
+            panelTotalExpenditures.Controls.Clear();
+
             Load_Data();
+        }
+        private void dateTimePickerOverview_ValueChanged(object sender, EventArgs e)
+        {
+            Reload_Data();
         }
     }
 }

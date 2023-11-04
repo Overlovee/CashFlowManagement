@@ -133,7 +133,7 @@
         aPx6rjGf8HpeqXwDihlmhK2zbyoAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnCurrencies.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
         MAAA6mAAADqYAAAXcJy6UTwAAAAHdElNRQfnCwEPDyZWMAnhAAAEP0lEQVRYR9WXWahVZRiGjyctbSIN
@@ -158,10 +158,10 @@
         RU5ErkJggg==
 </value>
   </data>
-  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnLanguages.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAALnSURBVFhHrZdL
+        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAALnSURBVFhHrZdL
         b01RGIZPq9V0hggRCaIqDSEVE8UAE1FmdGBggImYSToRA4lISMXAAIkfYGCCiUhEqAFxi1vSgbjFvVEa
         Euq+PO9a32730X129+U8yRNd7/rWt9c59trdrdTCOdeI6/AY3sW3+APf4G3sw9XYYEvqB0278SHGGUFd
         /LsfjXET19jSctCoGU+qq9GPO3CWlXgYz8FdeAsjDmOjleSHxbr4RXUCfdJum6oJNQ3Yg0MozmCxTbAw

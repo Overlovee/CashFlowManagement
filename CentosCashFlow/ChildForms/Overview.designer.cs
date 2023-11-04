@@ -43,7 +43,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.chartMoneyOut = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.label10 = new System.Windows.Forms.Label();
+            this.labelTotalExpenditures = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.labelExpendituresMonth = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -52,7 +52,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.chartMoneyIn = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.labelTotalIncome = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.labelIncomeMonth = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
@@ -78,7 +78,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(32, 0, 32, 0);
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(823, 36);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -104,6 +104,7 @@
             this.dateTimePickerOverview.Name = "dateTimePickerOverview";
             this.dateTimePickerOverview.Size = new System.Drawing.Size(210, 28);
             this.dateTimePickerOverview.TabIndex = 9;
+            this.dateTimePickerOverview.ValueChanged += new System.EventHandler(this.dateTimePickerOverview_ValueChanged);
             // 
             // panel2
             // 
@@ -192,7 +193,7 @@
             this.tableLayoutPanel5.ColumnCount = 2;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Controls.Add(this.label10, 1, 1);
+            this.tableLayoutPanel5.Controls.Add(this.labelTotalExpenditures, 1, 1);
             this.tableLayoutPanel5.Controls.Add(this.label11, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.labelExpendituresMonth, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top;
@@ -205,18 +206,18 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(759, 80);
             this.tableLayoutPanel5.TabIndex = 24;
             // 
-            // label10
+            // labelTotalExpenditures
             // 
-            this.label10.AutoSize = true;
-            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(382, 40);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(374, 40);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "15.000.000 VND";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelTotalExpenditures.AutoSize = true;
+            this.labelTotalExpenditures.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelTotalExpenditures.Font = new System.Drawing.Font("Montserrat Black", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotalExpenditures.ForeColor = System.Drawing.Color.White;
+            this.labelTotalExpenditures.Location = new System.Drawing.Point(382, 40);
+            this.labelTotalExpenditures.Name = "labelTotalExpenditures";
+            this.labelTotalExpenditures.Size = new System.Drawing.Size(374, 40);
+            this.labelTotalExpenditures.TabIndex = 3;
+            this.labelTotalExpenditures.Text = "15.000.000 VND";
+            this.labelTotalExpenditures.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label11
             // 
@@ -312,7 +313,7 @@
             this.chartMoneyIn.Series.Add(series2);
             this.chartMoneyIn.Size = new System.Drawing.Size(759, 341);
             this.chartMoneyIn.TabIndex = 7;
-            this.chartMoneyIn.Text = "chartIncome";
+            this.chartMoneyIn.Text = "chart1";
             // 
             // tableLayoutPanel3
             // 
@@ -320,7 +321,7 @@
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.label9, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.labelTotalIncome, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.label8, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.labelIncomeMonth, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -333,19 +334,19 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(759, 80);
             this.tableLayoutPanel3.TabIndex = 8;
             // 
-            // label9
+            // labelTotalIncome
             // 
-            this.label9.AutoSize = true;
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(379, 40);
-            this.label9.Margin = new System.Windows.Forms.Padding(0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(380, 40);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "15.000.000 VND";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelTotalIncome.AutoSize = true;
+            this.labelTotalIncome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelTotalIncome.Font = new System.Drawing.Font("Montserrat Black", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotalIncome.ForeColor = System.Drawing.Color.White;
+            this.labelTotalIncome.Location = new System.Drawing.Point(379, 40);
+            this.labelTotalIncome.Margin = new System.Windows.Forms.Padding(0);
+            this.labelTotalIncome.Name = "labelTotalIncome";
+            this.labelTotalIncome.Size = new System.Drawing.Size(380, 40);
+            this.labelTotalIncome.TabIndex = 3;
+            this.labelTotalIncome.Text = "15.000.000 VND";
+            this.labelTotalIncome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label8
             // 
@@ -412,14 +413,14 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartMoneyIn;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label labelTotalIncome;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label labelIncomeMonth;
         private System.Windows.Forms.Panel panelTotalExpenditures;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartMoneyOut;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label labelTotalExpenditures;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label labelExpendituresMonth;
         private System.Windows.Forms.Panel panel1;

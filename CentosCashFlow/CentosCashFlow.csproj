@@ -120,11 +120,35 @@
     <Compile Include="ChildForms\LoanItem.Designer.cs">
       <DependentUpon>LoanItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForms\ManageAdminAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\ManageAdminAccounts.Designer.cs">
+      <DependentUpon>ManageAdminAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\ManageCurrencies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\ManageCurrencies.Designer.cs">
+      <DependentUpon>ManageCurrencies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\ManageLanguages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\ManageLanguages.Designer.cs">
+      <DependentUpon>ManageLanguages.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildForms\ManageUserAccount.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ChildForms\ManageUserAccount.Designer.cs">
       <DependentUpon>ManageUserAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\NewAdminAccountAddingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\NewAdminAccountAddingForm.Designer.cs">
+      <DependentUpon>NewAdminAccountAddingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForms\Overview.cs">
       <SubType>Form</SubType>
@@ -167,6 +191,12 @@
     </Compile>
     <Compile Include="ChildForms\TransactionItem.Designer.cs">
       <DependentUpon>TransactionItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\TransactionListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\TransactionListView.Designer.cs">
+      <DependentUpon>TransactionListView.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForms\UserAccountEditingForm.cs">
       <SubType>Form</SubType>
@@ -255,8 +285,20 @@
     <EmbeddedResource Include="ChildForms\LoanItem.resx">
       <DependentUpon>LoanItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\ManageAdminAccounts.resx">
+      <DependentUpon>ManageAdminAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\ManageCurrencies.resx">
+      <DependentUpon>ManageCurrencies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\ManageLanguages.resx">
+      <DependentUpon>ManageLanguages.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\ManageUserAccount.resx">
       <DependentUpon>ManageUserAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\NewAdminAccountAddingForm.resx">
+      <DependentUpon>NewAdminAccountAddingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\Overview.resx">
       <DependentUpon>Overview.cs</DependentUpon>
@@ -278,6 +320,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\TransactionItem.resx">
       <DependentUpon>TransactionItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\TransactionListView.resx">
+      <DependentUpon>TransactionListView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\UserAccountEditingForm.resx">
       <DependentUpon>UserAccountEditingForm.cs</DependentUpon>

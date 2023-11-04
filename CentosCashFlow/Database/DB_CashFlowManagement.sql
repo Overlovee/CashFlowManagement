@@ -237,10 +237,10 @@ BEGIN
 END
 --
 CREATE PROCEDURE InsertUser
-@name NVARCHAR(255),@email NVARCHAR(255),@password NVARCHAR(255)
+@name NVARCHAR(255),@email CHAR(255),@password NVARCHAR(255), @role NVARCHAR(20)
 AS
-	INSERT INTO Users(Name,Email,Password)
-	VALUES(@name,@email,@password);
+	INSERT INTO Users(Name,Email,Password, Role)
+	VALUES(@name,@email,@password, @role);
 GO
 --
 INSERT INTO Languages
@@ -324,12 +324,11 @@ SELECT* FROM Currency
 --AND MONTH(T.Transaction_Date) = 9 AND YEAR(T.Transaction_Date) = 2023
 --ORDER BY T.Transaction_Date ASC;	
 
-SELECT c.Category_Img, c.Category_Name, SUM(t.Amount) AS TotalMoneyIn
+SELECT t.ID, c.Category_Img, c.Category_Name, t.Amount, t.Transaction_Date, t.Transaction_Description, t.Transaction_Type
 FROM Categories AS c
 JOIN Transactions AS t ON c.ID = t.Category_ID
-WHERE t.Transaction_Type = 'Expenditure'
+WHERE c.Category_Name = N'Thu Nhập'
     AND YEAR(t.Transaction_Date) = 2023
     AND MONTH(t.Transaction_Date) = 11
 	AND t.User_ID = 3
-GROUP BY c.Category_Img, c.Category_Name
-ORDER BY TotalMoneyIn ASC;
+ORDER BY t.Transaction_Date DESC;

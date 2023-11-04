@@ -30,9 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelDesktop = new System.Windows.Forms.Panel();
+            this.panelNavBar = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblTittle = new System.Windows.Forms.Label();
             this.btnSettings = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCurrencies = new System.Windows.Forms.Button();
+            this.btnLanguages = new System.Windows.Forms.Button();
             this.btnAdminAccount = new System.Windows.Forms.Button();
             this.btnUserAccount = new System.Windows.Forms.Button();
             this.btnAccount = new System.Windows.Forms.Button();
@@ -40,14 +47,7 @@
             this.btnTransaction = new System.Windows.Forms.Button();
             this.btnOverview = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
-            this.panelLogo = new System.Windows.Forms.Panel();
             this.labelIcon = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panelDesktop = new System.Windows.Forms.Panel();
-            this.panelNavBar = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblTittle = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -59,8 +59,8 @@
             // 
             this.panelMenu.BackColor = System.Drawing.Color.Black;
             this.panelMenu.Controls.Add(this.btnSettings);
-            this.panelMenu.Controls.Add(this.button3);
-            this.panelMenu.Controls.Add(this.button2);
+            this.panelMenu.Controls.Add(this.btnCurrencies);
+            this.panelMenu.Controls.Add(this.btnLanguages);
             this.panelMenu.Controls.Add(this.btnAdminAccount);
             this.panelMenu.Controls.Add(this.btnUserAccount);
             this.panelMenu.Controls.Add(this.btnAccount);
@@ -75,6 +75,93 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(250, 753);
             this.panelMenu.TabIndex = 0;
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.panelLogo.Controls.Add(this.labelIcon);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(250, 70);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 87);
+            this.button1.TabIndex = 1;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panelDesktop);
+            this.panel1.Controls.Add(this.panelNavBar);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(250, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1332, 753);
+            this.panel1.TabIndex = 3;
+            // 
+            // panelDesktop
+            // 
+            this.panelDesktop.AutoSize = true;
+            this.panelDesktop.BackColor = System.Drawing.Color.White;
+            this.panelDesktop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.panelDesktop.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.panelDesktop.Location = new System.Drawing.Point(0, 51);
+            this.panelDesktop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(1332, 702);
+            this.panelDesktop.TabIndex = 5;
+            this.panelDesktop.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
+            // panelNavBar
+            // 
+            this.panelNavBar.BackColor = System.Drawing.Color.White;
+            this.panelNavBar.Controls.Add(this.tableLayoutPanel1);
+            this.panelNavBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelNavBar.ForeColor = System.Drawing.Color.Black;
+            this.panelNavBar.Location = new System.Drawing.Point(0, 0);
+            this.panelNavBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelNavBar.Name = "panelNavBar";
+            this.panelNavBar.Size = new System.Drawing.Size(1332, 51);
+            this.panelNavBar.TabIndex = 2;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.lblTittle, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1332, 51);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // lblTittle
+            // 
+            this.lblTittle.AutoSize = true;
+            this.lblTittle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTittle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.lblTittle.ForeColor = System.Drawing.Color.Black;
+            this.lblTittle.Location = new System.Drawing.Point(3, 0);
+            this.lblTittle.Name = "lblTittle";
+            this.lblTittle.Size = new System.Drawing.Size(1326, 51);
+            this.lblTittle.TabIndex = 1;
+            this.lblTittle.Text = "HOME";
+            this.lblTittle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnSettings
             // 
@@ -97,45 +184,47 @@
             this.btnSettings.UseVisualStyleBackColor = false;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
-            // button3
+            // btnCurrencies
             // 
-            this.button3.BackColor = System.Drawing.Color.Black;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 518);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(250, 56);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "              Manage                 Currency";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnCurrencies.BackColor = System.Drawing.Color.Black;
+            this.btnCurrencies.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCurrencies.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnCurrencies.FlatAppearance.BorderSize = 0;
+            this.btnCurrencies.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCurrencies.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnCurrencies.ForeColor = System.Drawing.Color.White;
+            this.btnCurrencies.Image = ((System.Drawing.Image)(resources.GetObject("btnCurrencies.Image")));
+            this.btnCurrencies.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCurrencies.Location = new System.Drawing.Point(0, 518);
+            this.btnCurrencies.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCurrencies.Name = "btnCurrencies";
+            this.btnCurrencies.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnCurrencies.Size = new System.Drawing.Size(250, 56);
+            this.btnCurrencies.TabIndex = 16;
+            this.btnCurrencies.Text = "              Manage                 Currency";
+            this.btnCurrencies.UseVisualStyleBackColor = false;
+            this.btnCurrencies.Click += new System.EventHandler(this.btnCurrencies_Click);
             // 
-            // button2
+            // btnLanguages
             // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 462);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(250, 56);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "            Manage               Languages";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnLanguages.BackColor = System.Drawing.Color.Black;
+            this.btnLanguages.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLanguages.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnLanguages.FlatAppearance.BorderSize = 0;
+            this.btnLanguages.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLanguages.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnLanguages.ForeColor = System.Drawing.Color.White;
+            this.btnLanguages.Image = ((System.Drawing.Image)(resources.GetObject("btnLanguages.Image")));
+            this.btnLanguages.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLanguages.Location = new System.Drawing.Point(0, 462);
+            this.btnLanguages.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLanguages.Name = "btnLanguages";
+            this.btnLanguages.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnLanguages.Size = new System.Drawing.Size(250, 56);
+            this.btnLanguages.TabIndex = 15;
+            this.btnLanguages.Text = "            Manage               Languages";
+            this.btnLanguages.UseVisualStyleBackColor = false;
+            this.btnLanguages.Click += new System.EventHandler(this.btnLanguages_Click);
             // 
             // btnAdminAccount
             // 
@@ -156,6 +245,7 @@
             this.btnAdminAccount.TabIndex = 13;
             this.btnAdminAccount.Text = "Admin Accounts";
             this.btnAdminAccount.UseVisualStyleBackColor = false;
+            this.btnAdminAccount.Click += new System.EventHandler(this.btnAdminAccount_Click);
             // 
             // btnUserAccount
             // 
@@ -283,17 +373,6 @@
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // panelLogo
-            // 
-            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.panelLogo.Controls.Add(this.labelIcon);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(250, 70);
-            this.panelLogo.TabIndex = 0;
-            // 
             // labelIcon
             // 
             this.labelIcon.BackColor = System.Drawing.Color.Black;
@@ -306,82 +385,6 @@
             this.labelIcon.Size = new System.Drawing.Size(250, 70);
             this.labelIcon.TabIndex = 0;
             this.labelIcon.Click += new System.EventHandler(this.labelIcon_Click);
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 87);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.panelDesktop);
-            this.panel1.Controls.Add(this.panelNavBar);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(250, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1332, 753);
-            this.panel1.TabIndex = 3;
-            // 
-            // panelDesktop
-            // 
-            this.panelDesktop.AutoSize = true;
-            this.panelDesktop.BackColor = System.Drawing.Color.White;
-            this.panelDesktop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.panelDesktop.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.panelDesktop.Location = new System.Drawing.Point(0, 51);
-            this.panelDesktop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1332, 702);
-            this.panelDesktop.TabIndex = 5;
-            this.panelDesktop.Click += new System.EventHandler(this.btnSettings_Click);
-            // 
-            // panelNavBar
-            // 
-            this.panelNavBar.BackColor = System.Drawing.Color.White;
-            this.panelNavBar.Controls.Add(this.tableLayoutPanel1);
-            this.panelNavBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelNavBar.ForeColor = System.Drawing.Color.Black;
-            this.panelNavBar.Location = new System.Drawing.Point(0, 0);
-            this.panelNavBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelNavBar.Name = "panelNavBar";
-            this.panelNavBar.Size = new System.Drawing.Size(1332, 51);
-            this.panelNavBar.TabIndex = 2;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.lblTittle, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1332, 51);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // lblTittle
-            // 
-            this.lblTittle.AutoSize = true;
-            this.lblTittle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTittle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.lblTittle.ForeColor = System.Drawing.Color.Black;
-            this.lblTittle.Location = new System.Drawing.Point(3, 0);
-            this.lblTittle.Name = "lblTittle";
-            this.lblTittle.Size = new System.Drawing.Size(1326, 51);
-            this.lblTittle.TabIndex = 1;
-            this.lblTittle.Text = "HOME";
-            this.lblTittle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Menu
             // 
@@ -432,8 +435,8 @@
         private System.Windows.Forms.Button btnUserAccount;
         private System.Windows.Forms.Button btnAdminAccount;
         private System.Windows.Forms.Button btnSettings;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCurrencies;
+        private System.Windows.Forms.Button btnLanguages;
     }
 }
 

@@ -145,6 +145,22 @@ namespace CentosCashFlow
         {
             
         }
+
+        private void btnAdminAccount_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChildForms.ManageAdminAccounts(), sender);
+        }
+
+
+        private void btnLanguages_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChildForms.ManageLanguages(), sender);
+        }
+
+        private void btnCurrencies_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChildForms.ManageCurrencies(), sender);
+        }
     }
 
 }

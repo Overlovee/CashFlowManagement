@@ -1,6 +1,6 @@
 ﻿namespace CentosCashFlow.ChildForms
 {
-    partial class ManageUserAccount
+    partial class ManageAdminAccounts
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageUserAccount));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageAdminAccounts));
             this.panel7 = new System.Windows.Forms.Panel();
+            this.btnAddNewAccount = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.panelUserAccountsLoad = new System.Windows.Forms.Panel();
+            this.panelAdminAccountsLoad = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnHome = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel7.SuspendLayout();
             this.panel12.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -46,14 +47,29 @@
             // panel7
             // 
             this.panel7.Controls.Add(this.tableLayoutPanel2);
+            this.panel7.Controls.Add(this.btnAddNewAccount);
             this.panel7.Controls.Add(this.panel12);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Margin = new System.Windows.Forms.Padding(0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1124, 601);
-            this.panel7.TabIndex = 2;
+            this.panel7.Size = new System.Drawing.Size(1075, 547);
+            this.panel7.TabIndex = 3;
+            // 
+            // btnAddNewAccount
+            // 
+            this.btnAddNewAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddNewAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnAddNewAccount.ForeColor = System.Drawing.Color.Black;
+            this.btnAddNewAccount.Location = new System.Drawing.Point(29, 9);
+            this.btnAddNewAccount.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAddNewAccount.Name = "btnAddNewAccount";
+            this.btnAddNewAccount.Size = new System.Drawing.Size(135, 36);
+            this.btnAddNewAccount.TabIndex = 1;
+            this.btnAddNewAccount.Text = "+ Add new";
+            this.btnAddNewAccount.UseVisualStyleBackColor = true;
+            this.btnAddNewAccount.Click += new System.EventHandler(this.btnAddNewAccount_Click);
             // 
             // panel12
             // 
@@ -61,23 +77,23 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel12.Controls.Add(this.panelUserAccountsLoad);
+            this.panel12.Controls.Add(this.panelAdminAccountsLoad);
             this.panel12.Controls.Add(this.tableLayoutPanel1);
-            this.panel12.Location = new System.Drawing.Point(28, 58);
+            this.panel12.Location = new System.Drawing.Point(28, 101);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1073, 522);
+            this.panel12.Size = new System.Drawing.Size(1024, 425);
             this.panel12.TabIndex = 0;
             // 
-            // panelUserAccountsLoad
+            // panelAdminAccountsLoad
             // 
-            this.panelUserAccountsLoad.AutoScroll = true;
-            this.panelUserAccountsLoad.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelUserAccountsLoad.Location = new System.Drawing.Point(0, 49);
-            this.panelUserAccountsLoad.Margin = new System.Windows.Forms.Padding(0);
-            this.panelUserAccountsLoad.Name = "panelUserAccountsLoad";
-            this.panelUserAccountsLoad.Padding = new System.Windows.Forms.Padding(10, 20, 10, 10);
-            this.panelUserAccountsLoad.Size = new System.Drawing.Size(1071, 471);
-            this.panelUserAccountsLoad.TabIndex = 1;
+            this.panelAdminAccountsLoad.AutoScroll = true;
+            this.panelAdminAccountsLoad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelAdminAccountsLoad.Location = new System.Drawing.Point(0, 49);
+            this.panelAdminAccountsLoad.Margin = new System.Windows.Forms.Padding(0);
+            this.panelAdminAccountsLoad.Name = "panelAdminAccountsLoad";
+            this.panelAdminAccountsLoad.Padding = new System.Windows.Forms.Padding(10);
+            this.panelAdminAccountsLoad.Size = new System.Drawing.Size(1022, 374);
+            this.panelAdminAccountsLoad.TabIndex = 1;
             // 
             // tableLayoutPanel1
             // 
@@ -90,7 +106,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1071, 49);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1022, 49);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label6
@@ -101,9 +117,9 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(3, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(1065, 49);
+            this.label6.Size = new System.Drawing.Size(1016, 49);
             this.label6.TabIndex = 0;
-            this.label6.Text = "User Accounts";
+            this.label6.Text = "Admin Accounts";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel2
@@ -111,28 +127,16 @@
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 87.46492F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.53508F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.15625F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.84375F));
             this.tableLayoutPanel2.Controls.Add(this.btnHome, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.textBox1, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(28, 17);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(29, 60);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1073, 35);
-            this.tableLayoutPanel2.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(934, 35);
-            this.textBox1.TabIndex = 0;
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1024, 35);
+            this.tableLayoutPanel2.TabIndex = 4;
             // 
             // btnHome
             // 
@@ -145,26 +149,36 @@
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(938, 0);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.btnHome.Location = new System.Drawing.Point(872, 0);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(0);
             this.btnHome.Name = "btnHome";
             this.btnHome.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
-            this.btnHome.Size = new System.Drawing.Size(135, 35);
+            this.btnHome.Size = new System.Drawing.Size(152, 35);
             this.btnHome.TabIndex = 2;
             this.btnHome.Text = "Search";
             this.btnHome.UseVisualStyleBackColor = false;
             // 
-            // ManageUserAccount
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(868, 35);
+            this.textBox1.TabIndex = 0;
+            // 
+            // ManageAdminAccounts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1124, 611);
+            this.ClientSize = new System.Drawing.Size(1075, 547);
             this.Controls.Add(this.panel7);
-            this.Name = "ManageUserAccount";
-            this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.Text = "User Account Management";
-            this.Load += new System.EventHandler(this.ManageUserAccount_Load);
+            this.Name = "ManageAdminAccounts";
+            this.Text = "ManageAdminAccounts";
+            this.Load += new System.EventHandler(this.ManageAdminAccounts_Load);
             this.panel7.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -179,11 +193,12 @@
 
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Panel panelUserAccountsLoad;
+        private System.Windows.Forms.Panel panelAdminAccountsLoad;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnAddNewAccount;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
