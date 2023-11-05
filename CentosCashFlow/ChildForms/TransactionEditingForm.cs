@@ -123,11 +123,9 @@ namespace CentosCashFlow.ChildForms
 
                 if (kt != 0)
                 {
-                    if (MessageBox.Show("Completely updating!", "", MessageBoxButtons.OK) == DialogResult.OK)
-                    {
-                        isChanged = true;
-                        this.Close();
-                    }
+                    MessageBox.Show("Completely updating!", "", MessageBoxButtons.OK);
+                    isChanged = true;
+                    this.Close();
                 }
                 else
                 {

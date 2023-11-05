@@ -96,9 +96,8 @@ CREATE PROCEDURE DeleteCategory
     @Category_ID CHAR(10)
 AS
 BEGIN
-    BEGIN TRANSACTION; -- Bắt đầu giao dịch
+    BEGIN TRANSACTION;
 
-    -- Cập nhật các giao dịch tham chiếu đến danh mục
     UPDATE Transactions
     SET Category_ID = 
         CASE
@@ -242,6 +241,43 @@ AS
 	INSERT INTO Users(Name,Email,Password, Role)
 	VALUES(@name,@email,@password, @role);
 GO
+
+--
+CREATE PROCEDURE DeleteLanguage
+    @language_code CHAR(2)
+AS
+BEGIN
+    DECLARE @new_language_code CHAR(2);
+
+    SELECT TOP 1 @new_language_code = Language_Code
+    FROM Languages
+	WHERE Language_Code <> @language_code;
+
+    UPDATE Setting
+    SET Language_Code = @new_language_code
+    WHERE Language_Code = @language_code;
+
+    DELETE FROM Languages
+    WHERE Language_Code = @language_code;
+END;
+--
+CREATE PROCEDURE DeleteCurrency
+    @currency_code CHAR(3)
+AS
+BEGIN
+    DECLARE @new_currency_code CHAR(3);
+
+    SELECT TOP 1 @new_currency_code = Currency_Code
+    FROM Currency
+	WHERE Currency_Code <> @currency_code;
+
+    UPDATE Setting
+    SET Currency_Code = @new_currency_code
+    WHERE Currency_Code = @currency_code;
+
+    DELETE FROM Currency
+    WHERE Currency_Code = @currency_code;
+END;
 --
 INSERT INTO Languages
 VALUES ('EN', N'English'),
@@ -249,7 +285,7 @@ VALUES ('EN', N'English'),
 --
 INSERT INTO Currency
 VALUES ('USD', N'United State Dollar', 1),
-('VND', N'Việt Nam Đồng', 23.585)
+('VND', N'Việt Nam Đồng', 23585)
 
 --
 INSERT INTO Categories(ID, Category_Name, Category_Type)
@@ -311,6 +347,17 @@ SELECT* FROM Currency
 --    @NewTransactionDate = '2023/08/10',
 --    @NewTransactionDescription = 'Chi' 
 
+--EXEC DeleteLanguage 'EN'
+--EXEC DeleteCurrency 'USD'
+--update Setting 
+--Set Language_Code = 'EN'
+--Where User_ID = 1
+
+--update Setting 
+--Set Currency_Code = 'USD'
+--Where User_ID = 2
+
+
 --Drop table Transactions
 --Drop table Categories
 --Drop table Setting
@@ -324,11 +371,12 @@ SELECT* FROM Currency
 --AND MONTH(T.Transaction_Date) = 9 AND YEAR(T.Transaction_Date) = 2023
 --ORDER BY T.Transaction_Date ASC;	
 
-SELECT t.ID, c.Category_Img, c.Category_Name, t.Amount, t.Transaction_Date, t.Transaction_Description, t.Transaction_Type
-FROM Categories AS c
-JOIN Transactions AS t ON c.ID = t.Category_ID
-WHERE c.Category_Name = N'Thu Nhập'
-    AND YEAR(t.Transaction_Date) = 2023
-    AND MONTH(t.Transaction_Date) = 11
-	AND t.User_ID = 3
-ORDER BY t.Transaction_Date DESC;
+--SELECT t.ID, c.Category_Img, c.Category_Name, t.Amount, t.Transaction_Date, t.Transaction_Description, t.Transaction_Type
+--FROM Categories AS c
+--JOIN Transactions AS t ON c.ID = t.Category_ID
+--WHERE c.Category_Name = N'Thu Nhập'
+--    AND YEAR(t.Transaction_Date) = 2023
+--    AND MONTH(t.Transaction_Date) = 11
+--	AND t.User_ID = 3
+--ORDER BY t.Transaction_Date DESC;
+

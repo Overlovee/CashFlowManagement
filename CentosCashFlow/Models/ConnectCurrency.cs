@@ -28,5 +28,32 @@ namespace CentosCashFlow.Models
 
             return list;
         }
+
+        public int addNewItem(Currency currency)
+        {
+            int rs = 0;
+            string sql = "INSERT INTO Currency VALUES('" + currency.CurrencyCode +
+                "', N'" + currency.CurrencyName +
+                "', '" + currency.ExchangeRateUSD + "')";
+            rs = dbContext.ExcuteNonQuery(sql);
+            return rs;
+        }
+        public int updateDataForItem(Currency currency)
+        {
+            int rs = 0;
+            string sql = "UPDATE Currency " +
+                "SET Currency_Name = N'" + currency.CurrencyName + "', " +
+                "ExchangeRateUSD = '" + currency.ExchangeRateUSD + "' " +
+                "WHERE Currency_Code = '" + currency.CurrencyCode + "'";
+            rs = dbContext.ExcuteNonQuery(sql);
+            return rs;
+        }
+        public int deleteDataById(string id)
+        {
+            int rs = 0;
+            string sql = "EXEC DeleteCurrency '" + id + "'";
+            rs = dbContext.ExcuteNonQuery(sql);
+            return rs;
+        }
     }
 }

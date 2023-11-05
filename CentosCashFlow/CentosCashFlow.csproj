@@ -96,6 +96,24 @@
     <Compile Include="ChildForms\ConfirmPasswordForm.Designer.cs">
       <DependentUpon>ConfirmPasswordForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForms\CurrencyAddingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\CurrencyAddingForm.Designer.cs">
+      <DependentUpon>CurrencyAddingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\CurrencyEditingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\CurrencyEditingForm.Designer.cs">
+      <DependentUpon>CurrencyEditingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\CurrencyItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChildForms\CurrencyItem.Designer.cs">
+      <DependentUpon>CurrencyItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildForms\DebtItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -113,6 +131,24 @@
     </Compile>
     <Compile Include="ChildForms\Home.designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\LanguageAddingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\LanguageAddingForm.Designer.cs">
+      <DependentUpon>LanguageAddingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\LanguageEditingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\LanguageEditingForm.Designer.cs">
+      <DependentUpon>LanguageEditingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\LanguageItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChildForms\LanguageItem.Designer.cs">
+      <DependentUpon>LanguageItem.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForms\LoanItem.cs">
       <SubType>UserControl</SubType>
@@ -273,6 +309,15 @@
     <EmbeddedResource Include="ChildForms\ConfirmPasswordForm.resx">
       <DependentUpon>ConfirmPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\CurrencyAddingForm.resx">
+      <DependentUpon>CurrencyAddingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\CurrencyEditingForm.resx">
+      <DependentUpon>CurrencyEditingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\CurrencyItem.resx">
+      <DependentUpon>CurrencyItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\DebtItem.resx">
       <DependentUpon>DebtItem.cs</DependentUpon>
     </EmbeddedResource>
@@ -281,6 +326,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\LanguageAddingForm.resx">
+      <DependentUpon>LanguageAddingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\LanguageEditingForm.resx">
+      <DependentUpon>LanguageEditingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\LanguageItem.resx">
+      <DependentUpon>LanguageItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\LoanItem.resx">
       <DependentUpon>LoanItem.cs</DependentUpon>
@@ -374,9 +428,11 @@
     <Content Include="Resources\centos.png" />
     <Content Include="Resources\creative-commons-nc.png" />
     <None Include="Resources\file.png" />
+    <None Include="Resources\globalization.png" />
     <Content Include="Resources\home.png" />
     <Content Include="Resources\icon.ico" />
     <Content Include="Resources\icon.png" />
+    <None Include="Resources\languages.png" />
     <Content Include="Resources\laptop-code.png" />
     <Content Include="Resources\overview.png" />
     <Content Include="Resources\pay.png" />
@@ -385,6 +441,9 @@
     <Content Include="Resources\transaction.png" />
     <None Include="Resources\user.png" />
     <Content Include="Resources\Very-Basic-Menu-icon.png" />
+    <None Include="Resources\world.png" />
+    <None Include="Resources\world-24.png" />
+    <None Include="Resources\world-64.png" />
     <Content Include="Resources\x-24-icon.png" />
   </ItemGroup>
   <ItemGroup />

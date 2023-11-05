@@ -15,7 +15,7 @@ namespace CentosCashFlow.Models
         public List<Transaction> getCurrentDataByID(int id)
         {
             List<Transaction> list = new List<Transaction>();
-            string sql = ("SELECT TOP 20" +
+            string sql = ("SELECT TOP 50" +
                 "T.ID AS Transaction_ID, " +
                 "T.User_ID, " +
                 "C.Category_Name, " +
@@ -43,7 +43,7 @@ namespace CentosCashFlow.Models
 
                 list.Add(emp);
             }
-
+            rdr.Close();
             return list;
         }
         public List<Transaction> getMonthDataByID(int id, int month, int year)

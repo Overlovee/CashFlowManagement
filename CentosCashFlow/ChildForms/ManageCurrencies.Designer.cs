@@ -32,9 +32,9 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnAddNewAccount = new System.Windows.Forms.Button();
+            this.btnAddNewCurrency = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.panelAdminAccountsLoad = new System.Windows.Forms.Panel();
+            this.panelCurrenciesLoad = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.btnHome = new System.Windows.Forms.Button();
@@ -47,7 +47,7 @@
             // panel7
             // 
             this.panel7.Controls.Add(this.tableLayoutPanel2);
-            this.panel7.Controls.Add(this.btnAddNewAccount);
+            this.panel7.Controls.Add(this.btnAddNewCurrency);
             this.panel7.Controls.Add(this.panel12);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
@@ -85,18 +85,19 @@
             this.textBox1.Size = new System.Drawing.Size(810, 35);
             this.textBox1.TabIndex = 0;
             // 
-            // btnAddNewAccount
+            // btnAddNewCurrency
             // 
-            this.btnAddNewAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddNewAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnAddNewAccount.ForeColor = System.Drawing.Color.Black;
-            this.btnAddNewAccount.Location = new System.Drawing.Point(29, 9);
-            this.btnAddNewAccount.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAddNewAccount.Name = "btnAddNewAccount";
-            this.btnAddNewAccount.Size = new System.Drawing.Size(135, 36);
-            this.btnAddNewAccount.TabIndex = 1;
-            this.btnAddNewAccount.Text = "+ Add new";
-            this.btnAddNewAccount.UseVisualStyleBackColor = true;
+            this.btnAddNewCurrency.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddNewCurrency.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnAddNewCurrency.ForeColor = System.Drawing.Color.Black;
+            this.btnAddNewCurrency.Location = new System.Drawing.Point(29, 9);
+            this.btnAddNewCurrency.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAddNewCurrency.Name = "btnAddNewCurrency";
+            this.btnAddNewCurrency.Size = new System.Drawing.Size(135, 36);
+            this.btnAddNewCurrency.TabIndex = 1;
+            this.btnAddNewCurrency.Text = "+ Add new";
+            this.btnAddNewCurrency.UseVisualStyleBackColor = true;
+            this.btnAddNewCurrency.Click += new System.EventHandler(this.btnAddNewCurrency_Click);
             // 
             // panel12
             // 
@@ -104,23 +105,23 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel12.Controls.Add(this.panelAdminAccountsLoad);
+            this.panel12.Controls.Add(this.panelCurrenciesLoad);
             this.panel12.Controls.Add(this.tableLayoutPanel1);
             this.panel12.Location = new System.Drawing.Point(28, 101);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(957, 430);
             this.panel12.TabIndex = 0;
             // 
-            // panelAdminAccountsLoad
+            // panelCurrenciesLoad
             // 
-            this.panelAdminAccountsLoad.AutoScroll = true;
-            this.panelAdminAccountsLoad.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelAdminAccountsLoad.Location = new System.Drawing.Point(0, 49);
-            this.panelAdminAccountsLoad.Margin = new System.Windows.Forms.Padding(0);
-            this.panelAdminAccountsLoad.Name = "panelAdminAccountsLoad";
-            this.panelAdminAccountsLoad.Padding = new System.Windows.Forms.Padding(10);
-            this.panelAdminAccountsLoad.Size = new System.Drawing.Size(955, 379);
-            this.panelAdminAccountsLoad.TabIndex = 1;
+            this.panelCurrenciesLoad.AutoScroll = true;
+            this.panelCurrenciesLoad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelCurrenciesLoad.Location = new System.Drawing.Point(0, 49);
+            this.panelCurrenciesLoad.Margin = new System.Windows.Forms.Padding(0);
+            this.panelCurrenciesLoad.Name = "panelCurrenciesLoad";
+            this.panelCurrenciesLoad.Padding = new System.Windows.Forms.Padding(10);
+            this.panelCurrenciesLoad.Size = new System.Drawing.Size(955, 379);
+            this.panelCurrenciesLoad.TabIndex = 1;
             // 
             // tableLayoutPanel1
             // 
@@ -144,7 +145,7 @@
             this.label6.Font = new System.Drawing.Font("Montserrat Black", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(0, 0);
-            this.label6.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(955, 49);
             this.label6.TabIndex = 0;
@@ -179,6 +180,7 @@
             this.Controls.Add(this.panel7);
             this.Name = "ManageCurrencies";
             this.Text = "ManageCurrencies";
+            this.Load += new System.EventHandler(this.ManageCurrencies_Load);
             this.panel7.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
@@ -195,9 +197,9 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnAddNewAccount;
+        private System.Windows.Forms.Button btnAddNewCurrency;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Panel panelAdminAccountsLoad;
+        private System.Windows.Forms.Panel panelCurrenciesLoad;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label6;
     }

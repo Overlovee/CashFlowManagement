@@ -69,7 +69,7 @@ namespace CentosCashFlow.ChildForms
 
             labelTransactionTitle.Text = TransModel.CategoryName;
             labelDateTime.Text = TransModel.TransactionDate.ToString("d");
-            if(TransModel.TransactionType.Contains("Expenditure"))
+            if (TransModel.TransactionType.Contains("Expenditure"))
             {
                 labelAmount.ForeColor = Color.LightCoral;
                 labelAmount.Text = "-" + TransModel.Amount.ToString() + " " + userSettings.CurrencyCode;
@@ -79,7 +79,7 @@ namespace CentosCashFlow.ChildForms
                 labelAmount.ForeColor = Color.Chartreuse;
                 labelAmount.Text = "+" + TransModel.Amount.ToString() + " " + userSettings.CurrencyCode;
             }
-            
+
             string imagePath = TransModel.TransactionImg;
 
             string projectPath = Path.GetDirectoryName(Path.GetDirectoryName(System.Windows.Forms.Application.StartupPath));

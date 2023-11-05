@@ -59,11 +59,9 @@ namespace CentosCashFlow.ChildForms
 
                 if(kt != 0)
                 {
-                    if (MessageBox.Show("Completely updating!", "", MessageBoxButtons.OK) == DialogResult.OK)
-                    {
-                        isChanged = true;
-                        this.Close();
-                    }
+                    MessageBox.Show("Completely updating!", "", MessageBoxButtons.OK);
+                    isChanged = true;
+                    this.Close();
                 }
                 else
                 {
@@ -87,11 +85,9 @@ namespace CentosCashFlow.ChildForms
 
             if (kt != 0)
             {
-                if (MessageBox.Show("Completely deleting!", "", MessageBoxButtons.OK) == DialogResult.OK)
-                {
-                    isChanged = true;
-                    this.Close();
-                }
+                MessageBox.Show("Completely deleting!", "", MessageBoxButtons.OK);
+                isChanged = true;
+                this.Close();
             }
             else
             {
