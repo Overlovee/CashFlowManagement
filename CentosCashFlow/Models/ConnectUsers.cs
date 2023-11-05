@@ -169,7 +169,9 @@ namespace CentosCashFlow.Models
             string sql = "EXEC InsertUser " +
                "@name = N'" + name + "', " +
                "@email = N'" + email + "', " +
-               "@password = N'" + password + "'";
+               "@password = N'" + password + "'," +
+               "@role = N'User'";
+
             rs = dbContext.ExcuteNonQuery(sql);
             return rs;
         }
