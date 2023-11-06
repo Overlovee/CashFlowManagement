@@ -39,13 +39,13 @@ namespace CentosCashFlow.ChildForms
                     {
                         ManageUserAccount f = (ManageUserAccount)control.Parent;
 
-                        f.Reload_Data();
+                        f.Reload_Data(false);
                     }
                     if (control.Parent is ManageAdminAccounts)
                     {
                         ManageAdminAccounts f = (ManageAdminAccounts)control.Parent;
 
-                        f.Reload_Data();
+                        f.Reload_Data(false);
                     }
                 }
             }
@@ -83,13 +83,13 @@ namespace CentosCashFlow.ChildForms
                         {
                             ManageUserAccount f = (ManageUserAccount)control.Parent;
 
-                            f.Reload_Data();
+                            f.Reload_Data(false);
                         }
                         if (control.Parent is ManageAdminAccounts)
                         {
                             ManageAdminAccounts f = (ManageAdminAccounts)control.Parent;
 
-                            f.Reload_Data();
+                            f.Reload_Data(false);
                         }
                     }
                     else

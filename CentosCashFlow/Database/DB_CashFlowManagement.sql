@@ -379,4 +379,3 @@ SELECT* FROM Currency
 --    AND MONTH(t.Transaction_Date) = 11
 --	AND t.User_ID = 3
 --ORDER BY t.Transaction_Date DESC;
-

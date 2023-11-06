@@ -28,10 +28,44 @@ namespace CentosCashFlow.Models
             rdr.Close();
             return list;
         }
+        public List<UserAccountInfo> getUserAccountsInfoByName(string name)
+        {
+            List<UserAccountInfo> list = new List<UserAccountInfo>();
+            string sql = ("SELECT ID, Name, Email FROM Users WHERE Role = 'User' And Name Like N'%"+name+"%'");
+            SqlDataReader rdr = dbContext.ExcuteQuery(sql);
+            while (rdr.Read())
+            {
+                UserAccountInfo emp = new UserAccountInfo();
+                emp.Id = int.Parse(rdr.GetValue(0).ToString());
+                emp.UserName = rdr.GetValue(1).ToString();
+                emp.Email = rdr.GetValue(2).ToString().Trim();
+
+                list.Add(emp);
+            }
+            rdr.Close();
+            return list;
+        }
         public List<UserAccountInfo> getAdminAccountsInfo()
         {
             List<UserAccountInfo> list = new List<UserAccountInfo>();
             string sql = ("SELECT ID, Name, Email FROM Users WHERE Role = 'Admin'");
+            SqlDataReader rdr = dbContext.ExcuteQuery(sql);
+            while (rdr.Read())
+            {
+                UserAccountInfo emp = new UserAccountInfo();
+                emp.Id = int.Parse(rdr.GetValue(0).ToString());
+                emp.UserName = rdr.GetValue(1).ToString();
+                emp.Email = rdr.GetValue(2).ToString().Trim();
+
+                list.Add(emp);
+            }
+            rdr.Close();
+            return list;
+        }
+        public List<UserAccountInfo> getAdminAccountsInfoByName(string name)
+        {
+            List<UserAccountInfo> list = new List<UserAccountInfo>();
+            string sql = ("SELECT ID, Name, Email FROM Users WHERE Role = 'Admin' And Name Like N'%" + name + "%'");
             SqlDataReader rdr = dbContext.ExcuteQuery(sql);
             while (rdr.Read())
             {

@@ -442,7 +442,6 @@
     <None Include="Resources\user.png" />
     <Content Include="Resources\Very-Basic-Menu-icon.png" />
     <None Include="Resources\world.png" />
-    <None Include="Resources\world-24.png" />
     <None Include="Resources\world-64.png" />
     <Content Include="Resources\x-24-icon.png" />
   </ItemGroup>

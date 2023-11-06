@@ -43,7 +43,7 @@ namespace CentosCashFlow.ChildForms
                 {
                     ManageLanguages f = (ManageLanguages)control.Parent;
 
-                    f.Reload_Data();
+                    f.Reload_Data(false);
                 }
             }
         }

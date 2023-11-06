@@ -28,7 +28,23 @@ namespace CentosCashFlow.Models
 
             return list;
         }
+        public List<Currency> getDataByNameOrID(string name)
+        {
+            List<Currency> list = new List<Currency>();
+            string sql = ("Select * from Currency Where Currency_Name Like N'%" + name+ "%' Or Currency_Code Like '%" + name+"%'");
+            SqlDataReader rdr = dbContext.ExcuteQuery(sql);
+            while (rdr.Read())
+            {
+                Currency emp = new Currency();
+                emp.CurrencyCode = rdr.GetValue(0).ToString();
+                emp.CurrencyName = rdr.GetValue(1).ToString();
+                emp.ExchangeRateUSD = decimal.Parse(rdr.GetValue(2).ToString());
 
+                list.Add(emp);
+            }
+
+            return list;
+        }
         public int addNewItem(Currency currency)
         {
             int rs = 0;

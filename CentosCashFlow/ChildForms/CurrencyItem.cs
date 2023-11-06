@@ -43,7 +43,7 @@ namespace CentosCashFlow.ChildForms
                 {
                     ManageCurrencies f = (ManageCurrencies)control.Parent;
 
-                    f.Reload_Data();
+                    f.Reload_Data(false);
                 }
             }
         }

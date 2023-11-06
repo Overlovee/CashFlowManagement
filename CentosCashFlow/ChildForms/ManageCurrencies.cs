@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CentosCashFlow.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,10 +18,18 @@ namespace CentosCashFlow.ChildForms
             InitializeComponent();
         }
 
-        private void Load_Data()
+        private void Load_Data(bool isSearched)
         {
             Models.ConnectCurrency connectCurrency = new Models.ConnectCurrency();
-            List<Models.Currency> list = connectCurrency.getData();
+            List<Models.Currency> list = new List<Models.Currency>();
+            if (isSearched)
+            {
+                list = connectCurrency.getDataByNameOrID(textBoxSearch.Text);
+            }
+            else
+            {
+                list = connectCurrency.getData();
+            }
             foreach (Models.Currency currency in list)
             {
                 Panel newPanel = new Panel();
@@ -37,7 +46,7 @@ namespace CentosCashFlow.ChildForms
             }
         }
 
-        public void Reload_Data()
+        public void Reload_Data(bool isSearched)
         {
             foreach (Control control in panelCurrenciesLoad.Controls)
             {
@@ -46,11 +55,11 @@ namespace CentosCashFlow.ChildForms
 
             panelCurrenciesLoad.Controls.Clear();
 
-            Load_Data();
+            Load_Data(isSearched);
         }
         private void ManageCurrencies_Load(object sender, EventArgs e)
         {
-            Load_Data();
+            Load_Data(false);
         }
 
         private void btnAddNewCurrency_Click(object sender, EventArgs e)
@@ -59,8 +68,22 @@ namespace CentosCashFlow.ChildForms
             form.ShowDialog();
             if (form.isChanged)
             {
-                Reload_Data();
+                Reload_Data(false);
             }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (textBoxSearch.Text != "")
+            {
+                Reload_Data(true);
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            textBoxSearch.Clear();
+            Reload_Data(false);
         }
     }
 }

@@ -18,10 +18,19 @@ namespace CentosCashFlow.ChildForms
             InitializeComponent();
         }
 
-        private void Load_Data()
+        private void Load_Data(bool isSearched)
         {
             Models.ConnectLanguage connectLanguage = new Models.ConnectLanguage();
-            List<Models.Language> list = connectLanguage.getData();
+            List<Models.Language> list = new List<Models.Language>();
+            if (isSearched)
+            {
+                list = connectLanguage.getDataByNameOrID(textBoxSearch.Text);
+            }
+            else
+            {
+                list = connectLanguage.getData();
+            }
+            
             foreach (Models.Language language in list)
             {
                 Panel newPanel = new Panel();
@@ -38,7 +47,7 @@ namespace CentosCashFlow.ChildForms
             }
         }
 
-        public void Reload_Data()
+        public void Reload_Data(bool isSearched)
         {
             foreach (Control control in panelLanguagesLoad.Controls)
             {
@@ -47,11 +56,11 @@ namespace CentosCashFlow.ChildForms
 
             panelLanguagesLoad.Controls.Clear();
 
-            Load_Data();
+            Load_Data(isSearched);
         }
         private void ManageLanguages_Load(object sender, EventArgs e)
         {
-            Load_Data();
+            Load_Data(false);
         }
 
         private void btnAddNewLanguage_Click(object sender, EventArgs e)
@@ -60,8 +69,22 @@ namespace CentosCashFlow.ChildForms
             form.ShowDialog();
             if(form.isChanged)
             {
-                Reload_Data();
+                Reload_Data(false);
             }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (textBoxSearch.Text != "")
+            {
+                Reload_Data(true);
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            textBoxSearch.Clear();
+            Reload_Data(false);
         }
     }
 }

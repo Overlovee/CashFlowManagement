@@ -26,6 +26,22 @@ namespace CentosCashFlow.Models
             rdr.Close();
             return list;
         }
+        public List<Language> getDataByNameOrID(string name)
+        {
+            List<Language> list = new List<Language>();
+            string sql = ("Select * from Languages Where Language_Name Like N'%"+name+"%' Or Language_Code Like '%"+name+"%'");
+            SqlDataReader rdr = dbContext.ExcuteQuery(sql);
+            while (rdr.Read())
+            {
+                Language emp = new Language();
+                emp.Language_Code = rdr.GetValue(0).ToString();
+                emp.Language_Name = rdr.GetValue(1).ToString();
+
+                list.Add(emp);
+            }
+            rdr.Close();
+            return list;
+        }
         public Language getDataByID(string id)
         {
             Language emp = new Language();
