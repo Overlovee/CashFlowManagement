@@ -252,6 +252,7 @@
     <Compile Include="ChildForms\Wide.designer.cs">
       <DependentUpon>Wide.cs</DependentUpon>
     </Compile>
+    <Compile Include="Languages\LanguageDictionary.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -421,6 +422,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database\DB_CashFlowManagement.sql" />
+    <Content Include="Languages\EN.txt" />
+    <Content Include="Languages\FR.txt" />
+    <Content Include="Languages\VN.txt" />
     <Content Include="Resources\account.png" />
     <Content Include="Resources\Cat-With-Wry-Smile-icon.png" />
     <Content Include="Resources\categories.png" />

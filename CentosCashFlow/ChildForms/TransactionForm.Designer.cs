@@ -31,26 +31,26 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.panelCurrentTransactions = new System.Windows.Forms.Panel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.label9_display = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBoxAmount = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label1_display = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.comboBoxTransactionType = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label2_display = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.comboBoxCategory = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label3_display = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dateTimePickerCategory = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label4_display = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.richTextBoxDescription = new System.Windows.Forms.RichTextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnAddNewTransaction = new System.Windows.Forms.Button();
+            this.label5_display = new System.Windows.Forms.Label();
+            this.btnAddNewTransaction_display = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.comboBoxCurrency = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label7_display = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel9.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -93,7 +93,7 @@
             this.tableLayoutPanel5.BackColor = System.Drawing.Color.DarkViolet;
             this.tableLayoutPanel5.ColumnCount = 1;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Controls.Add(this.label9, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.label9_display, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -102,18 +102,18 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(927, 49);
             this.tableLayoutPanel5.TabIndex = 30;
             // 
-            // label9
+            // label9_display
             // 
-            this.label9.AutoSize = true;
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Font = new System.Drawing.Font("Montserrat Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(3, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(921, 49);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Current Transactions";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label9_display.AutoSize = true;
+            this.label9_display.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label9_display.Font = new System.Drawing.Font("Montserrat Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9_display.ForeColor = System.Drawing.Color.White;
+            this.label9_display.Location = new System.Drawing.Point(3, 0);
+            this.label9_display.Name = "label9_display";
+            this.label9_display.Size = new System.Drawing.Size(921, 49);
+            this.label9_display.TabIndex = 0;
+            this.label9_display.Text = "Current Transactions";
+            this.label9_display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -121,7 +121,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.textBoxAmount);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.label1_display);
             this.panel2.Location = new System.Drawing.Point(25, 20);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(418, 70);
@@ -138,17 +138,17 @@
             this.textBoxAmount.TabIndex = 1;
             this.textBoxAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAmount_KeyPress);
             // 
-            // label1
+            // label1_display
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label1_display.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(3, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Amount";
+            this.label1_display.AutoSize = true;
+            this.label1_display.ForeColor = System.Drawing.Color.Black;
+            this.label1_display.Location = new System.Drawing.Point(3, 23);
+            this.label1_display.Name = "label1_display";
+            this.label1_display.Size = new System.Drawing.Size(76, 24);
+            this.label1_display.TabIndex = 0;
+            this.label1_display.Text = "Amount";
             // 
             // panel3
             // 
@@ -156,7 +156,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.comboBoxTransactionType);
-            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.label2_display);
             this.panel3.Location = new System.Drawing.Point(25, 192);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(418, 70);
@@ -175,17 +175,17 @@
             this.comboBoxTransactionType.TabIndex = 1;
             this.comboBoxTransactionType.SelectedIndexChanged += new System.EventHandler(this.comboBoxTransactionType_SelectedIndexChanged);
             // 
-            // label2
+            // label2_display
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label2_display.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(3, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 24);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Transaction type";
+            this.label2_display.AutoSize = true;
+            this.label2_display.ForeColor = System.Drawing.Color.Black;
+            this.label2_display.Location = new System.Drawing.Point(3, 23);
+            this.label2_display.Name = "label2_display";
+            this.label2_display.Size = new System.Drawing.Size(148, 24);
+            this.label2_display.TabIndex = 0;
+            this.label2_display.Text = "Transaction type";
             // 
             // panel4
             // 
@@ -193,7 +193,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.comboBoxCategory);
-            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.label3_display);
             this.panel4.Location = new System.Drawing.Point(25, 280);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(418, 70);
@@ -211,17 +211,17 @@
             this.comboBoxCategory.Size = new System.Drawing.Size(242, 30);
             this.comboBoxCategory.TabIndex = 1;
             // 
-            // label3
+            // label3_display
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label3_display.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(3, 23);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 24);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Category";
+            this.label3_display.AutoSize = true;
+            this.label3_display.ForeColor = System.Drawing.Color.Black;
+            this.label3_display.Location = new System.Drawing.Point(3, 23);
+            this.label3_display.Name = "label3_display";
+            this.label3_display.Size = new System.Drawing.Size(85, 24);
+            this.label3_display.TabIndex = 0;
+            this.label3_display.Text = "Category";
             // 
             // panel5
             // 
@@ -229,7 +229,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.dateTimePickerCategory);
-            this.panel5.Controls.Add(this.label4);
+            this.panel5.Controls.Add(this.label4_display);
             this.panel5.Location = new System.Drawing.Point(25, 370);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(418, 70);
@@ -251,24 +251,24 @@
             this.dateTimePickerCategory.TabIndex = 1;
             this.dateTimePickerCategory.Value = new System.DateTime(2023, 10, 30, 0, 0, 0, 0);
             // 
-            // label4
+            // label4_display
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label4_display.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(3, 23);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 24);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Date time";
+            this.label4_display.AutoSize = true;
+            this.label4_display.ForeColor = System.Drawing.Color.Black;
+            this.label4_display.Location = new System.Drawing.Point(3, 23);
+            this.label4_display.Name = "label4_display";
+            this.label4_display.Size = new System.Drawing.Size(48, 24);
+            this.label4_display.TabIndex = 0;
+            this.label4_display.Text = "Date";
             // 
             // panel6
             // 
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.richTextBoxDescription);
-            this.panel6.Controls.Add(this.label5);
+            this.panel6.Controls.Add(this.label5_display);
             this.panel6.Location = new System.Drawing.Point(469, 20);
             this.panel6.Margin = new System.Windows.Forms.Padding(0);
             this.panel6.Name = "panel6";
@@ -287,33 +287,33 @@
             this.richTextBoxDescription.TabIndex = 1;
             this.richTextBoxDescription.Text = "";
             // 
-            // label5
+            // label5_display
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label5_display.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(3, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 24);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Description";
+            this.label5_display.AutoSize = true;
+            this.label5_display.ForeColor = System.Drawing.Color.Black;
+            this.label5_display.Location = new System.Drawing.Point(3, 0);
+            this.label5_display.Name = "label5_display";
+            this.label5_display.Size = new System.Drawing.Size(104, 24);
+            this.label5_display.TabIndex = 0;
+            this.label5_display.Text = "Description";
             // 
-            // btnAddNewTransaction
+            // btnAddNewTransaction_display
             // 
-            this.btnAddNewTransaction.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddNewTransaction.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAddNewTransaction.FlatAppearance.BorderSize = 0;
-            this.btnAddNewTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddNewTransaction.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAddNewTransaction.Location = new System.Drawing.Point(469, 370);
-            this.btnAddNewTransaction.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddNewTransaction.Name = "btnAddNewTransaction";
-            this.btnAddNewTransaction.Size = new System.Drawing.Size(436, 70);
-            this.btnAddNewTransaction.TabIndex = 8;
-            this.btnAddNewTransaction.Text = "Add new";
-            this.btnAddNewTransaction.UseVisualStyleBackColor = false;
-            this.btnAddNewTransaction.Click += new System.EventHandler(this.btnAddNewTransaction_Click);
+            this.btnAddNewTransaction_display.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddNewTransaction_display.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAddNewTransaction_display.FlatAppearance.BorderSize = 0;
+            this.btnAddNewTransaction_display.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddNewTransaction_display.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAddNewTransaction_display.Location = new System.Drawing.Point(469, 370);
+            this.btnAddNewTransaction_display.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddNewTransaction_display.Name = "btnAddNewTransaction_display";
+            this.btnAddNewTransaction_display.Size = new System.Drawing.Size(436, 70);
+            this.btnAddNewTransaction_display.TabIndex = 8;
+            this.btnAddNewTransaction_display.Text = "Add new";
+            this.btnAddNewTransaction_display.UseVisualStyleBackColor = false;
+            this.btnAddNewTransaction_display.Click += new System.EventHandler(this.btnAddNewTransaction_Click);
             // 
             // panel8
             // 
@@ -321,7 +321,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.comboBoxCurrency);
-            this.panel8.Controls.Add(this.label7);
+            this.panel8.Controls.Add(this.label7_display);
             this.panel8.Location = new System.Drawing.Point(25, 107);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(418, 70);
@@ -339,22 +339,22 @@
             this.comboBoxCurrency.Size = new System.Drawing.Size(242, 30);
             this.comboBoxCurrency.TabIndex = 1;
             // 
-            // label7
+            // label7_display
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label7_display.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(3, 23);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 24);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Currency";
+            this.label7_display.AutoSize = true;
+            this.label7_display.ForeColor = System.Drawing.Color.Black;
+            this.label7_display.Location = new System.Drawing.Point(3, 23);
+            this.label7_display.Name = "label7_display";
+            this.label7_display.Size = new System.Drawing.Size(87, 24);
+            this.label7_display.TabIndex = 0;
+            this.label7_display.Text = "Currency";
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel8);
-            this.panel1.Controls.Add(this.btnAddNewTransaction);
+            this.panel1.Controls.Add(this.btnAddNewTransaction_display);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
@@ -378,7 +378,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "TransactionForm";
             this.Padding = new System.Windows.Forms.Padding(10);
-            this.Text = "Transaction";
+            this.Text = "transaction";
             this.Load += new System.EventHandler(this.Transaction_Load);
             this.panel9.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
@@ -404,26 +404,26 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panelCurrentTransactions;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label9_display;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox textBoxAmount;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label1_display;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ComboBox comboBoxTransactionType;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label2_display;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ComboBox comboBoxCategory;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label3_display;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DateTimePicker dateTimePickerCategory;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label4_display;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.RichTextBox richTextBoxDescription;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnAddNewTransaction;
+        private System.Windows.Forms.Label label5_display;
+        private System.Windows.Forms.Button btnAddNewTransaction_display;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.ComboBox comboBoxCurrency;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label7_display;
         private System.Windows.Forms.Panel panel1;
     }
 }

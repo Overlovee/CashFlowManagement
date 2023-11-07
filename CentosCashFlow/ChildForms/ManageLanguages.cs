@@ -13,13 +13,22 @@ namespace CentosCashFlow.ChildForms
 {
     public partial class ManageLanguages : Form
     {
+        public Models.Settings userSettings { get; set; }
+        public Languages.LanguageDictionary dictionary { get; set; }
         public ManageLanguages()
         {
             InitializeComponent();
+            userSettings = new Models.Settings();
+            dictionary = new Languages.LanguageDictionary();
         }
 
         private void Load_Data(bool isSearched)
         {
+            Models.ConnectUsers connectUsers = new Models.ConnectUsers();
+            userSettings = connectUsers.getUserSettingsByID(int.Parse(this.Tag.ToString()));
+            dictionary = new Languages.LanguageDictionary(userSettings.LanguageCode);
+            dictionary.SetLanguages((Control)this);
+
             Models.ConnectLanguage connectLanguage = new Models.ConnectLanguage();
             List<Models.Language> list = new List<Models.Language>();
             if (isSearched)

@@ -1,5 +1,6 @@
 ﻿using CentosCashFlow.Models;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,13 +14,22 @@ namespace CentosCashFlow.ChildForms
 {
     public partial class ManageCurrencies : Form
     {
+        public Models.Settings userSettings { get; set; }
+        public Languages.LanguageDictionary dictionary { get; set; }
         public ManageCurrencies()
         {
             InitializeComponent();
+            userSettings = new Models.Settings();
+            dictionary = new Languages.LanguageDictionary();
         }
 
         private void Load_Data(bool isSearched)
         {
+            Models.ConnectUsers connectUsers = new Models.ConnectUsers();
+            userSettings = connectUsers.getUserSettingsByID(int.Parse(this.Tag.ToString()));
+            dictionary = new Languages.LanguageDictionary(userSettings.LanguageCode);
+            dictionary.SetLanguages((Control)this);
+
             Models.ConnectCurrency connectCurrency = new Models.ConnectCurrency();
             List<Models.Currency> list = new List<Models.Currency>();
             if (isSearched)

@@ -17,10 +17,12 @@ namespace CentosCashFlow.ChildForms
     {
         DbContext dbContext = new DbContext();
         public Models.Settings userSettings { get; set; }
+        public Languages.LanguageDictionary dictionary { get; set; }
         public Overview()
         {
             InitializeComponent();
             userSettings= new Models.Settings();
+            dictionary = new Languages.LanguageDictionary();
         }
 
         public void Load_Data()
@@ -29,9 +31,10 @@ namespace CentosCashFlow.ChildForms
             userSettings = connectUsers.getUserSettingsByID(int.Parse(this.Tag.ToString()));
             int month = dateTimePickerOverview.Value.Month;
             int year = dateTimePickerOverview.Value.Year;
-
-            labelIncomeMonth.Text = "Incomes in " + dateTimePickerOverview.Value.ToString("MM/yyyy");
-            labelExpendituresMonth.Text = "Expenditures in " + dateTimePickerOverview.Value.ToString("MM/yyyy");
+            dictionary = new Languages.LanguageDictionary(userSettings.LanguageCode);
+            dictionary.SetLanguages((Control)this);
+            labelIncomeMonth_display.Text = dictionary.getTranslatedWord("Incomes in") + " " + dateTimePickerOverview.Value.ToString("MM/yyyy");
+            labelExpendituresMonth_display.Text = dictionary.getTranslatedWord("Expenditures in") + " " + dateTimePickerOverview.Value.ToString("MM/yyyy");
 
             string sql = "SELECT " +
                 "c.Category_Img, " +
@@ -118,6 +121,8 @@ namespace CentosCashFlow.ChildForms
             }
             labelTotalIncome.Text = "+" + totalMoneyIn.ToString() + " " + userSettings.CurrencyCode;
             labelTotalExpenditures.Text = "-" + totalMoneyOut.ToString() + " " + userSettings.CurrencyCode;
+
+            
         }
         private void Overview_Load(object sender, EventArgs e)
         {

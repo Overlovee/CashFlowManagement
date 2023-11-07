@@ -12,13 +12,21 @@ namespace CentosCashFlow.ChildForms
 {
     public partial class ManageAdminAccounts : Form
     {
+        public Models.Settings userSettings { get; set; }
+        public Languages.LanguageDictionary dictionary { get; set; }
         public ManageAdminAccounts()
         {
             InitializeComponent();
+            userSettings = new Models.Settings();
+            dictionary = new Languages.LanguageDictionary();
         }
         public void Load_Data(bool isSearched)
         {
             Models.ConnectUsers connectUsers = new Models.ConnectUsers();
+            userSettings = connectUsers.getUserSettingsByID(int.Parse(this.Tag.ToString()));
+            dictionary = new Languages.LanguageDictionary(userSettings.LanguageCode);
+            dictionary.SetLanguages((Control)this);
+
             List<Models.UserAccountInfo> list = new List<Models.UserAccountInfo>();
             if (isSearched)
             {

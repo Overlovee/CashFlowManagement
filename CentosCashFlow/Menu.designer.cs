@@ -30,24 +30,24 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnSettings_display = new System.Windows.Forms.Button();
+            this.btnCurrencies_display = new System.Windows.Forms.Button();
+            this.btnLanguages_display = new System.Windows.Forms.Button();
+            this.btnAdminAccount_display = new System.Windows.Forms.Button();
+            this.btnUserAccount_display = new System.Windows.Forms.Button();
+            this.btnAccount_display = new System.Windows.Forms.Button();
+            this.btnCategory_display = new System.Windows.Forms.Button();
+            this.btnTransaction_display = new System.Windows.Forms.Button();
+            this.btnOverview_display = new System.Windows.Forms.Button();
+            this.btnHome_display = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.labelIcon = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.panelNavBar = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblTittle = new System.Windows.Forms.Label();
-            this.btnSettings = new System.Windows.Forms.Button();
-            this.btnCurrencies = new System.Windows.Forms.Button();
-            this.btnLanguages = new System.Windows.Forms.Button();
-            this.btnAdminAccount = new System.Windows.Forms.Button();
-            this.btnUserAccount = new System.Windows.Forms.Button();
-            this.btnAccount = new System.Windows.Forms.Button();
-            this.btnCategory = new System.Windows.Forms.Button();
-            this.btnTransaction = new System.Windows.Forms.Button();
-            this.btnOverview = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
-            this.labelIcon = new System.Windows.Forms.Label();
+            this.lblTittle_display = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -58,16 +58,16 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.Black;
-            this.panelMenu.Controls.Add(this.btnSettings);
-            this.panelMenu.Controls.Add(this.btnCurrencies);
-            this.panelMenu.Controls.Add(this.btnLanguages);
-            this.panelMenu.Controls.Add(this.btnAdminAccount);
-            this.panelMenu.Controls.Add(this.btnUserAccount);
-            this.panelMenu.Controls.Add(this.btnAccount);
-            this.panelMenu.Controls.Add(this.btnCategory);
-            this.panelMenu.Controls.Add(this.btnTransaction);
-            this.panelMenu.Controls.Add(this.btnOverview);
-            this.panelMenu.Controls.Add(this.btnHome);
+            this.panelMenu.Controls.Add(this.btnSettings_display);
+            this.panelMenu.Controls.Add(this.btnCurrencies_display);
+            this.panelMenu.Controls.Add(this.btnLanguages_display);
+            this.panelMenu.Controls.Add(this.btnAdminAccount_display);
+            this.panelMenu.Controls.Add(this.btnUserAccount_display);
+            this.panelMenu.Controls.Add(this.btnAccount_display);
+            this.panelMenu.Controls.Add(this.btnCategory_display);
+            this.panelMenu.Controls.Add(this.btnTransaction_display);
+            this.panelMenu.Controls.Add(this.btnOverview_display);
+            this.panelMenu.Controls.Add(this.btnHome_display);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
@@ -75,6 +75,216 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(250, 753);
             this.panelMenu.TabIndex = 0;
+            // 
+            // btnSettings_display
+            // 
+            this.btnSettings_display.BackColor = System.Drawing.Color.Black;
+            this.btnSettings_display.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSettings_display.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnSettings_display.FlatAppearance.BorderSize = 0;
+            this.btnSettings_display.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSettings_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnSettings_display.ForeColor = System.Drawing.Color.White;
+            this.btnSettings_display.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings_display.Image")));
+            this.btnSettings_display.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSettings_display.Location = new System.Drawing.Point(0, 574);
+            this.btnSettings_display.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSettings_display.Name = "btnSettings_display";
+            this.btnSettings_display.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnSettings_display.Size = new System.Drawing.Size(250, 56);
+            this.btnSettings_display.TabIndex = 17;
+            this.btnSettings_display.Text = "settings";
+            this.btnSettings_display.UseVisualStyleBackColor = false;
+            this.btnSettings_display.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
+            // btnCurrencies_display
+            // 
+            this.btnCurrencies_display.BackColor = System.Drawing.Color.Black;
+            this.btnCurrencies_display.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCurrencies_display.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnCurrencies_display.FlatAppearance.BorderSize = 0;
+            this.btnCurrencies_display.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCurrencies_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnCurrencies_display.ForeColor = System.Drawing.Color.White;
+            this.btnCurrencies_display.Image = ((System.Drawing.Image)(resources.GetObject("btnCurrencies_display.Image")));
+            this.btnCurrencies_display.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCurrencies_display.Location = new System.Drawing.Point(0, 518);
+            this.btnCurrencies_display.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCurrencies_display.Name = "btnCurrencies_display";
+            this.btnCurrencies_display.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnCurrencies_display.Size = new System.Drawing.Size(250, 56);
+            this.btnCurrencies_display.TabIndex = 16;
+            this.btnCurrencies_display.Text = "manage_currency";
+            this.btnCurrencies_display.UseVisualStyleBackColor = false;
+            this.btnCurrencies_display.Click += new System.EventHandler(this.btnCurrencies_Click);
+            // 
+            // btnLanguages_display
+            // 
+            this.btnLanguages_display.BackColor = System.Drawing.Color.Black;
+            this.btnLanguages_display.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLanguages_display.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnLanguages_display.FlatAppearance.BorderSize = 0;
+            this.btnLanguages_display.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLanguages_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnLanguages_display.ForeColor = System.Drawing.Color.White;
+            this.btnLanguages_display.Image = ((System.Drawing.Image)(resources.GetObject("btnLanguages_display.Image")));
+            this.btnLanguages_display.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLanguages_display.Location = new System.Drawing.Point(0, 462);
+            this.btnLanguages_display.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLanguages_display.Name = "btnLanguages_display";
+            this.btnLanguages_display.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnLanguages_display.Size = new System.Drawing.Size(250, 56);
+            this.btnLanguages_display.TabIndex = 15;
+            this.btnLanguages_display.Text = "manage_languages";
+            this.btnLanguages_display.UseVisualStyleBackColor = false;
+            this.btnLanguages_display.Click += new System.EventHandler(this.btnLanguages_Click);
+            // 
+            // btnAdminAccount_display
+            // 
+            this.btnAdminAccount_display.BackColor = System.Drawing.Color.Black;
+            this.btnAdminAccount_display.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAdminAccount_display.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnAdminAccount_display.FlatAppearance.BorderSize = 0;
+            this.btnAdminAccount_display.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAdminAccount_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnAdminAccount_display.ForeColor = System.Drawing.Color.White;
+            this.btnAdminAccount_display.Image = ((System.Drawing.Image)(resources.GetObject("btnAdminAccount_display.Image")));
+            this.btnAdminAccount_display.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdminAccount_display.Location = new System.Drawing.Point(0, 406);
+            this.btnAdminAccount_display.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAdminAccount_display.Name = "btnAdminAccount_display";
+            this.btnAdminAccount_display.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnAdminAccount_display.Size = new System.Drawing.Size(250, 56);
+            this.btnAdminAccount_display.TabIndex = 13;
+            this.btnAdminAccount_display.Text = "admins";
+            this.btnAdminAccount_display.UseVisualStyleBackColor = false;
+            this.btnAdminAccount_display.Click += new System.EventHandler(this.btnAdminAccount_Click);
+            // 
+            // btnUserAccount_display
+            // 
+            this.btnUserAccount_display.BackColor = System.Drawing.Color.Black;
+            this.btnUserAccount_display.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUserAccount_display.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnUserAccount_display.FlatAppearance.BorderSize = 0;
+            this.btnUserAccount_display.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUserAccount_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnUserAccount_display.ForeColor = System.Drawing.Color.White;
+            this.btnUserAccount_display.Image = ((System.Drawing.Image)(resources.GetObject("btnUserAccount_display.Image")));
+            this.btnUserAccount_display.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUserAccount_display.Location = new System.Drawing.Point(0, 350);
+            this.btnUserAccount_display.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUserAccount_display.Name = "btnUserAccount_display";
+            this.btnUserAccount_display.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnUserAccount_display.Size = new System.Drawing.Size(250, 56);
+            this.btnUserAccount_display.TabIndex = 11;
+            this.btnUserAccount_display.Text = "users";
+            this.btnUserAccount_display.UseVisualStyleBackColor = false;
+            this.btnUserAccount_display.Click += new System.EventHandler(this.btnUserAccount_Click);
+            // 
+            // btnAccount_display
+            // 
+            this.btnAccount_display.BackColor = System.Drawing.Color.Black;
+            this.btnAccount_display.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAccount_display.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnAccount_display.FlatAppearance.BorderSize = 0;
+            this.btnAccount_display.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAccount_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnAccount_display.ForeColor = System.Drawing.Color.White;
+            this.btnAccount_display.Image = ((System.Drawing.Image)(resources.GetObject("btnAccount_display.Image")));
+            this.btnAccount_display.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAccount_display.Location = new System.Drawing.Point(0, 294);
+            this.btnAccount_display.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAccount_display.Name = "btnAccount_display";
+            this.btnAccount_display.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnAccount_display.Size = new System.Drawing.Size(250, 56);
+            this.btnAccount_display.TabIndex = 9;
+            this.btnAccount_display.Text = "account";
+            this.btnAccount_display.UseVisualStyleBackColor = false;
+            this.btnAccount_display.Click += new System.EventHandler(this.btnAccount_Click);
+            // 
+            // btnCategory_display
+            // 
+            this.btnCategory_display.BackColor = System.Drawing.Color.Black;
+            this.btnCategory_display.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCategory_display.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnCategory_display.FlatAppearance.BorderSize = 0;
+            this.btnCategory_display.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCategory_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnCategory_display.ForeColor = System.Drawing.Color.White;
+            this.btnCategory_display.Image = ((System.Drawing.Image)(resources.GetObject("btnCategory_display.Image")));
+            this.btnCategory_display.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCategory_display.Location = new System.Drawing.Point(0, 238);
+            this.btnCategory_display.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCategory_display.Name = "btnCategory_display";
+            this.btnCategory_display.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnCategory_display.Size = new System.Drawing.Size(250, 56);
+            this.btnCategory_display.TabIndex = 4;
+            this.btnCategory_display.Text = "category";
+            this.btnCategory_display.UseVisualStyleBackColor = false;
+            this.btnCategory_display.Click += new System.EventHandler(this.btnCategory_Click);
+            // 
+            // btnTransaction_display
+            // 
+            this.btnTransaction_display.BackColor = System.Drawing.Color.Black;
+            this.btnTransaction_display.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTransaction_display.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnTransaction_display.FlatAppearance.BorderSize = 0;
+            this.btnTransaction_display.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTransaction_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnTransaction_display.ForeColor = System.Drawing.Color.White;
+            this.btnTransaction_display.Image = ((System.Drawing.Image)(resources.GetObject("btnTransaction_display.Image")));
+            this.btnTransaction_display.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTransaction_display.Location = new System.Drawing.Point(0, 182);
+            this.btnTransaction_display.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTransaction_display.Name = "btnTransaction_display";
+            this.btnTransaction_display.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnTransaction_display.Size = new System.Drawing.Size(250, 56);
+            this.btnTransaction_display.TabIndex = 3;
+            this.btnTransaction_display.Text = "transaction";
+            this.btnTransaction_display.UseVisualStyleBackColor = false;
+            this.btnTransaction_display.Click += new System.EventHandler(this.btnTransaction_Click);
+            // 
+            // btnOverview_display
+            // 
+            this.btnOverview_display.BackColor = System.Drawing.Color.Black;
+            this.btnOverview_display.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOverview_display.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnOverview_display.FlatAppearance.BorderSize = 0;
+            this.btnOverview_display.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOverview_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnOverview_display.ForeColor = System.Drawing.Color.White;
+            this.btnOverview_display.Image = ((System.Drawing.Image)(resources.GetObject("btnOverview_display.Image")));
+            this.btnOverview_display.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOverview_display.Location = new System.Drawing.Point(0, 126);
+            this.btnOverview_display.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOverview_display.Name = "btnOverview_display";
+            this.btnOverview_display.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnOverview_display.Size = new System.Drawing.Size(250, 56);
+            this.btnOverview_display.TabIndex = 2;
+            this.btnOverview_display.Text = "overview";
+            this.btnOverview_display.UseVisualStyleBackColor = false;
+            this.btnOverview_display.Click += new System.EventHandler(this.btnOverview_Click);
+            // 
+            // btnHome_display
+            // 
+            this.btnHome_display.BackColor = System.Drawing.Color.Black;
+            this.btnHome_display.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHome_display.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnHome_display.FlatAppearance.BorderSize = 0;
+            this.btnHome_display.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnHome_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnHome_display.ForeColor = System.Drawing.Color.White;
+            this.btnHome_display.Image = ((System.Drawing.Image)(resources.GetObject("btnHome_display.Image")));
+            this.btnHome_display.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome_display.Location = new System.Drawing.Point(0, 70);
+            this.btnHome_display.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHome_display.Name = "btnHome_display";
+            this.btnHome_display.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnHome_display.Size = new System.Drawing.Size(250, 56);
+            this.btnHome_display.TabIndex = 1;
+            this.btnHome_display.Text = "home";
+            this.btnHome_display.UseVisualStyleBackColor = false;
+            this.btnHome_display.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // panelLogo
             // 
@@ -86,6 +296,19 @@
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(250, 70);
             this.panelLogo.TabIndex = 0;
+            // 
+            // labelIcon
+            // 
+            this.labelIcon.BackColor = System.Drawing.Color.Black;
+            this.labelIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelIcon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelIcon.ForeColor = System.Drawing.Color.White;
+            this.labelIcon.Image = ((System.Drawing.Image)(resources.GetObject("labelIcon.Image")));
+            this.labelIcon.Location = new System.Drawing.Point(0, 0);
+            this.labelIcon.Name = "labelIcon";
+            this.labelIcon.Size = new System.Drawing.Size(250, 70);
+            this.labelIcon.TabIndex = 0;
+            this.labelIcon.Click += new System.EventHandler(this.labelIcon_Click);
             // 
             // button1
             // 
@@ -140,7 +363,7 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.lblTittle, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblTittle_display, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -150,241 +373,18 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1332, 51);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // lblTittle
+            // lblTittle_display
             // 
-            this.lblTittle.AutoSize = true;
-            this.lblTittle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTittle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.lblTittle.ForeColor = System.Drawing.Color.Black;
-            this.lblTittle.Location = new System.Drawing.Point(3, 0);
-            this.lblTittle.Name = "lblTittle";
-            this.lblTittle.Size = new System.Drawing.Size(1326, 51);
-            this.lblTittle.TabIndex = 1;
-            this.lblTittle.Text = "HOME";
-            this.lblTittle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnSettings
-            // 
-            this.btnSettings.BackColor = System.Drawing.Color.Black;
-            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSettings.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnSettings.FlatAppearance.BorderSize = 0;
-            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
-            this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSettings.Location = new System.Drawing.Point(0, 574);
-            this.btnSettings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnSettings.Size = new System.Drawing.Size(250, 56);
-            this.btnSettings.TabIndex = 17;
-            this.btnSettings.Text = "Settings";
-            this.btnSettings.UseVisualStyleBackColor = false;
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
-            // 
-            // btnCurrencies
-            // 
-            this.btnCurrencies.BackColor = System.Drawing.Color.Black;
-            this.btnCurrencies.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCurrencies.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnCurrencies.FlatAppearance.BorderSize = 0;
-            this.btnCurrencies.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCurrencies.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnCurrencies.ForeColor = System.Drawing.Color.White;
-            this.btnCurrencies.Image = ((System.Drawing.Image)(resources.GetObject("btnCurrencies.Image")));
-            this.btnCurrencies.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCurrencies.Location = new System.Drawing.Point(0, 518);
-            this.btnCurrencies.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCurrencies.Name = "btnCurrencies";
-            this.btnCurrencies.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnCurrencies.Size = new System.Drawing.Size(250, 56);
-            this.btnCurrencies.TabIndex = 16;
-            this.btnCurrencies.Text = "              Manage                 Currency";
-            this.btnCurrencies.UseVisualStyleBackColor = false;
-            this.btnCurrencies.Click += new System.EventHandler(this.btnCurrencies_Click);
-            // 
-            // btnLanguages
-            // 
-            this.btnLanguages.BackColor = System.Drawing.Color.Black;
-            this.btnLanguages.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLanguages.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnLanguages.FlatAppearance.BorderSize = 0;
-            this.btnLanguages.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLanguages.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnLanguages.ForeColor = System.Drawing.Color.White;
-            this.btnLanguages.Image = ((System.Drawing.Image)(resources.GetObject("btnLanguages.Image")));
-            this.btnLanguages.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLanguages.Location = new System.Drawing.Point(0, 462);
-            this.btnLanguages.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnLanguages.Name = "btnLanguages";
-            this.btnLanguages.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnLanguages.Size = new System.Drawing.Size(250, 56);
-            this.btnLanguages.TabIndex = 15;
-            this.btnLanguages.Text = "            Manage               Languages";
-            this.btnLanguages.UseVisualStyleBackColor = false;
-            this.btnLanguages.Click += new System.EventHandler(this.btnLanguages_Click);
-            // 
-            // btnAdminAccount
-            // 
-            this.btnAdminAccount.BackColor = System.Drawing.Color.Black;
-            this.btnAdminAccount.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAdminAccount.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnAdminAccount.FlatAppearance.BorderSize = 0;
-            this.btnAdminAccount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAdminAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnAdminAccount.ForeColor = System.Drawing.Color.White;
-            this.btnAdminAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnAdminAccount.Image")));
-            this.btnAdminAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdminAccount.Location = new System.Drawing.Point(0, 406);
-            this.btnAdminAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAdminAccount.Name = "btnAdminAccount";
-            this.btnAdminAccount.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnAdminAccount.Size = new System.Drawing.Size(250, 56);
-            this.btnAdminAccount.TabIndex = 13;
-            this.btnAdminAccount.Text = "Admin Accounts";
-            this.btnAdminAccount.UseVisualStyleBackColor = false;
-            this.btnAdminAccount.Click += new System.EventHandler(this.btnAdminAccount_Click);
-            // 
-            // btnUserAccount
-            // 
-            this.btnUserAccount.BackColor = System.Drawing.Color.Black;
-            this.btnUserAccount.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUserAccount.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnUserAccount.FlatAppearance.BorderSize = 0;
-            this.btnUserAccount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnUserAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnUserAccount.ForeColor = System.Drawing.Color.White;
-            this.btnUserAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnUserAccount.Image")));
-            this.btnUserAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUserAccount.Location = new System.Drawing.Point(0, 350);
-            this.btnUserAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnUserAccount.Name = "btnUserAccount";
-            this.btnUserAccount.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnUserAccount.Size = new System.Drawing.Size(250, 56);
-            this.btnUserAccount.TabIndex = 11;
-            this.btnUserAccount.Text = "User Accounts";
-            this.btnUserAccount.UseVisualStyleBackColor = false;
-            this.btnUserAccount.Click += new System.EventHandler(this.btnUserAccount_Click);
-            // 
-            // btnAccount
-            // 
-            this.btnAccount.BackColor = System.Drawing.Color.Black;
-            this.btnAccount.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAccount.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnAccount.FlatAppearance.BorderSize = 0;
-            this.btnAccount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnAccount.ForeColor = System.Drawing.Color.White;
-            this.btnAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnAccount.Image")));
-            this.btnAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAccount.Location = new System.Drawing.Point(0, 294);
-            this.btnAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAccount.Name = "btnAccount";
-            this.btnAccount.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnAccount.Size = new System.Drawing.Size(250, 56);
-            this.btnAccount.TabIndex = 9;
-            this.btnAccount.Text = "Account";
-            this.btnAccount.UseVisualStyleBackColor = false;
-            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
-            // 
-            // btnCategory
-            // 
-            this.btnCategory.BackColor = System.Drawing.Color.Black;
-            this.btnCategory.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCategory.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnCategory.FlatAppearance.BorderSize = 0;
-            this.btnCategory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnCategory.ForeColor = System.Drawing.Color.White;
-            this.btnCategory.Image = ((System.Drawing.Image)(resources.GetObject("btnCategory.Image")));
-            this.btnCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCategory.Location = new System.Drawing.Point(0, 238);
-            this.btnCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCategory.Name = "btnCategory";
-            this.btnCategory.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnCategory.Size = new System.Drawing.Size(250, 56);
-            this.btnCategory.TabIndex = 4;
-            this.btnCategory.Text = "Category";
-            this.btnCategory.UseVisualStyleBackColor = false;
-            this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
-            // 
-            // btnTransaction
-            // 
-            this.btnTransaction.BackColor = System.Drawing.Color.Black;
-            this.btnTransaction.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTransaction.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnTransaction.FlatAppearance.BorderSize = 0;
-            this.btnTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTransaction.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnTransaction.ForeColor = System.Drawing.Color.White;
-            this.btnTransaction.Image = ((System.Drawing.Image)(resources.GetObject("btnTransaction.Image")));
-            this.btnTransaction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTransaction.Location = new System.Drawing.Point(0, 182);
-            this.btnTransaction.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnTransaction.Name = "btnTransaction";
-            this.btnTransaction.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnTransaction.Size = new System.Drawing.Size(250, 56);
-            this.btnTransaction.TabIndex = 3;
-            this.btnTransaction.Text = "Transaction";
-            this.btnTransaction.UseVisualStyleBackColor = false;
-            this.btnTransaction.Click += new System.EventHandler(this.btnTransaction_Click);
-            // 
-            // btnOverview
-            // 
-            this.btnOverview.BackColor = System.Drawing.Color.Black;
-            this.btnOverview.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOverview.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnOverview.FlatAppearance.BorderSize = 0;
-            this.btnOverview.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnOverview.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnOverview.ForeColor = System.Drawing.Color.White;
-            this.btnOverview.Image = ((System.Drawing.Image)(resources.GetObject("btnOverview.Image")));
-            this.btnOverview.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOverview.Location = new System.Drawing.Point(0, 126);
-            this.btnOverview.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnOverview.Name = "btnOverview";
-            this.btnOverview.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnOverview.Size = new System.Drawing.Size(250, 56);
-            this.btnOverview.TabIndex = 2;
-            this.btnOverview.Text = "Overview";
-            this.btnOverview.UseVisualStyleBackColor = false;
-            this.btnOverview.Click += new System.EventHandler(this.btnOverview_Click);
-            // 
-            // btnHome
-            // 
-            this.btnHome.BackColor = System.Drawing.Color.Black;
-            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(0, 70);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnHome.Size = new System.Drawing.Size(250, 56);
-            this.btnHome.TabIndex = 1;
-            this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // labelIcon
-            // 
-            this.labelIcon.BackColor = System.Drawing.Color.Black;
-            this.labelIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelIcon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelIcon.ForeColor = System.Drawing.Color.White;
-            this.labelIcon.Image = ((System.Drawing.Image)(resources.GetObject("labelIcon.Image")));
-            this.labelIcon.Location = new System.Drawing.Point(0, 0);
-            this.labelIcon.Name = "labelIcon";
-            this.labelIcon.Size = new System.Drawing.Size(250, 70);
-            this.labelIcon.TabIndex = 0;
-            this.labelIcon.Click += new System.EventHandler(this.labelIcon_Click);
+            this.lblTittle_display.AutoSize = true;
+            this.lblTittle_display.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTittle_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.lblTittle_display.ForeColor = System.Drawing.Color.Black;
+            this.lblTittle_display.Location = new System.Drawing.Point(3, 0);
+            this.lblTittle_display.Name = "lblTittle_display";
+            this.lblTittle_display.Size = new System.Drawing.Size(1326, 51);
+            this.lblTittle_display.TabIndex = 1;
+            this.lblTittle_display.Text = "home";
+            this.lblTittle_display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Menu
             // 
@@ -419,24 +419,24 @@
         #endregion
 
         private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.Button btnHome_display;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label labelIcon;
-        private System.Windows.Forms.Button btnTransaction;
-        private System.Windows.Forms.Button btnOverview;
-        private System.Windows.Forms.Button btnAccount;
-        private System.Windows.Forms.Button btnCategory;
+        private System.Windows.Forms.Button btnTransaction_display;
+        private System.Windows.Forms.Button btnOverview_display;
+        private System.Windows.Forms.Button btnAccount_display;
+        private System.Windows.Forms.Button btnCategory_display;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelDesktop;
         private System.Windows.Forms.Panel panelNavBar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label lblTittle;
-        private System.Windows.Forms.Button btnUserAccount;
-        private System.Windows.Forms.Button btnAdminAccount;
-        private System.Windows.Forms.Button btnSettings;
-        private System.Windows.Forms.Button btnCurrencies;
-        private System.Windows.Forms.Button btnLanguages;
+        private System.Windows.Forms.Label lblTittle_display;
+        private System.Windows.Forms.Button btnUserAccount_display;
+        private System.Windows.Forms.Button btnAdminAccount_display;
+        private System.Windows.Forms.Button btnSettings_display;
+        private System.Windows.Forms.Button btnCurrencies_display;
+        private System.Windows.Forms.Button btnLanguages_display;
     }
 }
 

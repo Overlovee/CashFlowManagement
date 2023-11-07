@@ -32,18 +32,18 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnDeleteAccount = new System.Windows.Forms.Button();
+            this.btnDeleteAccount_display = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnEditAccount = new System.Windows.Forms.Button();
+            this.btnEditAccount_display = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label7_display = new System.Windows.Forms.Label();
             this.labelAccountEmail = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label5_display = new System.Windows.Forms.Label();
             this.labelAccountName = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label3_display = new System.Windows.Forms.Label();
+            this.label1_display = new System.Windows.Forms.Label();
             this.labelBalance = new System.Windows.Forms.Label();
-            this.linkLabelChangingPassword = new System.Windows.Forms.LinkLabel();
+            this.linkLabelChangingPassword_display = new System.Windows.Forms.LinkLabel();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -80,9 +80,9 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.btnDeleteAccount);
+            this.panel4.Controls.Add(this.btnDeleteAccount_display);
             this.panel4.Controls.Add(this.panel5);
-            this.panel4.Controls.Add(this.btnEditAccount);
+            this.panel4.Controls.Add(this.btnEditAccount_display);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 130);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
@@ -91,20 +91,20 @@
             this.panel4.Size = new System.Drawing.Size(582, 130);
             this.panel4.TabIndex = 3;
             // 
-            // btnDeleteAccount
+            // btnDeleteAccount_display
             // 
-            this.btnDeleteAccount.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDeleteAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteAccount.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnDeleteAccount.ForeColor = System.Drawing.Color.Red;
-            this.btnDeleteAccount.Location = new System.Drawing.Point(0, 76);
-            this.btnDeleteAccount.Margin = new System.Windows.Forms.Padding(0);
-            this.btnDeleteAccount.Name = "btnDeleteAccount";
-            this.btnDeleteAccount.Size = new System.Drawing.Size(582, 48);
-            this.btnDeleteAccount.TabIndex = 7;
-            this.btnDeleteAccount.Text = "Delete Account";
-            this.btnDeleteAccount.UseVisualStyleBackColor = true;
-            this.btnDeleteAccount.Click += new System.EventHandler(this.btnDeleteAccount_Click);
+            this.btnDeleteAccount_display.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDeleteAccount_display.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteAccount_display.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.btnDeleteAccount_display.ForeColor = System.Drawing.Color.Red;
+            this.btnDeleteAccount_display.Location = new System.Drawing.Point(0, 76);
+            this.btnDeleteAccount_display.Margin = new System.Windows.Forms.Padding(0);
+            this.btnDeleteAccount_display.Name = "btnDeleteAccount_display";
+            this.btnDeleteAccount_display.Size = new System.Drawing.Size(582, 48);
+            this.btnDeleteAccount_display.TabIndex = 7;
+            this.btnDeleteAccount_display.Text = "Delete Account";
+            this.btnDeleteAccount_display.UseVisualStyleBackColor = true;
+            this.btnDeleteAccount_display.Click += new System.EventHandler(this.btnDeleteAccount_Click);
             // 
             // panel5
             // 
@@ -114,35 +114,35 @@
             this.panel5.Size = new System.Drawing.Size(582, 16);
             this.panel5.TabIndex = 6;
             // 
-            // btnEditAccount
+            // btnEditAccount_display
             // 
-            this.btnEditAccount.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btnEditAccount.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEditAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditAccount.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnEditAccount.ForeColor = System.Drawing.Color.Black;
-            this.btnEditAccount.Location = new System.Drawing.Point(0, 10);
-            this.btnEditAccount.Margin = new System.Windows.Forms.Padding(0);
-            this.btnEditAccount.Name = "btnEditAccount";
-            this.btnEditAccount.Size = new System.Drawing.Size(582, 50);
-            this.btnEditAccount.TabIndex = 5;
-            this.btnEditAccount.Text = "Edit";
-            this.btnEditAccount.UseVisualStyleBackColor = false;
-            this.btnEditAccount.Click += new System.EventHandler(this.btnEditAccount_Click);
+            this.btnEditAccount_display.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnEditAccount_display.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEditAccount_display.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditAccount_display.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.btnEditAccount_display.ForeColor = System.Drawing.Color.Black;
+            this.btnEditAccount_display.Location = new System.Drawing.Point(0, 10);
+            this.btnEditAccount_display.Margin = new System.Windows.Forms.Padding(0);
+            this.btnEditAccount_display.Name = "btnEditAccount_display";
+            this.btnEditAccount_display.Size = new System.Drawing.Size(582, 50);
+            this.btnEditAccount_display.TabIndex = 5;
+            this.btnEditAccount_display.Text = "Edit";
+            this.btnEditAccount_display.UseVisualStyleBackColor = false;
+            this.btnEditAccount_display.Click += new System.EventHandler(this.btnEditAccount_Click);
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label7_display, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.labelAccountEmail, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label5_display, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.labelAccountName, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label3_display, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label1_display, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.labelBalance, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.linkLabelChangingPassword, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.linkLabelChangingPassword_display, 1, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -156,18 +156,18 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(582, 130);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // label7
+            // label7_display
             // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(3, 96);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(285, 32);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Password";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label7_display.AutoSize = true;
+            this.label7_display.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label7_display.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label7_display.ForeColor = System.Drawing.Color.Black;
+            this.label7_display.Location = new System.Drawing.Point(3, 96);
+            this.label7_display.Name = "label7_display";
+            this.label7_display.Size = new System.Drawing.Size(285, 32);
+            this.label7_display.TabIndex = 6;
+            this.label7_display.Text = "Password";
+            this.label7_display.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelAccountEmail
             // 
@@ -182,18 +182,18 @@
             this.labelAccountEmail.Text = "example@gmail.com";
             this.labelAccountEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label5
+            // label5_display
             // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(3, 64);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(285, 32);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Email";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label5_display.AutoSize = true;
+            this.label5_display.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5_display.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label5_display.ForeColor = System.Drawing.Color.Black;
+            this.label5_display.Location = new System.Drawing.Point(3, 64);
+            this.label5_display.Name = "label5_display";
+            this.label5_display.Size = new System.Drawing.Size(285, 32);
+            this.label5_display.TabIndex = 4;
+            this.label5_display.Text = "Email";
+            this.label5_display.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelAccountName
             // 
@@ -208,31 +208,31 @@
             this.labelAccountName.Text = "John Dor";
             this.labelAccountName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label3
+            // label3_display
             // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(3, 32);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(285, 32);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Name";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label3_display.AutoSize = true;
+            this.label3_display.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3_display.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label3_display.ForeColor = System.Drawing.Color.Black;
+            this.label3_display.Location = new System.Drawing.Point(3, 32);
+            this.label3_display.Name = "label3_display";
+            this.label3_display.Size = new System.Drawing.Size(285, 32);
+            this.label3_display.TabIndex = 2;
+            this.label3_display.Text = "Name";
+            this.label3_display.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label1
+            // label1_display
             // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(285, 32);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "My Wallet";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1_display.AutoSize = true;
+            this.label1_display.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1_display.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label1_display.ForeColor = System.Drawing.Color.Black;
+            this.label1_display.Location = new System.Drawing.Point(3, 0);
+            this.label1_display.Name = "label1_display";
+            this.label1_display.Size = new System.Drawing.Size(285, 32);
+            this.label1_display.TabIndex = 0;
+            this.label1_display.Text = "My Wallet";
+            this.label1_display.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelBalance
             // 
@@ -247,19 +247,19 @@
             this.labelBalance.Text = "10,001,230 VND";
             this.labelBalance.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // linkLabelChangingPassword
+            // linkLabelChangingPassword_display
             // 
-            this.linkLabelChangingPassword.AutoSize = true;
-            this.linkLabelChangingPassword.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.linkLabelChangingPassword.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.linkLabelChangingPassword.Location = new System.Drawing.Point(294, 96);
-            this.linkLabelChangingPassword.Name = "linkLabelChangingPassword";
-            this.linkLabelChangingPassword.Size = new System.Drawing.Size(285, 32);
-            this.linkLabelChangingPassword.TabIndex = 11;
-            this.linkLabelChangingPassword.TabStop = true;
-            this.linkLabelChangingPassword.Text = "Change password";
-            this.linkLabelChangingPassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.linkLabelChangingPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelChangingPassword_LinkClicked);
+            this.linkLabelChangingPassword_display.AutoSize = true;
+            this.linkLabelChangingPassword_display.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.linkLabelChangingPassword_display.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.linkLabelChangingPassword_display.Location = new System.Drawing.Point(294, 96);
+            this.linkLabelChangingPassword_display.Name = "linkLabelChangingPassword_display";
+            this.linkLabelChangingPassword_display.Size = new System.Drawing.Size(285, 32);
+            this.linkLabelChangingPassword_display.TabIndex = 11;
+            this.linkLabelChangingPassword_display.TabStop = true;
+            this.linkLabelChangingPassword_display.Text = "Change password";
+            this.linkLabelChangingPassword_display.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.linkLabelChangingPassword_display.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelChangingPassword_LinkClicked);
             // 
             // Account
             // 
@@ -271,7 +271,7 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Account";
-            this.Text = "Account";
+            this.Text = "account";
             this.Load += new System.EventHandler(this.Account_Load);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -287,17 +287,17 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label7_display;
         private System.Windows.Forms.Label labelAccountEmail;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label5_display;
         private System.Windows.Forms.Label labelAccountName;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3_display;
+        private System.Windows.Forms.Label label1_display;
         private System.Windows.Forms.Label labelBalance;
-        private System.Windows.Forms.LinkLabel linkLabelChangingPassword;
+        private System.Windows.Forms.LinkLabel linkLabelChangingPassword_display;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btnDeleteAccount;
+        private System.Windows.Forms.Button btnDeleteAccount_display;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btnEditAccount;
+        private System.Windows.Forms.Button btnEditAccount_display;
     }
 }

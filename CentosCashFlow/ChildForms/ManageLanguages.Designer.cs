@@ -31,14 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageLanguages));
             this.panel7 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnSearch_display = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
-            this.btnAddNewLanguage = new System.Windows.Forms.Button();
+            this.btnAddNewLanguage_display = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panelLanguagesLoad = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label6_display = new System.Windows.Forms.Label();
             this.panel7.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -48,7 +48,7 @@
             // panel7
             // 
             this.panel7.Controls.Add(this.tableLayoutPanel2);
-            this.panel7.Controls.Add(this.btnAddNewLanguage);
+            this.panel7.Controls.Add(this.btnAddNewLanguage_display);
             this.panel7.Controls.Add(this.panel12);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
@@ -66,7 +66,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
-            this.tableLayoutPanel2.Controls.Add(this.btnSearch, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnSearch_display, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnClear, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.textBoxSearch, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(29, 60);
@@ -76,26 +76,26 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(953, 35);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
-            // btnSearch
+            // btnSearch_display
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnSearch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(822, 0);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 0, 0, 0);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
-            this.btnSearch.Size = new System.Drawing.Size(131, 35);
-            this.btnSearch.TabIndex = 4;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.btnSearch_display.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnSearch_display.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSearch_display.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnSearch_display.FlatAppearance.BorderSize = 0;
+            this.btnSearch_display.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearch_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnSearch_display.ForeColor = System.Drawing.Color.White;
+            this.btnSearch_display.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch_display.Image")));
+            this.btnSearch_display.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch_display.Location = new System.Drawing.Point(822, 0);
+            this.btnSearch_display.Margin = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.btnSearch_display.Name = "btnSearch_display";
+            this.btnSearch_display.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.btnSearch_display.Size = new System.Drawing.Size(131, 35);
+            this.btnSearch_display.TabIndex = 4;
+            this.btnSearch_display.Text = "Search";
+            this.btnSearch_display.UseVisualStyleBackColor = false;
+            this.btnSearch_display.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnClear
             // 
@@ -127,19 +127,19 @@
             this.textBoxSearch.Size = new System.Drawing.Size(779, 35);
             this.textBoxSearch.TabIndex = 0;
             // 
-            // btnAddNewLanguage
+            // btnAddNewLanguage_display
             // 
-            this.btnAddNewLanguage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddNewLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnAddNewLanguage.ForeColor = System.Drawing.Color.Black;
-            this.btnAddNewLanguage.Location = new System.Drawing.Point(29, 9);
-            this.btnAddNewLanguage.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAddNewLanguage.Name = "btnAddNewLanguage";
-            this.btnAddNewLanguage.Size = new System.Drawing.Size(135, 36);
-            this.btnAddNewLanguage.TabIndex = 1;
-            this.btnAddNewLanguage.Text = "+ Add new";
-            this.btnAddNewLanguage.UseVisualStyleBackColor = true;
-            this.btnAddNewLanguage.Click += new System.EventHandler(this.btnAddNewLanguage_Click);
+            this.btnAddNewLanguage_display.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddNewLanguage_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnAddNewLanguage_display.ForeColor = System.Drawing.Color.Black;
+            this.btnAddNewLanguage_display.Location = new System.Drawing.Point(29, 9);
+            this.btnAddNewLanguage_display.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAddNewLanguage_display.Name = "btnAddNewLanguage_display";
+            this.btnAddNewLanguage_display.Size = new System.Drawing.Size(135, 36);
+            this.btnAddNewLanguage_display.TabIndex = 1;
+            this.btnAddNewLanguage_display.Text = "Add new";
+            this.btnAddNewLanguage_display.UseVisualStyleBackColor = true;
+            this.btnAddNewLanguage_display.Click += new System.EventHandler(this.btnAddNewLanguage_Click);
             // 
             // panel12
             // 
@@ -170,7 +170,7 @@
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.DarkViolet;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label6_display, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -179,20 +179,20 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(953, 49);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // label6
+            // label6_display
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Black;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Montserrat Black", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(0, 0);
-            this.label6.Margin = new System.Windows.Forms.Padding(0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(953, 49);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Languages";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label6_display.AutoSize = true;
+            this.label6_display.BackColor = System.Drawing.Color.Black;
+            this.label6_display.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label6_display.Font = new System.Drawing.Font("Montserrat Black", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6_display.ForeColor = System.Drawing.Color.White;
+            this.label6_display.Location = new System.Drawing.Point(0, 0);
+            this.label6_display.Margin = new System.Windows.Forms.Padding(0);
+            this.label6_display.Name = "label6_display";
+            this.label6_display.Size = new System.Drawing.Size(953, 49);
+            this.label6_display.TabIndex = 0;
+            this.label6_display.Text = "languages";
+            this.label6_display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ManageLanguages
             // 
@@ -201,7 +201,7 @@
             this.ClientSize = new System.Drawing.Size(1006, 537);
             this.Controls.Add(this.panel7);
             this.Name = "ManageLanguages";
-            this.Text = "ManageLanguages";
+            this.Text = "manage_languages";
             this.Load += new System.EventHandler(this.ManageLanguages_Load);
             this.panel7.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -216,13 +216,13 @@
         #endregion
 
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button btnAddNewLanguage;
+        private System.Windows.Forms.Button btnAddNewLanguage_display;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panelLanguagesLoad;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label6_display;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnSearch_display;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.TextBox textBoxSearch;
     }

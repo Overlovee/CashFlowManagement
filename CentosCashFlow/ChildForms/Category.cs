@@ -13,10 +13,14 @@ namespace CentosCashFlow.ChildForms
     public partial class Category : Form
     {
         public bool isChanged { get; set; }
+        public Models.Settings userSettings { get; set; }
+        public Languages.LanguageDictionary dictionary { get; set; }
         public Category()
         {
             InitializeComponent();
             isChanged= false;
+            userSettings= new Models.Settings();
+            dictionary = new Languages.LanguageDictionary();
         }
 
         private void btnIncomeAdding_Click(object sender, EventArgs e)
@@ -43,6 +47,8 @@ namespace CentosCashFlow.ChildForms
 
         private void Load_Data()
         {
+            dictionary = new Languages.LanguageDictionary(userSettings.LanguageCode);
+            dictionary.SetLanguages((Control)this);
             Models.ConnectCategory connect = new Models.ConnectCategory();
             List<Models.Category> incomeList = connect.getIncomeTypeData();
             List<Models.Category> expenditureList = connect.getExpenditureTypeData();
@@ -103,6 +109,8 @@ namespace CentosCashFlow.ChildForms
         }
         private void Category_Load(object sender, EventArgs e)
         {
+            Models.ConnectUsers connectUsers = new Models.ConnectUsers();
+            userSettings = connectUsers.getUserSettingsByID(int.Parse(this.Tag.ToString()));
             Load_Data();   
         }
     }

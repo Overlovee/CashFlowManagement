@@ -240,6 +240,10 @@ CREATE PROCEDURE InsertUser
 AS
 	INSERT INTO Users(Name,Email,Password, Role)
 	VALUES(@name,@email,@password, @role);
+	DECLARE @id INT;
+	SET @id = (SELECT ID FROM Users WHERE Name = N'Nguyễn Minh Thư');
+	INSERT INTO Setting(User_ID, Language_Code, Currency_Code)
+	VALUES (@id, 'EN', 'VND')
 GO
 
 --
@@ -309,7 +313,7 @@ VALUES(N'Trương Quốc Huy',N'Huy5512@gmail.com',N'Huy12445'),
 
 --
 INSERT INTO Setting(User_ID, Language_Code, Currency_Code)
-VALUES (3, 'EN', 'VND'),
+VALUES (3, 'VN', 'VND'),
 (2, 'EN', 'USD')
 
 
@@ -335,6 +339,9 @@ SELECT* FROM Categories
 SELECT* FROM Transactions
 SELECT* FROM Languages
 SELECT* FROM Currency
+
+Update Setting
+Set Language_Code = 'EN' Where User_ID = 3
 
 --EXEC DeleteCategory @Category_ID = 'CTP';
 

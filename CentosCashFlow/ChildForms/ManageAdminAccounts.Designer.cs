@@ -31,14 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageAdminAccounts));
             this.panel7 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnSearch_display = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
-            this.btnAddNewAccount = new System.Windows.Forms.Button();
+            this.btnAddNewAccount_display = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panelAdminAccountsLoad = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label6_display = new System.Windows.Forms.Label();
             this.panel7.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -48,7 +48,7 @@
             // panel7
             // 
             this.panel7.Controls.Add(this.tableLayoutPanel2);
-            this.panel7.Controls.Add(this.btnAddNewAccount);
+            this.panel7.Controls.Add(this.btnAddNewAccount_display);
             this.panel7.Controls.Add(this.panel12);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
@@ -66,7 +66,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
-            this.tableLayoutPanel2.Controls.Add(this.btnSearch, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnSearch_display, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnClear, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.textBoxSearch, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(28, 60);
@@ -76,26 +76,26 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1023, 35);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
-            // btnSearch
+            // btnSearch_display
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnSearch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(892, 0);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 0, 0, 0);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
-            this.btnSearch.Size = new System.Drawing.Size(131, 35);
-            this.btnSearch.TabIndex = 4;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.btnSearch_display.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnSearch_display.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSearch_display.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnSearch_display.FlatAppearance.BorderSize = 0;
+            this.btnSearch_display.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearch_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnSearch_display.ForeColor = System.Drawing.Color.White;
+            this.btnSearch_display.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch_display.Image")));
+            this.btnSearch_display.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch_display.Location = new System.Drawing.Point(892, 0);
+            this.btnSearch_display.Margin = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.btnSearch_display.Name = "btnSearch_display";
+            this.btnSearch_display.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.btnSearch_display.Size = new System.Drawing.Size(131, 35);
+            this.btnSearch_display.TabIndex = 4;
+            this.btnSearch_display.Text = "Search";
+            this.btnSearch_display.UseVisualStyleBackColor = false;
+            this.btnSearch_display.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnClear
             // 
@@ -127,19 +127,19 @@
             this.textBoxSearch.Size = new System.Drawing.Size(849, 35);
             this.textBoxSearch.TabIndex = 0;
             // 
-            // btnAddNewAccount
+            // btnAddNewAccount_display
             // 
-            this.btnAddNewAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddNewAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnAddNewAccount.ForeColor = System.Drawing.Color.Black;
-            this.btnAddNewAccount.Location = new System.Drawing.Point(29, 9);
-            this.btnAddNewAccount.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAddNewAccount.Name = "btnAddNewAccount";
-            this.btnAddNewAccount.Size = new System.Drawing.Size(135, 36);
-            this.btnAddNewAccount.TabIndex = 1;
-            this.btnAddNewAccount.Text = "+ Add new";
-            this.btnAddNewAccount.UseVisualStyleBackColor = true;
-            this.btnAddNewAccount.Click += new System.EventHandler(this.btnAddNewAccount_Click);
+            this.btnAddNewAccount_display.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddNewAccount_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnAddNewAccount_display.ForeColor = System.Drawing.Color.Black;
+            this.btnAddNewAccount_display.Location = new System.Drawing.Point(29, 9);
+            this.btnAddNewAccount_display.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAddNewAccount_display.Name = "btnAddNewAccount_display";
+            this.btnAddNewAccount_display.Size = new System.Drawing.Size(135, 36);
+            this.btnAddNewAccount_display.TabIndex = 1;
+            this.btnAddNewAccount_display.Text = "Add new";
+            this.btnAddNewAccount_display.UseVisualStyleBackColor = true;
+            this.btnAddNewAccount_display.Click += new System.EventHandler(this.btnAddNewAccount_Click);
             // 
             // panel12
             // 
@@ -170,7 +170,7 @@
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Khaki;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label6_display, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -179,18 +179,18 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1022, 49);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // label6
+            // label6_display
             // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Montserrat Black", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(3, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(1016, 49);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Admin Accounts";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label6_display.AutoSize = true;
+            this.label6_display.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label6_display.Font = new System.Drawing.Font("Montserrat Black", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6_display.ForeColor = System.Drawing.Color.White;
+            this.label6_display.Location = new System.Drawing.Point(3, 0);
+            this.label6_display.Name = "label6_display";
+            this.label6_display.Size = new System.Drawing.Size(1016, 49);
+            this.label6_display.TabIndex = 0;
+            this.label6_display.Text = "admin_accounts";
+            this.label6_display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ManageAdminAccounts
             // 
@@ -199,7 +199,7 @@
             this.ClientSize = new System.Drawing.Size(1075, 547);
             this.Controls.Add(this.panel7);
             this.Name = "ManageAdminAccounts";
-            this.Text = "ManageAdminAccounts";
+            this.Text = "manage_admin_accounts";
             this.Load += new System.EventHandler(this.ManageAdminAccounts_Load);
             this.panel7.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -217,10 +217,10 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panelAdminAccountsLoad;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnAddNewAccount;
+        private System.Windows.Forms.Label label6_display;
+        private System.Windows.Forms.Button btnAddNewAccount_display;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnSearch_display;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.TextBox textBoxSearch;
     }

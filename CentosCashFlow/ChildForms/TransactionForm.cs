@@ -18,6 +18,7 @@ namespace CentosCashFlow.ChildForms
         List<Models.Category> listIncomeItem;
         List<Models.Currency> listCurrencyItem;
         public Models.Settings userSettings { get; set; }
+        public Languages.LanguageDictionary dictionary { get; set; }
         public TransactionForm()
         {
             InitializeComponent();
@@ -25,12 +26,15 @@ namespace CentosCashFlow.ChildForms
             listIncomeItem = new List<Models.Category>();
             listCurrencyItem = new List<Models.Currency>();
             userSettings = new Models.Settings();
+            dictionary = new Languages.LanguageDictionary();
         }
 
         private void Transaction_Load(object sender, EventArgs e)
         {
             Models.ConnectUsers connectUsers = new Models.ConnectUsers();
             userSettings = connectUsers.getUserSettingsByID(int.Parse(this.Tag.ToString()));
+            dictionary = new Languages.LanguageDictionary(userSettings.LanguageCode);
+            dictionary.SetLanguages((Control)this);
 
             Models.ConnectCurrency connectCurrency = new Models.ConnectCurrency();
             listCurrencyItem = connectCurrency.getData();
@@ -40,6 +44,8 @@ namespace CentosCashFlow.ChildForms
             dateTimePickerCategory.MaxDate = DateTime.Now.AddMonths(3);
             dateTimePickerCategory.Value = DateTime.Now;
             dateTimePickerCategory.MaxDate = DateTime.Today;
+            //comboBoxTransactionType.Items.Add(dictionary.getTranslatedWord("Income"));
+            //comboBoxTransactionType.Items.Add(dictionary.getTranslatedWord("Expenditure"));
             comboBoxTransactionType.Items.Add("Income");
             comboBoxTransactionType.Items.Add("Expenditure");
             comboBoxTransactionType.SelectedItem = "Expenditure";

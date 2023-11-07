@@ -14,15 +14,16 @@ namespace CentosCashFlow.ChildForms
     public partial class Home : Form
     {
         public Models.User user { get; set; }
+        public Languages.LanguageDictionary dictionary { get; set; }
         public Home()
         {
             InitializeComponent();
             user = new Models.User();
+            dictionary = new Languages.LanguageDictionary();
         }
 
         public void Load_Data()
         {
-            
             Models.ConnectUsers connectUsers = new Models.ConnectUsers();
             user = connectUsers.getUserDataByID(int.Parse(this.Tag.ToString()));
 
@@ -67,7 +68,8 @@ namespace CentosCashFlow.ChildForms
             chartMonthCashFlow.Series["Cash Flow"].Points.AddXY("Incomes", totalIncomes);
             chartMonthCashFlow.Series["Cash Flow"].Points.AddXY("Expenditures", totalEnpenditures);
 
-
+            dictionary = new Languages.LanguageDictionary(user.UserSettings.LanguageCode);
+            dictionary.SetLanguages((Control)this);
         }
 
         public void Reload_Data()
@@ -86,6 +88,7 @@ namespace CentosCashFlow.ChildForms
         private void Home_Load(object sender, EventArgs e)
         {
             Load_Data();
+            
         }
         private void btnAddNewTransaction_Click(object sender, EventArgs e)
         {

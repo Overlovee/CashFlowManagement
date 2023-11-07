@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,10 +14,12 @@ namespace CentosCashFlow.ChildForms
     public partial class Account : Form
     {
         Models.User user { get; set; }
+        public Languages.LanguageDictionary dictionary { get; set; }
         public Account()
         {
             InitializeComponent();
             user= new Models.User();
+            dictionary = new Languages.LanguageDictionary();
         }
 
         private void linkLabelChangingPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -75,6 +78,8 @@ namespace CentosCashFlow.ChildForms
         {
             Models.ConnectUsers connectUsers = new Models.ConnectUsers();
             user = connectUsers.getUserDataByID(int.Parse(this.Tag.ToString()));
+            dictionary = new Languages.LanguageDictionary(user.UserSettings.LanguageCode);
+            dictionary.SetLanguages((Control)this);
             labelBalance.Text = user.AvailableMoney.ToString();
             labelAccountName.Text = user.Name;
             labelAccountEmail.Text = user.Email;

@@ -18,11 +18,13 @@ namespace CentosCashFlow
         private Form activeForm;
         public bool isClosing { get; set; } 
         public User user { get; set; }
+        public Languages.LanguageDictionary dictionary { get; set; }
         public Menu()
         {
             InitializeComponent();
             user = null;
             isClosing = false;
+            dictionary = new Languages.LanguageDictionary();
         }
         private void ActivateButton(object btnSender)
         {
@@ -67,7 +69,8 @@ namespace CentosCashFlow
             this.panelDesktop.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            lblTittle.Text = childForm.Text;
+            lblTittle_display.Text = childForm.Text;
+            dictionary.UpdateUIWithLanguage(lblTittle_display);
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
@@ -114,6 +117,10 @@ namespace CentosCashFlow
 
         private void Menu_Load(object sender, EventArgs e)
         {
+
+            dictionary = new Languages.LanguageDictionary(user.UserSettings.LanguageCode);
+            dictionary.SetLanguages((Control)this);
+
             this.Tag = user.Id.ToString();
             this.Show();
             goToHome();
@@ -134,7 +141,8 @@ namespace CentosCashFlow
             this.panelDesktop.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            lblTittle.Text = childForm.Text;
+            lblTittle_display.Text = childForm.Text;
+            dictionary.UpdateUIWithLanguage(lblTittle_display);
         }
         private void labelIcon_Click(object sender, EventArgs e)
         {

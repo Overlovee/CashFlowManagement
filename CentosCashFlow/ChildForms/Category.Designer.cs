@@ -34,16 +34,16 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panelIncomeCategoryItem = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label2_display = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnIncomeAdding = new System.Windows.Forms.Button();
+            this.btnIncomeAdding_display = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panelExpendituresCategoryItem = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label3_display = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.btnExpendituresAdding = new System.Windows.Forms.Button();
+            this.btnExpendituresAdding_display = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -121,7 +121,7 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label2_display, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(10, 10);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
@@ -131,22 +131,22 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(563, 45);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // label2
+            // label2_display
             // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(557, 45);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Income";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2_display.AutoSize = true;
+            this.label2_display.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label2_display.ForeColor = System.Drawing.Color.Black;
+            this.label2_display.Location = new System.Drawing.Point(3, 0);
+            this.label2_display.Name = "label2_display";
+            this.label2_display.Size = new System.Drawing.Size(557, 45);
+            this.label2_display.TabIndex = 1;
+            this.label2_display.Text = "Income";
+            this.label2_display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.btnIncomeAdding);
+            this.panel5.Controls.Add(this.btnIncomeAdding_display);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.Location = new System.Drawing.Point(0, 471);
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
@@ -155,24 +155,24 @@
             this.panel5.Size = new System.Drawing.Size(583, 68);
             this.panel5.TabIndex = 1;
             // 
-            // btnIncomeAdding
+            // btnIncomeAdding_display
             // 
-            this.btnIncomeAdding.BackColor = System.Drawing.Color.Black;
-            this.btnIncomeAdding.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnIncomeAdding.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnIncomeAdding.FlatAppearance.BorderSize = 0;
-            this.btnIncomeAdding.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIncomeAdding.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnIncomeAdding.ForeColor = System.Drawing.Color.White;
-            this.btnIncomeAdding.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIncomeAdding.Location = new System.Drawing.Point(140, 10);
-            this.btnIncomeAdding.Margin = new System.Windows.Forms.Padding(0);
-            this.btnIncomeAdding.Name = "btnIncomeAdding";
-            this.btnIncomeAdding.Size = new System.Drawing.Size(303, 48);
-            this.btnIncomeAdding.TabIndex = 11;
-            this.btnIncomeAdding.Text = "Add new item";
-            this.btnIncomeAdding.UseVisualStyleBackColor = false;
-            this.btnIncomeAdding.Click += new System.EventHandler(this.btnIncomeAdding_Click);
+            this.btnIncomeAdding_display.BackColor = System.Drawing.Color.Black;
+            this.btnIncomeAdding_display.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnIncomeAdding_display.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnIncomeAdding_display.FlatAppearance.BorderSize = 0;
+            this.btnIncomeAdding_display.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnIncomeAdding_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnIncomeAdding_display.ForeColor = System.Drawing.Color.White;
+            this.btnIncomeAdding_display.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIncomeAdding_display.Location = new System.Drawing.Point(140, 10);
+            this.btnIncomeAdding_display.Margin = new System.Windows.Forms.Padding(0);
+            this.btnIncomeAdding_display.Name = "btnIncomeAdding_display";
+            this.btnIncomeAdding_display.Size = new System.Drawing.Size(303, 48);
+            this.btnIncomeAdding_display.TabIndex = 11;
+            this.btnIncomeAdding_display.Text = "Add new item";
+            this.btnIncomeAdding_display.UseVisualStyleBackColor = false;
+            this.btnIncomeAdding_display.Click += new System.EventHandler(this.btnIncomeAdding_Click);
             // 
             // panel4
             // 
@@ -213,7 +213,7 @@
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.label3, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.label3_display, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(10, 10);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
@@ -223,22 +223,22 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(564, 45);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
-            // label3
+            // label3_display
             // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(3, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(558, 45);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Expenditures";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3_display.AutoSize = true;
+            this.label3_display.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label3_display.ForeColor = System.Drawing.Color.Black;
+            this.label3_display.Location = new System.Drawing.Point(3, 0);
+            this.label3_display.Name = "label3_display";
+            this.label3_display.Size = new System.Drawing.Size(558, 45);
+            this.label3_display.TabIndex = 2;
+            this.label3_display.Text = "Expenditures";
+            this.label3_display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.btnExpendituresAdding);
+            this.panel7.Controls.Add(this.btnExpendituresAdding_display);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel7.Location = new System.Drawing.Point(0, 471);
             this.panel7.Margin = new System.Windows.Forms.Padding(0);
@@ -247,24 +247,24 @@
             this.panel7.Size = new System.Drawing.Size(584, 68);
             this.panel7.TabIndex = 1;
             // 
-            // btnExpendituresAdding
+            // btnExpendituresAdding_display
             // 
-            this.btnExpendituresAdding.BackColor = System.Drawing.Color.Black;
-            this.btnExpendituresAdding.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnExpendituresAdding.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnExpendituresAdding.FlatAppearance.BorderSize = 0;
-            this.btnExpendituresAdding.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExpendituresAdding.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnExpendituresAdding.ForeColor = System.Drawing.Color.White;
-            this.btnExpendituresAdding.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExpendituresAdding.Location = new System.Drawing.Point(140, 10);
-            this.btnExpendituresAdding.Margin = new System.Windows.Forms.Padding(0);
-            this.btnExpendituresAdding.Name = "btnExpendituresAdding";
-            this.btnExpendituresAdding.Size = new System.Drawing.Size(304, 48);
-            this.btnExpendituresAdding.TabIndex = 12;
-            this.btnExpendituresAdding.Text = "Add new item";
-            this.btnExpendituresAdding.UseVisualStyleBackColor = false;
-            this.btnExpendituresAdding.Click += new System.EventHandler(this.btnExpendituresAdding_Click);
+            this.btnExpendituresAdding_display.BackColor = System.Drawing.Color.Black;
+            this.btnExpendituresAdding_display.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnExpendituresAdding_display.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnExpendituresAdding_display.FlatAppearance.BorderSize = 0;
+            this.btnExpendituresAdding_display.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExpendituresAdding_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnExpendituresAdding_display.ForeColor = System.Drawing.Color.White;
+            this.btnExpendituresAdding_display.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExpendituresAdding_display.Location = new System.Drawing.Point(140, 10);
+            this.btnExpendituresAdding_display.Margin = new System.Windows.Forms.Padding(0);
+            this.btnExpendituresAdding_display.Name = "btnExpendituresAdding_display";
+            this.btnExpendituresAdding_display.Size = new System.Drawing.Size(304, 48);
+            this.btnExpendituresAdding_display.TabIndex = 12;
+            this.btnExpendituresAdding_display.Text = "Add new item";
+            this.btnExpendituresAdding_display.UseVisualStyleBackColor = false;
+            this.btnExpendituresAdding_display.Click += new System.EventHandler(this.btnExpendituresAdding_Click);
             // 
             // label9
             // 
@@ -289,7 +289,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label1);
             this.Name = "Category";
-            this.Text = "Category";
+            this.Text = "category";
             this.Load += new System.EventHandler(this.Category_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -317,13 +317,13 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button btnIncomeAdding;
-        private System.Windows.Forms.Button btnExpendituresAdding;
+        private System.Windows.Forms.Button btnIncomeAdding_display;
+        private System.Windows.Forms.Button btnExpendituresAdding_display;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panelIncomeCategoryItem;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label2_display;
         private System.Windows.Forms.Panel panelExpendituresCategoryItem;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label3_display;
     }
 }
