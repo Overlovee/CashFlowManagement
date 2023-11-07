@@ -72,8 +72,6 @@ namespace CentosCashFlow.ChildForms
             cbbExport.Items.Add("Export Excel File");
             cbbExport.Items.Add("Export CSV File");
             cbbExport.SelectedItem = "Export Excel File";
-
-            
         }
 
         private void cbbOverviewDisplayMode_SelectedValueChanged(object sender, EventArgs e)
@@ -88,10 +86,6 @@ namespace CentosCashFlow.ChildForms
                 || cbbTimeFormat.SelectedItem.ToString() != userSetting.TimeFormat
                 || cbbOverviewDisplayMode.SelectedItem.ToString() != userSetting.OverviewDisplayMode)
                 {
-                    Console.WriteLine(userSetting.LanguageCode);
-                    Console.WriteLine(userSetting.CurrencyCode);
-                    Console.WriteLine(userSetting.TimeFormat);
-                    Console.WriteLine(userSetting.OverviewDisplayMode);
                     btnSave_display.Enabled = true;
                 }
                 else
@@ -102,6 +96,48 @@ namespace CentosCashFlow.ChildForms
             else
             {
                 btnSave_display.Enabled = false;
+            }
+        }
+
+        private void btnSave_display_Click(object sender, EventArgs e)
+        {
+            Models.ConnectLanguage connectLanguage = new Models.ConnectLanguage();
+            Models.Language languages = connectLanguage.getDataByName(cbbLanguages.SelectedItem.ToString());
+            string pre_LanguageCode = userSetting.LanguageCode;
+
+            userSetting.LanguageCode = languages.Language_Code;
+            userSetting.TimeFormat = cbbTimeFormat.SelectedItem.ToString();
+            userSetting.CurrencyCode = cbbCurrencyUnit.SelectedItem.ToString();
+            userSetting.OverviewDisplayMode = cbbOverviewDisplayMode.SelectedItem.ToString();
+
+            Models.ConnectUsers connectUsers = new Models.ConnectUsers();
+            int kt = connectUsers.updateUserSettingsFor(userSetting);
+            if(kt != 0)
+            {
+                MessageBox.Show("Completely editing!", "", MessageBoxButtons.OK);
+
+                if (pre_LanguageCode != userSetting.LanguageCode)
+                {
+                    Control control = (Control)this;
+                    while (control.Parent != null && !(control.Parent is Form))
+                    {
+                        control = control.Parent;
+                    }
+                    // Kiểm tra xem control.Parent có phải là Form
+                    if (control.Parent is Form)
+                    {
+                        if (control.Parent is Menu)
+                        {
+                            Menu f = (Menu)control.Parent;
+
+                            f.Reload_Form();
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Cannot edit!", "", MessageBoxButtons.OK);
             }
         }
     }

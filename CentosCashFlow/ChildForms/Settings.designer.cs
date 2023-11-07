@@ -113,6 +113,7 @@
             this.btnSave_display.TabIndex = 0;
             this.btnSave_display.Text = "save";
             this.btnSave_display.UseVisualStyleBackColor = true;
+            this.btnSave_display.Click += new System.EventHandler(this.btnSave_display_Click);
             // 
             // tableLayoutPanel1
             // 

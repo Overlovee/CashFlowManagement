@@ -55,6 +55,19 @@ namespace CentosCashFlow.Models
             rdr.Close();
             return emp;
         }
+        public Language getDataByName(string name)
+        {
+            Language emp = new Language();
+            string sql = ("Select * from Languages where Language_Name = '" + name + "'");
+            SqlDataReader rdr = dbContext.ExcuteQuery(sql);
+            if (rdr.Read())
+            {
+                emp.Language_Code = rdr.GetValue(0).ToString();
+                emp.Language_Name = rdr.GetValue(1).ToString();
+            }
+            rdr.Close();
+            return emp;
+        }
 
         public int addNewItem(Language language)
         {

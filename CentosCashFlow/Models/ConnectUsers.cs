@@ -181,6 +181,19 @@ namespace CentosCashFlow.Models
             rs = dbContext.ExcuteNonQuery(sql);
             return rs;
         }
+        public int updateUserSettingsFor(Models.Settings userSettings)
+        {
+            int rs = 0;
+            string sql = "Update Setting Set " +
+                "Language_Code = '" + userSettings.LanguageCode + "', " +
+                "Currency_Code = '" + userSettings.CurrencyCode + "', " +
+                "TimeFormat = '" + userSettings.TimeFormat + "', " +
+                "OverviewDisplayMode = N'" + userSettings.OverviewDisplayMode + "' " +
+                "Where User_ID = '" + userSettings.UserID + "'";
+
+            rs = dbContext.ExcuteNonQuery(sql);
+            return rs;
+        }
         public int updatePasswordFor(User user)
         {
             int rs = 0;

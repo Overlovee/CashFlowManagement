@@ -341,7 +341,12 @@ SELECT* FROM Languages
 SELECT* FROM Currency
 
 Update Setting
-Set Language_Code = 'EN' Where User_ID = 3
+Set 
+Language_Code = 'EN',
+Currency_Code = 'VND',
+TimeFormat = 'dd/mm/yyyy',
+OverviewDisplayMode = N'beginning/ending balance' 
+Where User_ID = 3
 
 --EXEC DeleteCategory @Category_ID = 'CTP';
 

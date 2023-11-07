@@ -114,16 +114,62 @@ namespace CentosCashFlow
         {
             OpenChildForm(new ChildForms.ManageUserAccount(), sender);
         }
-
-        private void Menu_Load(object sender, EventArgs e)
+        private void EmptyClickHandler(object sender, EventArgs e)
         {
-
+            OpenChildForm(new ChildForms.Category(), btnCategory_display);
+        }
+        private void AssignPermissions(string role)
+        {
+            if (role == "Admin")
+            {
+                labelIcon.Click += EmptyClickHandler;
+                btnHome_display.Hide();
+                btnOverview_display.Hide();
+                btnTransaction_display.Hide();
+                OpenChildForm(new ChildForms.Category(), btnCategory_display);
+            }
+            else
+            {
+                btnAdminAccount_display.Hide();
+                btnCategory_display.Hide();
+                btnUserAccount_display.Hide();
+                btnLanguages_display.Hide();
+                btnCurrencies_display.Hide();
+                goToHome();
+            }
+        }
+        public void Load_Form()
+        {
+            Models.ConnectUsers connectUsers = new Models.ConnectUsers();
+            user = connectUsers.getUserDataByID(user.Id);
+            this.Tag = user.Id.ToString();
             dictionary = new Languages.LanguageDictionary(user.UserSettings.LanguageCode);
             dictionary.SetLanguages((Control)this);
-
-            this.Tag = user.Id.ToString();
+            AssignPermissions(user.Role);
             this.Show();
-            goToHome();
+        }
+        public void Reload_Form()
+        {
+            btnHome_display.Text = "home";
+            btnOverview_display.Text = "overview";
+            btnTransaction_display.Text = "transaction";
+            btnCategory_display.Text = "category";
+            btnAccount_display.Text = "account";
+            btnUserAccount_display.Text = "users";
+            btnAdminAccount_display.Text = "admins";
+            btnLanguages_display.Text = "manage_languages";
+            btnCurrencies_display.Text = "manage_currency";
+            btnSettings_display.Text = "settings";
+
+            Load_Form();
+        }
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            foreach (Control btn in panelMenu.Controls)
+            {
+                btn.Show();
+            }
+            Load_Form();
         }
         private void goToHome()
         {
@@ -131,6 +177,10 @@ namespace CentosCashFlow
             {
                 activeForm.Close();
             }
+            DisableButton();
+            btnHome_display.BackColor = Color.Gray;
+            btnHome_display.ForeColor = Color.White;
+            btnHome_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             Form childForm = new ChildForms.Home();
             activeForm = childForm;
             childForm.Tag = this.Tag;
