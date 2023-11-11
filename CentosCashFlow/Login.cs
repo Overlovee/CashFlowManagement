@@ -48,8 +48,8 @@ namespace CentosCashFlow
             email = "Huy5512@gmail.com";
             password = "Huy12445";
 
-            email = "Thu2123@gmail.com";
-            password = "admin";
+            //email = "Thu2123@gmail.com";
+            //password = "admin";
 
             Models.ConnectUsers connect = new Models.ConnectUsers();
             Models.User user = connect.Login(email, password);

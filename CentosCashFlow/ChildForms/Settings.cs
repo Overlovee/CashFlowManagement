@@ -140,5 +140,45 @@ namespace CentosCashFlow.ChildForms
                 MessageBox.Show("Cannot edit!", "", MessageBoxButtons.OK);
             }
         }
+
+        private void btnExport_display_Click(object sender, EventArgs e)
+        {
+            ConnectExport connectExport = new ConnectExport();
+            Models.ConnectTransaction connectTransaction = new Models.ConnectTransaction();
+            int year = DateTime.Now.Year;
+            int month = DateTime.Now.Month;
+            List<Models.Transaction> listCurrrentMonth = connectTransaction.getMonthDataByID(int.Parse(this.Tag.ToString()), month, year);
+
+            // Create a DataTable to hold the data
+            DataTable dataTable = new DataTable();
+            dataTable.Columns.Add("TransactionType");
+            dataTable.Columns.Add("CategoryName");
+            dataTable.Columns.Add("Amount");
+            dataTable.Columns.Add("Date");
+            dataTable.Columns.Add("Transaction_Description");
+
+            // Add data to the DataTable
+            foreach (Models.Transaction transaction in listCurrrentMonth)
+            {
+                dataTable.Rows.Add(transaction.TransactionType,transaction.CategoryName, transaction.Amount, transaction.TransactionDate ,transaction.TransactionDescription);
+            }
+
+            // Display SaveFileDialog for user to choose the export location
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
+            saveFileDialog.Title = "Export to Excel";
+            saveFileDialog.FileName = "TransactionData.xlsx";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Get the chosen file path
+                string filePath = saveFileDialog.FileName;
+
+                // Export data to Excel using OpenXML
+                connectExport.ExportDataTableToExcel(dataTable, filePath);
+
+                MessageBox.Show("Export successful!");
+            }
+        }
     }
 }
