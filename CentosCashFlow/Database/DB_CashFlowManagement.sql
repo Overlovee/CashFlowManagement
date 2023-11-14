@@ -2,7 +2,7 @@
 
 -- Sử dụng cơ sở dữ liệu QuanLyThuChi
 USE DB_CashFlowManagement;
-
+GO
 -- Tạo bảng Danh mục (Category)
 CREATE TABLE Categories (
     ID CHAR(10) NOT NULL,

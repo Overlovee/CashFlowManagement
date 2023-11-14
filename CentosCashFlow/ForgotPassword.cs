@@ -44,7 +44,7 @@ namespace CentosCashFlow
 
                 // Tạo đối tượng MailMessage
                 MailMessage mail = new MailMessage(fromEmail, toEmail);
-
+                
 
                 // Cấu hình SmtpClient để sử dụng Gmail
                 SmtpClient smtpClient = new SmtpClient("smtp.gmail.com")

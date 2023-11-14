@@ -81,6 +81,7 @@
             this.btnSendMail.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnSendMail.FlatAppearance.BorderSize = 0;
             this.btnSendMail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSendMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSendMail.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSendMail.Location = new System.Drawing.Point(36, 288);
             this.btnSendMail.Margin = new System.Windows.Forms.Padding(2);
