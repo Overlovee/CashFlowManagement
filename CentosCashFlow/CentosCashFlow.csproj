@@ -256,6 +256,12 @@
     <Compile Include="ChildForms\Wide.designer.cs">
       <DependentUpon>Wide.cs</DependentUpon>
     </Compile>
+    <Compile Include="ForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Languages\LanguageDictionary.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -392,6 +398,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\Wide.resx">
       <DependentUpon>Wide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

@@ -1,4 +1,4 @@
-﻿CREATE DATABASE DB_CashFlowManagement;
+﻿﻿CREATE DATABASE DB_CashFlowManagement;
 
 -- Sử dụng cơ sở dữ liệu QuanLyThuChi
 USE DB_CashFlowManagement;
@@ -234,16 +234,19 @@ BEGIN
     DELETE FROM Users
     WHERE ID = @UserID;
 END
+GO
 --
 CREATE PROCEDURE InsertUser
 @name NVARCHAR(255),@email CHAR(255),@password NVARCHAR(255), @role NVARCHAR(20)
 AS
+BEGIN
 	INSERT INTO Users(Name,Email,Password, Role)
 	VALUES(@name,@email,@password, @role);
 	DECLARE @id INT;
-	SET @id = (SELECT ID FROM Users WHERE Name = N'Nguyễn Minh Thư');
+	SET @id = (SELECT ID FROM Users WHERE Name = @name)
 	INSERT INTO Setting(User_ID, Language_Code, Currency_Code)
 	VALUES (@id, 'EN', 'VND')
+	END
 GO
 
 --
@@ -332,7 +335,8 @@ VALUES(2,'CTD','Expenditure',200000,GETDATE(),N'Điện Tháng 8');
 GO
 
 SELECT ID, Name, Email FROM Users WHERE Role = 'User'
-
+Alter table Transactions
+Add TransactionImg Nvarchar(50)
 SELECT* FROM Users
 SELECT* FROM Setting
 SELECT* FROM Categories

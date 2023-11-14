@@ -85,12 +85,12 @@ namespace CentosCashFlow.Models
             Models.ConnectCategory connectCategory = new Models.ConnectCategory();
             Models.Category category = connectCategory.getDataByName(transaction.CategoryName);
             int rs = 0;
-            string sql = "Set dateformat dmy INSERT INTO Transactions " +
+            string sql = "Set dateformat mdy INSERT INTO Transactions " +
                 "VALUES('" + transaction.UserID + "', '" 
                 + category.CategoryID + "', '" 
                 + transaction.TransactionType + "', '" 
                 + transaction.Amount + "', '" 
-                + transaction.TransactionDate + "', 'N" 
+                + transaction.TransactionDate + "', N'" 
                 + transaction.TransactionDescription + "')";
 
             rs = dbContext.ExcuteNonQuery(sql);
@@ -101,14 +101,14 @@ namespace CentosCashFlow.Models
             Models.ConnectCategory connectCategory = new Models.ConnectCategory();
             Models.Category category = connectCategory.getDataByName(transaction.CategoryName);
             int rs = 0;
-            string sql = "Set dateformat dmy " +
+            string sql = "Set dateformat mdy " +
                 "EXEC UpdateTransaction " +
                 "@TransactionID = '"+ transaction.TransactionID + "', " +
                 "@NewAmount = '"+ transaction.Amount + "', " +
                 "@NewCategoryID = '"+ category.CategoryID + "', " +
                 "@NewTransactionType = '"+ transaction.TransactionType + "', " +
                 "@NewTransactionDate = '"+ transaction.TransactionDate + "', " +
-                "@NewTransactionDescription = '"+ transaction.TransactionDescription + "' ";
+                "@NewTransactionDescription = N'"+ transaction.TransactionDescription + "' ";
             rs = dbContext.ExcuteNonQuery(sql);
             return rs;
         }

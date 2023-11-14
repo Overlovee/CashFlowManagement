@@ -58,7 +58,7 @@ namespace CentosCashFlow
                 {
                     MessageBox.Show("Cannot Register!!");
                 }
-                else if (rs == 1)
+                else if (rs != 0)
                 {
                     MessageBox.Show("Register success");
                     Login login = new Login();
