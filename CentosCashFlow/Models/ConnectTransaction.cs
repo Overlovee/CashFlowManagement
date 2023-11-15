@@ -85,7 +85,7 @@ namespace CentosCashFlow.Models
             Models.ConnectCategory connectCategory = new Models.ConnectCategory();
             Models.Category category = connectCategory.getDataByName(transaction.CategoryName);
             int rs = 0;
-            string sql = "Set dateformat mdy INSERT INTO Transactions " +
+            string sql = "Set dateformat dmy INSERT INTO Transactions " +
                 "VALUES('" + transaction.UserID + "', '" 
                 + category.CategoryID + "', '" 
                 + transaction.TransactionType + "', '" 
