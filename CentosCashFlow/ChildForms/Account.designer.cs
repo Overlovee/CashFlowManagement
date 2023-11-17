@@ -277,7 +277,7 @@
             // 
             // btnLogOutAccount_display
             // 
-            this.btnLogOutAccount_display.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnLogOutAccount_display.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnLogOutAccount_display.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnLogOutAccount_display.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogOutAccount_display.Font = new System.Drawing.Font("Segoe UI", 11F);

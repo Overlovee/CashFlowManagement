@@ -91,9 +91,19 @@ namespace CentosCashFlow.ChildForms
 
         private void btnLogOutAccount_display_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
-            this.Hide();
-            login.ShowDialog();
+            Control control = (Control)this;
+            while (control.Parent != null && !(control.Parent is Form))
+            {
+                control = control.Parent;
+            }
+            // Kiểm tra xem control.Parent có phải là Form
+            if (control.Parent is Form && control.Parent is Menu)
+            {
+                Menu f = (Menu)control.Parent;
+                f.isClosing = false;
+                f.Close();
+            }
+
         }
     }
 }
