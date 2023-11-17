@@ -10,7 +10,7 @@ namespace CentosCashFlow.Models
 {
     class DbContext
     {
-        string constr = "Data Source=LAPTOP-UK11OJKK\\SQLEXPRESS;Initial Catalog=DB_CashFlowManagement;Integrated Security=True";
+        string constr = "Data Source=LAPTOP-G5HQJSJ2\\SQLEXPRESS;Initial Catalog=DB_CashFlowManagement;Integrated Security=True";
         SqlConnection con = new SqlConnection();
         SqlCommand cmd;
         SqlDataReader reader;
