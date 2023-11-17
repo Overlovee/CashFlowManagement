@@ -44,6 +44,8 @@
             this.label1_display = new System.Windows.Forms.Label();
             this.labelBalance = new System.Windows.Forms.Label();
             this.linkLabelChangingPassword_display = new System.Windows.Forms.LinkLabel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.btnLogOutAccount_display = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -55,27 +57,29 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(60, 416);
+            this.panel1.Size = new System.Drawing.Size(68, 520);
             this.panel1.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(642, 0);
+            this.panel2.Location = new System.Drawing.Point(722, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(60, 416);
+            this.panel2.Size = new System.Drawing.Size(68, 520);
             this.panel2.TabIndex = 1;
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.btnLogOutAccount_display);
+            this.panel3.Controls.Add(this.panel6);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.tableLayoutPanel1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(60, 0);
+            this.panel3.Location = new System.Drawing.Point(68, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(582, 416);
+            this.panel3.Size = new System.Drawing.Size(654, 520);
             this.panel3.TabIndex = 2;
             // 
             // panel4
@@ -84,11 +88,11 @@
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.btnEditAccount_display);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 130);
+            this.panel4.Location = new System.Drawing.Point(0, 162);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.panel4.Size = new System.Drawing.Size(582, 130);
+            this.panel4.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.panel4.Size = new System.Drawing.Size(654, 162);
             this.panel4.TabIndex = 3;
             // 
             // btnDeleteAccount_display
@@ -97,10 +101,10 @@
             this.btnDeleteAccount_display.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteAccount_display.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.btnDeleteAccount_display.ForeColor = System.Drawing.Color.Red;
-            this.btnDeleteAccount_display.Location = new System.Drawing.Point(0, 76);
+            this.btnDeleteAccount_display.Location = new System.Drawing.Point(0, 94);
             this.btnDeleteAccount_display.Margin = new System.Windows.Forms.Padding(0);
             this.btnDeleteAccount_display.Name = "btnDeleteAccount_display";
-            this.btnDeleteAccount_display.Size = new System.Drawing.Size(582, 48);
+            this.btnDeleteAccount_display.Size = new System.Drawing.Size(654, 60);
             this.btnDeleteAccount_display.TabIndex = 7;
             this.btnDeleteAccount_display.Text = "Delete Account";
             this.btnDeleteAccount_display.UseVisualStyleBackColor = true;
@@ -109,9 +113,10 @@
             // panel5
             // 
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 60);
+            this.panel5.Location = new System.Drawing.Point(0, 74);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(582, 16);
+            this.panel5.Size = new System.Drawing.Size(654, 20);
             this.panel5.TabIndex = 6;
             // 
             // btnEditAccount_display
@@ -121,10 +126,10 @@
             this.btnEditAccount_display.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditAccount_display.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.btnEditAccount_display.ForeColor = System.Drawing.Color.Black;
-            this.btnEditAccount_display.Location = new System.Drawing.Point(0, 10);
+            this.btnEditAccount_display.Location = new System.Drawing.Point(0, 12);
             this.btnEditAccount_display.Margin = new System.Windows.Forms.Padding(0);
             this.btnEditAccount_display.Name = "btnEditAccount_display";
-            this.btnEditAccount_display.Size = new System.Drawing.Size(582, 50);
+            this.btnEditAccount_display.Size = new System.Drawing.Size(654, 62);
             this.btnEditAccount_display.TabIndex = 5;
             this.btnEditAccount_display.Text = "Edit";
             this.btnEditAccount_display.UseVisualStyleBackColor = false;
@@ -148,12 +153,12 @@
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(582, 130);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(654, 162);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label7_display
@@ -162,9 +167,9 @@
             this.label7_display.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7_display.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label7_display.ForeColor = System.Drawing.Color.Black;
-            this.label7_display.Location = new System.Drawing.Point(3, 96);
+            this.label7_display.Location = new System.Drawing.Point(3, 120);
             this.label7_display.Name = "label7_display";
-            this.label7_display.Size = new System.Drawing.Size(285, 32);
+            this.label7_display.Size = new System.Drawing.Size(321, 40);
             this.label7_display.TabIndex = 6;
             this.label7_display.Text = "Password";
             this.label7_display.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -175,9 +180,9 @@
             this.labelAccountEmail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelAccountEmail.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.labelAccountEmail.ForeColor = System.Drawing.Color.Black;
-            this.labelAccountEmail.Location = new System.Drawing.Point(294, 64);
+            this.labelAccountEmail.Location = new System.Drawing.Point(330, 80);
             this.labelAccountEmail.Name = "labelAccountEmail";
-            this.labelAccountEmail.Size = new System.Drawing.Size(285, 32);
+            this.labelAccountEmail.Size = new System.Drawing.Size(321, 40);
             this.labelAccountEmail.TabIndex = 5;
             this.labelAccountEmail.Text = "example@gmail.com";
             this.labelAccountEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -188,9 +193,9 @@
             this.label5_display.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5_display.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label5_display.ForeColor = System.Drawing.Color.Black;
-            this.label5_display.Location = new System.Drawing.Point(3, 64);
+            this.label5_display.Location = new System.Drawing.Point(3, 80);
             this.label5_display.Name = "label5_display";
-            this.label5_display.Size = new System.Drawing.Size(285, 32);
+            this.label5_display.Size = new System.Drawing.Size(321, 40);
             this.label5_display.TabIndex = 4;
             this.label5_display.Text = "Email";
             this.label5_display.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -201,9 +206,9 @@
             this.labelAccountName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelAccountName.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.labelAccountName.ForeColor = System.Drawing.Color.Black;
-            this.labelAccountName.Location = new System.Drawing.Point(294, 32);
+            this.labelAccountName.Location = new System.Drawing.Point(330, 40);
             this.labelAccountName.Name = "labelAccountName";
-            this.labelAccountName.Size = new System.Drawing.Size(285, 32);
+            this.labelAccountName.Size = new System.Drawing.Size(321, 40);
             this.labelAccountName.TabIndex = 3;
             this.labelAccountName.Text = "John Dor";
             this.labelAccountName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -214,9 +219,9 @@
             this.label3_display.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3_display.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label3_display.ForeColor = System.Drawing.Color.Black;
-            this.label3_display.Location = new System.Drawing.Point(3, 32);
+            this.label3_display.Location = new System.Drawing.Point(3, 40);
             this.label3_display.Name = "label3_display";
-            this.label3_display.Size = new System.Drawing.Size(285, 32);
+            this.label3_display.Size = new System.Drawing.Size(321, 40);
             this.label3_display.TabIndex = 2;
             this.label3_display.Text = "Name";
             this.label3_display.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -229,7 +234,7 @@
             this.label1_display.ForeColor = System.Drawing.Color.Black;
             this.label1_display.Location = new System.Drawing.Point(3, 0);
             this.label1_display.Name = "label1_display";
-            this.label1_display.Size = new System.Drawing.Size(285, 32);
+            this.label1_display.Size = new System.Drawing.Size(321, 40);
             this.label1_display.TabIndex = 0;
             this.label1_display.Text = "My Wallet";
             this.label1_display.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -240,9 +245,9 @@
             this.labelBalance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelBalance.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.labelBalance.ForeColor = System.Drawing.Color.Black;
-            this.labelBalance.Location = new System.Drawing.Point(294, 0);
+            this.labelBalance.Location = new System.Drawing.Point(330, 0);
             this.labelBalance.Name = "labelBalance";
-            this.labelBalance.Size = new System.Drawing.Size(285, 32);
+            this.labelBalance.Size = new System.Drawing.Size(321, 40);
             this.labelBalance.TabIndex = 10;
             this.labelBalance.Text = "10,001,230 VND";
             this.labelBalance.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -252,20 +257,45 @@
             this.linkLabelChangingPassword_display.AutoSize = true;
             this.linkLabelChangingPassword_display.Dock = System.Windows.Forms.DockStyle.Fill;
             this.linkLabelChangingPassword_display.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.linkLabelChangingPassword_display.Location = new System.Drawing.Point(294, 96);
+            this.linkLabelChangingPassword_display.Location = new System.Drawing.Point(330, 120);
             this.linkLabelChangingPassword_display.Name = "linkLabelChangingPassword_display";
-            this.linkLabelChangingPassword_display.Size = new System.Drawing.Size(285, 32);
+            this.linkLabelChangingPassword_display.Size = new System.Drawing.Size(321, 40);
             this.linkLabelChangingPassword_display.TabIndex = 11;
             this.linkLabelChangingPassword_display.TabStop = true;
             this.linkLabelChangingPassword_display.Text = "Change password";
             this.linkLabelChangingPassword_display.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.linkLabelChangingPassword_display.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelChangingPassword_LinkClicked);
             // 
+            // panel6
+            // 
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 324);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(654, 20);
+            this.panel6.TabIndex = 7;
+            // 
+            // btnLogOutAccount_display
+            // 
+            this.btnLogOutAccount_display.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnLogOutAccount_display.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogOutAccount_display.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOutAccount_display.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.btnLogOutAccount_display.ForeColor = System.Drawing.Color.Black;
+            this.btnLogOutAccount_display.Location = new System.Drawing.Point(0, 344);
+            this.btnLogOutAccount_display.Margin = new System.Windows.Forms.Padding(0);
+            this.btnLogOutAccount_display.Name = "btnLogOutAccount_display";
+            this.btnLogOutAccount_display.Size = new System.Drawing.Size(654, 62);
+            this.btnLogOutAccount_display.TabIndex = 8;
+            this.btnLogOutAccount_display.Text = "Log Out";
+            this.btnLogOutAccount_display.UseVisualStyleBackColor = false;
+            this.btnLogOutAccount_display.Click += new System.EventHandler(this.btnLogOutAccount_display_Click);
+            // 
             // Account
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(702, 416);
+            this.ClientSize = new System.Drawing.Size(790, 520);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -299,5 +329,7 @@
         private System.Windows.Forms.Button btnDeleteAccount_display;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnEditAccount_display;
+        private System.Windows.Forms.Button btnLogOutAccount_display;
+        private System.Windows.Forms.Panel panel6;
     }
 }

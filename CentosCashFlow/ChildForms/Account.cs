@@ -88,5 +88,12 @@ namespace CentosCashFlow.ChildForms
         {
             Load_Data();
         }
+
+        private void btnLogOutAccount_display_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Hide();
+            login.ShowDialog();
+        }
     }
 }
