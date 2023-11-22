@@ -43,34 +43,45 @@ namespace CentosCashFlow
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string email = textBoxEmail.Text;
-            string password = textBoxPassword.Text;
-            email = "Huy5512@gmail.com";
-            password = "Huy12445";
+            
+            //email = "Huy5512@gmail.com";
+            //password = "Huy12445";
 
             //email = "Thu2123@gmail.com";
             //password = "admin";
-
-            Models.ConnectUsers connect = new Models.ConnectUsers();
-            Models.User user = connect.Login(email, password);
-            if(user is null || user.Id == 0)
+            if(textBoxEmail.Text == "")
             {
-                MessageBox.Show("Email or password is incorrect!", "", MessageBoxButtons.OK);
+                this.errorProvider1.SetError(textBoxEmail, "Username is required");
+            }
+            if(textBoxPassword.Text == "")
+            {
+                this.errorProvider2.SetError(textBoxPassword, "Password is required");
             }
             else
             {
-                this.Hide();
-                Menu menu = new Menu();
-                menu.user = user;
-                menu.ShowDialog();
-                if (menu.isClosing)
+                string email = textBoxEmail.Text;
+                string password = textBoxPassword.Text;
+                Models.ConnectUsers connect = new Models.ConnectUsers();
+                Models.User user = connect.Login(email, password);
+                if (user is null || user.Id == 0)
                 {
-                    this.Close();
+                    MessageBox.Show("Email or password is incorrect!", "", MessageBoxButtons.OK);
                 }
                 else
                 {
-                    this.Show();
-                    Reset_Login();
+                    this.Hide();
+                    Menu menu = new Menu();
+                    menu.user = user;
+                    menu.ShowDialog();
+                    if (menu.isClosing)
+                    {
+                        this.Close();
+                    }
+                    else
+                    {
+                        this.Show();
+                        Reset_Login();
+                    }
                 }
             }
         }
