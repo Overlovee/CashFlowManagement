@@ -27,7 +27,7 @@ namespace CentosCashFlow.Models
                 "FROM Transactions AS T " +
                 "JOIN Categories AS C ON T.Category_ID = C.ID " +
                 "WHERE T.User_ID = '"+ id +"' " +
-                "ORDER BY T.Transaction_Date ASC;");
+                "ORDER BY T.Transaction_Date ASC, Transaction_ID ASC;");
             SqlDataReader rdr = dbContext.ExcuteQuery(sql);
             while (rdr.Read())
             {
@@ -61,7 +61,7 @@ namespace CentosCashFlow.Models
                 "FROM Transactions T " +
                 "JOIN Categories C ON T.Category_ID = C.ID " +
                 "WHERE T.User_ID = '" + id + "' AND MONTH(T.Transaction_Date) = '" + month + "' AND YEAR(T.Transaction_Date) = '" + year + "' " +
-                "ORDER BY T.Transaction_Date ASC;");
+                "ORDER BY T.Transaction_Date ASC, T.ID ASC;");
             SqlDataReader rdr = dbContext.ExcuteQuery(sql);
             while (rdr.Read())
             {
@@ -101,7 +101,7 @@ namespace CentosCashFlow.Models
             Models.ConnectCategory connectCategory = new Models.ConnectCategory();
             Models.Category category = connectCategory.getDataByName(transaction.CategoryName);
             int rs = 0;
-            string sql = "Set dateformat mdy " +
+            string sql = "Set dateformat dmy " +
                 "EXEC UpdateTransaction " +
                 "@TransactionID = '"+ transaction.TransactionID + "', " +
                 "@NewAmount = '"+ transaction.Amount + "', " +

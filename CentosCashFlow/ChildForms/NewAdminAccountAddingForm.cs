@@ -58,5 +58,10 @@ namespace CentosCashFlow.ChildForms
                 MessageBox.Show("Please type your change!", "", MessageBoxButtons.OK);
             }
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
