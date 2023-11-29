@@ -1,5 +1,5 @@
-﻿﻿CREATE DATABASE DB_CashFlowManagement;
-
+﻿
+CREATE DATABASE DB_CashFlowManagement;
 -- Sử dụng cơ sở dữ liệu QuanLyThuChi
 USE DB_CashFlowManagement;
 GO
@@ -21,6 +21,7 @@ CREATE TABLE Users (
     Password NVARCHAR(255) NOT NULL,
 	Role NVARCHAR(20) DEFAULT N'User',
     Available_Money DECIMAL(18, 2) DEFAULT 0, -- Tiền mặc định = 0 (nếu không nhập)
+	Status NVARCHAR(50) DEFAULT'Active',
 	CONSTRAINT PK_Users PRIMARY KEY (ID)
 );
 
@@ -65,7 +66,17 @@ CREATE TABLE Setting (
 	CONSTRAINT CHK_TimeFormat CHECK (TimeFormat IN ('dd/mm/yyyy', 'mm/dd/yyyy', 'yyyy/mm/dd')),
 	CONSTRAINT CHK_OverviewDisplayMode CHECK (OverviewDisplayMode IN (N'beginning/ending balance', N'money in/money out'))
 );
+CREATE TABLE Messages (
+    MessageID INT IDENTITY(1, 1) PRIMARY KEY,
+    SenderID INT,
+    ReceiverID INT,
+    Content NVARCHAR(255),
+    Timestamp DATETIME,
+	CONSTRAINT FK_Messages_SenderID FOREIGN KEY (SenderID) REFERENCES Users(ID),
+	CONSTRAINT FK_Messages_ReceiverID FOREIGN KEY (ReceiverID) REFERENCES Users(ID)
+);
 --Trigger
+GO
 CREATE TRIGGER UPDATE_Income_Available_Money
 ON Transactions
 AFTER INSERT
@@ -113,7 +124,7 @@ BEGIN
 
     COMMIT; -- Kết thúc giao dịch
 END;
-
+GO
 --
 CREATE PROCEDURE DeleteTransaction
     @TransactionID INT
@@ -142,6 +153,7 @@ BEGIN
     DELETE FROM Transactions
     WHERE ID = @TransactionID;
 END
+GO
 --
 CREATE PROCEDURE UpdateTransaction
     @TransactionID INT,
@@ -198,7 +210,7 @@ BEGIN
 		Category_ID = @NewCategoryID
     WHERE ID = @TransactionID;
 END
-
+GO
 --
 CREATE PROCEDURE UpdateUser
     @UserID INT,
@@ -218,7 +230,7 @@ BEGIN
         Available_Money = ISNULL(@NewAvailableMoney, Available_Money)
     WHERE ID = @UserID;
 END
-
+GO
 --
 CREATE PROCEDURE deleteUser
     @UserID INT
@@ -267,6 +279,7 @@ BEGIN
     DELETE FROM Languages
     WHERE Language_Code = @language_code;
 END;
+GO
 --
 CREATE PROCEDURE DeleteCurrency
     @currency_code CHAR(3)
@@ -285,6 +298,25 @@ BEGIN
     DELETE FROM Currency
     WHERE Currency_Code = @currency_code;
 END;
+GO
+CREATE PROCEDURE DisableUser
+    @UserID INT
+AS
+BEGIN
+    UPDATE Users 
+	SET Status = 'Disable'
+	WHERE ID = @UserID ;
+END
+GO
+CREATE PROCEDURE UnlockUser
+    @UserID INT
+AS
+BEGIN
+    UPDATE Users 
+	SET Status = 'Active'
+	WHERE ID = @UserID ;
+END
+GO
 --
 INSERT INTO Languages
 VALUES ('EN', N'English'),
@@ -296,15 +328,15 @@ VALUES ('USD', N'United State Dollar', 1),
 
 --
 INSERT INTO Categories(ID, Category_Name, Category_Type)
-VALUES('CTP',N'Thực Phẩm', 'Expenditure'),
-('CSH',N'Sinh Hoạt Phí', 'Expenditure'),
-('CTD',N'Tiền Điện', 'Expenditure'),
-('CTN',N'Tiền Nước', 'Expenditure'),
-('CTT',N'Tiền Trọ', 'Expenditure'),
-('TTN',N'Thu nhập', 'Income'),
-('CTH',N'Tiền Học', 'Expenditure'),
-('TKK',N'Khoảng Thu Khác', 'Income'),
-('CKK',N'Khoảng Chi Khác', 'Expenditure');
+VALUES('CTP',N'Food', 'Expenditure'),
+('CSH',N'Lifestyle Expenses', 'Expenditure'),
+('CTD',N'Electricity Bill', 'Expenditure'),
+('CTN',N'Water Bill', 'Expenditure'),
+('CTT',N'Rental Fee', 'Expenditure'),
+('TTN',N'Salary', 'Income'),
+('CTH',N'Tuition Fee', 'Expenditure'),
+('TKK',N'Other Income', 'Income'),
+('CKK',N'Other Expenses', 'Expenditure');
 
 INSERT INTO Users(Name,Email,Password,Role)
 VALUES(N'Nguyễn Huy Hoàng',N'Hoang012@gmail.com',N'admin',N'Admin'),
@@ -332,7 +364,93 @@ INSERT INTO Transactions
 VALUES(3,'CTP','Expenditure',15000,'2023/9/1',N'Mua Đồ ăn');
 INSERT INTO Transactions
 VALUES(2,'CTD','Expenditure',200000,GETDATE(),N'Điện Tháng 8');
+INSERT INTO Transactions
+VALUES(3,'TTN','Income',10000000,'2023/10/1',N'Lương Tháng 9');
+INSERT INTO Transactions
+VALUES(3,'CTP','Expenditure',275000,'2023/10/1',N'Chợ');
+INSERT INTO Transactions
+VALUES(3,'CKK','Expenditure',5000,'2023/10/1',N'cho con đi học');
+INSERT INTO Transactions
+VALUES(3,'CKK','Expenditure',50000,'2023/10/1',N'Xăng');
+INSERT INTO Transactions
+VALUES(3,'CTP','Expenditure',200000,'2023/10/2',N'Chợ');
+INSERT INTO Transactions
+VALUES(3,'CKK','Expenditure',50000,'2023/10/3',N'Xăng');
+INSERT INTO Transactions
+VALUES(3,'CKK','Expenditure',5000,'2023/10/3',N'cho con đi học');
+INSERT INTO Transactions
+VALUES(3,'CTT','Expenditure',3500000,'2023/10/4',N'Tiền nhà tháng 9');
+INSERT INTO Transactions
+VALUES(3,'CTH','Expenditure',3000000,'2023/10/5',N'Tiền học cho con');
+INSERT INTO Transactions
+VALUES(3,'CTP','Expenditure',250000,'2023/10/5',N'Chợ');
+INSERT INTO Transactions
+VALUES(3,'CKK','Expenditure',5000,'2023/10/5',N'cho con đi học');
+INSERT INTO Transactions
+VALUES(3,'CTD','Expenditure',200000,'2023/10/6',N'Điện Tháng 9');
+INSERT INTO Transactions
+VALUES(3,'CKK','Expenditure',50000,'2023/10/6',N'Xăng');
+INSERT INTO Transactions
+VALUES(3,'CTN','Expenditure',200000,'2023/10/7',N'Nước Tháng 9');
+INSERT INTO Transactions
+VALUES(3,'CKK','Expenditure',5000,'2023/10/7',N'cho con đi học');
+INSERT INTO Transactions
+VALUES(3,'CTP','Expenditure',325000,'2023/10/7',N'Chợ');
+INSERT INTO Transactions
+VALUES(3,'TTN','Income',15000000,'2023/10/8',N'Lương Tháng 9 chồng');
+INSERT INTO Transactions
+VALUES(3,'CSH','Expenditure',1000000,'2023/10/8',NULL);
+INSERT INTO Transactions
+VALUES(3,'CKK','Expenditure',50000,'2023/10/9',N'Xăng');
 GO
+INSERT INTO Transactions
+VALUES(3,'CTP','Expenditure',350000,'2023/11/1',N'Chợ');
+INSERT INTO Transactions
+VALUES(3,'CKK','Expenditure',6000,'2023/11/1',N'cho con đi học');
+INSERT INTO Transactions
+VALUES(3,'CKK','Expenditure',60000,'2023/11/1',N'Xăng');
+INSERT INTO Transactions
+VALUES(3,'CTP','Expenditure',250000,'2023/11/2',N'Chợ');
+INSERT INTO Transactions
+VALUES(3,'CKK','Expenditure',60000,'2023/11/3',N'Xăng');
+INSERT INTO Transactions
+VALUES(3,'CKK','Expenditure',5000,'2023/11/3',N'cho con đi học');
+INSERT INTO Transactions
+VALUES(3,'CTT','Expenditure',3500000,'2023/11/4',N'Tiền nhà tháng 10');
+INSERT INTO Transactions
+VALUES(3,'CTH','Expenditure',3500000,'2023/11/5',N'Tiền học cho con');
+INSERT INTO Transactions
+VALUES(3,'CTP','Expenditure',275000,'2023/11/5',N'Chợ');
+INSERT INTO Transactions
+VALUES(3,'CKK','Expenditure',7000,'2023/11/5',N'cho con đi học');
+INSERT INTO Transactions
+VALUES(3,'CTD','Expenditure',300000,'2023/11/6',N'Điện Tháng 10');
+INSERT INTO Transactions
+VALUES(3,'CKK','Expenditure',50000,'2023/11/6',N'Xăng');
+INSERT INTO Transactions
+VALUES(3,'CTN','Expenditure',235000,'2023/11/7',N'Nước Tháng 10');
+INSERT INTO Transactions
+VALUES(3,'CKK','Expenditure',6000,'2023/11/7',N'cho con đi học');
+INSERT INTO Transactions
+VALUES(3,'CTP','Expenditure',385000,'2023/11/7',N'Chợ');
+INSERT INTO Transactions
+VALUES(3,'TTN','Income',17000000,'2023/11/8',N'Lương Tháng 10 chồng');
+INSERT INTO Transactions
+VALUES(3,'CKK','Expenditure',50000,'2023/11/9',N'Xăng');
+INSERT INTO Transactions
+VALUES(3,'CKK','Expenditure',5000,'2023/11/11',N'cho con đi học');
+INSERT INTO Transactions
+VALUES(3,'CTP','Expenditure',355000,'2023/11/11',N'Chợ');
+INSERT INTO Transactions
+VALUES(3,'CKK','Expenditure',60000,'2023/11/11',N'Xăng');
+INSERT INTO Transactions
+VALUES(3,'CKK','Expenditure',7000,'2023/11/11',N'cho con đi học');
+INSERT INTO Messages (SenderID, ReceiverID, Content, Timestamp)
+VALUES
+    (3, 2, N'Xin chào. Tôi cần hổ trợ', '2023-11-28 12:00:00'),
+    (2, 3, N'Chào bạn. Bạn cần tôi tư vấn điều gì?', '2023-11-28 12:02:00'),
+    (3, 2, N'Tôi muốn thêm một danh mục mới thì sao?', '2023-11-28 13:01:01'),
+	(2, 3, N'Bạn cần thêm danh mục gì? Chúng tôi sẽ hỗ trợ bạn.', '2023-11-28 13:06:01');
 
 SELECT ID, Name, Email FROM Users WHERE Role = 'User'
 Alter table Transactions

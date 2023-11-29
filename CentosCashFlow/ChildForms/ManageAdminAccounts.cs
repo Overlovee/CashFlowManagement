@@ -30,11 +30,11 @@ namespace CentosCashFlow.ChildForms
             List<Models.UserAccountInfo> list = new List<Models.UserAccountInfo>();
             if (isSearched)
             {
-                list = connectUsers.getAdminAccountsInfoByName(textBoxSearch.Text);
+                list = connectUsers.getAdminAccountsFullInfoByName(textBoxSearch.Text);
             }
             else
             {
-                list = connectUsers.getAdminAccountsInfo();
+                list = connectUsers.getAdminAccountsFullInfo();
             }
             
             foreach (Models.UserAccountInfo info in list)
