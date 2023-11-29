@@ -1,6 +1,5 @@
 ﻿﻿CREATE DATABASE DB_CashFlowManagement;
 
--- Sử dụng cơ sở dữ liệu QuanLyThuChi
 USE DB_CashFlowManagement;
 GO
 -- Tạo bảng Danh mục (Category)
@@ -65,6 +64,16 @@ CREATE TABLE Setting (
 	CONSTRAINT CHK_TimeFormat CHECK (TimeFormat IN ('dd/mm/yyyy', 'mm/dd/yyyy', 'yyyy/mm/dd')),
 	CONSTRAINT CHK_OverviewDisplayMode CHECK (OverviewDisplayMode IN (N'beginning/ending balance', N'money in/money out'))
 );
+CREATE TABLE Messages (
+    MessageID INT IDENTITY(1, 1) PRIMARY KEY,
+    SenderID INT,
+    ReceiverID INT,
+    Content NVARCHAR(255),
+    Timestamp DATETIME,
+	CONSTRAINT FK_Messages_SenderID FOREIGN KEY (SenderID) REFERENCES Users(ID),
+	CONSTRAINT FK_Messages_ReceiverID FOREIGN KEY (ReceiverID) REFERENCES Users(ID)
+);
+Go
 --Trigger
 CREATE TRIGGER UPDATE_Income_Available_Money
 ON Transactions
@@ -332,7 +341,35 @@ INSERT INTO Transactions
 VALUES(3,'CTP','Expenditure',15000,'2023/9/1',N'Mua Đồ ăn');
 INSERT INTO Transactions
 VALUES(2,'CTD','Expenditure',200000,GETDATE(),N'Điện Tháng 8');
-GO
+
+INSERT INTO Messages (SenderID, ReceiverID, Content, Timestamp)
+VALUES
+	(4, 2, N'Xin chào. Tôi cần hổ trợ', '2023-11-28 12:00:00'),
+	(2, 4, N'Chào bạn. Bạn cần tôi tư vấn điều gì?', '2023-11-28 13:00:00'),
+	(4, 2, N'Tôi muốn đổi mật khẩu thì vào đâu?', '2023-11-28 14:00:00'),
+    (3, 2, N'Xin chào. Tôi cần hổ trợ', '2023-11-28 12:00:00'),
+    (2, 3, N'Chào bạn. Bạn cần tôi tư vấn điều gì?', '2023-11-28 12:02:00'),
+    (3, 2, N'Tôi muốn thêm một danh mục mới thì sao?', '2023-11-28 13:01:01'),
+	(2, 3, N'Bạn cần thêm danh mục gì? Chúng tôi sẽ hỗ trợ bạn.', '2023-11-28 13:06:01');
+
+SELECT * FROM Messages where SenderID =3 or ReceiverID =3 Order by MessageID ASC
+
+SELECT MessageID, SenderID, ReceiverID, Content, Timestamp
+FROM Messages
+JOIN Users ON Messages.SenderID = Users.ID Or Messages.ReceiverID = Users.ID
+where Users.Role = 'User'
+AND Messages.MessageID = (SELECT Top 1 MessageID FROM Messages where SenderID = Users.ID or ReceiverID = Users.ID Order by MessageID DESC)
+Order by MessageID DESC
+
+SELECT MessageID, SenderID, ReceiverID, Content, Timestamp
+FROM Messages
+JOIN Users ON Messages.SenderID = Users.ID Or Messages.ReceiverID = Users.ID
+where Users.Role = 'User'
+AND Users.Name Like N'%h%'
+AND Messages.MessageID = (SELECT Top 1 MessageID FROM Messages where SenderID = Users.ID or ReceiverID = Users.ID Order by MessageID DESC)
+Order by MessageID DESC
+
+SELECT ID FROM Users WHERE Role = 'User'
 
 SELECT ID, Name, Email FROM Users WHERE Role = 'User'
 Alter table Transactions
@@ -354,7 +391,7 @@ Where User_ID = 3
 
 --EXEC DeleteCategory @Category_ID = 'CTP';
 
---EXEC DeleteTransaction 1;
+EXEC DeleteTransaction 42;
 
 --EXEC UpdateTransaction @TransactionID = 22,
 --    @NewAmount = 2000000,

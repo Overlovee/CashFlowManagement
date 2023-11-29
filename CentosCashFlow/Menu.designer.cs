@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnMessage_display = new System.Windows.Forms.Button();
             this.btnSettings_display = new System.Windows.Forms.Button();
             this.btnCurrencies_display = new System.Windows.Forms.Button();
             this.btnLanguages_display = new System.Windows.Forms.Button();
@@ -58,6 +59,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.Black;
+            this.panelMenu.Controls.Add(this.btnMessage_display);
             this.panelMenu.Controls.Add(this.btnSettings_display);
             this.panelMenu.Controls.Add(this.btnCurrencies_display);
             this.panelMenu.Controls.Add(this.btnLanguages_display);
@@ -75,6 +77,27 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(250, 753);
             this.panelMenu.TabIndex = 0;
+            // 
+            // btnMessage_display
+            // 
+            this.btnMessage_display.BackColor = System.Drawing.Color.Black;
+            this.btnMessage_display.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMessage_display.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnMessage_display.FlatAppearance.BorderSize = 0;
+            this.btnMessage_display.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMessage_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnMessage_display.ForeColor = System.Drawing.Color.White;
+            this.btnMessage_display.Image = ((System.Drawing.Image)(resources.GetObject("btnMessage_display.Image")));
+            this.btnMessage_display.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMessage_display.Location = new System.Drawing.Point(0, 630);
+            this.btnMessage_display.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMessage_display.Name = "btnMessage_display";
+            this.btnMessage_display.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnMessage_display.Size = new System.Drawing.Size(250, 56);
+            this.btnMessage_display.TabIndex = 18;
+            this.btnMessage_display.Text = "messages";
+            this.btnMessage_display.UseVisualStyleBackColor = false;
+            this.btnMessage_display.Click += new System.EventHandler(this.btnMessage_display_Click);
             // 
             // btnSettings_display
             // 
@@ -329,7 +352,7 @@
             this.panel1.Location = new System.Drawing.Point(250, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1332, 753);
+            this.panel1.Size = new System.Drawing.Size(1392, 753);
             this.panel1.TabIndex = 3;
             // 
             // panelDesktop
@@ -343,7 +366,7 @@
             this.panelDesktop.Location = new System.Drawing.Point(0, 51);
             this.panelDesktop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1332, 702);
+            this.panelDesktop.Size = new System.Drawing.Size(1392, 702);
             this.panelDesktop.TabIndex = 5;
             this.panelDesktop.Click += new System.EventHandler(this.btnSettings_Click);
             // 
@@ -356,7 +379,7 @@
             this.panelNavBar.Location = new System.Drawing.Point(0, 0);
             this.panelNavBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelNavBar.Name = "panelNavBar";
-            this.panelNavBar.Size = new System.Drawing.Size(1332, 51);
+            this.panelNavBar.Size = new System.Drawing.Size(1392, 51);
             this.panelNavBar.TabIndex = 2;
             // 
             // tableLayoutPanel1
@@ -370,7 +393,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1332, 51);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1392, 51);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // lblTittle_display
@@ -381,7 +404,7 @@
             this.lblTittle_display.ForeColor = System.Drawing.Color.Black;
             this.lblTittle_display.Location = new System.Drawing.Point(3, 0);
             this.lblTittle_display.Name = "lblTittle_display";
-            this.lblTittle_display.Size = new System.Drawing.Size(1326, 51);
+            this.lblTittle_display.Size = new System.Drawing.Size(1386, 51);
             this.lblTittle_display.TabIndex = 1;
             this.lblTittle_display.Text = "home";
             this.lblTittle_display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -393,13 +416,13 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1582, 753);
+            this.ClientSize = new System.Drawing.Size(1642, 753);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMenu);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(1600, 800);
+            this.MinimumSize = new System.Drawing.Size(1660, 800);
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cash Flow Management";
@@ -437,6 +460,7 @@
         private System.Windows.Forms.Button btnSettings_display;
         private System.Windows.Forms.Button btnCurrencies_display;
         private System.Windows.Forms.Button btnLanguages_display;
+        private System.Windows.Forms.Button btnMessage_display;
     }
 }
 

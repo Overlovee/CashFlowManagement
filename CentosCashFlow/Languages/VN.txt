@@ -47,3 +47,5 @@ Total Income In This Month=Tổng thu trong tháng này
 Total Expenditures In This Month=Tổng chi trong tháng này
 Incomes in=Các khoản thu trong
 Expenditures in=Các khoản chi trong
+inform=Thông báo
+messages=Tin Nhắn

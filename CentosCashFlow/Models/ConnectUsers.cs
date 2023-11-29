@@ -11,6 +11,21 @@ namespace CentosCashFlow.Models
     public class ConnectUsers
     {
         DbContext dbContext = new DbContext();
+        public List<int> getListUserID()
+        {
+            List<int> list = new List<int>();
+            string sql = ("SELECT ID FROM Users WHERE Role = 'User'");
+            SqlDataReader rdr = dbContext.ExcuteQuery(sql);
+            while (rdr.Read())
+            {
+                int emp = 0;
+                emp = int.Parse(rdr.GetValue(0).ToString());
+
+                list.Add(emp);
+            }
+            rdr.Close();
+            return list;
+        }
         public List<UserAccountInfo> getUserAccountsInfo()
         {
             List<UserAccountInfo> list = new List<UserAccountInfo>();
@@ -89,6 +104,30 @@ namespace CentosCashFlow.Models
 
             rs = dbContext.ExcuteNonQuery(sql);
             return rs;
+        }
+        public string getUserNameByID(int id)
+        {
+            string emp = "";
+            string sql = ("SELECT Name FROM Users WHERE ID = '" + id + "'");
+            SqlDataReader rdr = dbContext.ExcuteQuery(sql);
+            if (rdr.Read())
+            {
+                emp = rdr.GetValue(0).ToString();
+            }
+            rdr.Close();
+            return emp;
+        }
+        public bool isAdmin(int id)
+        {
+            string emp = "";
+            string sql = ("SELECT Role FROM Users WHERE ID = '" + id + "'");
+            SqlDataReader rdr = dbContext.ExcuteQuery(sql);
+            if (rdr.Read())
+            {
+                emp = rdr.GetValue(0).ToString();
+            }
+            rdr.Close();
+            return emp == "Admin";
         }
         public User getUserDataByID(int id)
         {
@@ -174,7 +213,7 @@ namespace CentosCashFlow.Models
             int rs = 0;
             string sql = "EXEC UpdateUser " +
                 "@UserID = '"+ user.Id + "', " +
-                "@NewName = '"+ user.Name + "', " +
+                "@NewName = N'"+ user.Name + "', " +
                 "@NewEmail = '"+ user.Email + "', " +
                 "@NewAvailableMoney = '"+ user.AvailableMoney + "'";
 

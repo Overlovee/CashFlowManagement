@@ -77,7 +77,7 @@ namespace CentosCashFlow.Models
 
                 list.Add(emp);
             }
-
+            rdr.Close();
             return list;
         }
         public int addNewItem(Transaction transaction)
@@ -94,6 +94,7 @@ namespace CentosCashFlow.Models
                 + transaction.TransactionDescription + "')";
 
             rs = dbContext.ExcuteNonQuery(sql);
+            dbContext.close();
             return rs;
         }
         public int updateDataForItem(Transaction transaction)
@@ -110,13 +111,15 @@ namespace CentosCashFlow.Models
                 "@NewTransactionDate = '"+ transaction.TransactionDate + "', " +
                 "@NewTransactionDescription = N'"+ transaction.TransactionDescription + "' ";
             rs = dbContext.ExcuteNonQuery(sql);
+            dbContext.close();
             return rs;
         }
         public int deleteDataById(int id)
         {
             int rs = 0;
-            string sql = "EXEC DeleteTransaction '"+id+"'";
+            string sql = "EXEC DeleteTransaction '" + id+"'";
             rs = dbContext.ExcuteNonQuery(sql);
+            dbContext.close();
             return rs;
         }
     }

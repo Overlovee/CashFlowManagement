@@ -71,5 +71,13 @@ namespace CentosCashFlow.Models
             close();
             return kq;
         }
+        public int UpdateData(string sql, DataTable dt)
+        {
+
+            SqlDataAdapter da = new SqlDataAdapter(sql, Con);
+            SqlCommandBuilder cb = new SqlCommandBuilder(da);
+            int kt = da.Update(dt);
+            return kt;
+        }
     }
 }

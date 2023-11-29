@@ -219,6 +219,19 @@ namespace CentosCashFlow
         {
             OpenChildForm(new ChildForms.ManageCurrencies(), sender);
         }
+
+        private void btnMessage_display_Click(object sender, EventArgs e)
+        {
+            if (user.Role == "Admin")
+            {
+                OpenChildForm(new ChildForms.Messages(), sender);
+            }
+            else
+            {
+                OpenChildForm(new ChildForms.UserMessagesForm(), sender);
+            }
+            
+        }
     }
 
 }

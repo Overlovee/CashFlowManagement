@@ -25,7 +25,7 @@ namespace CentosCashFlow.Models
 
                 list.Add(emp);
             }
-
+            dbContext.close();
             return list;
         }
         public List<Currency> getDataByNameOrID(string name)
@@ -42,7 +42,7 @@ namespace CentosCashFlow.Models
 
                 list.Add(emp);
             }
-
+            dbContext.close();
             return list;
         }
         public int addNewItem(Currency currency)
@@ -52,6 +52,7 @@ namespace CentosCashFlow.Models
                 "', N'" + currency.CurrencyName +
                 "', '" + currency.ExchangeRateUSD + "')";
             rs = dbContext.ExcuteNonQuery(sql);
+            dbContext.close();
             return rs;
         }
         public int updateDataForItem(Currency currency)
@@ -62,6 +63,17 @@ namespace CentosCashFlow.Models
                 "ExchangeRateUSD = '" + currency.ExchangeRateUSD + "' " +
                 "WHERE Currency_Code = '" + currency.CurrencyCode + "'";
             rs = dbContext.ExcuteNonQuery(sql);
+            dbContext.close();
+            return rs;
+        }
+        public int updateExchangeRateByID(string id, decimal exchangeRate)
+        {
+            int rs = 0;
+            string sql = "UPDATE Currency " +
+                "SET ExchangeRateUSD = '" + exchangeRate + "' " +
+                "WHERE Currency_Code = '" + id + "'";
+            rs = dbContext.ExcuteNonQuery(sql);
+            dbContext.close();
             return rs;
         }
         public int deleteDataById(string id)
@@ -69,6 +81,7 @@ namespace CentosCashFlow.Models
             int rs = 0;
             string sql = "EXEC DeleteCurrency '" + id + "'";
             rs = dbContext.ExcuteNonQuery(sql);
+            dbContext.close();
             return rs;
         }
     }

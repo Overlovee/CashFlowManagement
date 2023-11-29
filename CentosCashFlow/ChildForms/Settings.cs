@@ -24,7 +24,6 @@ namespace CentosCashFlow.ChildForms
             cbbExport.ItemHeight = 40;
             cbbTimeFormat.ItemHeight = 40;
             cbbCurrencyUnit.ItemHeight = 40;
-            cbbOverviewDisplayMode.ItemHeight = 40;
             userSetting= new Models.Settings();
             languageSetting= new Models.Language();
             dictionary = new Languages.LanguageDictionary();
@@ -65,9 +64,9 @@ namespace CentosCashFlow.ChildForms
             }
             cbbCurrencyUnit.SelectedItem = userSetting.CurrencyCode;
 
-            cbbOverviewDisplayMode.Items.Add("beginning/ending balance");
-            cbbOverviewDisplayMode.Items.Add("money in/money out");
-            cbbOverviewDisplayMode.SelectedItem = userSetting.OverviewDisplayMode;
+            //cbbOverviewDisplayMode.Items.Add("beginning/ending balance");
+            //cbbOverviewDisplayMode.Items.Add("money in/money out");
+            //cbbOverviewDisplayMode.SelectedItem = userSetting.OverviewDisplayMode;
 
             cbbExport.Items.Add("Export Excel File");
             cbbExport.Items.Add("Export CSV File");
@@ -79,12 +78,12 @@ namespace CentosCashFlow.ChildForms
             if (!(cbbLanguages.SelectedItem is null)
                 && !(cbbCurrencyUnit.SelectedItem is null)
                 && !(cbbTimeFormat.SelectedItem is null)
-                && !(cbbOverviewDisplayMode.SelectedItem is null))
+                /*&& !(cbbOverviewDisplayMode.SelectedItem is null)*/)
             {
                 if (cbbLanguages.SelectedItem.ToString() != languageSetting.Language_Name
                 || cbbCurrencyUnit.SelectedItem.ToString() != userSetting.CurrencyCode
                 || cbbTimeFormat.SelectedItem.ToString() != userSetting.TimeFormat
-                || cbbOverviewDisplayMode.SelectedItem.ToString() != userSetting.OverviewDisplayMode)
+                /*|| cbbOverviewDisplayMode.SelectedItem.ToString() != userSetting.OverviewDisplayMode*/)
                 {
                     btnSave_display.Enabled = true;
                 }
@@ -108,7 +107,7 @@ namespace CentosCashFlow.ChildForms
             userSetting.LanguageCode = languages.Language_Code;
             userSetting.TimeFormat = cbbTimeFormat.SelectedItem.ToString();
             userSetting.CurrencyCode = cbbCurrencyUnit.SelectedItem.ToString();
-            userSetting.OverviewDisplayMode = cbbOverviewDisplayMode.SelectedItem.ToString();
+            //userSetting.OverviewDisplayMode = cbbOverviewDisplayMode.SelectedItem.ToString();
 
             Models.ConnectUsers connectUsers = new Models.ConnectUsers();
             int kt = connectUsers.updateUserSettingsFor(userSetting);

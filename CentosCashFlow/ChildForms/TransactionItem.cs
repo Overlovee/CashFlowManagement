@@ -113,6 +113,12 @@ namespace CentosCashFlow.ChildForms
                 // Kiểm tra xem control.Parent có phải là Form
                 if (control.Parent is Form)
                 {
+                    if (control.Parent is Home)
+                    {
+                        Home f = (Home)control.Parent;
+
+                        f.Reload_Data();
+                    }
                     if (control.Parent is TransactionForm)
                     {
                         TransactionForm f = (TransactionForm)control.Parent;

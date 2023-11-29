@@ -20,3 +20,5 @@ settings=Settings
 user_account_management=User Account Management
 manage_admin_accounts=Admin Account Management
 manage_currencies=Currencies Management
+inform=Inform
+messages=Messages

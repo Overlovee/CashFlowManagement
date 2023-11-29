@@ -32,7 +32,7 @@
             this.pictureBoxAvatar = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnEditingUserAccount = new System.Windows.Forms.Button();
-            this.btnDeleteUserAccount = new System.Windows.Forms.Button();
+            this.btnDisableUserAccount = new System.Windows.Forms.Button();
             this.labelUserName = new System.Windows.Forms.Label();
             this.labelUserEmail = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -75,7 +75,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.Controls.Add(this.btnEditingUserAccount, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnDeleteUserAccount, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnDisableUserAccount, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.labelUserName, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.labelUserEmail, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -105,24 +105,24 @@
             this.btnEditingUserAccount.UseVisualStyleBackColor = false;
             this.btnEditingUserAccount.Click += new System.EventHandler(this.btnEditingUserAccount_Click);
             // 
-            // btnDeleteUserAccount
+            // btnDisableUserAccount
             // 
-            this.btnDeleteUserAccount.BackColor = System.Drawing.Color.DeepPink;
-            this.btnDeleteUserAccount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDeleteUserAccount.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnDeleteUserAccount.FlatAppearance.BorderSize = 0;
-            this.btnDeleteUserAccount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDeleteUserAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnDeleteUserAccount.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteUserAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteUserAccount.Location = new System.Drawing.Point(548, 10);
-            this.btnDeleteUserAccount.Margin = new System.Windows.Forms.Padding(10);
-            this.btnDeleteUserAccount.Name = "btnDeleteUserAccount";
-            this.btnDeleteUserAccount.Size = new System.Drawing.Size(80, 38);
-            this.btnDeleteUserAccount.TabIndex = 40;
-            this.btnDeleteUserAccount.Text = "Delete";
-            this.btnDeleteUserAccount.UseVisualStyleBackColor = false;
-            this.btnDeleteUserAccount.Click += new System.EventHandler(this.btnDeleteUserAccount_Click);
+            this.btnDisableUserAccount.BackColor = System.Drawing.Color.DeepPink;
+            this.btnDisableUserAccount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDisableUserAccount.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnDisableUserAccount.FlatAppearance.BorderSize = 0;
+            this.btnDisableUserAccount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDisableUserAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnDisableUserAccount.ForeColor = System.Drawing.Color.White;
+            this.btnDisableUserAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDisableUserAccount.Location = new System.Drawing.Point(548, 10);
+            this.btnDisableUserAccount.Margin = new System.Windows.Forms.Padding(10);
+            this.btnDisableUserAccount.Name = "btnDisableUserAccount";
+            this.btnDisableUserAccount.Size = new System.Drawing.Size(80, 38);
+            this.btnDisableUserAccount.TabIndex = 40;
+            this.btnDisableUserAccount.Text = "Disable";
+            this.btnDisableUserAccount.UseVisualStyleBackColor = false;
+            this.btnDisableUserAccount.Click += new System.EventHandler(this.btnDisableUserAccount_Click);
             // 
             // labelUserName
             // 
@@ -180,7 +180,7 @@
         private System.Windows.Forms.PictureBox pictureBoxAvatar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnEditingUserAccount;
-        private System.Windows.Forms.Button btnDeleteUserAccount;
+        private System.Windows.Forms.Button btnDisableUserAccount;
         private System.Windows.Forms.Label labelUserName;
         private System.Windows.Forms.Label labelUserEmail;
     }

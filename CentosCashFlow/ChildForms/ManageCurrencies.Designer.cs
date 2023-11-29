@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageCurrencies));
             this.panel7 = new System.Windows.Forms.Panel();
+            this.btnUpdateExchangeRate = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSearch_display = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
@@ -47,6 +48,7 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.btnUpdateExchangeRate);
             this.panel7.Controls.Add(this.tableLayoutPanel2);
             this.panel7.Controls.Add(this.btnAddNewCurrency_display);
             this.panel7.Controls.Add(this.panel12);
@@ -57,6 +59,21 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1008, 552);
             this.panel7.TabIndex = 4;
+            // 
+            // btnUpdateExchangeRate
+            // 
+            this.btnUpdateExchangeRate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdateExchangeRate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateExchangeRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnUpdateExchangeRate.ForeColor = System.Drawing.Color.Black;
+            this.btnUpdateExchangeRate.Location = new System.Drawing.Point(773, 9);
+            this.btnUpdateExchangeRate.Margin = new System.Windows.Forms.Padding(0);
+            this.btnUpdateExchangeRate.Name = "btnUpdateExchangeRate";
+            this.btnUpdateExchangeRate.Size = new System.Drawing.Size(211, 36);
+            this.btnUpdateExchangeRate.TabIndex = 4;
+            this.btnUpdateExchangeRate.Text = "Update Exchange Rate";
+            this.btnUpdateExchangeRate.UseVisualStyleBackColor = true;
+            this.btnUpdateExchangeRate.Click += new System.EventHandler(this.btnUpdateExchangeRate_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -73,7 +90,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(957, 35);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(956, 35);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // btnSearch_display
@@ -87,7 +104,7 @@
             this.btnSearch_display.ForeColor = System.Drawing.Color.White;
             this.btnSearch_display.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch_display.Image")));
             this.btnSearch_display.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch_display.Location = new System.Drawing.Point(826, 0);
+            this.btnSearch_display.Location = new System.Drawing.Point(825, 0);
             this.btnSearch_display.Margin = new System.Windows.Forms.Padding(4, 0, 0, 0);
             this.btnSearch_display.Name = "btnSearch_display";
             this.btnSearch_display.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
@@ -107,7 +124,7 @@
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnClear.ForeColor = System.Drawing.Color.White;
             this.btnClear.Image = ((System.Drawing.Image)(resources.GetObject("btnClear.Image")));
-            this.btnClear.Location = new System.Drawing.Point(787, 0);
+            this.btnClear.Location = new System.Drawing.Point(786, 0);
             this.btnClear.Margin = new System.Windows.Forms.Padding(0);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(35, 35);
@@ -124,7 +141,7 @@
             this.textBoxSearch.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
             this.textBoxSearch.Multiline = true;
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(783, 35);
+            this.textBoxSearch.Size = new System.Drawing.Size(782, 35);
             this.textBoxSearch.TabIndex = 0;
             // 
             // btnAddNewCurrency_display
@@ -225,5 +242,6 @@
         private System.Windows.Forms.Button btnSearch_display;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.Button btnUpdateExchangeRate;
     }
 }

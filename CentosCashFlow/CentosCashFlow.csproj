@@ -36,6 +36,9 @@
     <Reference Include="DocumentFormat.OpenXml, Version=2.20.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
       <HintPath>..\packages\DocumentFormat.OpenXml.2.20.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -63,6 +66,12 @@
     </Compile>
     <Compile Include="ChildForms\AccountEditingForm.Designer.cs">
       <DependentUpon>AccountEditingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\AccountMessageItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChildForms\AccountMessageItem.Designer.cs">
+      <DependentUpon>AccountMessageItem.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForms\Category.cs">
       <SubType>Form</SubType>
@@ -136,6 +145,12 @@
     <Compile Include="ChildForms\Home.designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForms\InformItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChildForms\InformItem.Designer.cs">
+      <DependentUpon>InformItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildForms\LanguageAddingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +198,18 @@
     </Compile>
     <Compile Include="ChildForms\ManageUserAccount.Designer.cs">
       <DependentUpon>ManageUserAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\MessageItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChildForms\MessageItem.Designer.cs">
+      <DependentUpon>MessageItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\Messages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\Messages.Designer.cs">
+      <DependentUpon>Messages.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForms\NewAdminAccountAddingForm.cs">
       <SubType>Form</SubType>
@@ -250,6 +277,12 @@
     <Compile Include="ChildForms\UserAccountItem.Designer.cs">
       <DependentUpon>UserAccountItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForms\UserMessagesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\UserMessagesForm.Designer.cs">
+      <DependentUpon>UserMessagesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildForms\Wide.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -280,11 +313,13 @@
     <Compile Include="Models\ConnectCurrency.cs" />
     <Compile Include="Models\ConnectExport.cs" />
     <Compile Include="Models\ConnectLanguage.cs" />
+    <Compile Include="Models\ConnectMessage.cs" />
     <Compile Include="Models\ConnectTransaction.cs" />
     <Compile Include="Models\ConnectUsers.cs" />
     <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\DbContext.cs" />
     <Compile Include="Models\Language.cs" />
+    <Compile Include="Models\Message.cs" />
     <Compile Include="Models\Settings.cs" />
     <Compile Include="Models\Transaction.cs" />
     <Compile Include="Models\User.cs" />
@@ -302,6 +337,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\AccountEditingForm.resx">
       <DependentUpon>AccountEditingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\AccountMessageItem.resx">
+      <DependentUpon>AccountMessageItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\Category.resx">
       <DependentUpon>Category.cs</DependentUpon>
@@ -339,6 +377,9 @@
     <EmbeddedResource Include="ChildForms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\InformItem.resx">
+      <DependentUpon>InformItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\LanguageAddingForm.resx">
       <DependentUpon>LanguageAddingForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -362,6 +403,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\ManageUserAccount.resx">
       <DependentUpon>ManageUserAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\MessageItem.resx">
+      <DependentUpon>MessageItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\Messages.resx">
+      <DependentUpon>Messages.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\NewAdminAccountAddingForm.resx">
       <DependentUpon>NewAdminAccountAddingForm.cs</DependentUpon>
@@ -395,6 +442,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\UserAccountItem.resx">
       <DependentUpon>UserAccountItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\UserMessagesForm.resx">
+      <DependentUpon>UserMessagesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\Wide.resx">
       <DependentUpon>Wide.cs</DependentUpon>
@@ -445,6 +495,7 @@
     <Content Include="Resources\categories.png" />
     <Content Include="Resources\category_df.png" />
     <Content Include="Resources\centos.png" />
+    <None Include="Resources\comments.png" />
     <Content Include="Resources\creative-commons-nc.png" />
     <None Include="Resources\file.png" />
     <None Include="Resources\globalization.png" />
