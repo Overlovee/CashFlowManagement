@@ -32,11 +32,11 @@ namespace CentosCashFlow.ChildForms
             List<Models.UserAccountInfo> list = new List<Models.UserAccountInfo>();
             if (isSearched)
             {
-                list = connectUsers.getUserAccountsInfoByName(textBoxSearch.Text);
+                list = connectUsers.getUserAccountsFullInfoByName(textBoxSearch.Text);
             }
             else
             {
-                list = connectUsers.getUserAccountsInfo();
+                list = connectUsers.getUserAccountsFullInfo();
             }
             
             foreach (Models.UserAccountInfo info in list)
@@ -52,6 +52,7 @@ namespace CentosCashFlow.ChildForms
                 newPanel.Controls.Add(item);
                 item.Dock = DockStyle.Top;
                 item.Height = 60;
+                
             }
         }
         public void Reload_Data(bool isSearched)

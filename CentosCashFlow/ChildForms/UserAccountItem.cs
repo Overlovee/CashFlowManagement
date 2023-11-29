@@ -55,11 +55,95 @@ namespace CentosCashFlow.ChildForms
         {
             labelUserName.Text = user.UserName;
             labelUserEmail.Text = user.Email;
+            if(user.Status == "Disable")
+            {
+                btnDeleteUserAccount.Text = "Active";
+            }
+            if(user.Status == "Active")
+            {
+                btnDeleteUserAccount.Text = "Disable";
+            }
         }
 
         private void btnDisableUserAccount_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 
+=======
+            if (MessageBox.Show("Are you sure you want to change this account?", "",
+                  MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Models.ConnectUsers connectUsers = new Models.ConnectUsers();
+                string password = connectUsers.getUserPasswordByID(int.Parse(this.Tag.ToString()));
+                ConfirmPasswordForm form = new ConfirmPasswordForm();
+                form.Password = password;
+                form.ShowDialog();
+                if (form.isValid)
+                {
+                    Models.ConnectUsers connect = new Models.ConnectUsers();
+                    if(user.Status == "Active")
+                    {
+                        int kt = connect.disableAccountByID(user.Id);
+                        if (kt != 0)
+                        {
+                            Control control = (Control)this;
+                            while (control.Parent != null && !(control.Parent is Form))
+                            {
+                                control = control.Parent;
+                            }
+                            // Kiểm tra xem control.Parent có phải là Form
+                            if (control.Parent is ManageUserAccount)
+                            {
+                                ManageUserAccount f = (ManageUserAccount)control.Parent;
+
+                                f.Reload_Data(false);
+
+                            }
+                            if (control.Parent is ManageAdminAccounts)
+                            {
+                                ManageAdminAccounts f = (ManageAdminAccounts)control.Parent;
+
+                                f.Reload_Data(false);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Cannot disable this account!", "", MessageBoxButtons.OK);
+                        }
+                    }
+                    if (user.Status == "Disable")
+                    {
+                        int kt = connect.UnlockAccountByID(user.Id);
+                        if (kt != 0)
+                        {
+                            Control control = (Control)this;
+                            while (control.Parent != null && !(control.Parent is Form))
+                            {
+                                control = control.Parent;
+                            }
+                            // Kiểm tra xem control.Parent có phải là Form
+                            if (control.Parent is ManageUserAccount)
+                            {
+                                ManageUserAccount f = (ManageUserAccount)control.Parent;
+
+                                f.Reload_Data(false);
+
+                            }
+                            if (control.Parent is ManageAdminAccounts)
+                            {
+                                ManageAdminAccounts f = (ManageAdminAccounts)control.Parent;
+
+                                f.Reload_Data(false);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Cannot disable this account!", "", MessageBoxButtons.OK);
+                        }
+                    }
+                }
+            }
+>>>>>>> 195218ea9f7a63f66fa3122559ce159fc60bbc00
         }
     }
 }
