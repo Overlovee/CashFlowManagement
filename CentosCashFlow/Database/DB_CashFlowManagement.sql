@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-﻿﻿CREATE DATABASE DB_CashFlowManagement;
-
-=======
-﻿
-CREATE DATABASE DB_CashFlowManagement;
+﻿CREATE DATABASE DB_CashFlowManagement;
 -- Sử dụng cơ sở dữ liệu QuanLyThuChi
->>>>>>> 195218ea9f7a63f66fa3122559ce159fc60bbc00
 USE DB_CashFlowManagement;
 GO
 -- Tạo bảng Danh mục (Category)
@@ -80,10 +74,8 @@ CREATE TABLE Messages (
 	CONSTRAINT FK_Messages_SenderID FOREIGN KEY (SenderID) REFERENCES Users(ID),
 	CONSTRAINT FK_Messages_ReceiverID FOREIGN KEY (ReceiverID) REFERENCES Users(ID)
 );
-<<<<<<< HEAD
+
 Go
-=======
->>>>>>> 195218ea9f7a63f66fa3122559ce159fc60bbc00
 --Trigger
 GO
 CREATE TRIGGER UPDATE_Income_Available_Money
@@ -373,14 +365,13 @@ INSERT INTO Transactions
 VALUES(3,'CTP','Expenditure',15000,'2023/9/1',N'Mua Đồ ăn');
 INSERT INTO Transactions
 VALUES(2,'CTD','Expenditure',200000,GETDATE(),N'Điện Tháng 8');
-<<<<<<< HEAD
 
 INSERT INTO Messages (SenderID, ReceiverID, Content, Timestamp)
 VALUES
 	(4, 2, N'Xin chào. Tôi cần hổ trợ', '2023-11-28 12:00:00'),
 	(2, 4, N'Chào bạn. Bạn cần tôi tư vấn điều gì?', '2023-11-28 13:00:00'),
-	(4, 2, N'Tôi muốn đổi mật khẩu thì vào đâu?', '2023-11-28 14:00:00'),
-=======
+	(4, 2, N'Tôi muốn đổi mật khẩu thì vào đâu?', '2023-11-28 14:00:00');
+
 INSERT INTO Transactions
 VALUES(3,'TTN','Income',10000000,'2023/10/1',N'Lương Tháng 9');
 INSERT INTO Transactions
@@ -464,13 +455,10 @@ INSERT INTO Transactions
 VALUES(3,'CKK','Expenditure',7000,'2023/11/11',N'cho con đi học');
 INSERT INTO Messages (SenderID, ReceiverID, Content, Timestamp)
 VALUES
->>>>>>> 195218ea9f7a63f66fa3122559ce159fc60bbc00
     (3, 2, N'Xin chào. Tôi cần hổ trợ', '2023-11-28 12:00:00'),
     (2, 3, N'Chào bạn. Bạn cần tôi tư vấn điều gì?', '2023-11-28 12:02:00'),
     (3, 2, N'Tôi muốn thêm một danh mục mới thì sao?', '2023-11-28 13:01:01'),
 	(2, 3, N'Bạn cần thêm danh mục gì? Chúng tôi sẽ hỗ trợ bạn.', '2023-11-28 13:06:01');
-<<<<<<< HEAD
-
 SELECT * FROM Messages where SenderID =3 or ReceiverID =3 Order by MessageID ASC
 
 SELECT MessageID, SenderID, ReceiverID, Content, Timestamp
@@ -489,8 +477,6 @@ AND Messages.MessageID = (SELECT Top 1 MessageID FROM Messages where SenderID = 
 Order by MessageID DESC
 
 SELECT ID FROM Users WHERE Role = 'User'
-=======
->>>>>>> 195218ea9f7a63f66fa3122559ce159fc60bbc00
 
 SELECT ID, Name, Email FROM Users WHERE Role = 'User'
 Alter table Transactions

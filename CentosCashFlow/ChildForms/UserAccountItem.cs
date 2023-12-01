@@ -57,19 +57,17 @@ namespace CentosCashFlow.ChildForms
             labelUserEmail.Text = user.Email;
             if(user.Status == "Disable")
             {
-                btnDeleteUserAccount.Text = "Active";
+                btnDisableUserAccount.Text = "Active";
             }
             if(user.Status == "Active")
             {
-                btnDeleteUserAccount.Text = "Disable";
+                btnDisableUserAccount.Text = "Disable";
             }
         }
 
         private void btnDisableUserAccount_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
 
-=======
             if (MessageBox.Show("Are you sure you want to change this account?", "",
                   MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
@@ -143,7 +141,6 @@ namespace CentosCashFlow.ChildForms
                     }
                 }
             }
->>>>>>> 195218ea9f7a63f66fa3122559ce159fc60bbc00
         }
     }
 }

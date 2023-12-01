@@ -44,22 +44,11 @@ namespace CentosCashFlow
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
-<<<<<<< HEAD
             textBoxEmail.Text = "Huy5512@gmail.com";
             textBoxPassword.Text = "Huy12445";
 
             textBoxEmail.Text = "Thu2123@gmail.com";
             textBoxPassword.Text = "admin";
-=======
-            
-
-            
-            //email = "Huy5512@gmail.com";
-            //password = "Huy12445";
-            //email = "Thu2123@gmail.com";
-            //password = "admin";
-
->>>>>>> 195218ea9f7a63f66fa3122559ce159fc60bbc00
             if (textBoxEmail.Text == "")
             {
                 this.errorProvider1.SetError(textBoxEmail, "Username is required");

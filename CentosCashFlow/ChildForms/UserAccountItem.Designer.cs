@@ -47,21 +47,21 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.MaximumSize = new System.Drawing.Size(68, 75);
-            this.panel1.MinimumSize = new System.Drawing.Size(68, 75);
+            this.panel1.MaximumSize = new System.Drawing.Size(60, 60);
+            this.panel1.MinimumSize = new System.Drawing.Size(60, 60);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(6);
-            this.panel1.Size = new System.Drawing.Size(68, 75);
+            this.panel1.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Size = new System.Drawing.Size(60, 60);
             this.panel1.TabIndex = 2;
             // 
             // pictureBoxAvatar
             // 
             this.pictureBoxAvatar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxAvatar.Image = global::CentosCashFlow.Properties.Resources.user;
-            this.pictureBoxAvatar.Location = new System.Drawing.Point(6, 6);
+            this.pictureBoxAvatar.Location = new System.Drawing.Point(5, 5);
             this.pictureBoxAvatar.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBoxAvatar.Name = "pictureBoxAvatar";
-            this.pictureBoxAvatar.Size = new System.Drawing.Size(56, 63);
+            this.pictureBoxAvatar.Size = new System.Drawing.Size(50, 50);
             this.pictureBoxAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxAvatar.TabIndex = 0;
             this.pictureBoxAvatar.TabStop = false;
@@ -72,19 +72,18 @@
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.Controls.Add(this.btnEditingUserAccount, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnDisableUserAccount, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.labelUserName, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.labelUserEmail, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(68, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(60, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(717, 72);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(638, 58);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // btnEditingUserAccount
@@ -97,10 +96,10 @@
             this.btnEditingUserAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnEditingUserAccount.ForeColor = System.Drawing.Color.White;
             this.btnEditingUserAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditingUserAccount.Location = new System.Drawing.Point(503, 12);
-            this.btnEditingUserAccount.Margin = new System.Windows.Forms.Padding(11, 12, 11, 12);
+            this.btnEditingUserAccount.Location = new System.Drawing.Point(448, 10);
+            this.btnEditingUserAccount.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
             this.btnEditingUserAccount.Name = "btnEditingUserAccount";
-            this.btnEditingUserAccount.Size = new System.Drawing.Size(90, 48);
+            this.btnEditingUserAccount.Size = new System.Drawing.Size(80, 38);
             this.btnEditingUserAccount.TabIndex = 41;
             this.btnEditingUserAccount.Text = "Edit";
             this.btnEditingUserAccount.UseVisualStyleBackColor = false;
@@ -108,7 +107,6 @@
             // 
             // btnDisableUserAccount
             // 
-<<<<<<< HEAD
             this.btnDisableUserAccount.BackColor = System.Drawing.Color.DeepPink;
             this.btnDisableUserAccount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDisableUserAccount.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
@@ -117,32 +115,14 @@
             this.btnDisableUserAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnDisableUserAccount.ForeColor = System.Drawing.Color.White;
             this.btnDisableUserAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDisableUserAccount.Location = new System.Drawing.Point(548, 10);
-            this.btnDisableUserAccount.Margin = new System.Windows.Forms.Padding(10);
+            this.btnDisableUserAccount.Location = new System.Drawing.Point(547, 8);
+            this.btnDisableUserAccount.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.btnDisableUserAccount.Name = "btnDisableUserAccount";
-            this.btnDisableUserAccount.Size = new System.Drawing.Size(80, 38);
+            this.btnDisableUserAccount.Size = new System.Drawing.Size(82, 42);
             this.btnDisableUserAccount.TabIndex = 40;
             this.btnDisableUserAccount.Text = "Disable";
             this.btnDisableUserAccount.UseVisualStyleBackColor = false;
             this.btnDisableUserAccount.Click += new System.EventHandler(this.btnDisableUserAccount_Click);
-=======
-            this.btnDeleteUserAccount.BackColor = System.Drawing.Color.DeepPink;
-            this.btnDeleteUserAccount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDeleteUserAccount.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnDeleteUserAccount.FlatAppearance.BorderSize = 0;
-            this.btnDeleteUserAccount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDeleteUserAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnDeleteUserAccount.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteUserAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteUserAccount.Location = new System.Drawing.Point(615, 12);
-            this.btnDeleteUserAccount.Margin = new System.Windows.Forms.Padding(11, 12, 11, 12);
-            this.btnDeleteUserAccount.Name = "btnDeleteUserAccount";
-            this.btnDeleteUserAccount.Size = new System.Drawing.Size(91, 48);
-            this.btnDeleteUserAccount.TabIndex = 40;
-            this.btnDeleteUserAccount.Text = "Disable";
-            this.btnDeleteUserAccount.UseVisualStyleBackColor = false;
-            this.btnDeleteUserAccount.Click += new System.EventHandler(this.btnDeleteUserAccount_Click);
->>>>>>> 195218ea9f7a63f66fa3122559ce159fc60bbc00
             // 
             // labelUserName
             // 
@@ -153,7 +133,7 @@
             this.labelUserName.Location = new System.Drawing.Point(0, 0);
             this.labelUserName.Margin = new System.Windows.Forms.Padding(0);
             this.labelUserName.Name = "labelUserName";
-            this.labelUserName.Size = new System.Drawing.Size(246, 72);
+            this.labelUserName.Size = new System.Drawing.Size(219, 58);
             this.labelUserName.TabIndex = 39;
             this.labelUserName.Text = "John Dor";
             this.labelUserName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -165,10 +145,10 @@
             this.labelUserEmail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelUserEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.labelUserEmail.ForeColor = System.Drawing.Color.Black;
-            this.labelUserEmail.Location = new System.Drawing.Point(246, 0);
+            this.labelUserEmail.Location = new System.Drawing.Point(219, 0);
             this.labelUserEmail.Margin = new System.Windows.Forms.Padding(0);
             this.labelUserEmail.Name = "labelUserEmail";
-            this.labelUserEmail.Size = new System.Drawing.Size(246, 72);
+            this.labelUserEmail.Size = new System.Drawing.Size(219, 58);
             this.labelUserEmail.TabIndex = 38;
             this.labelUserEmail.Text = "example123@gmail.com";
             this.labelUserEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -176,15 +156,15 @@
             // 
             // UserAccountItem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(0);
-            this.MinimumSize = new System.Drawing.Size(562, 74);
+            this.MinimumSize = new System.Drawing.Size(500, 60);
             this.Name = "UserAccountItem";
-            this.Size = new System.Drawing.Size(785, 72);
+            this.Size = new System.Drawing.Size(698, 58);
             this.Load += new System.EventHandler(this.UserAccountItem_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvatar)).EndInit();
