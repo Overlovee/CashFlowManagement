@@ -35,6 +35,8 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labelCurrencyExchangeUnit = new System.Windows.Forms.Label();
+            this.textBoxExchangeRate = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxCurrencyName = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -42,8 +44,6 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBoxExchangeRate = new System.Windows.Forms.TextBox();
-            this.labelCurrencyExchangeUnit = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -58,10 +58,10 @@
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSave.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSave.Location = new System.Drawing.Point(24, 314);
+            this.btnSave.Location = new System.Drawing.Point(27, 392);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(162, 70);
+            this.btnSave.Size = new System.Drawing.Size(182, 88);
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -71,10 +71,11 @@
             // 
             this.textBoxCurrencyCode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxCurrencyCode.Location = new System.Drawing.Point(17, 35);
+            this.textBoxCurrencyCode.Location = new System.Drawing.Point(19, 44);
+            this.textBoxCurrencyCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxCurrencyCode.Name = "textBoxCurrencyCode";
             this.textBoxCurrencyCode.ReadOnly = true;
-            this.textBoxCurrencyCode.Size = new System.Drawing.Size(546, 28);
+            this.textBoxCurrencyCode.Size = new System.Drawing.Size(609, 32);
             this.textBoxCurrencyCode.TabIndex = 3;
             this.textBoxCurrencyCode.Text = "VND";
             this.textBoxCurrencyCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -86,11 +87,12 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(17, -1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(19, -1);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(546, 30);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(609, 38);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // label5
@@ -99,7 +101,7 @@
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Location = new System.Drawing.Point(3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(540, 30);
+            this.label5.Size = new System.Drawing.Size(603, 38);
             this.label5.TabIndex = 1;
             this.label5.Text = "Currency Code";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -111,9 +113,10 @@
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.textBoxCurrencyCode);
             this.panel5.Controls.Add(this.tableLayoutPanel1);
-            this.panel5.Location = new System.Drawing.Point(24, 12);
+            this.panel5.Location = new System.Drawing.Point(27, 15);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(582, 77);
+            this.panel5.Size = new System.Drawing.Size(649, 96);
             this.panel5.TabIndex = 9;
             // 
             // label1
@@ -121,9 +124,9 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 23);
+            this.label1.Location = new System.Drawing.Point(34, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 24);
+            this.label1.Size = new System.Drawing.Size(254, 26);
             this.label1.TabIndex = 2;
             this.label1.Text = "Exchange rate: 1 USD = ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -136,10 +139,35 @@
             this.panel2.Controls.Add(this.labelCurrencyExchangeUnit);
             this.panel2.Controls.Add(this.textBoxExchangeRate);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(24, 214);
+            this.panel2.Location = new System.Drawing.Point(27, 268);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(582, 77);
+            this.panel2.Size = new System.Drawing.Size(649, 96);
             this.panel2.TabIndex = 11;
+            // 
+            // labelCurrencyExchangeUnit
+            // 
+            this.labelCurrencyExchangeUnit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelCurrencyExchangeUnit.AutoSize = true;
+            this.labelCurrencyExchangeUnit.Location = new System.Drawing.Point(549, 29);
+            this.labelCurrencyExchangeUnit.Name = "labelCurrencyExchangeUnit";
+            this.labelCurrencyExchangeUnit.Size = new System.Drawing.Size(59, 26);
+            this.labelCurrencyExchangeUnit.TabIndex = 5;
+            this.labelCurrencyExchangeUnit.Text = "VND";
+            this.labelCurrencyExchangeUnit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBoxExchangeRate
+            // 
+            this.textBoxExchangeRate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxExchangeRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBoxExchangeRate.Location = new System.Drawing.Point(281, 24);
+            this.textBoxExchangeRate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxExchangeRate.Name = "textBoxExchangeRate";
+            this.textBoxExchangeRate.Size = new System.Drawing.Size(255, 35);
+            this.textBoxExchangeRate.TabIndex = 4;
+            this.textBoxExchangeRate.Text = "1.0";
             // 
             // label2
             // 
@@ -147,7 +175,7 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(540, 30);
+            this.label2.Size = new System.Drawing.Size(603, 38);
             this.label2.TabIndex = 1;
             this.label2.Text = "Currency Name";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -156,9 +184,10 @@
             // 
             this.textBoxCurrencyName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxCurrencyName.Location = new System.Drawing.Point(17, 35);
+            this.textBoxCurrencyName.Location = new System.Drawing.Point(19, 44);
+            this.textBoxCurrencyName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxCurrencyName.Name = "textBoxCurrencyName";
-            this.textBoxCurrencyName.Size = new System.Drawing.Size(546, 28);
+            this.textBoxCurrencyName.Size = new System.Drawing.Size(609, 32);
             this.textBoxCurrencyName.TabIndex = 3;
             this.textBoxCurrencyName.Text = "Việt Nam Đồng";
             this.textBoxCurrencyName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -170,11 +199,12 @@
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(17, -1);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(19, -1);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(546, 30);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(609, 38);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // btnDeleting
@@ -184,10 +214,10 @@
             this.btnDeleting.FlatAppearance.BorderSize = 0;
             this.btnDeleting.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDeleting.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnDeleting.Location = new System.Drawing.Point(234, 314);
+            this.btnDeleting.Location = new System.Drawing.Point(258, 392);
             this.btnDeleting.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleting.Name = "btnDeleting";
-            this.btnDeleting.Size = new System.Drawing.Size(162, 70);
+            this.btnDeleting.Size = new System.Drawing.Size(182, 88);
             this.btnDeleting.TabIndex = 13;
             this.btnDeleting.Text = "Delete";
             this.btnDeleting.UseVisualStyleBackColor = false;
@@ -200,10 +230,10 @@
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCancel.Location = new System.Drawing.Point(444, 314);
+            this.btnCancel.Location = new System.Drawing.Point(495, 392);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(162, 70);
+            this.btnCancel.Size = new System.Drawing.Size(182, 88);
             this.btnCancel.TabIndex = 15;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -216,9 +246,10 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.textBoxCurrencyName);
             this.panel3.Controls.Add(this.tableLayoutPanel2);
-            this.panel3.Location = new System.Drawing.Point(24, 112);
+            this.panel3.Location = new System.Drawing.Point(27, 140);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(582, 77);
+            this.panel3.Size = new System.Drawing.Size(649, 96);
             this.panel3.TabIndex = 12;
             // 
             // panel1
@@ -232,41 +263,20 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(630, 405);
+            this.panel1.Size = new System.Drawing.Size(704, 495);
             this.panel1.TabIndex = 2;
-            // 
-            // textBoxExchangeRate
-            // 
-            this.textBoxExchangeRate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxExchangeRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxExchangeRate.Location = new System.Drawing.Point(250, 19);
-            this.textBoxExchangeRate.Name = "textBoxExchangeRate";
-            this.textBoxExchangeRate.Size = new System.Drawing.Size(232, 30);
-            this.textBoxExchangeRate.TabIndex = 4;
-            this.textBoxExchangeRate.Text = "1.0";
-            // 
-            // labelCurrencyExchangeUnit
-            // 
-            this.labelCurrencyExchangeUnit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelCurrencyExchangeUnit.AutoSize = true;
-            this.labelCurrencyExchangeUnit.Location = new System.Drawing.Point(488, 23);
-            this.labelCurrencyExchangeUnit.Name = "labelCurrencyExchangeUnit";
-            this.labelCurrencyExchangeUnit.Size = new System.Drawing.Size(50, 24);
-            this.labelCurrencyExchangeUnit.TabIndex = 5;
-            this.labelCurrencyExchangeUnit.Text = "VND";
-            this.labelCurrencyExchangeUnit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CurrencyEditingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(630, 405);
+            this.ClientSize = new System.Drawing.Size(704, 495);
             this.Controls.Add(this.panel1);
-            this.MaximumSize = new System.Drawing.Size(648, 452);
-            this.MinimumSize = new System.Drawing.Size(648, 452);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximumSize = new System.Drawing.Size(726, 551);
+            this.MinimumSize = new System.Drawing.Size(726, 551);
             this.Name = "CurrencyEditingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CurrencyEditingForm";

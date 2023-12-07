@@ -70,8 +70,9 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(582, 493);
+            this.panel1.Size = new System.Drawing.Size(650, 605);
             this.panel1.TabIndex = 1;
             // 
             // btnCancel
@@ -81,10 +82,10 @@
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCancel.Location = new System.Drawing.Point(397, 403);
+            this.btnCancel.Location = new System.Drawing.Point(442, 504);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(162, 70);
+            this.btnCancel.Size = new System.Drawing.Size(182, 88);
             this.btnCancel.TabIndex = 15;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -98,17 +99,19 @@
             this.panel4.Controls.Add(this.btnChooseImg);
             this.panel4.Controls.Add(this.textBoxCategoryImagePath);
             this.panel4.Controls.Add(this.tableLayoutPanel3);
-            this.panel4.Location = new System.Drawing.Point(25, 310);
+            this.panel4.Location = new System.Drawing.Point(28, 388);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(534, 77);
+            this.panel4.Size = new System.Drawing.Size(595, 96);
             this.panel4.TabIndex = 14;
             // 
             // btnChooseImg
             // 
             this.btnChooseImg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnChooseImg.Location = new System.Drawing.Point(378, 32);
+            this.btnChooseImg.Location = new System.Drawing.Point(425, 40);
+            this.btnChooseImg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnChooseImg.Name = "btnChooseImg";
-            this.btnChooseImg.Size = new System.Drawing.Size(137, 31);
+            this.btnChooseImg.Size = new System.Drawing.Size(154, 39);
             this.btnChooseImg.TabIndex = 4;
             this.btnChooseImg.Text = "Choose file";
             this.btnChooseImg.UseVisualStyleBackColor = true;
@@ -118,9 +121,10 @@
             // 
             this.textBoxCategoryImagePath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxCategoryImagePath.Location = new System.Drawing.Point(17, 35);
+            this.textBoxCategoryImagePath.Location = new System.Drawing.Point(19, 44);
+            this.textBoxCategoryImagePath.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxCategoryImagePath.Name = "textBoxCategoryImagePath";
-            this.textBoxCategoryImagePath.Size = new System.Drawing.Size(355, 28);
+            this.textBoxCategoryImagePath.Size = new System.Drawing.Size(394, 32);
             this.textBoxCategoryImagePath.TabIndex = 3;
             this.textBoxCategoryImagePath.Text = "category_df.png";
             this.textBoxCategoryImagePath.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -132,11 +136,12 @@
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.label3, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(17, -1);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(19, -1);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(498, 30);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(555, 38);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // label3
@@ -145,7 +150,7 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(492, 30);
+            this.label3.Size = new System.Drawing.Size(549, 38);
             this.label3.TabIndex = 1;
             this.label3.Text = "Category Image";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -157,10 +162,10 @@
             this.btnDeleteCategory.FlatAppearance.BorderSize = 0;
             this.btnDeleteCategory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDeleteCategory.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnDeleteCategory.Location = new System.Drawing.Point(211, 403);
+            this.btnDeleteCategory.Location = new System.Drawing.Point(232, 504);
             this.btnDeleteCategory.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteCategory.Name = "btnDeleteCategory";
-            this.btnDeleteCategory.Size = new System.Drawing.Size(162, 70);
+            this.btnDeleteCategory.Size = new System.Drawing.Size(182, 88);
             this.btnDeleteCategory.TabIndex = 13;
             this.btnDeleteCategory.Text = "Delete";
             this.btnDeleteCategory.UseVisualStyleBackColor = false;
@@ -173,18 +178,20 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.textBoxCategoryName);
             this.panel3.Controls.Add(this.tableLayoutPanel2);
-            this.panel3.Location = new System.Drawing.Point(25, 214);
+            this.panel3.Location = new System.Drawing.Point(28, 268);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(534, 77);
+            this.panel3.Size = new System.Drawing.Size(595, 96);
             this.panel3.TabIndex = 12;
             // 
             // textBoxCategoryName
             // 
             this.textBoxCategoryName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxCategoryName.Location = new System.Drawing.Point(17, 35);
+            this.textBoxCategoryName.Location = new System.Drawing.Point(19, 44);
+            this.textBoxCategoryName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxCategoryName.Name = "textBoxCategoryName";
-            this.textBoxCategoryName.Size = new System.Drawing.Size(498, 28);
+            this.textBoxCategoryName.Size = new System.Drawing.Size(555, 32);
             this.textBoxCategoryName.TabIndex = 3;
             this.textBoxCategoryName.Text = "ID123";
             this.textBoxCategoryName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -196,11 +203,12 @@
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(17, -1);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(19, -1);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(498, 30);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(555, 38);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // label2
@@ -209,7 +217,7 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(492, 30);
+            this.label2.Size = new System.Drawing.Size(549, 38);
             this.label2.TabIndex = 1;
             this.label2.Text = "Category Name";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -221,9 +229,10 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.comboBoxTransactionType);
-            this.panel2.Location = new System.Drawing.Point(25, 12);
+            this.panel2.Location = new System.Drawing.Point(28, 15);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(534, 77);
+            this.panel2.Size = new System.Drawing.Size(595, 96);
             this.panel2.TabIndex = 11;
             // 
             // label1
@@ -231,9 +240,9 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 21);
+            this.label1.Location = new System.Drawing.Point(15, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 24);
+            this.label1.Size = new System.Drawing.Size(171, 26);
             this.label1.TabIndex = 2;
             this.label1.Text = "Transaction type";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -245,9 +254,10 @@
             this.comboBoxTransactionType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTransactionType.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBoxTransactionType.FormattingEnabled = true;
-            this.comboBoxTransactionType.Location = new System.Drawing.Point(185, 19);
+            this.comboBoxTransactionType.Location = new System.Drawing.Point(208, 24);
+            this.comboBoxTransactionType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxTransactionType.Name = "comboBoxTransactionType";
-            this.comboBoxTransactionType.Size = new System.Drawing.Size(330, 30);
+            this.comboBoxTransactionType.Size = new System.Drawing.Size(366, 34);
             this.comboBoxTransactionType.TabIndex = 1;
             // 
             // panel5
@@ -257,19 +267,21 @@
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.textBoxCategoryID);
             this.panel5.Controls.Add(this.tableLayoutPanel1);
-            this.panel5.Location = new System.Drawing.Point(25, 114);
+            this.panel5.Location = new System.Drawing.Point(28, 142);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(534, 77);
+            this.panel5.Size = new System.Drawing.Size(595, 96);
             this.panel5.TabIndex = 9;
             // 
             // textBoxCategoryID
             // 
             this.textBoxCategoryID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxCategoryID.Location = new System.Drawing.Point(17, 35);
+            this.textBoxCategoryID.Location = new System.Drawing.Point(19, 44);
+            this.textBoxCategoryID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxCategoryID.Name = "textBoxCategoryID";
             this.textBoxCategoryID.ReadOnly = true;
-            this.textBoxCategoryID.Size = new System.Drawing.Size(498, 28);
+            this.textBoxCategoryID.Size = new System.Drawing.Size(555, 32);
             this.textBoxCategoryID.TabIndex = 3;
             this.textBoxCategoryID.Text = "ID123";
             this.textBoxCategoryID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -281,11 +293,12 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(17, -1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(19, -1);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(498, 30);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(555, 38);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // label5
@@ -294,7 +307,7 @@
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Location = new System.Drawing.Point(3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(492, 30);
+            this.label5.Size = new System.Drawing.Size(549, 38);
             this.label5.TabIndex = 1;
             this.label5.Text = "Category ID";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -305,10 +318,10 @@
             this.btnSaveCategoryEditing.FlatAppearance.BorderSize = 0;
             this.btnSaveCategoryEditing.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSaveCategoryEditing.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSaveCategoryEditing.Location = new System.Drawing.Point(25, 403);
+            this.btnSaveCategoryEditing.Location = new System.Drawing.Point(28, 504);
             this.btnSaveCategoryEditing.Margin = new System.Windows.Forms.Padding(2);
             this.btnSaveCategoryEditing.Name = "btnSaveCategoryEditing";
-            this.btnSaveCategoryEditing.Size = new System.Drawing.Size(162, 70);
+            this.btnSaveCategoryEditing.Size = new System.Drawing.Size(182, 88);
             this.btnSaveCategoryEditing.TabIndex = 8;
             this.btnSaveCategoryEditing.Text = "Save";
             this.btnSaveCategoryEditing.UseVisualStyleBackColor = false;
@@ -316,12 +329,13 @@
             // 
             // CategoryEditForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 493);
+            this.ClientSize = new System.Drawing.Size(650, 605);
             this.Controls.Add(this.panel1);
-            this.MaximumSize = new System.Drawing.Size(600, 540);
-            this.MinimumSize = new System.Drawing.Size(600, 540);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximumSize = new System.Drawing.Size(672, 661);
+            this.MinimumSize = new System.Drawing.Size(672, 661);
             this.Name = "CategoryEditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CategoryEditForm";
