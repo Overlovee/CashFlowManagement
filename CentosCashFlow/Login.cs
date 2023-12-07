@@ -44,8 +44,8 @@ namespace CentosCashFlow
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
-            textBoxEmail.Text = "Huy5512@gmail.com";
-            textBoxPassword.Text = "Huy12445";
+            //textBoxEmail.Text = "Huy5512@gmail.com";
+            //textBoxPassword.Text = "Huy12445";
 
             textBoxEmail.Text = "Thu2123@gmail.com";
             textBoxPassword.Text = "admin";

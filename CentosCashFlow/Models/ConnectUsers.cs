@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace CentosCashFlow.Models
     public class ConnectUsers
     {
         DbContext dbContext = new DbContext();
+        
         public List<int> getListUserID()
         {
             List<int> list = new List<int>();
@@ -246,11 +248,17 @@ namespace CentosCashFlow.Models
         }
         public User Login(string email, string password)
         {
-            string sql = ("SELECT ID FROM Users WHERE Email = '"+ email + "' and Password = '"+ password + "'");
+            ConnectPassword connectPassword = new ConnectPassword();
+            string sql = ("SELECT ID,Status FROM Users WHERE Email = '" + email + "' and Password = '"+ Models.ConnectPassword.Create_MD5(password) + "'");
             SqlDataReader rdr = dbContext.ExcuteQuery(sql);
             if (rdr.Read())
             {
                 int id = int.Parse(rdr.GetValue(0).ToString());
+                string Status = rdr.GetValue(1).ToString();
+                if(Status == "Disable")
+                {
+                    return null;
+                }
                 rdr.Close();
                 return getUserDataByID(id);
             }
@@ -334,11 +342,12 @@ namespace CentosCashFlow.Models
         }
         public int Register(string name, string email, string password)
         {
+            string hashPass = Models.ConnectPassword.Create_MD5(password);
             int rs = 0;
             string sql = "EXEC InsertUser " +
                "@name = N'" + name + "', " +
                "@email = N'" + email + "', " +
-               "@password = N'" + password + "'," +
+               "@password = N'" + hashPass + "'," +
                "@role = N'User'";
 
             rs = dbContext.ExcuteNonQuery(sql);
