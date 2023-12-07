@@ -50,7 +50,7 @@
             this.panel1.MaximumSize = new System.Drawing.Size(60, 60);
             this.panel1.MinimumSize = new System.Drawing.Size(60, 60);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Padding = new System.Windows.Forms.Padding(5);
             this.panel1.Size = new System.Drawing.Size(60, 60);
             this.panel1.TabIndex = 2;
             // 
@@ -97,7 +97,7 @@
             this.btnEditingUserAccount.ForeColor = System.Drawing.Color.White;
             this.btnEditingUserAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditingUserAccount.Location = new System.Drawing.Point(448, 10);
-            this.btnEditingUserAccount.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.btnEditingUserAccount.Margin = new System.Windows.Forms.Padding(10);
             this.btnEditingUserAccount.Name = "btnEditingUserAccount";
             this.btnEditingUserAccount.Size = new System.Drawing.Size(80, 38);
             this.btnEditingUserAccount.TabIndex = 41;
