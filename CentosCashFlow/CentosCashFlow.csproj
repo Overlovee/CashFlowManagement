@@ -220,6 +220,12 @@
     <Compile Include="ChildForms\NewAdminAccountAddingForm.Designer.cs">
       <DependentUpon>NewAdminAccountAddingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForms\NewLaguages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\NewLaguages.Designer.cs">
+      <DependentUpon>NewLaguages.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildForms\Overview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -416,6 +422,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\NewAdminAccountAddingForm.resx">
       <DependentUpon>NewAdminAccountAddingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\NewLaguages.resx">
+      <DependentUpon>NewLaguages.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\Overview.resx">
       <DependentUpon>Overview.cs</DependentUpon>

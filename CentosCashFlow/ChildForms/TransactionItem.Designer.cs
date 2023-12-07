@@ -50,21 +50,21 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.MaximumSize = new System.Drawing.Size(60, 60);
-            this.panel1.MinimumSize = new System.Drawing.Size(60, 60);
+            this.panel1.MaximumSize = new System.Drawing.Size(68, 75);
+            this.panel1.MinimumSize = new System.Drawing.Size(68, 75);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(5);
-            this.panel1.Size = new System.Drawing.Size(60, 60);
+            this.panel1.Padding = new System.Windows.Forms.Padding(6);
+            this.panel1.Size = new System.Drawing.Size(68, 75);
             this.panel1.TabIndex = 0;
             // 
             // pictureBoxTransaction
             // 
             this.pictureBoxTransaction.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxTransaction.Image = global::CentosCashFlow.Properties.Resources.file;
-            this.pictureBoxTransaction.Location = new System.Drawing.Point(5, 5);
+            this.pictureBoxTransaction.Location = new System.Drawing.Point(6, 6);
             this.pictureBoxTransaction.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBoxTransaction.Name = "pictureBoxTransaction";
-            this.pictureBoxTransaction.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxTransaction.Size = new System.Drawing.Size(56, 63);
             this.pictureBoxTransaction.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxTransaction.TabIndex = 0;
             this.pictureBoxTransaction.TabStop = false;
@@ -75,19 +75,20 @@
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113F));
             this.tableLayoutPanel1.Controls.Add(this.btnEditingTransaction, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnDeletingTransaction, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.labelAmount, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(60, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(68, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(524, 58);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 72F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(589, 72);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // btnEditingTransaction
@@ -100,10 +101,10 @@
             this.btnEditingTransaction.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnEditingTransaction.ForeColor = System.Drawing.Color.White;
             this.btnEditingTransaction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditingTransaction.Location = new System.Drawing.Point(334, 10);
-            this.btnEditingTransaction.Margin = new System.Windows.Forms.Padding(10);
+            this.btnEditingTransaction.Location = new System.Drawing.Point(375, 12);
+            this.btnEditingTransaction.Margin = new System.Windows.Forms.Padding(11, 12, 11, 12);
             this.btnEditingTransaction.Name = "btnEditingTransaction";
-            this.btnEditingTransaction.Size = new System.Drawing.Size(80, 38);
+            this.btnEditingTransaction.Size = new System.Drawing.Size(90, 48);
             this.btnEditingTransaction.TabIndex = 27;
             this.btnEditingTransaction.Text = "Edit";
             this.btnEditingTransaction.UseVisualStyleBackColor = false;
@@ -119,10 +120,10 @@
             this.btnDeletingTransaction.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnDeletingTransaction.ForeColor = System.Drawing.Color.White;
             this.btnDeletingTransaction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeletingTransaction.Location = new System.Drawing.Point(434, 10);
-            this.btnDeletingTransaction.Margin = new System.Windows.Forms.Padding(10);
+            this.btnDeletingTransaction.Location = new System.Drawing.Point(487, 12);
+            this.btnDeletingTransaction.Margin = new System.Windows.Forms.Padding(11, 12, 11, 12);
             this.btnDeletingTransaction.Name = "btnDeletingTransaction";
-            this.btnDeletingTransaction.Size = new System.Drawing.Size(80, 38);
+            this.btnDeletingTransaction.Size = new System.Drawing.Size(91, 48);
             this.btnDeletingTransaction.TabIndex = 26;
             this.btnDeletingTransaction.Text = "Delete";
             this.btnDeletingTransaction.UseVisualStyleBackColor = false;
@@ -133,9 +134,10 @@
             this.panel2.Controls.Add(this.labelDateTime);
             this.panel2.Controls.Add(this.labelTransactionTitle);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Location = new System.Drawing.Point(3, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(156, 52);
+            this.panel2.Size = new System.Drawing.Size(176, 64);
             this.panel2.TabIndex = 22;
             this.panel2.Click += new System.EventHandler(this.btnEditingTransaction_Click);
             // 
@@ -144,10 +146,10 @@
             this.labelDateTime.AutoSize = true;
             this.labelDateTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.labelDateTime.ForeColor = System.Drawing.Color.Black;
-            this.labelDateTime.Location = new System.Drawing.Point(0, 25);
+            this.labelDateTime.Location = new System.Drawing.Point(0, 31);
             this.labelDateTime.Margin = new System.Windows.Forms.Padding(0);
             this.labelDateTime.Name = "labelDateTime";
-            this.labelDateTime.Size = new System.Drawing.Size(82, 20);
+            this.labelDateTime.Size = new System.Drawing.Size(94, 25);
             this.labelDateTime.TabIndex = 5;
             this.labelDateTime.Text = "Date time";
             this.labelDateTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -157,10 +159,10 @@
             this.labelTransactionTitle.AutoSize = true;
             this.labelTransactionTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.labelTransactionTitle.ForeColor = System.Drawing.Color.Black;
-            this.labelTransactionTitle.Location = new System.Drawing.Point(0, 5);
+            this.labelTransactionTitle.Location = new System.Drawing.Point(0, 6);
             this.labelTransactionTitle.Margin = new System.Windows.Forms.Padding(0);
             this.labelTransactionTitle.Name = "labelTransactionTitle";
-            this.labelTransactionTitle.Size = new System.Drawing.Size(148, 24);
+            this.labelTransactionTitle.Size = new System.Drawing.Size(171, 26);
             this.labelTransactionTitle.TabIndex = 4;
             this.labelTransactionTitle.Text = "Transaction type";
             this.labelTransactionTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -169,11 +171,11 @@
             // 
             this.labelAmount.AutoSize = true;
             this.labelAmount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelAmount.Font = new System.Drawing.Font("Montserrat ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAmount.Location = new System.Drawing.Point(162, 0);
+            this.labelAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAmount.Location = new System.Drawing.Point(182, 0);
             this.labelAmount.Margin = new System.Windows.Forms.Padding(0);
             this.labelAmount.Name = "labelAmount";
-            this.labelAmount.Size = new System.Drawing.Size(162, 58);
+            this.labelAmount.Size = new System.Drawing.Size(182, 72);
             this.labelAmount.TabIndex = 18;
             this.labelAmount.Text = "10,000,000 VND";
             this.labelAmount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -181,15 +183,15 @@
             // 
             // TransactionItem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(0);
-            this.MinimumSize = new System.Drawing.Size(500, 60);
+            this.MinimumSize = new System.Drawing.Size(562, 74);
             this.Name = "TransactionItem";
-            this.Size = new System.Drawing.Size(584, 58);
+            this.Size = new System.Drawing.Size(657, 72);
             this.Load += new System.EventHandler(this.TransactionItem_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTransaction)).EndInit();
