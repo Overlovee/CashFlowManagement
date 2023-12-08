@@ -76,19 +76,20 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(32, 0, 32, 0);
+            this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(36, 0, 36, 0);
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(823, 36);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(924, 45);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.dateTimePickerOverview);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(35, 3);
+            this.panel3.Location = new System.Drawing.Point(39, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(373, 30);
+            this.panel3.Size = new System.Drawing.Size(420, 37);
             this.panel3.TabIndex = 6;
             // 
             // dateTimePickerOverview
@@ -99,10 +100,10 @@
             this.dateTimePickerOverview.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.dateTimePickerOverview.Location = new System.Drawing.Point(0, 0);
             this.dateTimePickerOverview.Margin = new System.Windows.Forms.Padding(0);
-            this.dateTimePickerOverview.MaximumSize = new System.Drawing.Size(210, 28);
-            this.dateTimePickerOverview.MinimumSize = new System.Drawing.Size(210, 28);
+            this.dateTimePickerOverview.MaximumSize = new System.Drawing.Size(236, 28);
+            this.dateTimePickerOverview.MinimumSize = new System.Drawing.Size(236, 28);
             this.dateTimePickerOverview.Name = "dateTimePickerOverview";
-            this.dateTimePickerOverview.Size = new System.Drawing.Size(210, 28);
+            this.dateTimePickerOverview.Size = new System.Drawing.Size(236, 28);
             this.dateTimePickerOverview.TabIndex = 9;
             this.dateTimePickerOverview.ValueChanged += new System.EventHandler(this.dateTimePickerOverview_ValueChanged);
             // 
@@ -118,11 +119,11 @@
             this.panel2.Controls.Add(this.chartMoneyIn);
             this.panel2.Controls.Add(this.tableLayoutPanel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 36);
+            this.panel2.Location = new System.Drawing.Point(0, 45);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(32, 10, 32, 32);
-            this.panel2.Size = new System.Drawing.Size(823, 1711);
+            this.panel2.Padding = new System.Windows.Forms.Padding(36, 12, 36, 40);
+            this.panel2.Size = new System.Drawing.Size(924, 2139);
             this.panel2.TabIndex = 8;
             // 
             // panelTotalExpenditures
@@ -130,11 +131,11 @@
             this.panelTotalExpenditures.AutoScroll = true;
             this.panelTotalExpenditures.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelTotalExpenditures.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTotalExpenditures.Location = new System.Drawing.Point(32, 1316);
+            this.panelTotalExpenditures.Location = new System.Drawing.Point(36, 1643);
             this.panelTotalExpenditures.Margin = new System.Windows.Forms.Padding(0);
             this.panelTotalExpenditures.Name = "panelTotalExpenditures";
-            this.panelTotalExpenditures.Padding = new System.Windows.Forms.Padding(16);
-            this.panelTotalExpenditures.Size = new System.Drawing.Size(759, 350);
+            this.panelTotalExpenditures.Padding = new System.Windows.Forms.Padding(18, 20, 18, 20);
+            this.panelTotalExpenditures.Size = new System.Drawing.Size(852, 437);
             this.panelTotalExpenditures.TabIndex = 27;
             // 
             // tableLayoutPanel6
@@ -143,11 +144,12 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.Controls.Add(this.label15_display, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(32, 1276);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(36, 1593);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(759, 40);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(852, 50);
             this.tableLayoutPanel6.TabIndex = 26;
             // 
             // label15_display
@@ -160,7 +162,7 @@
             this.label15_display.Location = new System.Drawing.Point(0, 0);
             this.label15_display.Margin = new System.Windows.Forms.Padding(0);
             this.label15_display.Name = "label15_display";
-            this.label15_display.Size = new System.Drawing.Size(759, 40);
+            this.label15_display.Size = new System.Drawing.Size(852, 50);
             this.label15_display.TabIndex = 1;
             this.label15_display.Text = "Expenditures list";
             this.label15_display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -172,7 +174,7 @@
             this.chartMoneyOut.Dock = System.Windows.Forms.DockStyle.Top;
             legend1.Name = "Legend1";
             this.chartMoneyOut.Legends.Add(legend1);
-            this.chartMoneyOut.Location = new System.Drawing.Point(32, 935);
+            this.chartMoneyOut.Location = new System.Drawing.Point(36, 1167);
             this.chartMoneyOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chartMoneyOut.Name = "chartMoneyOut";
             this.chartMoneyOut.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
@@ -183,7 +185,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Money out";
             this.chartMoneyOut.Series.Add(series1);
-            this.chartMoneyOut.Size = new System.Drawing.Size(759, 341);
+            this.chartMoneyOut.Size = new System.Drawing.Size(852, 426);
             this.chartMoneyOut.TabIndex = 25;
             this.chartMoneyOut.Text = "chart2";
             // 
@@ -197,24 +199,24 @@
             this.tableLayoutPanel5.Controls.Add(this.label11_display, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.labelExpendituresMonth_display, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(32, 855);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(36, 1067);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(759, 80);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(852, 100);
             this.tableLayoutPanel5.TabIndex = 24;
             // 
             // labelTotalExpenditures
             // 
             this.labelTotalExpenditures.AutoSize = true;
             this.labelTotalExpenditures.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelTotalExpenditures.Font = new System.Drawing.Font("Montserrat Black", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotalExpenditures.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTotalExpenditures.ForeColor = System.Drawing.Color.White;
-            this.labelTotalExpenditures.Location = new System.Drawing.Point(382, 40);
+            this.labelTotalExpenditures.Location = new System.Drawing.Point(429, 50);
             this.labelTotalExpenditures.Name = "labelTotalExpenditures";
-            this.labelTotalExpenditures.Size = new System.Drawing.Size(374, 40);
+            this.labelTotalExpenditures.Size = new System.Drawing.Size(420, 50);
             this.labelTotalExpenditures.TabIndex = 3;
             this.labelTotalExpenditures.Text = "15.000.000 VND";
             this.labelTotalExpenditures.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -225,9 +227,9 @@
             this.label11_display.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label11_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label11_display.ForeColor = System.Drawing.Color.White;
-            this.label11_display.Location = new System.Drawing.Point(3, 40);
+            this.label11_display.Location = new System.Drawing.Point(3, 50);
             this.label11_display.Name = "label11_display";
-            this.label11_display.Size = new System.Drawing.Size(373, 40);
+            this.label11_display.Size = new System.Drawing.Size(420, 50);
             this.label11_display.TabIndex = 2;
             this.label11_display.Text = "Total";
             this.label11_display.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -240,7 +242,7 @@
             this.labelExpendituresMonth_display.ForeColor = System.Drawing.Color.White;
             this.labelExpendituresMonth_display.Location = new System.Drawing.Point(3, 0);
             this.labelExpendituresMonth_display.Name = "labelExpendituresMonth_display";
-            this.labelExpendituresMonth_display.Size = new System.Drawing.Size(373, 40);
+            this.labelExpendituresMonth_display.Size = new System.Drawing.Size(420, 50);
             this.labelExpendituresMonth_display.TabIndex = 0;
             this.labelExpendituresMonth_display.Text = "Expenditures";
             this.labelExpendituresMonth_display.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -248,9 +250,10 @@
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(32, 821);
+            this.panel1.Location = new System.Drawing.Point(36, 1025);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(759, 34);
+            this.panel1.Size = new System.Drawing.Size(852, 42);
             this.panel1.TabIndex = 23;
             // 
             // panelTotalIncome
@@ -258,11 +261,11 @@
             this.panelTotalIncome.AutoScroll = true;
             this.panelTotalIncome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelTotalIncome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTotalIncome.Location = new System.Drawing.Point(32, 471);
+            this.panelTotalIncome.Location = new System.Drawing.Point(36, 588);
             this.panelTotalIncome.Margin = new System.Windows.Forms.Padding(0);
             this.panelTotalIncome.Name = "panelTotalIncome";
-            this.panelTotalIncome.Padding = new System.Windows.Forms.Padding(16);
-            this.panelTotalIncome.Size = new System.Drawing.Size(759, 350);
+            this.panelTotalIncome.Padding = new System.Windows.Forms.Padding(18, 20, 18, 20);
+            this.panelTotalIncome.Size = new System.Drawing.Size(852, 437);
             this.panelTotalIncome.TabIndex = 22;
             // 
             // tableLayoutPanel4
@@ -271,11 +274,12 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.label14_display, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(32, 431);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(36, 538);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(759, 40);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(852, 50);
             this.tableLayoutPanel4.TabIndex = 9;
             // 
             // label14_display
@@ -288,7 +292,7 @@
             this.label14_display.Location = new System.Drawing.Point(0, 0);
             this.label14_display.Margin = new System.Windows.Forms.Padding(0);
             this.label14_display.Name = "label14_display";
-            this.label14_display.Size = new System.Drawing.Size(759, 40);
+            this.label14_display.Size = new System.Drawing.Size(852, 50);
             this.label14_display.TabIndex = 0;
             this.label14_display.Text = "Income list";
             this.label14_display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -300,7 +304,7 @@
             this.chartMoneyIn.Dock = System.Windows.Forms.DockStyle.Top;
             legend2.Name = "Legend1";
             this.chartMoneyIn.Legends.Add(legend2);
-            this.chartMoneyIn.Location = new System.Drawing.Point(32, 90);
+            this.chartMoneyIn.Location = new System.Drawing.Point(36, 112);
             this.chartMoneyIn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chartMoneyIn.Name = "chartMoneyIn";
             this.chartMoneyIn.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
@@ -311,7 +315,7 @@
             series2.Legend = "Legend1";
             series2.Name = "Money in";
             this.chartMoneyIn.Series.Add(series2);
-            this.chartMoneyIn.Size = new System.Drawing.Size(759, 341);
+            this.chartMoneyIn.Size = new System.Drawing.Size(852, 426);
             this.chartMoneyIn.TabIndex = 7;
             this.chartMoneyIn.Text = "chart1";
             // 
@@ -325,25 +329,25 @@
             this.tableLayoutPanel3.Controls.Add(this.label8_display, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.labelIncomeMonth_display, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(32, 10);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(36, 12);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(759, 80);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(852, 100);
             this.tableLayoutPanel3.TabIndex = 8;
             // 
             // labelTotalIncome
             // 
             this.labelTotalIncome.AutoSize = true;
             this.labelTotalIncome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelTotalIncome.Font = new System.Drawing.Font("Montserrat Black", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotalIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTotalIncome.ForeColor = System.Drawing.Color.White;
-            this.labelTotalIncome.Location = new System.Drawing.Point(379, 40);
+            this.labelTotalIncome.Location = new System.Drawing.Point(426, 50);
             this.labelTotalIncome.Margin = new System.Windows.Forms.Padding(0);
             this.labelTotalIncome.Name = "labelTotalIncome";
-            this.labelTotalIncome.Size = new System.Drawing.Size(380, 40);
+            this.labelTotalIncome.Size = new System.Drawing.Size(426, 50);
             this.labelTotalIncome.TabIndex = 3;
             this.labelTotalIncome.Text = "15.000.000 VND";
             this.labelTotalIncome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -354,10 +358,10 @@
             this.label8_display.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label8_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label8_display.ForeColor = System.Drawing.Color.White;
-            this.label8_display.Location = new System.Drawing.Point(0, 40);
+            this.label8_display.Location = new System.Drawing.Point(0, 50);
             this.label8_display.Margin = new System.Windows.Forms.Padding(0);
             this.label8_display.Name = "label8_display";
-            this.label8_display.Size = new System.Drawing.Size(379, 40);
+            this.label8_display.Size = new System.Drawing.Size(426, 50);
             this.label8_display.TabIndex = 2;
             this.label8_display.Text = "Total";
             this.label8_display.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -371,22 +375,22 @@
             this.labelIncomeMonth_display.Location = new System.Drawing.Point(0, 0);
             this.labelIncomeMonth_display.Margin = new System.Windows.Forms.Padding(0);
             this.labelIncomeMonth_display.Name = "labelIncomeMonth_display";
-            this.labelIncomeMonth_display.Size = new System.Drawing.Size(379, 40);
+            this.labelIncomeMonth_display.Size = new System.Drawing.Size(426, 50);
             this.labelIncomeMonth_display.TabIndex = 0;
             this.labelIncomeMonth_display.Text = "Income";
             this.labelIncomeMonth_display.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Overview
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(844, 1055);
+            this.ClientSize = new System.Drawing.Size(950, 1050);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Overview";
-            this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 20);
+            this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 25);
             this.Text = "overview";
             this.Load += new System.EventHandler(this.Overview_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

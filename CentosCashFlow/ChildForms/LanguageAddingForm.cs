@@ -43,8 +43,10 @@ namespace CentosCashFlow.ChildForms
                     int kt = connectLanguage.addNewItem(language);
                     if (kt != 0)
                     {
-                        MessageBox.Show("Completely adding!", "", MessageBoxButtons.OK);
+                        //MessageBox.Show("Completely adding!", "", MessageBoxButtons.OK);
                         isChanged = true;
+                        NewLaguages newLaguages = new NewLaguages();
+                        newLaguages.ShowDialog();
                         this.Close();
                     }
                     else

@@ -50,7 +50,7 @@
             this.panel1.MaximumSize = new System.Drawing.Size(68, 75);
             this.panel1.MinimumSize = new System.Drawing.Size(68, 75);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel1.Padding = new System.Windows.Forms.Padding(6);
             this.panel1.Size = new System.Drawing.Size(68, 75);
             this.panel1.TabIndex = 2;
             // 
@@ -73,7 +73,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113F));
             this.tableLayoutPanel1.Controls.Add(this.btnEditingUserAccount, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnDisableUserAccount, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.labelUserName, 0, 0);
@@ -117,7 +117,7 @@
             this.btnDisableUserAccount.ForeColor = System.Drawing.Color.White;
             this.btnDisableUserAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDisableUserAccount.Location = new System.Drawing.Point(614, 10);
-            this.btnDisableUserAccount.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.btnDisableUserAccount.Margin = new System.Windows.Forms.Padding(10);
             this.btnDisableUserAccount.Name = "btnDisableUserAccount";
             this.btnDisableUserAccount.Size = new System.Drawing.Size(93, 52);
             this.btnDisableUserAccount.TabIndex = 40;
