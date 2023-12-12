@@ -15,7 +15,7 @@ namespace CentosCashFlow.Models
         public List<Transaction> getCurrentDataByID(int id)
         {
             List<Transaction> list = new List<Transaction>();
-            string sql = ("SELECT TOP 50" +
+            string sql = ("SELECT " +
                 "T.ID AS Transaction_ID, " +
                 "T.User_ID, " +
                 "C.Category_Name, " +
@@ -27,7 +27,7 @@ namespace CentosCashFlow.Models
                 "FROM Transactions AS T " +
                 "JOIN Categories AS C ON T.Category_ID = C.ID " +
                 "WHERE T.User_ID = '"+ id +"' " +
-                "ORDER BY T.Transaction_Date ASC, Transaction_ID ASC;");
+                "ORDER BY T.Transaction_Date ASC, Transaction_ID ASC;  ");
             SqlDataReader rdr = dbContext.ExcuteQuery(sql);
             while (rdr.Read())
             {
@@ -89,8 +89,8 @@ namespace CentosCashFlow.Models
                 "VALUES('" + transaction.UserID + "', '" 
                 + category.CategoryID + "', '" 
                 + transaction.TransactionType + "', '" 
-                + transaction.Amount + "', '" 
-                + transaction.TransactionDate + "', N'" 
+                + transaction.Amount + "', CONVERT (varchar, '"
+                + transaction.TransactionDate + "', 103), N'"
                 + transaction.TransactionDescription + "')";
 
             rs = dbContext.ExcuteNonQuery(sql);

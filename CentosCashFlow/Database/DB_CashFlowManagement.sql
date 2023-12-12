@@ -11,7 +11,6 @@ CREATE TABLE Categories (
 	CONSTRAINT PK_Categories PRIMARY KEY (ID),
 	CONSTRAINT CK_Category_Type CHECK (Category_Type IN ('Income', 'Expenditure'))
 );
-
 -- Tạo bảng Users (User)
 CREATE TABLE Users (
     ID INT IDENTITY(1, 1) NOT NULL,
@@ -90,6 +89,13 @@ BEGIN
 		INNER JOIN inserted ON Users.ID = inserted.User_ID;
 END
 GO
+SELECT T.ID AS Transaction_ID,  
+T.User_ID,  C.Category_Name,  T.Transaction_Type,  
+T.Amount,  T.Transaction_Date,  T.Transaction_Description,  C.Category_Img 
+FROM Transactions AS T 
+JOIN Categories AS C ON T.Category_ID = C.ID 
+WHERE T.User_ID = 3
+ORDER BY T.Transaction_Date ASC, Transaction_ID ASC;  
 
 CREATE TRIGGER UPDATE_Expenditures_Available_Money
 ON Transactions
