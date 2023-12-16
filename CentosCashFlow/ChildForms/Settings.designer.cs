@@ -55,16 +55,16 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(68, 488);
+            this.panel1.Size = new System.Drawing.Size(60, 390);
             this.panel1.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(789, 0);
+            this.panel2.Location = new System.Drawing.Point(702, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(68, 488);
+            this.panel2.Size = new System.Drawing.Size(60, 390);
             this.panel2.TabIndex = 1;
             // 
             // panel3
@@ -72,30 +72,30 @@
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.tableLayoutPanel1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(68, 0);
+            this.panel3.Location = new System.Drawing.Point(60, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(721, 488);
+            this.panel3.Size = new System.Drawing.Size(642, 390);
             this.panel3.TabIndex = 2;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 160);
+            this.panel4.Location = new System.Drawing.Point(0, 128);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(721, 48);
+            this.panel4.Size = new System.Drawing.Size(642, 38);
             this.panel4.TabIndex = 1;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.btnSave_display);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(526, 0);
+            this.panel5.Location = new System.Drawing.Point(469, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(195, 48);
+            this.panel5.Size = new System.Drawing.Size(173, 38);
             this.panel5.TabIndex = 0;
             // 
             // btnSave_display
@@ -107,7 +107,7 @@
             this.btnSave_display.Location = new System.Drawing.Point(0, 0);
             this.btnSave_display.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave_display.Name = "btnSave_display";
-            this.btnSave_display.Size = new System.Drawing.Size(195, 48);
+            this.btnSave_display.Size = new System.Drawing.Size(173, 38);
             this.btnSave_display.TabIndex = 0;
             this.btnSave_display.Text = "save";
             this.btnSave_display.UseVisualStyleBackColor = true;
@@ -131,11 +131,11 @@
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(721, 160);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(642, 128);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // labelCurrencyUnit_display
@@ -144,9 +144,9 @@
             this.labelCurrencyUnit_display.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelCurrencyUnit_display.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.labelCurrencyUnit_display.ForeColor = System.Drawing.Color.Black;
-            this.labelCurrencyUnit_display.Location = new System.Drawing.Point(3, 80);
+            this.labelCurrencyUnit_display.Location = new System.Drawing.Point(3, 64);
             this.labelCurrencyUnit_display.Name = "labelCurrencyUnit_display";
-            this.labelCurrencyUnit_display.Size = new System.Drawing.Size(354, 40);
+            this.labelCurrencyUnit_display.Size = new System.Drawing.Size(315, 32);
             this.labelCurrencyUnit_display.TabIndex = 4;
             this.labelCurrencyUnit_display.Text = "currency_unit";
             this.labelCurrencyUnit_display.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -157,9 +157,9 @@
             this.labelTimeFormat_display.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelTimeFormat_display.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.labelTimeFormat_display.ForeColor = System.Drawing.Color.Black;
-            this.labelTimeFormat_display.Location = new System.Drawing.Point(3, 40);
+            this.labelTimeFormat_display.Location = new System.Drawing.Point(3, 32);
             this.labelTimeFormat_display.Name = "labelTimeFormat_display";
-            this.labelTimeFormat_display.Size = new System.Drawing.Size(354, 40);
+            this.labelTimeFormat_display.Size = new System.Drawing.Size(315, 32);
             this.labelTimeFormat_display.TabIndex = 2;
             this.labelTimeFormat_display.Text = "time_format";
             this.labelTimeFormat_display.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -168,10 +168,10 @@
             // 
             this.btnExport_display.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnExport_display.ForeColor = System.Drawing.Color.Black;
-            this.btnExport_display.Location = new System.Drawing.Point(360, 120);
+            this.btnExport_display.Location = new System.Drawing.Point(321, 96);
             this.btnExport_display.Margin = new System.Windows.Forms.Padding(0);
             this.btnExport_display.Name = "btnExport_display";
-            this.btnExport_display.Size = new System.Drawing.Size(163, 38);
+            this.btnExport_display.Size = new System.Drawing.Size(145, 30);
             this.btnExport_display.TabIndex = 13;
             this.btnExport_display.Text = "export";
             this.btnExport_display.UseVisualStyleBackColor = true;
@@ -185,7 +185,7 @@
             this.labelLanguages_display.ForeColor = System.Drawing.Color.Black;
             this.labelLanguages_display.Location = new System.Drawing.Point(3, 0);
             this.labelLanguages_display.Name = "labelLanguages_display";
-            this.labelLanguages_display.Size = new System.Drawing.Size(354, 40);
+            this.labelLanguages_display.Size = new System.Drawing.Size(315, 32);
             this.labelLanguages_display.TabIndex = 0;
             this.labelLanguages_display.Text = "languages";
             this.labelLanguages_display.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -197,11 +197,11 @@
             this.cbbLanguages.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.cbbLanguages.ForeColor = System.Drawing.Color.Black;
             this.cbbLanguages.FormattingEnabled = true;
-            this.cbbLanguages.ItemHeight = 36;
-            this.cbbLanguages.Location = new System.Drawing.Point(363, 2);
+            this.cbbLanguages.ItemHeight = 30;
+            this.cbbLanguages.Location = new System.Drawing.Point(324, 2);
             this.cbbLanguages.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbLanguages.Name = "cbbLanguages";
-            this.cbbLanguages.Size = new System.Drawing.Size(355, 44);
+            this.cbbLanguages.Size = new System.Drawing.Size(315, 38);
             this.cbbLanguages.Sorted = true;
             this.cbbLanguages.TabIndex = 9;
             this.cbbLanguages.SelectedValueChanged += new System.EventHandler(this.cbbOverviewDisplayMode_SelectedValueChanged);
@@ -213,10 +213,10 @@
             this.cbbTimeFormat.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.cbbTimeFormat.ForeColor = System.Drawing.Color.Black;
             this.cbbTimeFormat.FormattingEnabled = true;
-            this.cbbTimeFormat.Location = new System.Drawing.Point(363, 42);
+            this.cbbTimeFormat.Location = new System.Drawing.Point(324, 34);
             this.cbbTimeFormat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbTimeFormat.Name = "cbbTimeFormat";
-            this.cbbTimeFormat.Size = new System.Drawing.Size(355, 44);
+            this.cbbTimeFormat.Size = new System.Drawing.Size(315, 38);
             this.cbbTimeFormat.Sorted = true;
             this.cbbTimeFormat.TabIndex = 10;
             this.cbbTimeFormat.SelectedValueChanged += new System.EventHandler(this.cbbOverviewDisplayMode_SelectedValueChanged);
@@ -228,10 +228,10 @@
             this.cbbCurrencyUnit.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.cbbCurrencyUnit.ForeColor = System.Drawing.Color.Black;
             this.cbbCurrencyUnit.FormattingEnabled = true;
-            this.cbbCurrencyUnit.Location = new System.Drawing.Point(363, 82);
+            this.cbbCurrencyUnit.Location = new System.Drawing.Point(324, 66);
             this.cbbCurrencyUnit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbCurrencyUnit.Name = "cbbCurrencyUnit";
-            this.cbbCurrencyUnit.Size = new System.Drawing.Size(355, 44);
+            this.cbbCurrencyUnit.Size = new System.Drawing.Size(315, 38);
             this.cbbCurrencyUnit.Sorted = true;
             this.cbbCurrencyUnit.TabIndex = 11;
             this.cbbCurrencyUnit.SelectedValueChanged += new System.EventHandler(this.cbbOverviewDisplayMode_SelectedValueChanged);
@@ -243,19 +243,19 @@
             this.cbbExport.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.cbbExport.ForeColor = System.Drawing.Color.Black;
             this.cbbExport.FormattingEnabled = true;
-            this.cbbExport.ItemHeight = 36;
-            this.cbbExport.Location = new System.Drawing.Point(3, 122);
+            this.cbbExport.ItemHeight = 30;
+            this.cbbExport.Location = new System.Drawing.Point(3, 98);
             this.cbbExport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbExport.Name = "cbbExport";
-            this.cbbExport.Size = new System.Drawing.Size(354, 44);
+            this.cbbExport.Size = new System.Drawing.Size(315, 38);
             this.cbbExport.Sorted = true;
             this.cbbExport.TabIndex = 14;
             // 
             // Settings
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(857, 488);
+            this.ClientSize = new System.Drawing.Size(762, 390);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

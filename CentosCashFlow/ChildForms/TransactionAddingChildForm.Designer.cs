@@ -69,9 +69,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1010, 580);
+            this.panel1.Size = new System.Drawing.Size(901, 471);
             this.panel1.TabIndex = 1;
             // 
             // panel7
@@ -81,10 +80,9 @@
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.comboBoxCurrency);
             this.panel7.Controls.Add(this.label6);
-            this.panel7.Location = new System.Drawing.Point(28, 138);
-            this.panel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel7.Location = new System.Drawing.Point(25, 110);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(430, 87);
+            this.panel7.Size = new System.Drawing.Size(385, 70);
             this.panel7.TabIndex = 9;
             // 
             // comboBoxCurrency
@@ -93,10 +91,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxCurrency.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCurrency.FormattingEnabled = true;
-            this.comboBoxCurrency.Location = new System.Drawing.Point(177, 25);
-            this.comboBoxCurrency.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBoxCurrency.Location = new System.Drawing.Point(157, 20);
             this.comboBoxCurrency.Name = "comboBoxCurrency";
-            this.comboBoxCurrency.Size = new System.Drawing.Size(232, 34);
+            this.comboBoxCurrency.Size = new System.Drawing.Size(210, 30);
             this.comboBoxCurrency.TabIndex = 1;
             // 
             // label6
@@ -104,9 +101,9 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 29);
+            this.label6.Location = new System.Drawing.Point(3, 23);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(145, 26);
+            this.label6.Size = new System.Drawing.Size(124, 24);
             this.label6.TabIndex = 0;
             this.label6.Text = "Currency Unit";
             // 
@@ -117,10 +114,10 @@
             this.btnAddNewTransaction.FlatAppearance.BorderSize = 0;
             this.btnAddNewTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddNewTransaction.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAddNewTransaction.Location = new System.Drawing.Point(495, 475);
+            this.btnAddNewTransaction.Location = new System.Drawing.Point(443, 380);
             this.btnAddNewTransaction.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddNewTransaction.Name = "btnAddNewTransaction";
-            this.btnAddNewTransaction.Size = new System.Drawing.Size(490, 88);
+            this.btnAddNewTransaction.Size = new System.Drawing.Size(436, 70);
             this.btnAddNewTransaction.TabIndex = 8;
             this.btnAddNewTransaction.Text = "Add new";
             this.btnAddNewTransaction.UseVisualStyleBackColor = false;
@@ -132,20 +129,20 @@
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.richTextBoxDescription);
             this.panel6.Controls.Add(this.label5);
-            this.panel6.Location = new System.Drawing.Point(495, 25);
+            this.panel6.Location = new System.Drawing.Point(443, 20);
             this.panel6.Margin = new System.Windows.Forms.Padding(0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(490, 424);
+            this.panel6.Size = new System.Drawing.Size(436, 340);
             this.panel6.TabIndex = 4;
             // 
             // richTextBoxDescription
             // 
             this.richTextBoxDescription.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBoxDescription.Location = new System.Drawing.Point(21, 34);
+            this.richTextBoxDescription.Location = new System.Drawing.Point(19, 27);
             this.richTextBoxDescription.Margin = new System.Windows.Forms.Padding(0);
             this.richTextBoxDescription.Name = "richTextBoxDescription";
-            this.richTextBoxDescription.Size = new System.Drawing.Size(448, 365);
+            this.richTextBoxDescription.Size = new System.Drawing.Size(399, 293);
             this.richTextBoxDescription.TabIndex = 1;
             this.richTextBoxDescription.Text = "";
             // 
@@ -156,7 +153,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 26);
+            this.label5.Size = new System.Drawing.Size(104, 24);
             this.label5.TabIndex = 0;
             this.label5.Text = "Description";
             // 
@@ -167,10 +164,9 @@
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.dateTimePickerCategory);
             this.panel5.Controls.Add(this.label4);
-            this.panel5.Location = new System.Drawing.Point(28, 475);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel5.Location = new System.Drawing.Point(25, 380);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(430, 87);
+            this.panel5.Size = new System.Drawing.Size(385, 70);
             this.panel5.TabIndex = 3;
             // 
             // dateTimePickerCategory
@@ -179,11 +175,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePickerCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.dateTimePickerCategory.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerCategory.Location = new System.Drawing.Point(177, 29);
+            this.dateTimePickerCategory.Location = new System.Drawing.Point(157, 23);
             this.dateTimePickerCategory.Margin = new System.Windows.Forms.Padding(0);
             this.dateTimePickerCategory.MaxDate = new System.DateTime(2023, 10, 30, 13, 47, 27, 0);
             this.dateTimePickerCategory.Name = "dateTimePickerCategory";
-            this.dateTimePickerCategory.Size = new System.Drawing.Size(232, 32);
+            this.dateTimePickerCategory.Size = new System.Drawing.Size(210, 28);
             this.dateTimePickerCategory.TabIndex = 2;
             this.dateTimePickerCategory.Value = new System.DateTime(2023, 10, 30, 0, 0, 0, 0);
             // 
@@ -192,9 +188,9 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 29);
+            this.label4.Location = new System.Drawing.Point(3, 23);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 26);
+            this.label4.Size = new System.Drawing.Size(88, 24);
             this.label4.TabIndex = 0;
             this.label4.Text = "Date time";
             // 
@@ -205,10 +201,9 @@
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.comboBoxCategory);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Location = new System.Drawing.Point(28, 362);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel4.Location = new System.Drawing.Point(25, 290);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(430, 87);
+            this.panel4.Size = new System.Drawing.Size(385, 70);
             this.panel4.TabIndex = 2;
             // 
             // comboBoxCategory
@@ -217,10 +212,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCategory.FormattingEnabled = true;
-            this.comboBoxCategory.Location = new System.Drawing.Point(177, 25);
-            this.comboBoxCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBoxCategory.Location = new System.Drawing.Point(157, 20);
             this.comboBoxCategory.Name = "comboBoxCategory";
-            this.comboBoxCategory.Size = new System.Drawing.Size(232, 34);
+            this.comboBoxCategory.Size = new System.Drawing.Size(210, 30);
             this.comboBoxCategory.TabIndex = 1;
             // 
             // label3
@@ -228,9 +222,9 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 29);
+            this.label3.Location = new System.Drawing.Point(3, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 26);
+            this.label3.Size = new System.Drawing.Size(85, 24);
             this.label3.TabIndex = 0;
             this.label3.Text = "Category";
             // 
@@ -241,10 +235,9 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.comboBoxTransactionType);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(28, 252);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel3.Location = new System.Drawing.Point(25, 202);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(430, 87);
+            this.panel3.Size = new System.Drawing.Size(385, 70);
             this.panel3.TabIndex = 1;
             // 
             // comboBoxTransactionType
@@ -253,10 +246,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxTransactionType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTransactionType.FormattingEnabled = true;
-            this.comboBoxTransactionType.Location = new System.Drawing.Point(177, 25);
-            this.comboBoxTransactionType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBoxTransactionType.Location = new System.Drawing.Point(157, 20);
             this.comboBoxTransactionType.Name = "comboBoxTransactionType";
-            this.comboBoxTransactionType.Size = new System.Drawing.Size(232, 34);
+            this.comboBoxTransactionType.Size = new System.Drawing.Size(210, 30);
             this.comboBoxTransactionType.TabIndex = 1;
             this.comboBoxTransactionType.SelectedIndexChanged += new System.EventHandler(this.comboBoxTransactionType_SelectedIndexChanged);
             // 
@@ -265,9 +257,9 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 29);
+            this.label2.Location = new System.Drawing.Point(3, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 26);
+            this.label2.Size = new System.Drawing.Size(148, 24);
             this.label2.TabIndex = 0;
             this.label2.Text = "Transaction type";
             // 
@@ -278,20 +270,18 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.textBoxAmount);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(28, 25);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Location = new System.Drawing.Point(25, 20);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(430, 87);
+            this.panel2.Size = new System.Drawing.Size(385, 70);
             this.panel2.TabIndex = 0;
             // 
             // textBoxAmount
             // 
             this.textBoxAmount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxAmount.Location = new System.Drawing.Point(177, 24);
-            this.textBoxAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxAmount.Location = new System.Drawing.Point(157, 19);
             this.textBoxAmount.Name = "textBoxAmount";
-            this.textBoxAmount.Size = new System.Drawing.Size(232, 32);
+            this.textBoxAmount.Size = new System.Drawing.Size(210, 28);
             this.textBoxAmount.TabIndex = 1;
             this.textBoxAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAmount_KeyPress);
             // 
@@ -300,21 +290,20 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 29);
+            this.label1.Location = new System.Drawing.Point(3, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 26);
+            this.label1.Size = new System.Drawing.Size(76, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Amount";
             // 
             // TransactionAddingChildForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1010, 580);
+            this.ClientSize = new System.Drawing.Size(901, 471);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MaximumSize = new System.Drawing.Size(1032, 636);
-            this.MinimumSize = new System.Drawing.Size(1032, 636);
+            this.MaximumSize = new System.Drawing.Size(919, 518);
+            this.MinimumSize = new System.Drawing.Size(919, 518);
             this.Name = "TransactionAddingChildForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TransactionAddingChildForm";
