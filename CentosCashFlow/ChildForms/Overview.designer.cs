@@ -133,7 +133,7 @@
             this.panelTotalExpenditures.Location = new System.Drawing.Point(32, 1316);
             this.panelTotalExpenditures.Margin = new System.Windows.Forms.Padding(0);
             this.panelTotalExpenditures.Name = "panelTotalExpenditures";
-            this.panelTotalExpenditures.Padding = new System.Windows.Forms.Padding(16);
+            this.panelTotalExpenditures.Padding = new System.Windows.Forms.Padding(16, 16, 16, 16);
             this.panelTotalExpenditures.Size = new System.Drawing.Size(759, 350);
             this.panelTotalExpenditures.TabIndex = 27;
             // 
@@ -261,7 +261,7 @@
             this.panelTotalIncome.Location = new System.Drawing.Point(32, 471);
             this.panelTotalIncome.Margin = new System.Windows.Forms.Padding(0);
             this.panelTotalIncome.Name = "panelTotalIncome";
-            this.panelTotalIncome.Padding = new System.Windows.Forms.Padding(16);
+            this.panelTotalIncome.Padding = new System.Windows.Forms.Padding(16, 16, 16, 16);
             this.panelTotalIncome.Size = new System.Drawing.Size(759, 350);
             this.panelTotalIncome.TabIndex = 22;
             // 
